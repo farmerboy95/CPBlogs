@@ -1,2 +1,2 @@
-# cp_blogs
+# CPBlogs
 CP Blogs for myself in Vietnamese
