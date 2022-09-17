@@ -269,7 +269,7 @@ Biến thể có hướng của cây DFS được dùng để tạo dominator tr
 Các bài cần tìm block-cut tree
 
 | Problem | Status | Date |
-| --- | ----------- | --- |
+| --- | :-----------: | --- |
 | [118E - Bertown Roads](https://codeforces.com/contest/118/problem/E) | :white_check_mark: | 24/06/2022 |
 | [231E - Cactus](https://codeforces.com/contest/231/problem/E) | :white_check_mark: | 24/06/2022 |
 | [19E - Fairy](https://codeforces.com/contest/19/problem/E) | :white_check_mark: | 24/06/2022 |
