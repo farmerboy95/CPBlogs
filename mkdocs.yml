@@ -9,6 +9,7 @@ theme:
   favicon: assets/images/logo.jpg
   features:
     - navigation.tabs
+    - navigation.top
   icon:
     repo: fontawesome/brands/git-alt
   palette:
