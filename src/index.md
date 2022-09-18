@@ -1,17 +1,8 @@
-# Welcome to MkDocs
+# Trang chủ
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Xin chào, mình là **farmerboy**.
 
-## Commands
+Đây là nơi mình lưu trữ những blog hay ho về Competitive Programming mà mình đã học (đã được dịch). Mình sẽ làm bài tập song song với việc dịch các tài liệu mà mình thích.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Dịch thuật là một công việc rất khó khăn, nên nếu các bạn thấy bản dịch không thực sự tốt, hãy đề xuất chỉnh sửa tại [đây](https://github.com/farmerboy95/CPBlogs).
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
