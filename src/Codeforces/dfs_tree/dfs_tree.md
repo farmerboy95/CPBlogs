@@ -121,6 +121,7 @@ Ví dụ, xét đề bài sau:
 Cho 1 đồ thị xương rồng liên thông $N$ đỉnh. Trả lời các truy vấn có dạng: Có bao nhiêu đường đi đơn khác nhau từ $p$ đến $q$?
 
 Đây là bài [231E - Cactus](https://codeforces.com/contest/231/problem/E). [Lời giải chính thức](https://codeforces.com/blog/entry/5486) nhìn như thế này:
+
 1. Bóp mỗi chu trình thành 1 đỉnh, tô đỉnh này màu đen
 2. Như vậy đồ thị sẽ thành 1 cây, chọn gốc của cây
 3. Với mỗi đỉnh $u$, đếm số đỉnh đen trên đường đi từ gốc đến $u$, gọi nó là $cnt[u]$

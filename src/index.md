@@ -1,4 +1,4 @@
-# Trang chủ
+# Lời chào
 
 Xin chào, mình là **farmerboy**.
 

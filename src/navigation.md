@@ -1,5 +1,5 @@
 - Trang chủ
-    - [Trang chủ](index.md)
+    - [Lời chào](index.md)
     - [Các tài liệu](navigation.md)
 - Codeforces
     - Đồ thị
