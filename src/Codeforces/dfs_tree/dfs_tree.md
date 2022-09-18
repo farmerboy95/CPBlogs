@@ -132,6 +132,7 @@ Không khó để hiểu lời giải này, nhưng điều thú vị lại nằm
 ![figure4](figure4.png)
 
 Sau 1 hồi suy nghĩ, bạn có thể tìm được cách cài cho step 1 ở trên, nhưng có 1 cách dễ hơn dùng cây DFS:
+
 1. Gán cho mỗi cạnh ngược 1 index bắt đầu từ $N + 1$
 2. Với mỗi đỉnh $u$, tìm index của cạnh ngược chứa $u$ (đi lên), gọi đó là $cycleId[u]$, nếu $u$ không nằm trong chu trình thì $cycleId[u] = u$
 3. Tạo một danh sách kề mới mà với mỗi $u$, mỗi instance của $u$ sẽ được thay bằng $cycleId[u]$
@@ -186,7 +187,8 @@ Một cạnh xuôi $uv$ là đáp án khi và chỉ khi các cạnh ngược “
 
     Cạnh xuôi $uv$ sẽ là đáp án khi và chỉ khi đảo màu làm tiêu biến hết các cạnh mâu thuẫn và không tạo ra cạnh mâu thuẫn mới. Điều này xảy ra khi và chỉ khi các cạnh mâu thuẫn này nối cây con $uv$ với phần còn lại của đồ thị.
 
-Vậy ta giải bài như sau
+Vậy ta giải bài như sau:
+
 1. Tìm cây DFS của đồ thị và tô màu cho nó.
 2. Nếu chỉ có 1 cạnh ngược mâu thuẫn, thêm nó vào đáp án.
 3. Dùng DP để tính, với mỗi cạnh xuôi, có bao nhiêu cạnh ngược mâu thuẫn và không mâu thuẫn “chạy qua” nó.
