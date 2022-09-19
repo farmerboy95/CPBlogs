@@ -60,8 +60,8 @@ Ví dụ, xét cây ở hình trên, cạnh 6-2 không phải cầu, vì khi xó
 Cạnh ngược chắc chắn không phải cầu <br/><br/>
 Điều này dẫn về thuật tìm cầu cơ bản. Cho đồ thị $G$:
 
-- Tìm cây DFS của nó.
-- Với mỗi cạnh xuôi $uv$, nếu có không có cạnh ngược “chạy qua” $uv$, nó là cầu.
+1. Tìm cây DFS của nó.
+2. Với mỗi cạnh xuôi $uv$, nếu có không có cạnh ngược “chạy qua” $uv$, nó là cầu.
 
 Vì cấu trúc đơn giản của cây DFS, step 2 rất dễ cài. Ví dụ, bạn có thể dùng cách $low[u]$. Hoặc bạn có thể dùng prefix sum. Gọi $dp[u]$ là số cạnh ngược “chạy qua” cạnh nối $u$ và $parent[u]$. Khi đó,
 
@@ -92,7 +92,7 @@ Giả sử đồ thị không có cầu, xét cây DFS của nó. Chỉ hướng
 Có đường đi từ gốc đến tất cả các node khác.
 
 ??? question "Vì sao?"
-    Đơn giản vì bạn có thể đi xuống nhờ cung ngược.
+    Đơn giản vì bạn có thể đi xuống nhờ cạnh xuôi.
 
 ### Observation 6
 Có đường đi từ tất cả về gốc
@@ -172,7 +172,7 @@ Vì vậy, trường hợp ta cần xét ở đây là trường hợp có 1 th�
 Xét cây DFS của đồ thị này. Ta tô màu cây này sao cho cạnh xuôi nối node đen và node trắng. Một số cạnh ngược có thể kết nối 2 node cùng màu. Gọi các cạnh này là các cạnh “mâu thuẫn", ngược lại, cạnh ngược nối 2 node khác màu gọi là “không mâu thuẫn”.
 
 ### Observation 7
-Một cạnh ngược u-v là đáp án khi và chỉ khi u-v là cạnh mâu thuẫn duy nhất
+Một cạnh ngược $uv$ là đáp án khi và chỉ khi $uv$ là cạnh mâu thuẫn duy nhất
 
 ??? question "Vì sao?"
     Nếu ta xoá cạnh ngược mâu thuẫn duy nhất trong đồ thị, đồ thị bây giờ được tô 2 màu, nên nó là đồ thị 2 phía
@@ -208,7 +208,7 @@ function visit(u):
       mark the edge u->v
       call visit(v)
 ```
-Dòng số 3 chỉ những v mà có cung từ u tới v
+Dòng số 3 chỉ những $v$ mà có cung từ $u$ tới $v$
 
 Sẽ có một số trường hợp duyệt không đến được một số node. Để đơn giản thì giả sử rằng:
 
