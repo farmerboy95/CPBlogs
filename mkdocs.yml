@@ -4,7 +4,6 @@ repo_url: https://github.com/farmerboy95/CPBlogs
 repo_name: farmerboy95/CPBlogs
 theme:
   name: material
-  language: vi
   custom_dir: overrides
   logo: assets/images/logo.jpg
   favicon: assets/images/logo.jpg
