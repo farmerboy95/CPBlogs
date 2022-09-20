@@ -251,7 +251,7 @@ Các bài cần tìm block-cut tree
 | [118E - Bertown Roads](https://codeforces.com/contest/118/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/118/submission/161629222) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF118-D2-E.cpp) | 24/06/2022 |
 | [231E - Cactus](https://codeforces.com/contest/231/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/231/submission/161657760) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF231-D2-E.cpp) | 24/06/2022 |
 | [19E - Fairy](https://codeforces.com/contest/19/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/19/submission/161872851) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF19-D12-E.cpp) | 26/06/2022 |
-| [858F - Wizard's Tour](https://codeforces.com/contest/858/problem/F) | | | | |
+| [858F - Wizard's Tour](https://codeforces.com/contest/858/problem/F) | :white_check_mark: | [Submission](https://codeforces.com/contest/858/submission/172841740) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF858-D12-F.cpp) | 20/09/2022 |
 | [412D - Giving Awards](https://codeforces.com/contest/412/problem/D) | | | | |
 | [101612G - Grand Test](https://codeforces.com/gym/101612/problem/G) | | | | |
 | [CEOI 2017 - One-Way Streets](https://oj.uz/problem/view/CEOI17_oneway) | | | | |
