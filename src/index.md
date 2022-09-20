@@ -6,3 +6,5 @@ Xin chào, mình là **farmerboy**.
 
 Dịch thuật là một công việc rất khó khăn, nên nếu các bạn thấy bản dịch không thực sự tốt, hãy đề xuất chỉnh sửa tại [đây](https://github.com/farmerboy95/CPBlogs).
 
+Lưu ý, nếu bạn thắc mắc vì sao mình viết tiếng Việt mà vẫn dùng UI tiếng Anh cho trang này, đó là vì tính năng tìm kiếm không hoạt động khi chọn ngôn ngữ tiếng Việt. Mong các bạn thông cảm.
+
