@@ -261,3 +261,11 @@ Các bài cần tìm block-cut tree
 | [1000E - We Need More Bosses](https://codeforces.com/problemset/problem/1000/E) | | | | |
 | [Codechef SROADS](https://www.codechef.com/IPC15P3B/problems/SROADS) | | | | |
 | [406C - Graph Cutting](https://codeforces.com/contest/406/problem/C) | | | | |
+| [555E - Case of Computer Network](https://codeforces.com/contest/555/problem/E) | | | | |
+| [1277E - Two Fairs](https://codeforces.com/contest/1277/problem/E) | | | | |
+| [962F - Simple Cycles Edges](https://codeforces.com/contest/962/problem/F) | | | | |
+| [1680F - Lenient Vertex Cover](https://codeforces.com/contest/1680/problem/F) | | | | |
+| [1045C - Hyperspace Highways](https://codeforces.com/contest/1045/problem/C) | | | | |
+| [1325F - Ehab's Last Theorem](https://codeforces.com/contest/1325/problem/F) | | | | |
+| [1364D - Ehab's Last Corollary](https://codeforces.com/contest/1364/problem/D) | | | | |
+| [AtCoder ARC 111D - Orientation](https://atcoder.jp/contests/arc111/tasks/arc111_d) | | | | |
