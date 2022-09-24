@@ -254,7 +254,7 @@ Các bài cần tìm block-cut tree
 | [858F - Wizard's Tour](https://codeforces.com/contest/858/problem/F) | :white_check_mark: | [Submission](https://codeforces.com/contest/858/submission/172841740) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF858-D12-F.cpp) | 20/09/2022 |
 | [412D - Giving Awards](https://codeforces.com/contest/412/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/412/submission/172901134) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF412-D12-D.cpp) | 21/09/2022 |
 | [101612G - Grand Test](https://codeforces.com/gym/101612/problem/G) | :white_check_mark: | Link not available | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF101612-Gym-G.cpp) | 22/09/2022 |
-| [CEOI 2017 - One-Way Streets](https://oj.uz/problem/view/CEOI17_oneway) | | | | |
+| [CEOI 2017 - One-Way Streets](https://oj.uz/problem/view/CEOI17_oneway) | :white_check_mark: | [Submission](https://oj.uz/submission/644273) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/CEOI/CEOI%2017-Oneway.cpp) | 24/09/2022 |
 | [732F - Tourist Reform](https://codeforces.com/problemset/problem/732/F) | | | | |
 | [COI 2006 - Policija](https://dmoj.ca/problem/coi06p2) | | | | |
 | [1391E - Pairs of Pairs](https://codeforces.com/contest/1391/problem/E) | | | | |
