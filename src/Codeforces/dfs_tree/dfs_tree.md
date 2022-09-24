@@ -255,7 +255,7 @@ Các bài cần tìm block-cut tree
 | [412D - Giving Awards](https://codeforces.com/contest/412/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/412/submission/172901134) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF412-D12-D.cpp) | 21/09/2022 |
 | [101612G - Grand Test](https://codeforces.com/gym/101612/problem/G) | :white_check_mark: | Link not available | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF101612-Gym-G.cpp) | 22/09/2022 |
 | [CEOI 2017 - One-Way Streets](https://oj.uz/problem/view/CEOI17_oneway) | :white_check_mark: | [Submission](https://oj.uz/submission/644273) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/CEOI/CEOI%2017-Oneway.cpp) | 24/09/2022 |
-| [732F - Tourist Reform](https://codeforces.com/problemset/problem/732/F) | | | | |
+| [732F - Tourist Reform](https://codeforces.com/problemset/problem/732/F) | :white_check_mark: | [Submission](https://codeforces.com/contest/732/submission/173347954) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF732-D2-F.cpp) | 24/09/2022 |
 | [COI 2006 - Policija](https://dmoj.ca/problem/coi06p2) | | | | |
 | [1391E - Pairs of Pairs](https://codeforces.com/contest/1391/problem/E) | | | | |
 | [1000E - We Need More Bosses](https://codeforces.com/problemset/problem/1000/E) | | | | |
