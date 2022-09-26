@@ -41,7 +41,7 @@ Trở lại với ví dụ trên, đỉnh 4 và 8 không có cạnh ngược k�
 
 <hr/>
 
-## Tìm cầu (hoặc khớp)
+## Tìm cầu
 
 Cây DFS và Observation 1 ở trên là cốt lõi của thuật tìm cầu Tarjan. [Một số](https://cp-algorithms.com/graph/bridge-searching.html) [hướng dẫn](http://bit.ly/2FKgk3t) [tìm cầu](https://www.tutorialspoint.com/Bridges-in-a-Graph) trên mạng chỉ nói về cây DFS sương sương và định nghĩa những thứ mơ hồ như $dfs[u]$ và $low[u]$. Quên hết chúng đi. Đó không phải cách dễ hiểu để tìm cầu, $dfs[u]$ chỉ là 1 cách lộn xộn để kiểm tra xem 1 node có phải cha của 1 node khác hay không. Trong khi đó, $low[u]$ thì còn khó giải thích hơn nữa.
 
@@ -242,6 +242,71 @@ Biến thể có hướng của cây DFS được dùng để tạo dominator tr
 
 <hr>
 
+## Nhận xét về phương pháp DP
+
+**Lưu ý:** Phần này không có trong bài gốc của tác giả mà là cảm nhận của cá nhân mình khi luyện tập các bài trong chủ đề này.
+
+### Ưu điểm
+
+**Thứ nhất**, phương pháp này khá dễ hiểu với mình. Mình thấy nó giúp giải quyết phần lớn các bài trong 8 bài đầu tiên của phần luyện tập một cách cực kỳ dễ dàng (Các bài chọn hướng cho cạnh).
+
+**Thứ hai**, các Observation trong bài viết cùng với các phần chứng minh rõ ràng đã giúp mình rất nhiều trong việc hiểu được tính chất của cây DFS. Mình thấy nó giải đáp rất tốt các thắc mắc mà các bạn có thể có trong cuốn Giải thuật và Lập trình của thầy Lê Minh Hoàng (sách này trình bày cách dùng $num[u]$ và $low[u]$, lần đầu mình đọc nó thấy khá là rắc rối)
+
+### Nhược điểm
+
+Tuy nhiên, phương pháp này tồn tại một nhược điểm rất lớn. Đó chính là sự khó khăn trong việc tìm khớp (articulation point) của đồ thị. Khi mình đọc bình luận của bài viết gốc trên Codeforces, mình không thực sự thấy ai có thể tìm được khớp của đồ thị bằng cách này mà hầu như toàn đoán hoặc trả lời sai (ngay chính tác giả cũng có trả lời sai). Vì sao nó lại khó khăn đến như vậy?
+
+Xét một đỉnh $u$ trên cây DFS. Để $u$ là một khớp của đồ thị, ta cần có những điều kiện sau đây:
+
+1. Giả sử $u$ không phải gốc của cây DFS. $u$ là khớp của đồ thị khi và chỉ khi tồn tại một nhánh con của $u$ (gọi là $v$) không có cạnh ngược "đi qua" cạnh nối giữa $u$ và cha của $u$. Như vậy là với mỗi đỉnh con $v$ thì bạn phải kiểm tra xem các cạnh ngược trong $dp[v]$ có vượt qua đỉnh $u$ hay không. Nếu tất cả đều không qua thì $u$ mới là khớp. Nghĩ thôi đã thấy làm kiểu này rất mệt não khi bạn cần thông tin của $u$ với mỗi $v$ trong khi bạn chỉ có thông tin to đùng của $dp[u]$ và các $dp[v]$.
+2. Khi $u$ là gốc của cây DFS, $u$ là khớp của đồ thị khi và chỉ khi nó có nhiều hơn 1 nhánh con. Trường hợp này thì dễ xử lý hơn nhiều.
+
+Đến đây thì mình rẽ hướng sang việc tìm hiểu lại cách dùng $num[u]$ và $low[u]$ và mình thấy rất dễ hiểu. Chỉ với một điều kiện, bạn đã có thể giải quyết trường hợp khó nhằn ở trên. Mình khởi động phương pháp này với bài [VN SPOJ - GRAPH_](https://vn.spoj.com/problems/GRAPH_/).
+
+Đại khái thì $num[u]$ là số thứ tự của đỉnh được thăm đầu tiên đến đỉnh thăm sau cùng, cứ đến đâu thì đánh số cho đỉnh đó theo thứ tự tăng dần của số. Còn $low[u]$ là giá trị numbering nhỏ nhất trong các đỉnh có thể đến được từ một đỉnh $v$ nào đó của nhánh DFS gốc $u$ bằng một cung (với giả thiết rằng $u$ có một cung giả nối với chính $u$). Định nghĩa phức tạp như vậy nhưng nếu bạn đã đọc bài viết này thì thấy nó cũng bình thường thôi.
+
+Như vậy ban đầu khi thăm $u$, ta đánh số thứ tự thăm cho đỉnh $u$ và khởi gán
+
+$$low[u] = num[u]$$
+
+Sau đó xét tất cả các đỉnh $v$ nối từ $u$
+
+- Nếu $v$ đã được thăm thì ta cực tiểu hoá $low[u]$ như sau (lưu ý là nó là num nhỏ nhất trong các đỉnh có thể đến được từ một đỉnh $v$ nào đó của nhánh DFS gốc $u$ bằng **một** cung):
+
+$$low[u] = min(low[u], num[v])$$
+
+- Nếu $v$ chưa được thăm thì ta thăm $v$ sau đó cực tiểu hoá $low[u]$ như sau (cùng lưu ý như trên):
+
+$$low[u] = min(low[u], low[v])$$
+
+Vậy nếu tồn tại một đỉnh $v$ mà $low[v] >= num[u]$ ($u$ là cha của $v$ trong cây DFS) thì $u$ là khớp (nếu $u$ là gốc của cây DFS thì nó cần nhiều hơn 1 nhánh con để thành điều kiện đủ). Còn nếu $low[v] > num[u]$ thì cạnh $uv$ là cầu. Rất đơn giản.
+
+### Về bài [COI 2006 - Policija](https://dmoj.ca/problem/coi06p2)
+
+Cá nhân mình thấy bài này thực sự thách thức với người không quen làm các bài khớp cầu như thế này. Về cơ bản, đề bài cho một đơn đồ thị vô hướng. Ta có thêm $Q$ truy vấn bao gồm 2 loại truy vấn.
+
+1. Truy vấn 1: cho 2 đỉnh $u$ và $v$, hỏi xem nếu ta cắt 1 cạnh $xy$ trên đồ thị thì $u$ và $v$ có cùng thành phần liên thông hay không.
+2. Truy vấn 2: cho 2 đỉnh $u$ và $v$, hỏi xem nếu ta bỏ 1 đỉnh $x$ trên đồ thị thì $u$ và $v$ có cùng thành phần liên thông hay không.
+
+Dễ dàng thấy được là cạnh $xy$ trong truy vấn 1 trước hết cần phải là cầu, còn đỉnh $x$ trong truy vấn 2 trước hết cần phải là khớp. Trước khi đi vào giải quyết từng loại truy vấn, chúng ta cần giải quyết một vấn đề, cho 2 đỉnh $u$ và $v$, làm sao biết $u$ có phải tổ tiên của $v$ trên cây DFS hay không? Vì ta đã có một cái cây, ta có thể làm phẳng nó ra thành một mảng để một đỉnh sẽ phụ trách một đoạn trên mảng. Sau đó, $u$ là tổ tiên của $v$ khi đoạn của $v$ nằm trọn trong đoạn của $u$.
+
+#### Truy vấn 1
+Giả sử $y$ là con của $x$ trên cây DFS mà không làm mất đi tính tổng quát. Ta kiểm tra xem $u$ và $v$ có phải là con cháu của $y$ trên cây DFS hay không. Nếu không đỉnh nào hoặc cả 2 đều thoả mãn, rõ ràng chúng cùng thành phần liên thông khi cắt cạnh $xy$, ngược lại thì không cùng thành phần liên thông.
+
+#### Truy vấn 2
+Nếu không đỉnh nào là con cháu của $x$ trên cây DFS, chúng rõ ràng cùng thành phần liên thông khi bỏ đỉnh $x$
+
+Nếu có một đỉnh là con cháu của $x$, ta xét xem nó có phải tác nhân làm cho $x$ là khớp hay không, nếu có thì $u$ và $v$ không cùng thành phần liên thông (bởi vì nếu nó không phải tác nhân, bạn vẫn có thể đi lên đỉnh cha của $x$ và từ đó đi tới đỉnh còn lại)
+
+Nếu cả 2 đều là con cháu của $x$, đầu tiên chúng cùng thành phần liên thông nếu chúng ở chung nhánh. Nếu khác nhánh, chúng không cùng thành phần liên thông khi một trong 2 ở nhánh tác nhân. Còn lại thì chúng cùng thành phần liên thông.
+
+Tuy nhiên làm sao để kiểm tra nó có phải là tác nhân không. Như đã nói, nếu tồn tại một đỉnh $v$ mà $low[v] >= num[u]$ ($u$ là cha của $v$ trong cây DFS) thì $u$ là khớp. Làm sao để lấy được đỉnh con của $x$ mà từ đó nó đi xuống được đỉnh con cháu đang xét? Ta dùng binary lifting để tìm tổ tiên thứ $k$ của một đỉnh trên cây.
+
+#### Kết luận
+Tổng kết lại thì mình thấy bài này sử dụng khá nhiều kỹ thuật mà nếu bạn làm không quen, bạn sẽ mất rất nhiều thời gian suy nghĩ và đôi khi cách làm của bạn lại rất rất dài. Mong là qua đây các bạn sẽ thấy thú vị với phần nhận xét và bài tập này.
+
+<hr>
+
 ## Luyện tập
 
 Các bài cần tìm block-cut tree
@@ -253,10 +318,11 @@ Các bài cần tìm block-cut tree
 | [19E - Fairy](https://codeforces.com/contest/19/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/19/submission/161872851) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF19-D12-E.cpp) | 26/06/2022 |
 | [858F - Wizard's Tour](https://codeforces.com/contest/858/problem/F) | :white_check_mark: | [Submission](https://codeforces.com/contest/858/submission/172841740) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF858-D12-F.cpp) | 20/09/2022 |
 | [412D - Giving Awards](https://codeforces.com/contest/412/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/412/submission/172901134) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF412-D12-D.cpp) | 21/09/2022 |
-| [101612G - Grand Test](https://codeforces.com/gym/101612/problem/G) | :white_check_mark: | Link not available | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF101612-Gym-G.cpp) | 22/09/2022 |
+| [101612G - Grand Test](https://codeforces.com/gym/101612/problem/G) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF101612-Gym-G.cpp) | 22/09/2022 |
 | [CEOI 2017 - One-Way Streets](https://oj.uz/problem/view/CEOI17_oneway) | :white_check_mark: | [Submission](https://oj.uz/submission/644273) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/CEOI/CEOI%2017-Oneway.cpp) | 24/09/2022 |
 | [732F - Tourist Reform](https://codeforces.com/problemset/problem/732/F) | :white_check_mark: | [Submission](https://codeforces.com/contest/732/submission/173347954) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF732-D2-F.cpp) | 24/09/2022 |
-| [COI 2006 - Policija](https://dmoj.ca/problem/coi06p2) | | | | |
+| [VN SPOJ - GRAPH_](https://vn.spoj.com/problems/GRAPH_/) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20GRAPH_.cpp) | 26/09/2022 |
+| [COI 2006 - Policija](https://dmoj.ca/problem/coi06p2) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/COI/COI%2006-Policija.cpp) | 26/09/2022 |
 | [1391E - Pairs of Pairs](https://codeforces.com/contest/1391/problem/E) | | | | |
 | [1000E - We Need More Bosses](https://codeforces.com/problemset/problem/1000/E) | | | | |
 | [Codechef SROADS](https://www.codechef.com/IPC15P3B/problems/SROADS) | | | | |
