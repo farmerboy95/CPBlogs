@@ -323,7 +323,7 @@ Các bài cần tìm block-cut tree
 | [732F - Tourist Reform](https://codeforces.com/problemset/problem/732/F) | :white_check_mark: | [Submission](https://codeforces.com/contest/732/submission/173347954) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF732-D2-F.cpp) | 24/09/2022 |
 | [VN SPOJ - GRAPH_](https://vn.spoj.com/problems/GRAPH_/) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20GRAPH_.cpp) | 26/09/2022 |
 | [COI 2006 - Policija](https://dmoj.ca/problem/coi06p2) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/COI/COI%2006-Policija.cpp) | 26/09/2022 |
-| [1391E - Pairs of Pairs](https://codeforces.com/contest/1391/problem/E) | | | | |
+| [1391E - Pairs of Pairs](https://codeforces.com/contest/1391/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/1391/submission/173826120) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1391-D2-E.cpp) | 28/09/2022 |
 | [1000E - We Need More Bosses](https://codeforces.com/problemset/problem/1000/E) | | | | |
 | [Codechef SROADS](https://www.codechef.com/IPC15P3B/problems/SROADS) | | | | |
 | [406C - Graph Cutting](https://codeforces.com/contest/406/problem/C) | | | | |
