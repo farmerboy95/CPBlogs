@@ -327,7 +327,7 @@ Các bài cần tìm block-cut tree
 | [1000E - We Need More Bosses](https://codeforces.com/problemset/problem/1000/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/1000/submission/173894271) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1000-D12-E.cpp) | 29/09/2022 |
 | [Codechef SROADS](https://www.codechef.com/problems/SROADS) | :white_check_mark: | [Submission](https://www.codechef.com/viewsolution/75622148) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20SROADS.cpp) | 29/09/2022 |
 | [406C - Graph Cutting](https://codeforces.com/contest/406/problem/C) | :white_check_mark: | [Submission](https://codeforces.com/contest/406/submission/174007392) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF406-D1-C.cpp) | 29/09/2022 |
-| [555E - Case of Computer Network](https://codeforces.com/contest/555/problem/E) | | | | |
+| [555E - Case of Computer Network](https://codeforces.com/contest/555/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/555/submission/174201580) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF555-D1-E.cpp) | 01/10/2022 |
 | [1277E - Two Fairs](https://codeforces.com/contest/1277/problem/E) | | | | |
 | [962F - Simple Cycles Edges](https://codeforces.com/contest/962/problem/F) | | | | |
 | [1680F - Lenient Vertex Cover](https://codeforces.com/contest/1680/problem/F) | | | | |
