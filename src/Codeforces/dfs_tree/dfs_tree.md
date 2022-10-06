@@ -331,7 +331,7 @@ Các bài cần tìm block-cut tree
 | [1277E - Two Fairs](https://codeforces.com/contest/1277/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/1277/submission/174242495) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1277-D2-E.cpp) | 01/10/2022 |
 | [962F - Simple Cycles Edges](https://codeforces.com/contest/962/problem/F) | :white_check_mark: | [Submission](https://codeforces.com/contest/962/submission/174269457) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF962-D12-F.cpp) | 01/10/2022 |
 | [1680F - Lenient Vertex Cover](https://codeforces.com/contest/1680/problem/F) | :white_check_mark: | [Submission](https://codeforces.com/contest/1680/submission/174773605) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1680-D12-F.cpp) | 05/10/2022 |
-| [1045C - Hyperspace Highways](https://codeforces.com/contest/1045/problem/C) | | | | |
+| [1045C - Hyperspace Highways](https://codeforces.com/contest/1045/problem/C) | :white_check_mark: | [Submission](https://codeforces.com/contest/1045/submission/174871453) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1045-D1-C.cpp) | 06/10/2022 |
 | [1325F - Ehab's Last Theorem](https://codeforces.com/contest/1325/problem/F) | | | | |
 | [1364D - Ehab's Last Corollary](https://codeforces.com/contest/1364/problem/D) | | | | |
 | [AtCoder ARC 111D - Orientation](https://atcoder.jp/contests/arc111/tasks/arc111_d) | | | | |
