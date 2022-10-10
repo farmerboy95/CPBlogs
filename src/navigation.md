@@ -6,4 +6,4 @@
         - [Cây DFS và ứng dụng](Codeforces/dfs_tree/dfs_tree.md)
 - cp-algorithms
     - Đại số
-        - [Binary Exponentiation](cp-algorithms/binary_exponentiation.md)
+        - [Luỹ thừa nhị phân](cp-algorithms/binary_exponentiation/binary_exponentiation.md)
