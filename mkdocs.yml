@@ -22,8 +22,7 @@ theme:
 
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      accent: cyan
-      primary: light blue
+      primary: black
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
