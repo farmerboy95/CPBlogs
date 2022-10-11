@@ -3,7 +3,7 @@
     - [Các tài liệu](navigation.md)
 - Codeforces
     - Đồ thị
-        - [Cây DFS và ứng dụng](Codeforces/dfs_tree/dfs_tree.md)
+        - [Cây DFS và ứng dụng](Codeforces/graph/dfs_tree/dfs_tree.md)
 - cp-algorithms
     - Đại số
-        - [Luỹ thừa nhị phân](cp-algorithms/binary_exponentiation/binary_exponentiation.md)
+        - [Luỹ thừa nhị phân](cp-algorithms/algebra/binary_exponentiation/binary_exponentiation.md)
