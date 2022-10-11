@@ -231,13 +231,13 @@ $$a \cdot b = \begin{cases}
 
 | Problem | Status | Submission | Code | Date |
 | :---: | :-----------: | :---: | :---: | :---: |
-| [UVa 1230 - MODEX](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3671) | | | | |
-| [UVa 374 - Big Mod](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=310) | | | | |
-| [UVa 11029 - Leading and Trailing](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1970) | | | | |
-| [Codeforces - Parking Lot](http://codeforces.com/problemset/problem/630/I) | | | | |
-| [SPOJ - The last digit](http://www.spoj.com/problems/LASTDIG/) | | | | |
-| [SPOJ - Locker](http://www.spoj.com/problems/LOCKER/) | | | | |
-| [LA - 3722 Jewel-eating Monsters](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1723) | | | | |
-| [SPOJ - Just add it](http://www.spoj.com/problems/ZSUM/) | | | | |
-| [Codechef - Chef and Riffles](https://www.codechef.com/JAN221B/problems/RIFFLES) | | | | |
-| [leetcode - Count good numbers](https://leetcode.com/problems/count-good-numbers/) | | | | |
+| [UVa 1230 - MODEX](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3671) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%201230.cpp) | 03/10/2019 |
+| [UVa 374 - Big Mod](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=310) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%20374.cpp) | 03/10/2019 |
+| [UVa 11029 - Leading and Trailing](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1970) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%2011029.cpp) | 04/10/2019 |
+| [Codeforces - Parking Lot](http://codeforces.com/problemset/problem/630/I) | :white_check_mark: | [Code](https://codeforces.com/contest/630/submission/62216039) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF630-D12-I.cpp) | 09/10/2019 |
+| [SPOJ - LASTDIG](http://www.spoj.com/problems/LASTDIG/) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20LASTDIG.cpp) | 04/10/2019 |
+| [SPOJ - LOCKER](http://www.spoj.com/problems/LOCKER/) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20LOCKER.cpp) | 12/10/2019 |
+| [LA - 3722 Jewel-eating Monsters](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1723) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LiveArchive/LIVEARCHIVE%203722.cpp) | 21/03/2020 |
+| [SPOJ - ZSUM](http://www.spoj.com/problems/ZSUM/) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20ZSUM.cpp) | 21/03/2020 |
+| [Codechef RIFFLES](https://www.codechef.com/problems/RIFFLES) | :white_check_mark: | [Submission](https://www.codechef.com/viewsolution/76714669) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20RIFFLES.cpp) | 11/10/2022 |
+| [Leetcode - Count good numbers](https://leetcode.com/problems/count-good-numbers/) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC1922-count-good-numbers.cpp) | 11/10/2022 |
