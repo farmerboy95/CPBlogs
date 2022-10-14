@@ -52,6 +52,9 @@ extra:
   social:
     - icon: fontawesome/brands/github 
       link: https://github.com/farmerboy95
+  analytics:
+    provider: google
+    property: G-W9EFM7GCX7
 
 plugins:
   - literate-nav:
