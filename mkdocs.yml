@@ -55,6 +55,20 @@ extra:
   analytics:
     provider: google
     property: G-W9EFM7GCX7
+    feedback:
+      title: Bài viết này có tốt không?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: Bài viết rất hay
+          data: 1
+          note: >-
+            Cảm ơn phản hồi tích cực của bạn!
+        - icon: material/thumb-down-outline
+          name: Bài viết cần được cải thiện
+          data: 0
+          note: >- 
+            Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào 
+            <a href="https://github.com/farmerboy95/CPBlogs/issues" target="_blank">GitHub</a> của trang này.
 
 plugins:
   - literate-nav:
