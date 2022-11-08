@@ -9,7 +9,7 @@ Trong lý thuyết tính toán độ phức tạp, Phương pháp Tiềm năng l
 
 ## Định nghĩa Thời gian phân bổ (Amortized time)
 
-Trong phương pháp Tiềm năng, một hàm $\Phi$ được chọn để ánh xạ các trạng thái của cấu trúc dữ liệu với các số không âm. Nếu $S$ là một trạng thái của cấu trúc dữ liệu, $\Phi(S)$ tượng trưng cho lượng công việc được giữ (hay "được trả tiền") trong phân tích phân bổ nhưng chưa được thực thi. Vì vậy, $\Phi(S)$ có thể được hiểu là việc tính phần năng lượng tiềm năng lưu trong trạng thái đó. Giá trị tiềm năng trước khi khởi tạo cấu trúc dữ liệu là $0$. Ngoài ra, $\Phi(S)$ có thể được hiểu là khoảng cách của trạng thái hiện tại đến trạng thái lý tưởng.
+Trong phương pháp Tiềm năng, một hàm $\Phi$ được chọn để ánh xạ các trạng thái của cấu trúc dữ liệu với các số không âm. Nếu $S$ là một trạng thái của cấu trúc dữ liệu, $\Phi(S)$ tượng trưng cho lượng công việc được giữ (hay "được trả tiền") trong phân tích phân bổ nhưng chưa được thực thi. Vì vậy, $\Phi(S)$ có thể được hiểu là việc tính phần năng lượng tiềm năng lưu trong trạng thái đó. Giá trị tiềm năng trước khi khởi tạo cấu trúc dữ liệu là $0$. Ngoài ra, $\Phi(S)$ có thể được hiểu là lượng hỗn loạn trong trạng thái $S$ hoặc là khoảng cách của trạng thái hiện tại đến trạng thái lý tưởng.
 
 Gọi $o$ là bất cứ thao tác đơn lẻ nào trong một dãy các thao tác trên một cấu trúc dữ liệu nào đó, với $S_{trước}$ là trạng thái của cấu trúc dữ liệu trước thao tác $o$ này và $S_{sau}$ là trạng thái sau khi thao tác $o$ kết thúc. Một khi $\Phi$ được chọn, thời gian phân bổ của thao tác $o$ được định nghĩa là:
 
