@@ -60,7 +60,7 @@ Vì việc resize này làm cho $A$ luôn có số phần tử lớn hơn hoặc
 
 Thao tác tăng kích thước mảng không phải lúc nào cũng dẫn đến việc resize, $\Phi$ tăng lên 2, một hằng số. Vì vậy, thời gian thực của thao tác và thời gian tăng lên tiềm năng kết hợp lại để tạo ra thời gian phân bổ của thao tác loại này.
 
-Tuy nhiên, nếu việc tăng kích thước dẫn đến resize mảng, $\Phi$ giảm về $0$ sau khi resize. Tạo mảng mới $A$ và sao chép tất cả các giá trị cũ của vào mảng mới này tôn $O(n)$ thời gian thực, nhưng (với hằng số tỉ lệ C tốt) cái này bị tiêu huỷ bới việc giảm hàm tiềm năng, trả về một tổng thời gian phân bổ là hằng số cho thao tác này.
+Tuy nhiên, nếu việc tăng kích thước dẫn đến resize mảng, $\Phi$ giảm về $0$ sau khi resize. Tạo mảng mới $A$ và sao chép tất cả các giá trị cũ của vào mảng mới này tôn $O(n)$ thời gian thực, nhưng (với hằng số tỉ lệ $C$ tốt) cái này bị tiêu huỷ bới việc giảm hàm tiềm năng, trả về một tổng thời gian phân bổ là hằng số cho thao tác này.
 
 Những thao tác khác của cấu trúc dữ liệu (đọc ghi mảng mà không thay đổi kích thước) không tạo ra thay đổi cho hàm tiềm năng và có cùng thời gian phân bổ hằng số như thời gian thực.
 
@@ -106,7 +106,7 @@ $$\Phi = \text{số bit 1 của giá trị bộ đếm} = \text{khoảng-cách-h
 
 Rõ ràng số phần tử thì luôn không âm.
 
-Một thao tác $Inc$ đảo bit đầu tiên (bit bên phải ngoài cùng). Sau đó, nếu bit đầu tiên bị đảo từ $1$ về $0$, bit tiếp theo cũng phải bị đảo. Việc này tiếp tục đến khi một bit được đảo từ $0$ sang $1$. Đến đây thì nó dừng đảo. Nếu giá trị ban đầu có $k$ bit $1$ thì ta đảo tổng cộng $k+1$ bit, với thời gian thực là $k+1$, trừ đi phần Tiềm năng là $k-1$, thì thời gian phân bổ là $2$. Vậy thời gian thực để chạy $m$ thao tác là $O(m)$.
+Một thao tác $Inc$ đảo bit đầu tiên (bit bên phải ngoài cùng). Sau đó, nếu bit đầu tiên bị đảo từ $1$ về $0$, bit tiếp theo cũng phải bị đảo. Việc này tiếp tục đến khi một bit được đảo từ $0$ sang $1$. Đến đây thì nó dừng đảo. Nếu giá trị ban đầu có $k$ bit $1$ thì ta đảo tổng cộng $k+1$ bit, với thời gian thực là $k+1$, trừ đi phần Tiềm năng là $k-1$ (trước thao tác ta có $k$ bit $1$, sau thao tác ta có $1$ bit $1$, nên $\Phi(S_{trước}) - \Phi(S_{sau}) = k - 1$), thì thời gian phân bổ là $2$. Vậy thời gian thực để chạy $m$ thao tác là $O(m)$.
 
 ## Ứng dụng
 
