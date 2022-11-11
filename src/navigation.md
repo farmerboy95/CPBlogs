@@ -10,3 +10,5 @@
 - Nguồn khác
     - Phân tích Độ phức tạp
         - [Phương pháp Tiềm năng](Misc/complexity_analysis/potential_method/potential_method.md)
+    - Cấu trúc dữ liệu
+        - [Splay Tree: Một mình anh chấp hết](Misc/data_structures/splay_tree/splay_tree.md)
