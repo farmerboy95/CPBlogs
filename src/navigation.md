@@ -7,6 +7,9 @@
 - cp-algorithms
     - Đại số
         - [Luỹ thừa nhị phân](cp-algorithms/algebra/binary_exponentiation/binary_exponentiation.md)
+    - Cấu trúc dữ liệu
+        - Cơ bản
+            - [Minimum Stack / Minimum Queue](cp-algorithms/data_structures/fundamentals/min_stack_min_queue.md)
 - Nguồn khác
     - Phân tích Độ phức tạp
         - [Phương pháp Tiềm năng](Misc/complexity_analysis/potential_method/potential_method.md)
