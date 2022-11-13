@@ -73,18 +73,18 @@ plugins:
   - literate-nav:
       nav_file: navigation.md
   - search
-  - git-authors:
-      show_contribution: true
-      exclude:
-        - index.md
-        - navigation.md
-  - git-revision-date-localized:
-      type: custom
-      custom_format: "%d/%m/%Y %H:%M (GMT%Z)"
-      timezone: Asia/Ho_Chi_Minh
-      locale: vi
-      enable_creation_date: true
-      enabled: true
-      exclude:
-        - index.md
-        - navigation.md
+  # - git-authors:
+  #     show_contribution: true
+  #     exclude:
+  #       - index.md
+  #       - navigation.md
+  # - git-revision-date-localized:
+  #     type: custom
+  #     custom_format: "%d/%m/%Y %H:%M (GMT%Z)"
+  #     timezone: Asia/Ho_Chi_Minh
+  #     locale: vi
+  #     enable_creation_date: true
+  #     enabled: true
+  #     exclude:
+  #       - index.md
+  #       - navigation.md
