@@ -11,7 +11,7 @@ Bạn có sợ cài đặt các bài tìm giá trị nhỏ nhất, lớn nhất 
 
 Không cần phải sợ nữa. Trong bài này tôi sẽ giới thiệu cho các bạn một cấu trúc dữ liệu (CTDL) có thể giải được các dạng bài này - Splay Tree. Một mình anh chấp hếttttttttttt!
 
-**Lưu ý**: Một nhược điểm của Splay Tree là việc nó có hằng số trong độ phức tạp lớn mặc dù nó được khấu hao về $O(\text{log n})$. Dùng CTDL này trên các bài có limit nhỏ sẽ có nguy cơ TLE rất lớn (bạn hoàn toàn có thể dùng các CTDL ít tốn kém hơn nếu đó là vấn đề).
+**Lưu ý**: Một nhược điểm của Splay Tree là việc nó có hằng số trong độ phức tạp lớn mặc dù nó được khấu hao về $O(\log n)$. Dùng CTDL này trên các bài có limit nhỏ sẽ có nguy cơ TLE rất lớn (bạn hoàn toàn có thể dùng các CTDL ít tốn kém hơn nếu đó là vấn đề).
 
 **Lưu ý từ farmerboy**: Mình đã cố gắng cài đặt lại các code trong bài gốc theo một cách dễ hiểu hơn với phần comment bằng tiếng Việt.
 
@@ -113,13 +113,13 @@ void insert(Node *node, int pos) {
 }
 ```
 
-Giờ chúng ta xét độ phức tạp của thuật toán này. Ta có thể suy luận ra được độ phức tạp của bất kỳ thao tác nào ở trên là chiều cao cây $O(h)$, và một cây nhị phân có thể lưu $n$ phần tử với chiều cao tối thiểu là $\text{log n}$. Vì vậy ta có thể làm cho độ phức tạp của thao tác Tìm và Chèn thành $O(\text{log n})$.
+Giờ chúng ta xét độ phức tạp của thuật toán này. Ta có thể suy luận ra được độ phức tạp của bất kỳ thao tác nào ở trên là chiều cao cây $O(h)$, và một cây nhị phân có thể lưu $n$ phần tử với chiều cao tối thiểu là $\text{log n}$. Vì vậy ta có thể làm cho độ phức tạp của thao tác Tìm và Chèn thành $O(\log n)$.
 
 Tuy nhiên, dùng một cây đơn giản như trên để giải là điều không dễ dàng. Một cây nhị phân có thể trở thành một "cây gậy" nếu ta không để ý. Xét cây như sau, cây này cũng có thể biểu thị dãy ban đầu:
 
 ![figure2](figure2.svg){ style="background-color: white; display: block; margin: 0 auto" }
 
-Cây gậy này có chiều cao $n$, làm cho giả thiết về độ phức tạp của chúng ta không thành hiện thực. Vì vậy, ta cần một cách nào đó để duy trì chiều cao cây là $O(\text{log n})$ để giữ độ phức tạp như lý thuyết. Việc này được gọi là **cân bằng cây**, và có nhiều cách để làm như AVL, Red-Black Tree, Scapegoat Tree... Tuy nhiên, chúng ta sẽ tìm hiểu một loại cây có thể không chỉ tự cân bằng, mà còn duy trì được các thông tin bổ trợ để giúp ta tìm được những thông tin khó chịu như tổng đoạn - **Splay Tree**!
+Cây gậy này có chiều cao $n$, làm cho giả thiết về độ phức tạp của chúng ta không thành hiện thực. Vì vậy, ta cần một cách nào đó để duy trì chiều cao cây là $O(\log n)$ để giữ độ phức tạp như lý thuyết. Việc này được gọi là **cân bằng cây**, và có nhiều cách để làm như AVL, Red-Black Tree, Scapegoat Tree... Tuy nhiên, chúng ta sẽ tìm hiểu một loại cây có thể không chỉ tự cân bằng, mà còn duy trì được các thông tin bổ trợ để giúp ta tìm được những thông tin khó chịu như tổng đoạn - **Splay Tree**!
 
 ## Cân bằng cây
 
@@ -343,7 +343,7 @@ void splay(Node *node, Node *desiredParent = NULL) {
 - Tìm một phần tử tại một vị trí xác định;
 - Chèn một phần tử vào một vị trí xác định
 
-trong thời gian phân bổ $O(\text{log n})$. Đó là điều rất tốt vì $O(\text{log n})$ rất nhỏ. Ta sẽ xem xét một số ví dụ và tôi sẽ trình bày một ví dụ cụ thể với mã nguồn.
+trong thời gian phân bổ $O(\log n)$. Đó là điều rất tốt vì $O(\log n)$ rất nhỏ. Ta sẽ xem xét một số ví dụ và tôi sẽ trình bày một ví dụ cụ thể với mã nguồn.
 
 ### Tổng đoạn
 
