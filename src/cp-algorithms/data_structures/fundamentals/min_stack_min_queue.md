@@ -1,5 +1,9 @@
 # Minimum Stack / Minimum Queue
 
+## Nguồn
+
+[Minimum stack / Minimum queue](https://cp-algorithms.com/data_structures/stack_queue_modification.html)
+
 ## Lời tựa
 
 Trong bài viết này chúng ta sẽ xem xét 3 bài toán: bài đầu tiên ta sẽ biến đổi một stack sao cho nó có thể tìm min của stack trong $O(1)$, sau đó ta làm điều tương tự với queue, cuối cùng ta sẽ dùng những cấu trúc dữ liệu đó để tìm min của tất cả các dãy con độ dài $M$ không đổi của mảng trong $O(n)$.
