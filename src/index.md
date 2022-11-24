@@ -8,3 +8,4 @@ Dịch thuật là một công việc rất khó khăn, nên nếu các bạn th
 
 Lưu ý, nếu bạn thắc mắc vì sao mình viết tiếng Việt mà vẫn dùng UI tiếng Anh cho trang này, đó là vì tính năng tìm kiếm không hoạt động khi chọn ngôn ngữ tiếng Việt. Mong các bạn thông cảm.
 
+Các bạn có thể tìm được các tài khoản của mình trên các trang Competitive Programming tại [đây](https://clist.by/coder/farmerboy/).

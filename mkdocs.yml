@@ -1,6 +1,7 @@
 site_name: farmerboy's CP Blogs
 docs_dir: src
 repo_url: https://github.com/farmerboy95/CPBlogs
+edit_uri: 'edit/main/src/'
 repo_name: farmerboy95/CPBlogs
 theme:
   name: material
