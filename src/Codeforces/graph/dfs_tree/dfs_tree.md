@@ -19,11 +19,11 @@ function visit(u):
 
 Nếu ta `visit(1)` thì nó sẽ như thế này:
 
-![figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
 
 Nhìn vào các cạnh được đánh dấu trên dòng số 5. Chúng tạo thành một cây khung của $G$ với gốc là 1. Chúng ta gọi những cạnh này là *cạnh xuôi* (*span-edges*). Các cạnh còn lại là các *cạnh ngược* (*back-edges*). Cây DFS cuối cùng sẽ như sau:
 
-![figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
 
 ### Observation 1
 Các cạnh ngược trên đồ thị kết nối 1 node với con cháu của nó trên cây khung. **Đó là lý do vì sao cây DFS rất hữu dụng.**
@@ -86,7 +86,7 @@ Nếu $G$ có cầu, trả về impossible.
 
 Giả sử đồ thị không có cầu, xét cây DFS của nó. Chỉ hướng cạnh xuôi hướng xuống và cạnh ngược hướng lên, ta có:
 
-![figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
 
 ### Observation 5
 Có đường đi từ gốc đến tất cả các node khác.
@@ -129,7 +129,7 @@ Cho 1 đồ thị xương rồng liên thông $N$ đỉnh. Trả lời các truy
 
 Không khó để hiểu lời giải này, nhưng điều thú vị lại nằm ở cách cài step 1.
 
-![figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
 
 Sau 1 hồi suy nghĩ, bạn có thể tìm được cách cài cho step 1 ở trên, nhưng có 1 cách dễ hơn dùng cây DFS:
 

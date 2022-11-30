@@ -11,8 +11,12 @@
         - Cơ bản
             - [Minimum Stack / Minimum Queue](cp-algorithms/data_structures/fundamentals/min_stack_min_queue/min_stack_min_queue.md)
             - [Sparse Table](cp-algorithms/data_structures/fundamentals/sparse_table/sparse_table.md)
+- Codechef
+    - Cấu trúc dữ liệu
+        - [Disjoint Sparse Table](Codechef/data_structures/disjoint_sparse_table/disjoint_sparse_table.md)
 - Nguồn khác
     - Phân tích Độ phức tạp
+        - [Các ký hiệu tiệm cận](Misc/complexity_analysis/asymptotic_notations/asymptotic_notations.md)
         - [Phương pháp Tiềm năng](Misc/complexity_analysis/potential_method/potential_method.md)
     - Cấu trúc dữ liệu
         - [Splay Tree: Một mình anh chấp hết](Misc/data_structures/splay_tree/splay_tree.md)

@@ -6,8 +6,8 @@ repo_name: farmerboy95/CPBlogs
 theme:
   name: material
   custom_dir: overrides
-  logo: assets/images/logo.jpg
-  favicon: assets/images/logo.jpg
+  logo: img/logo.jpg
+  favicon: img/logo.jpg
   features:
     - navigation.tabs
     - navigation.top
@@ -41,6 +41,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - lightgallery
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6

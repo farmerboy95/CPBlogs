@@ -126,7 +126,7 @@ int minimum = min(st[i][L], st[i][R - (1 << i) + 1]);
 
 Một trong những điểm yếu chính của cách tiếp cận $O(1)$ ở trên là nó chỉ hỗ trợ các truy vấn trên các [hàm idempotent](https://en.wikipedia.org/wiki/Idempotence). Ví dụ nó hiệu quả trên các truy vấn min đoạn, nhưng không dùng được trên các truy vấn tổng đoạn.
 
-Ta cũng có những cấu trúc dữ liệu tương tự có thể xử lý bất kỳ loại hàm kết hợp và truy vấn đoạn nào trong $O(1)$. Một trong số chúng là [Disjoint Sparse Table - Coming soon](https://discuss.codechef.com/questions/117696/tutorial-disjoint-sparse-table). Một cái khác là [Sqrt Tree - Coming soon]().
+Ta cũng có những cấu trúc dữ liệu tương tự có thể xử lý bất kỳ loại hàm kết hợp và truy vấn đoạn nào trong $O(1)$. Một trong số chúng là [Disjoint Sparse Table](/src/Codechef/data_structures/disjoint_sparse_table/disjoint_sparse_table.md). Một cái khác là [Sqrt Tree - Coming soon]().
 
 ## Luyện tập
 
