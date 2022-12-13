@@ -15,3 +15,8 @@ Then run by this command:
 ```
 mkdocs serve
 ```
+
+When you want to upgrade any of the packages above, simply run this, for example `mkdocs-material`:
+```
+pip3 install --upgrade mkdocs-material
+```

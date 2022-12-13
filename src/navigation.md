@@ -4,6 +4,8 @@
 - Codeforces
     - Đồ thị
         - [Cây DFS và ứng dụng](Codeforces/graph/dfs_tree/dfs_tree.md)
+    - Xử lý bit
+        - [Kĩ thuật Vector cơ sở cho các bài toán XOR](Codeforces/bit_manipulation/xor_basis/xor_basis.md)
 - cp-algorithms
     - Đại số
         - [Luỹ thừa nhị phân](cp-algorithms/algebra/binary_exponentiation/binary_exponentiation.md)
@@ -11,6 +13,8 @@
         - Cơ bản
             - [Minimum Stack / Minimum Queue](cp-algorithms/data_structures/fundamentals/min_stack_min_queue/min_stack_min_queue.md)
             - [Sparse Table](cp-algorithms/data_structures/fundamentals/sparse_table/sparse_table.md)
+        - Cây
+            - [Sqrt Tree](cp-algorithms/data_structures/trees/sqrt_tree/sqrt_tree.md)
 - Codechef
     - Cấu trúc dữ liệu
         - [Disjoint Sparse Table](Codechef/data_structures/disjoint_sparse_table/disjoint_sparse_table.md)

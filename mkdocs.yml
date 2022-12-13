@@ -16,7 +16,7 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: teal
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
