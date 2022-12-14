@@ -1,7 +1,7 @@
 # Luỹ thừa nhị phân
 
 ## Nguồn
-[Binary Exponentiation](https://cp-algorithms.com/algebra/binary-exp.html)
+<img src="/img/cpalgorithms.ico" width="16" height="16"/> [Binary Exponentiation](https://cp-algorithms.com/algebra/binary-exp.html)
 
 ## Khái niệm
 

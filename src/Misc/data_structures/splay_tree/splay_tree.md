@@ -1,7 +1,7 @@
 # Splay Tree: Một mình anh chấp hết
 
 ## Nguồn
-[Splay Tree: One Tree to Rule Them All](https://zhtluo.com/cp/splay-tree-one-tree-to-rule-them-all.html)
+[Splay Tree: One Tree to Rule Them All - zhtluo.com](https://zhtluo.com/cp/splay-tree-one-tree-to-rule-them-all.html)
 
 ## Lời tựa
 

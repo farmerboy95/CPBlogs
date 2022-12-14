@@ -2,7 +2,7 @@
 
 ## Nguồn
 
-[Minimum stack / Minimum queue](https://cp-algorithms.com/data_structures/stack_queue_modification.html)
+<img src="/img/cpalgorithms.ico" width="16" height="16"/> [Minimum stack / Minimum queue](https://cp-algorithms.com/data_structures/stack_queue_modification.html)
 
 ## Lời tựa
 
