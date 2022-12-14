@@ -15,14 +15,14 @@ Lưu ý, nếu bạn thắc mắc vì sao mình viết tiếng Việt mà vẫn 
 
 Hiện tại mình đang tham gia Competitive Programming với các tài khoản như:
 
-- <img src="/img/codeforces.png" width="16" height="16"/>  [farmerboy](https://codeforces.com/profile/farmerboy)
-- <img src="/img/atcoder.png" width="16" height="16"/>  [farmerboy](https://atcoder.jp/users/farmerboy)
-- <img src="/img/codechef.png" width="16" height="16"/>  [farmerboy](https://www.codechef.com/users/farmerboy)
-- <img src="/img/leetcode.png" width="16" height="16"/>  [farmerboy](https://leetcode.com/farmerboy/)
-- <img src="/img/topcoder.png" width="16" height="16"/>  [farmerboy](https://www.topcoder.com/members/farmerboy)
-- <img src="/img/toki.png" width="16" height="16"/>  [farmerboy](https://tlx.toki.id/profiles/farmerboy)
-- <img src="/img/hackerrank.png" width="16" height="16"/>  [farmerboy](https://www.hackerrank.com/profile/farmerboy)
-- <img src="/img/uva.ico" width="16" height="16"/>  [farmerboy](https://uhunt.onlinejudge.org/id/762901)
+- <img src="img/codeforces.png" width="16" height="16"/>  [farmerboy](https://codeforces.com/profile/farmerboy)
+- <img src="img/atcoder.png" width="16" height="16"/>  [farmerboy](https://atcoder.jp/users/farmerboy)
+- <img src="img/codechef.png" width="16" height="16"/>  [farmerboy](https://www.codechef.com/users/farmerboy)
+- <img src="img/leetcode.png" width="16" height="16"/>  [farmerboy](https://leetcode.com/farmerboy/)
+- <img src="img/topcoder.png" width="16" height="16"/>  [farmerboy](https://www.topcoder.com/members/farmerboy)
+- <img src="img/toki.png" width="16" height="16"/>  [farmerboy](https://tlx.toki.id/profiles/farmerboy)
+- <img src="img/hackerrank.png" width="16" height="16"/>  [farmerboy](https://www.hackerrank.com/profile/farmerboy)
+- <img src="img/uva.ico" width="16" height="16"/>  [farmerboy](https://uhunt.onlinejudge.org/id/762901)
 
 Ngoài ra, các bạn có thể tìm được các tài khoản của mình trên các trang Competitive Programming tại [clist.by](https://clist.by/coder/farmerboy/).
 

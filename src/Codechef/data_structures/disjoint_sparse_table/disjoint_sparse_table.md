@@ -2,7 +2,7 @@
 
 ## Nguồn
 
-<img src="/img/codechef.png" width="16" height="16"/> [[Tutorial] Disjoint Sparse Table](https://discuss.codechef.com/t/tutorial-disjoint-sparse-table/17404)
+<img src="../../../../img/codechef.png" width="16" height="16"/> [[Tutorial] Disjoint Sparse Table](https://discuss.codechef.com/t/tutorial-disjoint-sparse-table/17404)
 
 ## Giới thiệu
 

@@ -2,7 +2,7 @@
 
 ## Nguồn
 
-<img src="/img/codeforces.png" width="16" height="16"/> [A Beautiful Technique for Some XOR Related Problems](https://codeforces.com/blog/entry/68953)
+<img src="../../../../img/codeforces.png" width="16" height="16"/> [A Beautiful Technique for Some XOR Related Problems](https://codeforces.com/blog/entry/68953)
 
 ## Giới thiệu
 

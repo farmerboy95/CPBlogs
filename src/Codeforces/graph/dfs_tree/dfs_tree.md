@@ -1,7 +1,7 @@
 # Cây DFS và ứng dụng
 
 ## Nguồn
-<img src="/img/codeforces.png" width="16" height="16"/> [[Tutorial] The DFS tree and its applications: how I found out I really didn't understand bridges](https://codeforces.com/blog/entry/68138)
+<img src="../../../../img/codeforces.png" width="16" height="16"/> [[Tutorial] The DFS tree and its applications: how I found out I really didn't understand bridges](https://codeforces.com/blog/entry/68138)
 
 <hr/>
 ## Cây DFS
