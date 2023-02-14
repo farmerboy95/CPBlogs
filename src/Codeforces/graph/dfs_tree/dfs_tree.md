@@ -279,7 +279,7 @@ $$low[u] = min(low[u], num[v])$$
 
 $$low[u] = min(low[u], low[v])$$
 
-Vậy nếu tồn tại một đỉnh $v$ mà $low[v] >= num[u]$ ($u$ là cha của $v$ trong cây DFS) thì $u$ là khớp (nếu $u$ là gốc của cây DFS thì nó cần nhiều hơn 1 nhánh con để thành điều kiện đủ). Còn nếu $low[v] > num[u]$ thì cạnh $uv$ là cầu. Rất đơn giản.
+Vậy nếu tồn tại một đỉnh $v$ mà $low[v] \ge num[u]$ ($u$ là cha của $v$ trong cây DFS) thì $u$ là khớp (nếu $u$ là gốc của cây DFS thì nó cần nhiều hơn 1 nhánh con để thành điều kiện đủ). Còn nếu $low[v] > num[u]$ thì cạnh $uv$ là cầu. Rất đơn giản.
 
 ### Về bài [COI 2006 - Policija](https://dmoj.ca/problem/coi06p2)
 
@@ -300,7 +300,7 @@ Nếu có một đỉnh là con cháu của $x$, ta xét xem nó có phải tác
 
 Nếu cả 2 đều là con cháu của $x$, đầu tiên chúng cùng thành phần liên thông nếu chúng ở chung nhánh. Nếu khác nhánh, chúng không cùng thành phần liên thông khi một trong 2 ở nhánh tác nhân. Còn lại thì chúng cùng thành phần liên thông.
 
-Tuy nhiên làm sao để kiểm tra nó có phải là tác nhân không. Như đã nói, nếu tồn tại một đỉnh $v$ mà $low[v] >= num[u]$ ($u$ là cha của $v$ trong cây DFS) thì $u$ là khớp. Làm sao để lấy được đỉnh con của $x$ mà từ đó nó đi xuống được đỉnh con cháu đang xét? Ta dùng binary lifting để tìm tổ tiên thứ $k$ của một đỉnh trên cây.
+Tuy nhiên làm sao để kiểm tra nó có phải là tác nhân không. Như đã nói, nếu tồn tại một đỉnh $v$ mà $low[v] \ge num[u]$ ($u$ là cha của $v$ trong cây DFS) thì $u$ là khớp. Làm sao để lấy được đỉnh con của $x$ mà từ đó nó đi xuống được đỉnh con cháu đang xét? Ta dùng binary lifting để tìm tổ tiên thứ $k$ của một đỉnh trên cây.
 
 #### Kết luận
 Tổng kết lại thì mình thấy bài này sử dụng khá nhiều kỹ thuật mà nếu bạn làm không quen, bạn sẽ mất rất nhiều thời gian suy nghĩ và đôi khi cách làm của bạn lại rất rất dài. Mong là qua đây các bạn sẽ thấy thú vị với phần nhận xét và bài tập này.

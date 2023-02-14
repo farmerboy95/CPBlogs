@@ -2,7 +2,7 @@
 
 ## Nguồn
 
-<img src="../../../../img/cpalgorithms.ico" width="16" height="16"/> [Sparse Table](https://cp-algorithms.com/data_structures/sparse-table.html)
+<img src="../../../../../img/cpalgorithms.ico" width="16" height="16"/> [Sparse Table](https://cp-algorithms.com/data_structures/sparse-table.html)
 
 ## Lời tựa
 
