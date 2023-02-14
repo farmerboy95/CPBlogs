@@ -1,0 +1,2144 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/Codeforces/graph/dfs_tree/dfs_tree/">
+      
+      
+        <link rel="prev" href="../../../../navigation/">
+      
+      
+        <link rel="next" href="../../../bit_manipulation/xor_basis/xor_basis/">
+      
+      <link rel="icon" href="../../../../img/logo.jpg">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
+    
+    
+      
+        <title>Cây DFS và ứng dụng - farmerboy's CP Blogs</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    <link rel="stylesheet" href="../../../../css/lightgallery.min.css">
+
+    
+    
+    <script src="../../../../js/lightgallery.min.js"></script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-W9EFM7GCX7"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-W9EFM7GCX7",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-W9EFM7GCX7",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cay-dfs-va-ung-dung" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+      
+  <img src="../../../../img/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            farmerboy's CP Blogs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cây DFS và ứng dụng
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/farmerboy95/CPBlogs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    farmerboy95/CPBlogs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        Trang chủ
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Codeforces
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../cp-algorithms/algebra/binary_exponentiation/binary_exponentiation/" class="md-tabs__link">
+        cp-algorithms
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Codechef/data_structures/disjoint_sparse_table/disjoint_sparse_table/" class="md-tabs__link">
+        Codechef
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Misc/complexity_analysis/asymptotic_notations/asymptotic_notations/" class="md-tabs__link">
+        Nguồn khác
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+      
+  <img src="../../../../img/logo.jpg" alt="logo">
+
+    </a>
+    farmerboy's CP Blogs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/farmerboy95/CPBlogs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    farmerboy95/CPBlogs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Trang chủ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Trang chủ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Lời chào
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../navigation/" class="md-nav__link">
+        Các tài liệu
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Codeforces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Codeforces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Đồ thị
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Đồ thị
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cây DFS và ứng dụng
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Cây DFS và ứng dụng
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cay-dfs" class="md-nav__link">
+    Cây DFS
+  </a>
+  
+    <nav class="md-nav" aria-label="Cây DFS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observation-1" class="md-nav__link">
+    Observation 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tim-cau" class="md-nav__link">
+    Tìm cầu
+  </a>
+  
+    <nav class="md-nav" aria-label="Tìm cầu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observation-2" class="md-nav__link">
+    Observation 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-3" class="md-nav__link">
+    Observation 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chon-huong-canh-e-tao-o-thi-lien-thong-manh" class="md-nav__link">
+    Chọn hướng cạnh để tạo đồ thị liên thông mạnh
+  </a>
+  
+    <nav class="md-nav" aria-label="Chọn hướng cạnh để tạo đồ thị liên thông mạnh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-1" class="md-nav__link">
+    Problem 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-4" class="md-nav__link">
+    Observation 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-5" class="md-nav__link">
+    Observation 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-6" class="md-nav__link">
+    Observation 6
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cai-at-cacti-rung-xuong-rong" class="md-nav__link">
+    Cài đặt cacti (rừng xương rồng)
+  </a>
+  
+    <nav class="md-nav" aria-label="Cài đặt cacti (rừng xương rồng)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-2" class="md-nav__link">
+    Problem 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xoa-canh-e-tao-o-thi-hai-phia" class="md-nav__link">
+    Xóa cạnh để tạo đồ thị hai phía
+  </a>
+  
+    <nav class="md-nav" aria-label="Xóa cạnh để tạo đồ thị hai phía">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-3" class="md-nav__link">
+    Problem 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-7" class="md-nav__link">
+    Observation 7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-8" class="md-nav__link">
+    Observation 8
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voi-o-thi-co-huong" class="md-nav__link">
+    Với đồ thị có hướng
+  </a>
+  
+    <nav class="md-nav" aria-label="Với đồ thị có hướng">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observation-9" class="md-nav__link">
+    Observation 9
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-10" class="md-nav__link">
+    Observation 10
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nhan-xet-ve-phuong-phap-dp" class="md-nav__link">
+    Nhận xét về phương pháp DP
+  </a>
+  
+    <nav class="md-nav" aria-label="Nhận xét về phương pháp DP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uu-iem" class="md-nav__link">
+    Ưu điểm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nhuoc-iem" class="md-nav__link">
+    Nhược điểm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ve-bai-coi-2006-policija" class="md-nav__link">
+    Về bài COI 2006 - Policija
+  </a>
+  
+    <nav class="md-nav" aria-label="Về bài COI 2006 - Policija">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truy-van-1" class="md-nav__link">
+    Truy vấn 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#truy-van-2" class="md-nav__link">
+    Truy vấn 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    Kết luận
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luyen-tap" class="md-nav__link">
+    Luyện tập
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Xử lý bit
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Xử lý bit
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bit_manipulation/xor_basis/xor_basis/" class="md-nav__link">
+        Kĩ thuật Vector cơ sở cho các bài toán XOR
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          cp-algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          cp-algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          Đại số
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Đại số
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cp-algorithms/algebra/binary_exponentiation/binary_exponentiation/" class="md-nav__link">
+        Luỹ thừa nhị phân
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Cấu trúc dữ liệu
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cấu trúc dữ liệu
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+          Cơ bản
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Cơ bản
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cp-algorithms/data_structures/fundamentals/min_stack_min_queue/min_stack_min_queue/" class="md-nav__link">
+        Minimum Stack / Minimum Queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cp-algorithms/data_structures/fundamentals/sparse_table/sparse_table/" class="md-nav__link">
+        Sparse Table
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+          Cây
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cây
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cp-algorithms/data_structures/trees/sqrt_tree/sqrt_tree/" class="md-nav__link">
+        Sqrt Tree
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Codechef
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Codechef
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Cấu trúc dữ liệu
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Cấu trúc dữ liệu
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Codechef/data_structures/disjoint_sparse_table/disjoint_sparse_table/" class="md-nav__link">
+        Disjoint Sparse Table
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Nguồn khác
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Nguồn khác
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          Phân tích Độ phức tạp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Phân tích Độ phức tạp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Misc/complexity_analysis/asymptotic_notations/asymptotic_notations/" class="md-nav__link">
+        Các ký hiệu tiệm cận
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Misc/complexity_analysis/potential_method/potential_method/" class="md-nav__link">
+        Phương pháp Tiềm năng
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Cấu trúc dữ liệu
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cấu trúc dữ liệu
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Misc/data_structures/splay_tree/splay_tree/" class="md-nav__link">
+        Splay Tree: Một mình anh chấp hết
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cay-dfs" class="md-nav__link">
+    Cây DFS
+  </a>
+  
+    <nav class="md-nav" aria-label="Cây DFS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observation-1" class="md-nav__link">
+    Observation 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tim-cau" class="md-nav__link">
+    Tìm cầu
+  </a>
+  
+    <nav class="md-nav" aria-label="Tìm cầu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observation-2" class="md-nav__link">
+    Observation 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-3" class="md-nav__link">
+    Observation 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chon-huong-canh-e-tao-o-thi-lien-thong-manh" class="md-nav__link">
+    Chọn hướng cạnh để tạo đồ thị liên thông mạnh
+  </a>
+  
+    <nav class="md-nav" aria-label="Chọn hướng cạnh để tạo đồ thị liên thông mạnh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-1" class="md-nav__link">
+    Problem 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-4" class="md-nav__link">
+    Observation 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-5" class="md-nav__link">
+    Observation 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-6" class="md-nav__link">
+    Observation 6
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cai-at-cacti-rung-xuong-rong" class="md-nav__link">
+    Cài đặt cacti (rừng xương rồng)
+  </a>
+  
+    <nav class="md-nav" aria-label="Cài đặt cacti (rừng xương rồng)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-2" class="md-nav__link">
+    Problem 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xoa-canh-e-tao-o-thi-hai-phia" class="md-nav__link">
+    Xóa cạnh để tạo đồ thị hai phía
+  </a>
+  
+    <nav class="md-nav" aria-label="Xóa cạnh để tạo đồ thị hai phía">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-3" class="md-nav__link">
+    Problem 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-7" class="md-nav__link">
+    Observation 7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-8" class="md-nav__link">
+    Observation 8
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voi-o-thi-co-huong" class="md-nav__link">
+    Với đồ thị có hướng
+  </a>
+  
+    <nav class="md-nav" aria-label="Với đồ thị có hướng">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observation-9" class="md-nav__link">
+    Observation 9
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-10" class="md-nav__link">
+    Observation 10
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nhan-xet-ve-phuong-phap-dp" class="md-nav__link">
+    Nhận xét về phương pháp DP
+  </a>
+  
+    <nav class="md-nav" aria-label="Nhận xét về phương pháp DP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uu-iem" class="md-nav__link">
+    Ưu điểm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nhuoc-iem" class="md-nav__link">
+    Nhược điểm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ve-bai-coi-2006-policija" class="md-nav__link">
+    Về bài COI 2006 - Policija
+  </a>
+  
+    <nav class="md-nav" aria-label="Về bài COI 2006 - Policija">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truy-van-1" class="md-nav__link">
+    Truy vấn 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#truy-van-2" class="md-nav__link">
+    Truy vấn 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    Kết luận
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luyen-tap" class="md-nav__link">
+    Luyện tập
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+  
+  
+
+
+
+<h1 id="cay-dfs-va-ung-dung">Cây DFS và ứng dụng</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><img src="../../../../img/codeforces.png" width="16" height="16"/> <a href="https://codeforces.com/blog/entry/68138">[Tutorial] The DFS tree and its applications: how I found out I really didn't understand bridges</a></p>
+<hr/>
+<h2 id="cay-dfs">Cây DFS</h2>
+<p>Cho một đồ thị <span class="arithmatex">\(G\)</span> vô hướng liên thông. Chạy DFS trên đồ thị đó với điểm gốc bất kỳ, có thể cài đặt như sau:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>function visit(u):
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  mark u as visited
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  for each vertex v among the neighbors of u:
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    if v is not visited:
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      mark the edge uv
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      call visit(v)
+</code></pre></div>
+<p>Nếu ta <code>visit(1)</code> thì nó sẽ như thế này:</p>
+<p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Nhìn vào các cạnh được đánh dấu trên dòng số 5. Chúng tạo thành một cây khung của <span class="arithmatex">\(G\)</span> với gốc là 1. Chúng ta gọi những cạnh này là <em>cạnh xuôi</em> (<em>span-edges</em>). Các cạnh còn lại là các <em>cạnh ngược</em> (<em>back-edges</em>). Cây DFS cuối cùng sẽ như sau:</p>
+<p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
+<h3 id="observation-1">Observation 1</h3>
+<p>Các cạnh ngược trên đồ thị kết nối 1 node với con cháu của nó trên cây khung. <strong>Đó là lý do vì sao cây DFS rất hữu dụng.</strong></p>
+<details class="question">
+<summary>Vì sao?</summary>
+<p>Giả sử có cạnh <span class="arithmatex">\(uv\)</span>, không mất đi tính tổng quát, ta giả sử <span class="arithmatex">\(u\)</span> được thăm trước <span class="arithmatex">\(v\)</span> (lúc này <span class="arithmatex">\(v\)</span> chưa được thăm). Ta có:</p>
+<ul>
+<li>
+<p>Nếu DFS đi đến <span class="arithmatex">\(v\)</span> từ <span class="arithmatex">\(u\)</span> dùng cạnh <span class="arithmatex">\(uv\)</span>, <span class="arithmatex">\(uv\)</span> là cạnh xuôi</p>
+</li>
+<li>
+<p>Nếu DFS không đi đến <span class="arithmatex">\(v\)</span> từ <span class="arithmatex">\(u\)</span> dùng cạnh <span class="arithmatex">\(uv\)</span>, thì <span class="arithmatex">\(v\)</span> đã được thăm ở trước đó ở line số 4 trong mã giả. Vì vậy nó đã được thăm trên 1 đỉnh con của <span class="arithmatex">\(u\)</span>, nên <span class="arithmatex">\(v\)</span> là con cháu của <span class="arithmatex">\(u\)</span> trên cây DFS.</p>
+</li>
+</ul>
+</details>
+<p>Trở lại với ví dụ trên, đỉnh 4 và 8 không có cạnh ngược kết nối chúng vì đỉnh này không phải tổ tiên của đỉnh kia và ngược lại. Nếu có cạnh nối 4 và 8, DFS sẽ đi đến 8 từ 4 thay vì về 2.</p>
+<p>Đây là Observation quan trọng nhất về cây DFS. Cây DFS rất mạnh vì nó đơn giản hoá đồ thị. Thay vì phải quan tâm đến quá nhiều loại cạnh, ta chỉ cần biết đến 1 cái cây và vài cạnh nối cha-con đơn thuần. Điều này làm nó dễ cài đặt và suy nghĩ.</p>
+<hr/>
+
+<h2 id="tim-cau">Tìm cầu</h2>
+<p>Cây DFS và Observation 1 ở trên là cốt lõi của thuật tìm cầu Tarjan. <a href="https://cp-algorithms.com/graph/bridge-searching.html">Một số</a> <a href="http://bit.ly/2FKgk3t">hướng dẫn</a> <a href="https://www.tutorialspoint.com/Bridges-in-a-Graph">tìm cầu</a> trên mạng chỉ nói về cây DFS sương sương và định nghĩa những thứ mơ hồ như <span class="arithmatex">\(dfs[u]\)</span> và <span class="arithmatex">\(low[u]\)</span>. Quên hết chúng đi. Đó không phải cách dễ hiểu để tìm cầu, <span class="arithmatex">\(dfs[u]\)</span> chỉ là 1 cách lộn xộn để kiểm tra xem 1 node có phải cha của 1 node khác hay không. Trong khi đó, <span class="arithmatex">\(low[u]\)</span> thì còn khó giải thích hơn nữa.</p>
+<p>Giờ chúng ta sẽ tìm cầu trên 1 đồ thị vô hướng liên thông <span class="arithmatex">\(G\)</span>. Xét cây DFS của <span class="arithmatex">\(G\)</span>.</p>
+<h3 id="observation-2">Observation 2</h3>
+<p>Một cạnh xuôi <span class="arithmatex">\(uv\)</span> là cầu khi và chỉ khi không tồn tại cạnh ngược kết nối con cháu của <span class="arithmatex">\(uv\)</span> với tổ tiên của <span class="arithmatex">\(uv\)</span>. Nói cách khác, cạnh xuôi <span class="arithmatex">\(uv\)</span> là cầu khi và chỉ khi không có cạnh ngược "chạy qua" <span class="arithmatex">\(uv\)</span>.</p>
+<details class="question">
+<summary>Vì sao?</summary>
+<p>Xóa cạnh <span class="arithmatex">\(uv\)</span> chia cây khung ra thành 2 phần tách nhau: cây con gốc <span class="arithmatex">\(uv\)</span> và phần còn lại. Nếu có cạnh ngược nối 2 phần này, đồ thị vẫn được kết nối, ngược lại <span class="arithmatex">\(uv\)</span> là cầu. Cách duy nhất 1 cạnh ngược có thể kết nối 2 phần này là khi nó kết nối con cháu của <span class="arithmatex">\(uv\)</span> với tổ tiên của <span class="arithmatex">\(uv\)</span>.</p>
+</details>
+<p>Ví dụ, xét cây ở hình trên, cạnh 6-2 không phải cầu, vì khi xóa nó, cạnh ngược 3-8 vẫn kết nối 2 phần. Ngược lại, cạnh 2-4 là cầu vì không có cạnh ngược nào tương tự.</p>
+<h3 id="observation-3">Observation 3</h3>
+<p>Cạnh ngược chắc chắn không phải cầu <br/><br/>
+Điều này dẫn về thuật tìm cầu cơ bản. Cho đồ thị <span class="arithmatex">\(G\)</span>:</p>
+<ol>
+<li>Tìm cây DFS của nó.</li>
+<li>Với mỗi cạnh xuôi <span class="arithmatex">\(uv\)</span>, nếu có không có cạnh ngược “chạy qua” <span class="arithmatex">\(uv\)</span>, nó là cầu.</li>
+</ol>
+<p>Vì cấu trúc đơn giản của cây DFS, step 2 rất dễ cài. Ví dụ, bạn có thể dùng cách <span class="arithmatex">\(low[u]\)</span>. Hoặc bạn có thể dùng prefix sum. Gọi <span class="arithmatex">\(dp[u]\)</span> là số cạnh ngược “chạy qua” cạnh nối <span class="arithmatex">\(u\)</span> và <span class="arithmatex">\(parent[u]\)</span>. Khi đó,</p>
+<div class="arithmatex">\[dp[u] = (\text{số cạnh ngược đi lên từ u}) + \sum_{\text{v là con u} }^{} dp[v] - (\text{số cạnh ngược đi xuống từ u}) \]</div>
+<p>Cạnh xuôi nối u và <span class="arithmatex">\(parent[u]\)</span> là cầu khi và chỉ khi <span class="arithmatex">\(dp[u] = 0\)</span></p>
+<hr/>
+
+<h2 id="chon-huong-canh-e-tao-o-thi-lien-thong-manh">Chọn hướng cạnh để tạo đồ thị liên thông mạnh</h2>
+<p>Cho bài tập như sau, từ <a href="https://codeforces.com/contest/118/problem/E">118E - Bertown Roads</a>.</p>
+<h3 id="problem-1">Problem 1</h3>
+<p>Cho đồ thị vô hướng liên thông <span class="arithmatex">\(G\)</span>. Chỉ hướng cho từng cạnh để tạo thành đồ thị liên thông mạnh hoặc trả về impossible.</p>
+<h3 id="observation-4">Observation 4</h3>
+<p>Nếu <span class="arithmatex">\(G\)</span> có cầu, trả về impossible.</p>
+<details class="question">
+<summary>Vì sao?</summary>
+<p>Đơn giản vì nếu <span class="arithmatex">\(uv\)</span> là cầu và ta chọn hướng <span class="arithmatex">\(u \to v\)</span>, sẽ không có đường đi từ <span class="arithmatex">\(v\)</span> đến <span class="arithmatex">\(u\)</span></p>
+</details>
+<p>Giả sử đồ thị không có cầu, xét cây DFS của nó. Chỉ hướng cạnh xuôi hướng xuống và cạnh ngược hướng lên, ta có:</p>
+<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
+<h3 id="observation-5">Observation 5</h3>
+<p>Có đường đi từ gốc đến tất cả các node khác.</p>
+<details class="question">
+<summary>Vì sao?</summary>
+<p>Đơn giản vì bạn có thể đi xuống nhờ cạnh xuôi.</p>
+</details>
+<h3 id="observation-6">Observation 6</h3>
+<p>Có đường đi từ tất cả về gốc</p>
+<details class="question">
+<summary>Vì sao?</summary>
+<p>Xét 1 node <span class="arithmatex">\(v\)</span> không phải gốc. Gọi <span class="arithmatex">\(u\)</span> là cha của nó trên cây khung. Vì đồ thị không có cầu, sẽ phải có 1 cạnh ngược “chạy qua” <span class="arithmatex">\(uv\)</span>: nó kết nối con cháu của <span class="arithmatex">\(v\)</span> và tổ tiên của <span class="arithmatex">\(u\)</span>. Ta có thể đi xuống từ <span class="arithmatex">\(v\)</span> tới cạnh ngược đó, sau đó dùng nó để về đến tổ tiên của <span class="arithmatex">\(u\)</span>. Dùng cách này ta đến gần node gốc hơn. Lặp lại đến khi về gốc.</p>
+</details>
+<p>Vì vậy, đồ thị liên thông.</p>
+<hr/>
+
+<h2 id="cai-at-cacti-rung-xuong-rong">Cài đặt cacti (rừng xương rồng)</h2>
+<p>Đôi khi cây DFS chỉ là 1 cách để biểu diễn đồ thị theo kiểu làm cho nó dễ cài đặt hơn, giống danh sách kề nhưng ở đẳng cấp cao hơn. Phần này đơn thuần chỉ là 1 trick cài đặt.</p>
+<p>1 cactus (cây xương rồng) là 1 đồ thị mà mỗi cạnh (hoặc đôi khi, đỉnh) thuộc về nhiều nhất 1 chu trình đơn. Trường hợp đầu gọi là cạnh xương rồng, trường hợp sau gọi là đỉnh xương rồng. Rừng xương rồng có cấu trúc đơn giản hơn đồ thị thông thường, nên người ta có thể giải bài trên nó dễ hơn trên đồ thị truyền thống. Nhưng dễ hơn ở trên giấy thôi: các thuật xương rồng khi cài thường rất khó chịu nếu bạn không biết mình đang làm gì.</p>
+<p>Trên cây DFS của xương rồng, với mỗi cạnh xuôi, có nhiều nhất 1 cạnh ngược “chạy qua” nó. Như vậy các chu trình trong cây này tương tự như 1 chu trình đơn:
+Mỗi cạnh ngược tạo 1 chu trình đơn với các cạnh xuôi nó “chạy qua”.
+Không có chu trình đơn nào khác.</p>
+<p>Đó gần như là tất cả các tính chất của cây xương rồng.</p>
+<p>Ví dụ, xét đề bài sau:</p>
+<h3 id="problem-2">Problem 2</h3>
+<p>Cho 1 đồ thị xương rồng liên thông <span class="arithmatex">\(N\)</span> đỉnh. Trả lời các truy vấn có dạng: Có bao nhiêu đường đi đơn khác nhau từ <span class="arithmatex">\(p\)</span> đến <span class="arithmatex">\(q\)</span>?</p>
+<p>Đây là bài <a href="https://codeforces.com/contest/231/problem/E">231E - Cactus</a>. <a href="https://codeforces.com/blog/entry/5486">Lời giải chính thức</a> nhìn như thế này:</p>
+<ol>
+<li>Bóp mỗi chu trình thành 1 đỉnh, tô đỉnh này màu đen</li>
+<li>Như vậy đồ thị sẽ thành 1 cây, chọn gốc của cây</li>
+<li>Với mỗi đỉnh <span class="arithmatex">\(u\)</span>, đếm số đỉnh đen trên đường đi từ gốc đến <span class="arithmatex">\(u\)</span>, gọi nó là <span class="arithmatex">\(cnt[u]\)</span></li>
+<li>Đáp án của query <span class="arithmatex">\((p, q)\)</span> sẽ là <span class="arithmatex">\(2 ^ {cnt[p] + cnt[q] - 2 * cnt[lca(p, q)]}\)</span> hoặc <span class="arithmatex">\(2 ^ {cnt[p] + cnt[q] - 2 * cnt[lca(p, q)] + 1}\)</span> tuỳ vào màu của <span class="arithmatex">\(lca(p, q)\)</span></li>
+</ol>
+<p>Không khó để hiểu lời giải này, nhưng điều thú vị lại nằm ở cách cài step 1.</p>
+<p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Sau 1 hồi suy nghĩ, bạn có thể tìm được cách cài cho step 1 ở trên, nhưng có 1 cách dễ hơn dùng cây DFS:</p>
+<ol>
+<li>Gán cho mỗi cạnh ngược 1 index bắt đầu từ <span class="arithmatex">\(N + 1\)</span></li>
+<li>Với mỗi đỉnh <span class="arithmatex">\(u\)</span>, tìm index của cạnh ngược chứa <span class="arithmatex">\(u\)</span> (đi lên), gọi đó là <span class="arithmatex">\(cycleId[u]\)</span>, nếu <span class="arithmatex">\(u\)</span> không nằm trong chu trình thì <span class="arithmatex">\(cycleId[u] = u\)</span></li>
+<li>Tạo một danh sách kề mới mà với mỗi <span class="arithmatex">\(u\)</span>, mỗi instance của <span class="arithmatex">\(u\)</span> sẽ được thay bằng <span class="arithmatex">\(cycleId[u]\)</span></li>
+</ol>
+<p>Step 2 sẽ trông như thế này:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>function visit(u):
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  for each vertex v among the children of u:
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    visit(v)
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  if there is a back-edge going up from u:
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    cycleId[u] = the index of that back-edge
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  else:
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    cycleId[u] = u
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    for each vertex v among the children of u:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>      if cycleId[v] != v and there is no back-edge going down from v:
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        cycleId[u] = cycleId[v]
+</code></pre></div>
+<hr/>
+
+<h2 id="xoa-canh-e-tao-o-thi-hai-phia">Xóa cạnh để tạo đồ thị hai phía</h2>
+<h3 id="problem-3">Problem 3</h3>
+<p>Xét một đồ thị vô hướng. Tìm số cách xoá 1 cạnh để tạo ra đồ thị hai phía.</p>
+<p>Đây là bài <a href="https://codeforces.com/contest/19/problem/E">19E - Fairy</a>. Bài này không có lời giải chính thức, nhưng <a href="https://codeforces.com/blog/entry/559">lời giải không chính thức</a> dùng cấu trúc dữ liệu phức tạp như là Link cut tree. Chúng ta sẽ giải quyết nó bằng cây DFS.</p>
+<p>Trong đề bài, đồ thị không nhất thiết phải liên thông. Tuy nhiên, ta thấy:</p>
+<ul>
+<li>Nếu đồ thị gồm toàn thành phần liên thông 2 phía, xóa bất kỳ cạnh nào cũng tạo thành đồ thị 2 phía.</li>
+<li>Nếu đồ thị gồm nhiều thành phần liên thông không phải 2 phía, thì ta không thể tạo đồ thị 2 phía bằng cách xoá 1 cạnh.</li>
+</ul>
+<p>Vì vậy, trường hợp ta cần xét ở đây là trường hợp có 1 thành phần liên thông không phải 2 phía. Rõ ràng cạnh cần xoá là cạnh từ thành phần liên thông đó, ta có thể giả sử rằng nó là thành phần liên thông duy nhất trong đồ thị. Từ giờ, ta giả sử rằng ta có 1 đồ thị liên thông, không phải 2 phía.</p>
+<p>Xét cây DFS của đồ thị này. Ta tô màu cây này sao cho cạnh xuôi nối node đen và node trắng. Một số cạnh ngược có thể kết nối 2 node cùng màu. Gọi các cạnh này là các cạnh “mâu thuẫn", ngược lại, cạnh ngược nối 2 node khác màu gọi là “không mâu thuẫn”.</p>
+<h3 id="observation-7">Observation 7</h3>
+<p>Một cạnh ngược <span class="arithmatex">\(uv\)</span> là đáp án khi và chỉ khi <span class="arithmatex">\(uv\)</span> là cạnh mâu thuẫn duy nhất</p>
+<details class="question">
+<summary>Vì sao?</summary>
+<p>Nếu ta xoá cạnh ngược mâu thuẫn duy nhất trong đồ thị, đồ thị bây giờ được tô 2 màu, nên nó là đồ thị 2 phía</p>
+<p>Nếu đồ thị có những cạnh mâu thuẫn khác hoặc ta xoá cạnh ngược không mâu thuẫn, những cạnh mâu thuẫn còn lại tiếp tục tạo ra chu trình lẻ và đồ thị sẽ không thể là đồ thị 2 phía.</p>
+</details>
+<h3 id="observation-8">Observation 8</h3>
+<p>Một cạnh xuôi <span class="arithmatex">\(uv\)</span> là đáp án khi và chỉ khi các cạnh ngược “chạy qua” nó đều là cạnh mâu thuẫn.</p>
+<details class="question">
+<summary>Vì sao?</summary>
+<p>Nếu ta xoá cạnh xuôi <span class="arithmatex">\(uv\)</span>, cây khung sẽ bị chia làm 2 phần: cây con của <span class="arithmatex">\(uv\)</span> và phần còn lại. Các cạnh xuôi khác vẫn sẽ phải nối node đen và node trắng. Vì vậy cách duy nhất để tô màu đồ thị là đảo ngược màu cho cây con <span class="arithmatex">\(uv\)</span>.</p>
+<p>Cạnh xuôi <span class="arithmatex">\(uv\)</span> sẽ là đáp án khi và chỉ khi đảo màu làm tiêu biến hết các cạnh mâu thuẫn và không tạo ra cạnh mâu thuẫn mới. Điều này xảy ra khi và chỉ khi các cạnh mâu thuẫn này nối cây con <span class="arithmatex">\(uv\)</span> với phần còn lại của đồ thị.</p>
+</details>
+<p>Vậy ta giải bài như sau:</p>
+<ol>
+<li>Tìm cây DFS của đồ thị và tô màu cho nó.</li>
+<li>Nếu chỉ có 1 cạnh ngược mâu thuẫn, thêm nó vào đáp án.</li>
+<li>Dùng DP để tính, với mỗi cạnh xuôi, có bao nhiêu cạnh ngược mâu thuẫn và không mâu thuẫn “chạy qua” nó.</li>
+<li>Nếu 1 cạnh xuôi gồm toàn cạnh mâu thuẫn chạy qua, thêm nó vào đáp án.</li>
+</ol>
+<hr/>
+
+<h2 id="voi-o-thi-co-huong">Với đồ thị có hướng</h2>
+<p>Nếu ta duyệt cây DFS của đồ thị có hướng thì sao:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>function visit(u):
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  mark u as visited
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  for each vertex v among the neighbors of u:
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    if v is not visited:
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>      mark the edge u-&gt;v
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>      call visit(v)
+</code></pre></div>
+Dòng số 3 chỉ những <span class="arithmatex">\(v\)</span> mà có cung từ <span class="arithmatex">\(u\)</span> tới <span class="arithmatex">\(v\)</span></p>
+<p>Sẽ có một số trường hợp duyệt không đến được một số node. Để đơn giản thì giả sử rằng:</p>
+<ul>
+<li>Ta bắt đầu từ node 1</li>
+<li>Có thể thăm tất cả các đỉnh từ đỉnh 1</li>
+</ul>
+<p>Gọi các cung được đánh dấu ở dòng 5 là cung xuôi</p>
+<h3 id="observation-9">Observation 9</h3>
+<p>Các cung xuôi tạo một cây khung có gốc, có hướng xa ra khỏi node gốc.</p>
+<p>Các cung khác sẽ rơi vào các trường hợp sau:</p>
+<ul>
+<li>Cung nối con cháu và tổ tiên: cung ngược</li>
+<li>Cung không như vậy: cung chéo</li>
+</ul>
+<p>Có thể chia các cung ngược thành cung lên hoặc cung xuống tuỳ vào hướng của chúng.</p>
+<h3 id="observation-10">Observation 10</h3>
+<p>Các cung chéo luôn hướng từ đỉnh thăm sau về đỉnh thăm trước</p>
+<details class="question">
+<summary>Vì sao?</summary>
+<p>Giả sử có cung <span class="arithmatex">\(u \to v\)</span>, và DFS đến <span class="arithmatex">\(u\)</span> nhưng chưa đến <span class="arithmatex">\(v\)</span>. Ta có:</p>
+<ul>
+<li>Nếu DFS không đi từ <span class="arithmatex">\(u\)</span> đến <span class="arithmatex">\(v\)</span>, nghĩa là phép duyệt đã thăm <span class="arithmatex">\(v\)</span> khi thăm một con khác của <span class="arithmatex">\(u\)</span> rồi nên <span class="arithmatex">\(u \to v\)</span> là cung ngược</li>
+<li>Nếu phép duyệt đi từ <span class="arithmatex">\(u\)</span> đến <span class="arithmatex">\(v\)</span>, cung <span class="arithmatex">\(u \to v\)</span> là cung xuôi</li>
+</ul>
+<p>Vì vậy <span class="arithmatex">\(u \to v\)</span> là cung chéo khi phép duyệt đến <span class="arithmatex">\(v\)</span> trước <span class="arithmatex">\(u\)</span></p>
+</details>
+<p>Biến thể có hướng của cây DFS được dùng để tạo dominator tree của đồ thị có hướng, nhưng đó lại nằm ngoài phạm vi bài viết này và xứng đáng có 1 bài riêng.</p>
+<hr>
+
+<h2 id="nhan-xet-ve-phuong-phap-dp">Nhận xét về phương pháp DP</h2>
+<p><strong>Lưu ý:</strong> Phần này không có trong bài gốc của tác giả mà là cảm nhận của cá nhân mình khi luyện tập các bài trong chủ đề này.</p>
+<h3 id="uu-iem">Ưu điểm</h3>
+<p><strong>Thứ nhất</strong>, phương pháp này khá dễ hiểu với mình. Mình thấy nó giúp giải quyết phần lớn các bài trong 8 bài đầu tiên của phần luyện tập một cách cực kỳ dễ dàng (Các bài chọn hướng cho cạnh).</p>
+<p><strong>Thứ hai</strong>, các Observation trong bài viết cùng với các phần chứng minh rõ ràng đã giúp mình rất nhiều trong việc hiểu được tính chất của cây DFS. Mình thấy nó giải đáp rất tốt các thắc mắc mà các bạn có thể có trong cuốn Giải thuật và Lập trình của thầy Lê Minh Hoàng (sách này trình bày cách dùng <span class="arithmatex">\(num[u]\)</span> và <span class="arithmatex">\(low[u]\)</span>, lần đầu mình đọc nó thấy khá là rắc rối)</p>
+<h3 id="nhuoc-iem">Nhược điểm</h3>
+<p>Tuy nhiên, phương pháp này tồn tại một nhược điểm rất lớn. Đó chính là sự khó khăn trong việc tìm khớp (articulation point) của đồ thị. Khi mình đọc bình luận của bài viết gốc trên Codeforces, mình không thực sự thấy ai có thể tìm được khớp của đồ thị bằng cách này mà hầu như toàn đoán hoặc trả lời sai (ngay chính tác giả cũng có trả lời sai). Vì sao nó lại khó khăn đến như vậy?</p>
+<p>Xét một đỉnh <span class="arithmatex">\(u\)</span> trên cây DFS. Để <span class="arithmatex">\(u\)</span> là một khớp của đồ thị, ta cần có những điều kiện sau đây:</p>
+<ol>
+<li>Giả sử <span class="arithmatex">\(u\)</span> không phải gốc của cây DFS. <span class="arithmatex">\(u\)</span> là khớp của đồ thị khi và chỉ khi tồn tại một nhánh con của <span class="arithmatex">\(u\)</span> (gọi là <span class="arithmatex">\(v\)</span>) không có cạnh ngược "đi qua" cạnh nối giữa <span class="arithmatex">\(u\)</span> và cha của <span class="arithmatex">\(u\)</span>. Như vậy là với mỗi đỉnh con <span class="arithmatex">\(v\)</span> thì bạn phải kiểm tra xem các cạnh ngược trong <span class="arithmatex">\(dp[v]\)</span> có vượt qua đỉnh <span class="arithmatex">\(u\)</span> hay không. Nếu tất cả đều không qua thì <span class="arithmatex">\(u\)</span> mới là khớp. Nghĩ thôi đã thấy làm kiểu này rất mệt não khi bạn cần thông tin của <span class="arithmatex">\(u\)</span> với mỗi <span class="arithmatex">\(v\)</span> trong khi bạn chỉ có thông tin to đùng của <span class="arithmatex">\(dp[u]\)</span> và các <span class="arithmatex">\(dp[v]\)</span>.</li>
+<li>Khi <span class="arithmatex">\(u\)</span> là gốc của cây DFS, <span class="arithmatex">\(u\)</span> là khớp của đồ thị khi và chỉ khi nó có nhiều hơn 1 nhánh con. Trường hợp này thì dễ xử lý hơn nhiều.</li>
+</ol>
+<p>Đến đây thì mình rẽ hướng sang việc tìm hiểu lại cách dùng <span class="arithmatex">\(num[u]\)</span> và <span class="arithmatex">\(low[u]\)</span> và mình thấy rất dễ hiểu. Chỉ với một điều kiện, bạn đã có thể giải quyết trường hợp khó nhằn ở trên. Mình khởi động phương pháp này với bài <a href="https://vn.spoj.com/problems/GRAPH_/">VN SPOJ - GRAPH_</a>.</p>
+<p>Đại khái thì <span class="arithmatex">\(num[u]\)</span> là số thứ tự của đỉnh được thăm đầu tiên đến đỉnh thăm sau cùng, cứ đến đâu thì đánh số cho đỉnh đó theo thứ tự tăng dần của số. Còn <span class="arithmatex">\(low[u]\)</span> là giá trị numbering nhỏ nhất trong các đỉnh có thể đến được từ một đỉnh <span class="arithmatex">\(v\)</span> nào đó của nhánh DFS gốc <span class="arithmatex">\(u\)</span> bằng một cung (với giả thiết rằng <span class="arithmatex">\(u\)</span> có một cung giả nối với chính <span class="arithmatex">\(u\)</span>). Định nghĩa phức tạp như vậy nhưng nếu bạn đã đọc bài viết này thì thấy nó cũng bình thường thôi.</p>
+<p>Như vậy ban đầu khi thăm <span class="arithmatex">\(u\)</span>, ta đánh số thứ tự thăm cho đỉnh <span class="arithmatex">\(u\)</span> và khởi gán</p>
+<div class="arithmatex">\[low[u] = num[u]\]</div>
+<p>Sau đó xét tất cả các đỉnh <span class="arithmatex">\(v\)</span> nối từ <span class="arithmatex">\(u\)</span></p>
+<ul>
+<li>Nếu <span class="arithmatex">\(v\)</span> đã được thăm thì ta cực tiểu hoá <span class="arithmatex">\(low[u]\)</span> như sau (lưu ý là nó là num nhỏ nhất trong các đỉnh có thể đến được từ một đỉnh <span class="arithmatex">\(v\)</span> nào đó của nhánh DFS gốc <span class="arithmatex">\(u\)</span> bằng <strong>một</strong> cung):</li>
+</ul>
+<div class="arithmatex">\[low[u] = min(low[u], num[v])\]</div>
+<ul>
+<li>Nếu <span class="arithmatex">\(v\)</span> chưa được thăm thì ta thăm <span class="arithmatex">\(v\)</span> sau đó cực tiểu hoá <span class="arithmatex">\(low[u]\)</span> như sau (cùng lưu ý như trên):</li>
+</ul>
+<div class="arithmatex">\[low[u] = min(low[u], low[v])\]</div>
+<p>Vậy nếu tồn tại một đỉnh <span class="arithmatex">\(v\)</span> mà <span class="arithmatex">\(low[v] \ge num[u]\)</span> (<span class="arithmatex">\(u\)</span> là cha của <span class="arithmatex">\(v\)</span> trong cây DFS) thì <span class="arithmatex">\(u\)</span> là khớp (nếu <span class="arithmatex">\(u\)</span> là gốc của cây DFS thì nó cần nhiều hơn 1 nhánh con để thành điều kiện đủ). Còn nếu <span class="arithmatex">\(low[v] &gt; num[u]\)</span> thì cạnh <span class="arithmatex">\(uv\)</span> là cầu. Rất đơn giản.</p>
+<h3 id="ve-bai-coi-2006-policija">Về bài <a href="https://dmoj.ca/problem/coi06p2">COI 2006 - Policija</a></h3>
+<p>Cá nhân mình thấy bài này thực sự thách thức với người không quen làm các bài khớp cầu như thế này. Về cơ bản, đề bài cho một đơn đồ thị vô hướng. Ta có thêm <span class="arithmatex">\(Q\)</span> truy vấn bao gồm 2 loại truy vấn.</p>
+<ol>
+<li>Truy vấn 1: cho 2 đỉnh <span class="arithmatex">\(u\)</span> và <span class="arithmatex">\(v\)</span>, hỏi xem nếu ta cắt 1 cạnh <span class="arithmatex">\(xy\)</span> trên đồ thị thì <span class="arithmatex">\(u\)</span> và <span class="arithmatex">\(v\)</span> có cùng thành phần liên thông hay không.</li>
+<li>Truy vấn 2: cho 2 đỉnh <span class="arithmatex">\(u\)</span> và <span class="arithmatex">\(v\)</span>, hỏi xem nếu ta bỏ 1 đỉnh <span class="arithmatex">\(x\)</span> trên đồ thị thì <span class="arithmatex">\(u\)</span> và <span class="arithmatex">\(v\)</span> có cùng thành phần liên thông hay không.</li>
+</ol>
+<p>Dễ dàng thấy được là cạnh <span class="arithmatex">\(xy\)</span> trong truy vấn 1 trước hết cần phải là cầu, còn đỉnh <span class="arithmatex">\(x\)</span> trong truy vấn 2 trước hết cần phải là khớp. Trước khi đi vào giải quyết từng loại truy vấn, chúng ta cần giải quyết một vấn đề, cho 2 đỉnh <span class="arithmatex">\(u\)</span> và <span class="arithmatex">\(v\)</span>, làm sao biết <span class="arithmatex">\(u\)</span> có phải tổ tiên của <span class="arithmatex">\(v\)</span> trên cây DFS hay không? Vì ta đã có một cái cây, ta có thể làm phẳng nó ra thành một mảng để một đỉnh sẽ phụ trách một đoạn trên mảng. Sau đó, <span class="arithmatex">\(u\)</span> là tổ tiên của <span class="arithmatex">\(v\)</span> khi đoạn của <span class="arithmatex">\(v\)</span> nằm trọn trong đoạn của <span class="arithmatex">\(u\)</span>.</p>
+<h4 id="truy-van-1">Truy vấn 1</h4>
+<p>Giả sử <span class="arithmatex">\(y\)</span> là con của <span class="arithmatex">\(x\)</span> trên cây DFS mà không làm mất đi tính tổng quát. Ta kiểm tra xem <span class="arithmatex">\(u\)</span> và <span class="arithmatex">\(v\)</span> có phải là con cháu của <span class="arithmatex">\(y\)</span> trên cây DFS hay không. Nếu không đỉnh nào hoặc cả 2 đều thoả mãn, rõ ràng chúng cùng thành phần liên thông khi cắt cạnh <span class="arithmatex">\(xy\)</span>, ngược lại thì không cùng thành phần liên thông.</p>
+<h4 id="truy-van-2">Truy vấn 2</h4>
+<p>Nếu không đỉnh nào là con cháu của <span class="arithmatex">\(x\)</span> trên cây DFS, chúng rõ ràng cùng thành phần liên thông khi bỏ đỉnh <span class="arithmatex">\(x\)</span></p>
+<p>Nếu có một đỉnh là con cháu của <span class="arithmatex">\(x\)</span>, ta xét xem nó có phải tác nhân làm cho <span class="arithmatex">\(x\)</span> là khớp hay không, nếu có thì <span class="arithmatex">\(u\)</span> và <span class="arithmatex">\(v\)</span> không cùng thành phần liên thông (bởi vì nếu nó không phải tác nhân, bạn vẫn có thể đi lên đỉnh cha của <span class="arithmatex">\(x\)</span> và từ đó đi tới đỉnh còn lại)</p>
+<p>Nếu cả 2 đều là con cháu của <span class="arithmatex">\(x\)</span>, đầu tiên chúng cùng thành phần liên thông nếu chúng ở chung nhánh. Nếu khác nhánh, chúng không cùng thành phần liên thông khi một trong 2 ở nhánh tác nhân. Còn lại thì chúng cùng thành phần liên thông.</p>
+<p>Tuy nhiên làm sao để kiểm tra nó có phải là tác nhân không. Như đã nói, nếu tồn tại một đỉnh <span class="arithmatex">\(v\)</span> mà <span class="arithmatex">\(low[v] \ge num[u]\)</span> (<span class="arithmatex">\(u\)</span> là cha của <span class="arithmatex">\(v\)</span> trong cây DFS) thì <span class="arithmatex">\(u\)</span> là khớp. Làm sao để lấy được đỉnh con của <span class="arithmatex">\(x\)</span> mà từ đó nó đi xuống được đỉnh con cháu đang xét? Ta dùng binary lifting để tìm tổ tiên thứ <span class="arithmatex">\(k\)</span> của một đỉnh trên cây.</p>
+<h4 id="ket-luan">Kết luận</h4>
+<p>Tổng kết lại thì mình thấy bài này sử dụng khá nhiều kỹ thuật mà nếu bạn làm không quen, bạn sẽ mất rất nhiều thời gian suy nghĩ và đôi khi cách làm của bạn lại rất rất dài. Mong là qua đây các bạn sẽ thấy thú vị với phần nhận xét và bài tập này.</p>
+<hr>
+
+<h2 id="luyen-tap">Luyện tập</h2>
+<p>Các bài cần tìm block-cut tree</p>
+<table>
+<thead>
+<tr>
+<th align="center">Problem</th>
+<th align="center">Status</th>
+<th align="center">Submission</th>
+<th align="center">Code</th>
+<th align="center">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/118/problem/E">118E - Bertown Roads</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/118/submission/161629222">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF118-D2-E.cpp">Code</a></td>
+<td align="center">24/06/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/231/problem/E">231E - Cactus</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/231/submission/161657760">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF231-D2-E.cpp">Code</a></td>
+<td align="center">24/06/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/19/problem/E">19E - Fairy</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/19/submission/161872851">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF19-D12-E.cpp">Code</a></td>
+<td align="center">26/06/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/858/problem/F">858F - Wizard's Tour</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/858/submission/172841740">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF858-D12-F.cpp">Code</a></td>
+<td align="center">20/09/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/412/problem/D">412D - Giving Awards</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/412/submission/172901134">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF412-D12-D.cpp">Code</a></td>
+<td align="center">21/09/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/gym/101612/problem/G">101612G - Grand Test</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center">Unavailable public link</td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF101612-Gym-G.cpp">Code</a></td>
+<td align="center">22/09/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://oj.uz/problem/view/CEOI17_oneway">CEOI 2017 - One-Way Streets</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://oj.uz/submission/644273">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/CEOI/CEOI%2017-Oneway.cpp">Code</a></td>
+<td align="center">24/09/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/problemset/problem/732/F">732F - Tourist Reform</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/732/submission/173347954">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF732-D2-F.cpp">Code</a></td>
+<td align="center">24/09/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://vn.spoj.com/problems/GRAPH_/">VN SPOJ - GRAPH_</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center">Unavailable public link</td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20GRAPH_.cpp">Code</a></td>
+<td align="center">26/09/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://dmoj.ca/problem/coi06p2">COI 2006 - Policija</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center">Unavailable public link</td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/COI/COI%2006-Policija.cpp">Code</a></td>
+<td align="center">26/09/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/1391/problem/E">1391E - Pairs of Pairs</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/1391/submission/173826120">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1391-D2-E.cpp">Code</a></td>
+<td align="center">28/09/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/problemset/problem/1000/E">1000E - We Need More Bosses</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/1000/submission/173894271">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1000-D12-E.cpp">Code</a></td>
+<td align="center">29/09/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.codechef.com/problems/SROADS">Codechef SROADS</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://www.codechef.com/viewsolution/75622148">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20SROADS.cpp">Code</a></td>
+<td align="center">29/09/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/406/problem/C">406C - Graph Cutting</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/406/submission/174007392">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF406-D1-C.cpp">Code</a></td>
+<td align="center">29/09/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/555/problem/E">555E - Case of Computer Network</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/555/submission/174201580">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF555-D1-E.cpp">Code</a></td>
+<td align="center">01/10/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/1277/problem/E">1277E - Two Fairs</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/1277/submission/174242495">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1277-D2-E.cpp">Code</a></td>
+<td align="center">01/10/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/962/problem/F">962F - Simple Cycles Edges</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/962/submission/174269457">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF962-D12-F.cpp">Code</a></td>
+<td align="center">01/10/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/1680/problem/F">1680F - Lenient Vertex Cover</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/1680/submission/174773605">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1680-D12-F.cpp">Code</a></td>
+<td align="center">05/10/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/1045/problem/C">1045C - Hyperspace Highways</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/1045/submission/174871453">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1045-D1-C.cpp">Code</a></td>
+<td align="center">06/10/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/1325/problem/F">1325F - Ehab's Last Theorem</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/1325/submission/175158533">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1325-D2-F.cpp">Code</a></td>
+<td align="center">08/10/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://codeforces.com/contest/1364/problem/D">1364D - Ehab's Last Corollary</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://codeforces.com/contest/1364/submission/175165289">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1364-D2-D.cpp">Code</a></td>
+<td align="center">08/10/2022</td>
+</tr>
+<tr>
+<td align="center"><a href="https://atcoder.jp/contests/arc111/tasks/arc111_d">AtCoder ARC 111D - Orientation</a></td>
+<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
+<td align="center"><a href="https://atcoder.jp/contests/arc111/submissions/35518032">Submission</a></td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder111-ARC-D.cpp">Code</a></td>
+<td align="center">08/10/2022</td>
+</tr>
+</tbody>
+</table>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">14/02/2023 (GMT+07)</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">14/02/2023 (GMT+07)</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Bài viết này có tốt không?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết rất hay" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết cần được cải thiện" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Cảm ơn phản hồi tích cực của bạn!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào  <a href="https://github.com/farmerboy95/CPBlogs/issues" target="_blank">GitHub</a> của trang này.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 farmerboy
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/farmerboy95" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+    
+      <script src="../../../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  </body>
+</html>
