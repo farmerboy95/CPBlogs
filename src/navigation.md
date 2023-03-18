@@ -11,6 +11,8 @@ hide:
         - [Cây DFS và ứng dụng](Codeforces/graph/dfs_tree/dfs_tree.md)
     - Xử lý bit
         - [Kĩ thuật Vector cơ sở cho các bài toán XOR](Codeforces/bit_manipulation/xor_basis/xor_basis.md)
+    - Toán học
+        - [Xác suất 101, bí ẩn đằng sau Martingales và các bài tập ứng dụng - Sắp ra mắt](Codeforces/math/martingales/martingales.md)
 - cp-algorithms
     - Đại số
         - [Luỹ thừa nhị phân](cp-algorithms/algebra/binary_exponentiation/binary_exponentiation.md)
@@ -23,6 +25,8 @@ hide:
 - Codechef
     - Cấu trúc dữ liệu
         - [Disjoint Sparse Table](Codechef/data_structures/disjoint_sparse_table/disjoint_sparse_table.md)
+- LeetCode
+    - [Lấy mẫu hồ chứa (Reservoir Sampling)](LeetCode/reservoir_sampling/reservoir_sampling.md)
 - Nguồn khác
     - Phân tích Độ phức tạp
         - [Các ký hiệu tiệm cận](Misc/complexity_analysis/asymptotic_notations/asymptotic_notations.md)
