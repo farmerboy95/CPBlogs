@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/LeetCode/reservoir_sampling/reservoir_sampling/">
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/LeetCode/search_in_rotated_sorted_array/search_in_rotated_sorted_array/">
       
       
-        <link rel="prev" href="../../../Codechef/data_structures/disjoint_sparse_table/disjoint_sparse_table/">
+        <link rel="prev" href="../../reservoir_sampling/reservoir_sampling/">
       
       
-        <link rel="next" href="../../search_in_rotated_sorted_array/search_in_rotated_sorted_array/">
+        <link rel="next" href="../../../Misc/complexity_analysis/asymptotic_notations/asymptotic_notations/">
       
       <link rel="icon" href="../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>Lấy mẫu hồ chứa (Reservoir Sampling) - farmerboy's CP Blogs</title>
+        <title>Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay - farmerboy's CP Blogs</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lay-mau-ho-chua-reservoir-sampling" class="md-skip">
+        <a href="#tim-kiem-tren-mang-a-sap-xep-nhung-a-xoay" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lấy mẫu hồ chứa (Reservoir Sampling)
+              Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay
             
           </span>
         </div>
@@ -308,7 +308,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../reservoir_sampling/reservoir_sampling/" class="md-tabs__link md-tabs__link--active">
         LeetCode
       </a>
     </li>
@@ -982,6 +982,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../reservoir_sampling/reservoir_sampling/" class="md-nav__link">
+        Lấy mẫu hồ chứa (Reservoir Sampling)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -994,12 +1008,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Lấy mẫu hồ chứa (Reservoir Sampling)
+          Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Lấy mẫu hồ chứa (Reservoir Sampling)
+        Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay
       </a>
       
         
@@ -1025,13 +1039,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mo-au" class="md-nav__link">
-    Mở đầu
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#e-bai" class="md-nav__link">
     Đề bài
   </a>
@@ -1039,23 +1046,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cac-cach-tiep-can" class="md-nav__link">
-    Các cách tiếp cận
+  <a href="#tim-kiem-nhi-phan" class="md-nav__link">
+    Tìm kiếm nhị phân
   </a>
   
-    <nav class="md-nav" aria-label="Các cách tiếp cận">
+    <nav class="md-nav" aria-label="Tìm kiếm nhị phân">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cach-tiep-can-1-lay-mau-co-inh" class="md-nav__link">
-    Cách tiếp cận 1: Lấy mẫu cố định
+  <a href="#mo-au" class="md-nav__link">
+    Mở đầu
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cach-tiep-can-2-lay-mau-ho-chua" class="md-nav__link">
-    Cách tiếp cận 2: Lấy mẫu hồ chứa
+  <a href="#thuat-toan" class="md-nav__link">
+    Thuật toán
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phan-tich-o-phuc-tap" class="md-nav__link">
+    Phân tích độ phức tạp
   </a>
   
 </li>
@@ -1076,20 +1090,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../search_in_rotated_sorted_array/search_in_rotated_sorted_array/" class="md-nav__link">
-        Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay
-      </a>
     </li>
   
 
@@ -1280,13 +1280,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mo-au" class="md-nav__link">
-    Mở đầu
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#e-bai" class="md-nav__link">
     Đề bài
   </a>
@@ -1294,23 +1287,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cac-cach-tiep-can" class="md-nav__link">
-    Các cách tiếp cận
+  <a href="#tim-kiem-nhi-phan" class="md-nav__link">
+    Tìm kiếm nhị phân
   </a>
   
-    <nav class="md-nav" aria-label="Các cách tiếp cận">
+    <nav class="md-nav" aria-label="Tìm kiếm nhị phân">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cach-tiep-can-1-lay-mau-co-inh" class="md-nav__link">
-    Cách tiếp cận 1: Lấy mẫu cố định
+  <a href="#mo-au" class="md-nav__link">
+    Mở đầu
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cach-tiep-can-2-lay-mau-ho-chua" class="md-nav__link">
-    Cách tiếp cận 2: Lấy mẫu hồ chứa
+  <a href="#thuat-toan" class="md-nav__link">
+    Thuật toán
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phan-tich-o-phuc-tap" class="md-nav__link">
+    Phân tích độ phức tạp
   </a>
   
 </li>
@@ -1346,177 +1346,129 @@
   
 
 
-<h1 id="lay-mau-ho-chua-reservoir-sampling">Lấy mẫu hồ chứa (Reservoir Sampling)</h1>
+<h1 id="tim-kiem-tren-mang-a-sap-xep-nhung-a-xoay">Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/leetcode.png" width="16" height="16"/> <a href="https://leetcode.com/problems/linked-list-random-node/editorial/">LeetCode 382 -  Linked List Random Node - Editorial</a></p>
-<h2 id="mo-au">Mở đầu</h2>
-<p>Mình gặp một bài tập khá thú vị trên LeetCode mà mình nghĩ là ít người gặp khi thi Competitive Programming, có điều mình thấy nó khá hay. Đó là bài tập về lấy mẫu trong một list (mảng, linked list gì đó). Nghe có vẻ đơn giản nhưng với các giới hạn đi kèm, nó thực sự đáng để lưu lại.</p>
-<p><strong>Lấy mẫu hồ chứa (<a href="https://en.wikipedia.org/wiki/Reservoir_sampling">Reservoir Sampling</a>)</strong> là một lớp của các thuật toán ngẫu nhiên để lấy mẫu trong một không gian mẫu không xác định được số lượng.</p>
+<p><img src="../../../img/leetcode.png" width="16" height="16"/> <a href="https://leetcode.com/problems/search-in-rotated-sorted-array-ii/editorial/">LeetCode 81 -  Search in Rotated Sorted Array II - Editorial</a></p>
 <h2 id="e-bai">Đề bài</h2>
-<p>Cho một linked list đơn, trả về giá trị của một node ngẫu nhiên nào đó trên linked list này. Tuy nhiên, mỗi node phải có cùng xác suất được chọn.</p>
-<p>Bạn cần cài class <code>Solution</code> như sau:</p>
-<ul>
-<li><code>Solution(ListNode head)</code>: Khởi tạo object với một tham số là head của linked list.</li>
-<li><code>int getRandom()</code>: Chọn một node từ linked list và trả về giá trị của nó. Tất cả các node của linked list cần có tỉ lệ được chọn bằng nhau.</li>
-</ul>
-<p>Follow up:</p>
-<ul>
-<li>Giải như nào khi linked list cực lớn và độ dài bạn không biết được?</li>
-<li>Giải như nào để không phải dùng thêm bộ nhớ?</li>
-</ul>
-<h2 id="cac-cach-tiep-can">Các cách tiếp cận</h2>
-<h3 id="cach-tiep-can-1-lay-mau-co-inh">Cách tiếp cận 1: Lấy mẫu cố định</h3>
-<p>Nếu ta được cho một mảng hoặc linked list mà <strong>đã biết kích thước</strong>, ta có thể dễ dàng giải được bài này.</p>
-<p>Nếu được cho một linked list, ta có thể chuyển nó thành một mảng. Với mảng, ta có thể biết được kích thước của nó và có thể truy cập vào từng phần tử ngay lập tức.</p>
-<p>Ta được yêu cầu cài 2 hàm trong object, bao gồm hàm <code>init(head)</code> và <code>getRandom()</code>.</p>
-<p>Hàm <code>init(head)</code> sẽ được gọi khi khởi tạo object. Ta sẽ chuyển đổi linked list đã cho thành một mảng.</p>
-<p>Hàm <code>getRandom()</code> sẽ chỉ đơn giản là lấy mẫu từ mảng ở trên.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/**</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm"> * Definition for singly-linked list.</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cm"> * struct ListNode {</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cm"> *     int val;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cm"> *     ListNode *next;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cm"> *     ListNode() : val(0), next(nullptr) {}</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="cm"> *     ListNode(int x) : val(x), next(nullptr) {}</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="cm"> *     ListNode(int x, ListNode *next) : val(x), next(next) {}</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="cm"> * };</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="cm"> */</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">public</span><span class="o">:</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">range</span><span class="p">;</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="n">Solution</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span><span class="w"> </span><span class="n">head</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">head</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">            </span><span class="n">range</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">            </span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">getRandom</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">pick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">range</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">range</span><span class="p">[</span><span class="n">pick</span><span class="p">];</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="p">};</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="cm">/**</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="cm"> * Your Solution object will be instantiated and called as such:</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="cm"> * Solution* obj = new Solution(head);</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="cm"> * int param_1 = obj-&gt;getRandom();</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="cm"> */</span>
-</code></pre></div>
-<p>Cách giải trên rất đơn giản và nhanh. Nhưng nó đi kèm với hai nhược điểm:</p>
-<ul>
-<li>Nó cần thêm bộ nhớ để lưu trữ các phần tử cho việc lấy mẫu, nên không thoả mãn điều kiện trong follow up (một cách giải với độ phức tạp bộ nhớ là hằng số).</li>
-<li>Nó không thể giải quyết trường hợp khi ta có một danh sách với các phần tử được thêm vào, nghĩa là ta không có đủ bộ nhớ để lưu tất cả các phần tử. Giả sử ta có một luồng số, ta muốn chọn ngẫu nhiêu một số ở bất cứ thời điểm nào. Với cách giải trên thì ta phải lưu tất cả các số trong bộ nhớ, nên không thể mở rộng được.</li>
-</ul>
-<p>Ta sẽ giải quyết 2 nhược điểm này trong cách tiếp cận 2.</p>
-<p>Độ phức tạp thời gian:</p>
-<ul>
-<li>Với hàm <code>init(head)</code>, độ phức tạp thời gian là <span class="arithmatex">\(O(N)\)</span>, với <span class="arithmatex">\(N\)</span> là số phần tử trong linked list.</li>
-<li>Với hàm <code>getRandom()</code>, độ phức tạp thời gian là <span class="arithmatex">\(O(1)\)</span>. Sinh số ngẫu nhiên tốn <span class="arithmatex">\(O(1)\)</span> và truy cập vào phần tử của mảng cũng vậy.</li>
-</ul>
-<p>Độ phức tạp bộ nhớ:</p>
-<ul>
-<li><span class="arithmatex">\(O(N)\)</span>, vì ta phải lưu thêm các phần tử của linked list vào một mảng.</li>
-</ul>
-<h3 id="cach-tiep-can-2-lay-mau-ho-chua">Cách tiếp cận 2: Lấy mẫu hồ chứa</h3>
-<p>Để lấy mẫu ngẫu nhiên mà không biết kích thước mẫu với độ phức tạp bộ nhớ hằng số, ta dùng <a href="https://en.wikipedia.org/wiki/Reservoir_sampling">Lấy mẫu hồ chứa</a>. Nó có thể giải quyết được hai nhược điểm của cách tiếp cận 1.</p>
-<p>Thuật toán Lấy mẫu hồ chứa dùng để lấy mẫu <span class="arithmatex">\(k\)</span> phần tử từ một quần thể có kích thước không xác định. Trong trường hợp này, <span class="arithmatex">\(k = 1\)</span>.</p>
-<p>Lấy mẫu hồ chứa là một họ các thuật toán bao gồm nhiều biến thể qua thời gian. Ở đây ta sẽ nói về một thuật toán đơn giản, nhưng chậm, còn được gọi là Thuật toán R của <a href="https://en.wikipedia.org/wiki/Reservoir_sampling#cite_note-vitter-1">Alan Waterman</a>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># S chứa các phần tử để lấy mẫu, R chứa kết quả lấy mẫu k phần tử</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">def</span> <span class="nf">ReservoirSample</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="mf">1.</span><span class="o">.</span><span class="n">n</span><span class="p">],</span> <span class="n">R</span><span class="p">[</span><span class="mf">1.</span><span class="o">.</span><span class="n">k</span><span class="p">])</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="c1"># làm đầy hồ chứa trước đã</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="k">for</span> <span class="n">i</span> <span class="o">:=</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">k</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="n">R</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">:=</span> <span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="c1"># thay thế các phần tử với xác suất giảm dần</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="k">for</span> <span class="n">i</span> <span class="o">:=</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span> <span class="n">to</span> <span class="n">n</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="c1"># randomInteger(a, b) trả về một số nguyên trong đoạn [a, b]</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="c1"># các số có xác suất được chọn bằng nhau</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="n">j</span> <span class="o">:=</span> <span class="n">randomInteger</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="c1"># nếu j nằm trong hồ chứa thì cho nó vào hồ chứa</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="k">if</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">k</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>            <span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">:=</span> <span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</code></pre></div>
+<p>Có một mảng <code>nums</code> được sắp xếp không giảm (<strong>có thể có hai phần tử trùng nhau</strong>).</p>
+<p>Mảng <code>nums</code> được <strong>xoay</strong> ở một vị trí pivot <code>k</code> (<code>0 &lt;= k &lt; nums.length</code>) sao cho mảng kết quả là <code>[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]</code> (<strong>đánh số từ 0</strong>). Ví dụ, <code>[0,1,2,4,4,4,5,6,6,7]</code> có thể được xoay ở vị trí pivot <code>5</code> và trở thành <code>[4,5,6,6,7,0,1,2,4,4]</code>.</p>
+<p>Cho mảng <code>nums</code> sau khi xoay và một số nguyên <code>target</code>, trả về <code>true</code> nếu <code>target</code> nằm trong <code>nums</code>, ngược lại trả về <code>false</code>.</p>
+<p>Bạn phải giảm số thao tác tìm kiếm đến mức tối thiểu.</p>
+<h2 id="tim-kiem-nhi-phan">Tìm kiếm nhị phân</h2>
+<p>Đây là mở rộng của <a href="https://leetcode.com/problems/search-in-rotated-sorted-array/">bài 33 - Search in Rotated Sorted Array</a>. Điểm khác biệt ở đây là bài này có thể có các phần tử giống nhau.</p>
+<h3 id="mo-au">Mở đầu</h3>
+<p>Sau khi xoay một mảng đã sắp xếp, ta sẽ có 2 mảng đã sắp xếp chập vào nhau.</p>
 <p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Ta tóm tắt ý tưởng thuật toán như sau:</p>
+<p>Gọi mảng đã sắp xếp đầu tiên là <code>F</code>, còn mảng thứ hai là <code>S</code>.</p>
+<p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Ta có thể thấy là tất cả các phần tử của mảng thứ hai <code>S</code> sẽ nhỏ hơn hoặc bằng phần tử đầu tiên <code>start</code> của <code>F</code> (cũng là phần tử đầu tiên của mảng ban đầu).</p>
+<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Với observation này, ta có thể biết được phần tử <code>target</code> nằm trong mảng <code>F</code> hay <code>S</code> bằng cách so sánh nó với phần tử đầu tiên của mảng.</p>
+<p>Giả sử ta đang tìm phần tử <code>target</code> trong mảng <code>arr</code>:</p>
 <ul>
-<li>Đầu tiên, ta làm đầy hồ chứa <span class="arithmatex">\(R[]\)</span> với các phần tử đầu tiên của mẫu <span class="arithmatex">\(S[]\)</span>. Đến cuối cùng, hồ chứa sẽ bao gồm các phần tử mà ta đã lấy từ mẫu.</li>
-<li>Sau đó ta duyệt các phần tử còn lại của mẫu. Với mỗi phần tử, ta cần xác định xem ta có muốn cho nó vào hồ chứa hay không. Nếu có, ta thay thế phần tử trong hồ chứa với phần tử hiện tại.</li>
+<li>Trường hợp 1: Nếu <code>target &gt; arr[start]</code>: <code>target</code> nằm trong mảng <code>F</code></li>
 </ul>
-<p>Câu hỏi đặt ra ở đây là làm sao biết chắc rằng mỗi phần tử có <strong>xác suất được chọn bằng nhau</strong>?</p>
-<p><strong>Thuật toán trên đảm bảo rằng với mỗi phần tử đã được duyệt, chúng sẽ có xác suất được chọn vào hồ chứa bằng nhau.</strong></p>
-<p>Chứng minh như sau:</p>
+<p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
 <ul>
-<li>Giả sử ta có một phần tử ở vị trí <span class="arithmatex">\(i\)</span> (và <span class="arithmatex">\(i &gt; k\)</span>), khi ta duyệt đến phần tử đó, xác suất được chọn vào hồ chứa của nó sẽ là <span class="arithmatex">\(\frac{k}{i}\)</span>, như ta thấy trong thuật toán.</li>
-<li>Sau đó, có khả năng phần tử được chọn vào hồ chứa sẽ bị thay thế bởi một trong các phần tử sau nó. Cụ thể hơn, khi ta đến phần tử <span class="arithmatex">\(x\)</span> (<span class="arithmatex">\(x &gt; i\)</span>), <span class="arithmatex">\(\frac{1}{x}\)</span> sẽ là xác suất cho bất kỳ phần tử nào trong hồ chứa bị thay thế. Vì với bất kỳ vị trí nào trong hồ chứa, sẽ có <span class="arithmatex">\(\frac{1}{x}\)</span> cơ hội nó sẽ bị chọn bởi hàm sinh số ngẫu nhiên. Ngược lại, xác suất sẽ là <span class="arithmatex">\(\frac{x-1}{x}\)</span> cho bất cứ phần tử nào ở lại trong hồ chứa sau khi duyệt xong <span class="arithmatex">\(x\)</span>.</li>
-<li>Tổng kết lại, để bất kỳ phần tử nào trong mẫu có thể được chọn vào hồ chứa kết quả, một dãy các <strong>biến cố độc lập</strong> sẽ phải xảy ra như sau:<ul>
-<li>Thứ nhất, phần tử cần được chọn vào hồ chứa khi duyệt đến phần tử đó.</li>
-<li>Thứ hai, khi duyệt các phần tử tiếp theo, phần tử cần được chọn phải ở lại, nghĩa là không bị thay bởi các phần tử tiếp theo.</li>
+<li>Trường hợp 2: Nếu <code>target &lt; arr[start]</code>: <code>target</code> nằm trong mảng <code>S</code></li>
 </ul>
-</li>
-<li>Như vậy, với một dãy số độ dài <span class="arithmatex">\(n\)</span>, xác suất để bất kỳ phần tử nào nằm trong hồ chứa kết quả sẽ theo công thức sau:</li>
-</ul>
-<div class="arithmatex">\[ \frac{k}{i} \cdot \frac{i}{i+1} \cdot \frac{i+1}{i+2} \dots \frac{n-1}{n} = \frac{k}{n} \]</div>
-<p>Với phân tích trên, ta có thể cài như sau:</p>
+<p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
 <ul>
-<li>Trong hàm <code>init()</code>, ta chỉ cần lưu lại head của linked list, thay vì chuyển nó thành mảng.</li>
-<li>Trong hàm <code>getRandom()</code>, ta lấy mẫu hồ chứa bắt đầu từ head của linked list. Cụ thể hơn là ta duyệt tất cả các phần tử lần lượt để xem thử ta có cần cho nó vào hồ chứa hay không (trong trường hợp này hồ chứa có <span class="arithmatex">\(1\)</span> phần tử).</li>
+<li>Trường hợp 3: Nếu <code>target == arr[start]</code>: <code>target</code> rõ ràng nằm trong mảng <code>F</code>, nhưng cũng có thể nằm trong mảng <code>S</code>.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cm">/**</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cm"> * Definition for singly-linked list.</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cm"> * struct ListNode {</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="cm"> *     int val;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="cm"> *     ListNode *next;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="cm"> *     ListNode() : val(0), next(nullptr) {}</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="cm"> *     ListNode(int x) : val(x), next(nullptr) {}</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="cm"> *     ListNode(int x, ListNode *next) : val(x), next(next) {}</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="cm"> * };</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="cm"> */</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="k">public</span><span class="o">:</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="n">ListNode</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="p">;</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="n">Solution</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span><span class="w"> </span><span class="n">head</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="c1">// seed cho hàm sinh số ngẫu nhiên</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">srand</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">getRandom</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="c1">// ở đây k = 1</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">        </span><span class="c1">// chosenVal là kết quả</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">        </span><span class="c1">// scope là số phần tử đã và đang duyệt qua</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">chosenVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">        </span><span class="n">ListNode</span><span class="w"> </span><span class="o">*</span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">            </span><span class="c1">// nếu random trúng phần tử đầu tiên thì thay thế nó</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">            </span><span class="c1">// ở đây ta dùng chia lấy dư trong scope cho tiện</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">scope</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">                </span><span class="n">chosenVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">;</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">            </span><span class="n">scope</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">            </span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">chosenVal</span><span class="p">;</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="p">};</span>
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="cm">/**</span>
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="cm"> * Your Solution object will be instantiated and called as such:</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="cm"> * Solution* obj = new Solution(head);</span>
-<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="cm"> * int param_1 = obj-&gt;getRandom();</span>
-<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="cm"> */</span>
+<p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Hàm dưới đây cho ta biết phần tử <code>target</code> có thể nằm trong mảng <code>F</code> hay không:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// trả về true nếu element nằm trong mảng đầu tiên, false nếu nó nằm trong mảng thứ hai</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">existsInFirst</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">element</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
 </code></pre></div>
-<p>Độ phức tạp thời gian:</p>
+<h3 id="thuat-toan">Thuật toán</h3>
+<p>Nhớ lại rằng trong tìm kiếm nhị phân bình thường, ta có hai con trỏ (<code>start</code> và <code>end</code>) để giữ phạm vi tìm kiếm trong mảng <code>arr</code>. Ta chia không gian tìm kiếm thành 3 phần: <code>[start, mid)</code>, <code>[mid, mid]</code>, <code>(mid, end]</code>. Ta tiếp tục tìm kiếm <code>target</code> trong một trong các không gian tìm kiếm đó.</p>
+<p>Bằng cách xác định vị trí của <code>arr[mid]</code> và <code>target</code> trong <code>F</code> và <code>S</code>, ta có thể gia giảm không gian tìm kiếm bằng cách tương tự với tìm kiếm nhị phân bình thường:</p>
 <ul>
-<li>Với hàm <code>init(head)</code>, độ phức tạp thời gian là <span class="arithmatex">\(O(1)\)</span>.</li>
-<li>Với hàm <code>getRandom()</code>, độ phức tạp thời gian là <span class="arithmatex">\(O(N)\)</span>, với <span class="arithmatex">\(N\)</span> là số phần tử trong linked list.</li>
+<li>Trường hợp 1: <code>arr[mid]</code> nằm trong <code>F</code>, <code>target</code> nằm trong <code>S</code>: Vì mảng <code>S</code> bắt đầu khi <code>F</code> hết, ta biết <code>target</code> nằm trong đoạn <code>(mid, end]</code>.</li>
 </ul>
-<p>Độ phức tạp bộ nhớ:</p>
+<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
 <ul>
-<li><span class="arithmatex">\(O(1)\)</span>, vì các số các biến là hằng số, không tính linked list ban đầu.</li>
+<li>Trường hợp 2: <code>arr[mid]</code> nằm trong <code>S</code>, <code>target</code> nằm trong <code>F</code>: Tương tự, ta biết <code>target</code> nằm trong đoạn <code>[start, mid)</code>.</li>
 </ul>
+<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></div></p>
+<ul>
+<li>Trường hợp 3: <code>arr[mid]</code> và <code>target</code> nằm trong <code>F</code>: Vì cả hai nằm trong cùng một mảng đã sắp xếp, ta có thể so sánh <code>arr[mid]</code> và <code>target</code> để biết làm sao gia giảm không gian tìm kiếm.</li>
+</ul>
+<p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></div></p>
+<ul>
+<li>Trường hợp 4: <code>arr[mid]</code> và <code>target</code> nằm trong <code>S</code>: Tương tự, vì cả hai nằm trong cùng một mảng đã sắp xếp, ta có thể so sánh <code>arr[mid]</code> và <code>target</code> để biết làm sao gia giảm không gian tìm kiếm.</li>
+</ul>
+<p><div class="lightgallery"><a data-sub-html="figure10" href="../figure10.png"><img alt="figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><strong>Nhưng có một trường hợp đặc biệt</strong>, nếu <code>arr[mid]</code> bằng <code>arr[start]</code>, ta biết rằng <code>arr[mid]</code> có thể nằm trong cả <code>F</code> lẫn <code>S</code>, nên ta không thể tìm vị trí tương đối của <code>target</code> từ đó.</p>
+<p><div class="lightgallery"><a data-sub-html="figure11" href="../figure11.png"><img alt="figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// trả về true nếu ta có thể gia giảm không gian tìm kiếm với không gian tìm kiếm nhị phân hiện tại</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">isBinarySearchHelpful</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">element</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>Trong trường hợp này, ta không còn cách nào khác ngoài việc di chuyển con trỏ <code>start</code> đi tiếp một bước. Vì vậy, có những không gian tìm kiếm cho phép tìm kiếm nhị phân, và một số khác không cho phép.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">search</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">end</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isBinarySearchHelpful</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">mid</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">                </span><span class="n">start</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">                </span><span class="k">continue</span><span class="p">;</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">            </span><span class="c1">// pivot nằm trong mảng đầu tiên hay không</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">pivotArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">existsInFirst</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">mid</span><span class="p">]);</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">            </span><span class="c1">// target nằm trong mảng đầu tiên hay không</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">targetArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">existsInFirst</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">);</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pivotArray</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">targetArray</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// target và pivot nằm khác mảng đã sắp xếp, nhớ lại xor chỉ true khi hai toán tử khác nhau</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pivotArray</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">                    </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// pivot nằm ở mảng đầu, target nằm ở mảng sau</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">                    </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// target nằm ở mảng đầu, pivot nằm ở mảng sau</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// target và pivot nằm cùng mảng đã sắp xếp</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">                    </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">                    </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">    </span><span class="c1">// trả về true nếu ta có thể gia giảm không gian tìm kiếm với không gian tìm kiếm nhị phân hiện tại</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isBinarySearchHelpful</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">element</span><span class="p">;</span>
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="w">    </span><span class="c1">// trả về true nếu element nằm trong mảng đầu tiên, false nếu nó nằm trong mảng thứ hai</span>
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">existsInFirst</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">element</span><span class="p">;</span>
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a><span class="p">};</span>
+</code></pre></div>
+<h3 id="phan-tich-o-phuc-tap">Phân tích độ phức tạp</h3>
+<p><strong>Độ phức tạp thời gian</strong>: <span class="arithmatex">\(O(N)\)</span> trong trường hợp xấu nhất, <span class="arithmatex">\(O(\log N)\)</span> trong trường hợp tốt nhất, với N là độ dài mảng ban đầu.</p>
+<p>Trường hợp xấu nhất: Trường hợp này xảy ra khi tất cả phần tử giống nhau và ta tìm một số khác. Ở mỗi bước, ta chỉ có thể gia giảm không gian tìm kiếm đi 1 đơn vị, vì <code>arr[mid]</code> bằng <code>arr[start]</code> và không thể tìm vị trí tương đối của <code>target</code> từ <code>arr[mid]</code>. Ví dụ: <code>[1, 1, 1, 1, 1, 1, 1], target = 2</code>.</p>
+<p>Trường hợp tốt nhất: Trường hợp này xảy ra khi tất cả phần tử khác nhau. Ở mỗi bước, ta có thể chia không gian tìm kiếm làm đôi như tìm kiếm nhị phân bình thường</p>
+<p>Điều này cũng giải thích câu hỏi follow-up. Ta có thể thấy, vì có thể các phần tử giống nhau, ta có thể lỡ mất cơ hội tìm kiếm nhị phân trên một số không gian tìm kiếm cụ thể. Vì vậy, ta tồn <span class="arithmatex">\(O(N)\)</span> trong trường hợp xấu nhất (với các phần tử trùng nhau), và <span class="arithmatex">\(O(\log N)\)</span> trong trường hợp tốt nhất (không có phần tử trùng nhau).</p>
+<p><strong>Độ phức tạp bộ nhớ</strong>: <span class="arithmatex">\(O(1)\)</span>.</p>
 <h2 id="luyen-tap">Luyện tập</h2>
 <table>
 <thead>
@@ -1530,32 +1482,11 @@
 </thead>
 <tbody>
 <tr>
-<td align="center"><a href="https://leetcode.com/problems/linked-list-random-node/">LC 382 - Linked List Random Node</a></td>
+<td align="center"><a href="https://leetcode.com/problems/search-in-rotated-sorted-array-ii/">LC 81 - Search in Rotated Sorted Array II</a></td>
 <td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
 <td align="center">Unavailable public link</td>
-<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC382-linked-list-random-node.cpp">Code</a></td>
-<td align="center">17/03/2023</td>
-</tr>
-<tr>
-<td align="center"><a href="https://leetcode.com/problems/random-pick-index">LC 398 - Random Pick Index</a></td>
-<td align="center"><img alt="❌" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" title=":x:" /></td>
-<td align="center">Unavailable public link</td>
-<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC398-random-pick-index.cpp">Code</a></td>
-<td align="center">17/03/2023</td>
-</tr>
-<tr>
-<td align="center"><a href="https://leetcode.com/problems/random-flip-matrix">LC 519 - Random Flip Matrix</a></td>
-<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
-<td align="center">Unavailable public link</td>
-<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC519-random-flip-matrix.cpp">Code</a></td>
-<td align="center">17/03/2023</td>
-</tr>
-<tr>
-<td align="center"><a href="https://leetcode.com/problems/random-point-in-non-overlapping-rectangles">LC 497 - Random Point in Non-overlapping Rectangles</a></td>
-<td align="center"><img alt="✅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" title=":white_check_mark:" /></td>
-<td align="center">Unavailable public link</td>
-<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC497-random-point-in-non-overlapping-rectangles.cpp">Code</a></td>
-<td align="center">18/03/2023</td>
+<td align="center"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC81-search-in-rotated-sorted-array.cpp">Code</a></td>
+<td align="center">08/03/2022</td>
 </tr>
 </tbody>
 </table>
