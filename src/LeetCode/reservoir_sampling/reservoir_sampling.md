@@ -202,7 +202,7 @@ public:
 
 | Problem | Status | Submission | Code | Date |
 | :---: | :-----------: | :---: | :---: | :---: |
-| [LC 382 - Linked List Random Node](https://codeforces.com/contest/1575/problem/F) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC382-linked-list-random-node.cpp) | 17/03/2023 |
+| [LC 382 - Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC382-linked-list-random-node.cpp) | 17/03/2023 |
 | [LC 398 - Random Pick Index](https://leetcode.com/problems/random-pick-index) | :x: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC398-random-pick-index.cpp) | 17/03/2023 |
 | [LC 519 - Random Flip Matrix](https://leetcode.com/problems/random-flip-matrix) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC519-random-flip-matrix.cpp) | 17/03/2023 |
 | [LC 497 - Random Point in Non-overlapping Rectangles](https://leetcode.com/problems/random-point-in-non-overlapping-rectangles) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC497-random-point-in-non-overlapping-rectangles.cpp) | 18/03/2023 |

@@ -12,6 +12,7 @@ hide:
     - Xử lý bit
         - [Kĩ thuật Vector cơ sở cho các bài toán XOR](Codeforces/bit_manipulation/xor_basis/xor_basis.md)
     - Toán học
+        - [Floor, ceiling và bất đẳng thức cho người mới học - Sấp ra mắt](Codeforces/math/floors_ceilings_inequalities/floors_ceilings_inequalities.md)
         - [Xác suất 101, bí ẩn đằng sau Martingales và các bài tập ứng dụng - Sắp ra mắt](Codeforces/math/martingales/martingales.md)
 - cp-algorithms
     - Đại số
@@ -27,6 +28,7 @@ hide:
         - [Disjoint Sparse Table](Codechef/data_structures/disjoint_sparse_table/disjoint_sparse_table.md)
 - LeetCode
     - [Lấy mẫu hồ chứa (Reservoir Sampling)](LeetCode/reservoir_sampling/reservoir_sampling.md)
+    - [Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay](LeetCode/search_in_rotated_sorted_array/search_in_rotated_sorted_array.md)
 - Nguồn khác
     - Phân tích Độ phức tạp
         - [Các ký hiệu tiệm cận](Misc/complexity_analysis/asymptotic_notations/asymptotic_notations.md)
