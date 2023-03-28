@@ -295,7 +295,7 @@ Thông thường có hai hành vi khi thực hiện phép chia số nguyên vớ
 
 Lưu ý rằng `std::floor` và `std::ceil` là các thao tác trên số có dấu chấm động, và kết quả cũng thuộc kiểu đó. Nên chúng có thể không chính xác khi chuyển thành số nguyên, vì vậy chúng không nên được sử dụng trong phần lớn trong thực tế.
 
-# Luyện tập
+## Luyện tập
 
 Ở đây chỉ lưu code của những ví dụ ở trên
 
