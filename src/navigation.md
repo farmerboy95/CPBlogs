@@ -12,7 +12,7 @@ hide:
     - Xử lý bit
         - [Kĩ thuật Vector cơ sở cho các bài toán XOR](Codeforces/bit_manipulation/xor_basis/xor_basis.md)
     - Toán học
-        - [Floor, ceiling và bất đẳng thức cho người mới học - Sấp ra mắt](Codeforces/math/floors_ceilings_inequalities/floors_ceilings_inequalities.md)
+        - [Floor, ceiling và bất đẳng thức cho người mới học](Codeforces/math/floors_ceilings_inequalities/floors_ceilings_inequalities.md)
         - [Xác suất 101, bí ẩn đằng sau Martingales và các bài tập ứng dụng - Sắp ra mắt](Codeforces/math/martingales/martingales.md)
 - cp-algorithms
     - Đại số
