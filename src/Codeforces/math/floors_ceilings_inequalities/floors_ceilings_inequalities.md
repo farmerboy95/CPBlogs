@@ -293,7 +293,7 @@ Thông thường có hai hành vi khi thực hiện phép chia số nguyên vớ
 
 Để tính ceiling của $\frac{a}{b}$ với số nguyên dương $b$ và số nguyên $a$, ta có thể dùng kết quả trước đó: $\lceil \frac{a}{b} \rceil = \lfloor \frac{a+b-1}{b} \rfloor$. Việc cài đặt thì xin mời bạn đọc. 
 
-Lưu ý rằng `std::floor` và `std::ceil` là các thao tác trên số có dấu chấm động, và kết quả cũng thuộc kiểu đó. Nên chúng có thể không chính xác khi chuyển thành số nguyên, vì vậy chúng không nên được sử dụng trong phần lớn trong thực tế.
+Lưu ý rằng `std::floor` và `std::ceil` là các thao tác trên số có dấu chấm động, và kết quả cũng thuộc kiểu đó. Nên chúng có thể không chính xác khi chuyển thành số nguyên, vì vậy chúng hầu như không nên được sử dụng trong thực tế.
 
 ## Luyện tập
 
