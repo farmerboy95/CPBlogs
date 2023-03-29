@@ -1649,7 +1649,7 @@
 <li>Làm tròn kết quả về <span class="arithmatex">\(0\)</span>: ví dụ như C++. Lý do là để phòng ngừa tràn số khi nhân kết quả với mẫu số. Cho nên, với số dương <span class="arithmatex">\(a\)</span>, cách làm sẽ tương tự Python, nhưng với số âm <span class="arithmatex">\(a\)</span>, nó sẽ trả về <span class="arithmatex">\(\lceil \frac{a}{b} \rceil\)</span>, và <code>a % b</code> sẽ cho ra khoảng cách âm đến bội tương ứng của <span class="arithmatex">\(b\)</span>.</li>
 </ul>
 <p>Để tính ceiling của <span class="arithmatex">\(\frac{a}{b}\)</span> với số nguyên dương <span class="arithmatex">\(b\)</span> và số nguyên <span class="arithmatex">\(a\)</span>, ta có thể dùng kết quả trước đó: <span class="arithmatex">\(\lceil \frac{a}{b} \rceil = \lfloor \frac{a+b-1}{b} \rfloor\)</span>. Việc cài đặt thì xin mời bạn đọc. </p>
-<p>Lưu ý rằng <code>std::floor</code> và <code>std::ceil</code> là các thao tác trên số có dấu chấm động, và kết quả cũng thuộc kiểu đó. Nên chúng có thể không chính xác khi chuyển thành số nguyên, vì vậy chúng không nên được sử dụng trong phần lớn trong thực tế.</p>
+<p>Lưu ý rằng <code>std::floor</code> và <code>std::ceil</code> là các thao tác trên số có dấu chấm động, và kết quả cũng thuộc kiểu đó. Nên chúng có thể không chính xác khi chuyển thành số nguyên, vì vậy chúng hầu như không nên được sử dụng trong thực tế.</p>
 <h2 id="luyen-tap">Luyện tập</h2>
 <p>Ở đây chỉ lưu code của những ví dụ ở trên</p>
 <table>
