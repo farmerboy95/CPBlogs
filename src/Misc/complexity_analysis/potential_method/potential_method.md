@@ -1,7 +1,8 @@
 # Phương pháp Tiềm năng
 
 ## Nguồn
-[Potential method - Wikipedia](https://en.wikipedia.org/wiki/Potential_method)
+
+<img src="/CPBlogs/img/wikipedia.png" width="16" height="16"/> [Potential method - Wikipedia](https://en.wikipedia.org/wiki/Potential_method)
 
 ## Lời tựa
 

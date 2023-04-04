@@ -2,7 +2,7 @@
 
 ## Nguồn
 
-<img src="../../../img/leetcode.png" width="16" height="16"/> [LeetCode 81 -  Search in Rotated Sorted Array II - Editorial](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/editorial/)
+<img src="/CPBlogs/img/leetcode.png" width="16" height="16"/> [LeetCode 81 -  Search in Rotated Sorted Array II - Editorial](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/editorial/)
 
 ## Đề bài
 

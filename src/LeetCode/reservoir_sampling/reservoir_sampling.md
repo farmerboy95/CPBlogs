@@ -2,7 +2,7 @@
 
 ## Nguồn
 
-<img src="../../../img/leetcode.png" width="16" height="16"/> [LeetCode 382 -  Linked List Random Node - Editorial](https://leetcode.com/problems/linked-list-random-node/editorial/)
+<img src="/CPBlogs/img/leetcode.png" width="16" height="16"/> [LeetCode 382 -  Linked List Random Node - Editorial](https://leetcode.com/problems/linked-list-random-node/editorial/)
 
 ## Mở đầu
 

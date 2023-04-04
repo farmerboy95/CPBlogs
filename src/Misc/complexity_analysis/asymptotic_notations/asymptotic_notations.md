@@ -2,7 +2,7 @@
 
 ## Nguồn
 
-[What are Asymptotic Notations in Complexity Analysis of Algorithms - GeeksForGeeks](https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations)
+<img src="/CPBlogs/img/geeksforgeeks.png" width="16" height="16"/> [What are Asymptotic Notations in Complexity Analysis of Algorithms - GeeksForGeeks](https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations)
 
 Hình vẽ tham khảo từ [Asymptotic Analysis: Big-O Notation and More - Programiz](https://www.programiz.com/dsa/asymptotic-notations)
 

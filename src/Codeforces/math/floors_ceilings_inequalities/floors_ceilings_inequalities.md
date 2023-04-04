@@ -2,7 +2,7 @@
 
 ## Nguồn
 
-<img src="../../../../img/codeforces.png" width="16" height="16"/> [[Tutorial] Floors, ceilings and inequalities for beginners (with some programming tips)](https://codeforces.com/blog/entry/113633)
+<img src="/CPBlogs/img/codeforces.png" width="16" height="16"/> [[Tutorial] Floors, ceilings and inequalities for beginners (with some programming tips)](https://codeforces.com/blog/entry/113633)
 
 ## Cơ bản về bất đẳng thức
 
