@@ -35,3 +35,6 @@ hide:
         - [Phương pháp Tiềm năng](Misc/complexity_analysis/potential_method/potential_method.md)
     - Cấu trúc dữ liệu
         - [Splay Tree: Một mình anh chấp hết](Misc/data_structures/splay_tree/splay_tree.md)
+    - Xác suất
+        - [Xác suất](Misc/probability/probability/probability.md)
+        - [Kỳ vọng tuyến tính - Sắp ra mắt](Misc/probability/linearity_of_expectation/linearity_of_expectation.md)
