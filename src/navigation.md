@@ -29,6 +29,7 @@ hide:
 - LeetCode
     - [Lấy mẫu hồ chứa (Reservoir Sampling)](LeetCode/reservoir_sampling/reservoir_sampling.md)
     - [Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay](LeetCode/search_in_rotated_sorted_array/search_in_rotated_sorted_array.md)
+    - [Tính toán biểu thức từ xâu](LeetCode/basic_calculator/basic_calculator.md)
 - Nguồn khác
     - Phân tích Độ phức tạp
         - [Các ký hiệu tiệm cận](Misc/complexity_analysis/asymptotic_notations/asymptotic_notations.md)
@@ -37,4 +38,5 @@ hide:
         - [Splay Tree: Một mình anh chấp hết](Misc/data_structures/splay_tree/splay_tree.md)
     - Xác suất
         - [Xác suất](Misc/probability/probability/probability.md)
+        - [Phân phối chuẩn tắc - Sắp ra mắt](Misc/probability/normal_distribution/normal_distribution.md)
         - [Kỳ vọng tuyến tính - Sắp ra mắt](Misc/probability/linearity_of_expectation/linearity_of_expectation.md)
