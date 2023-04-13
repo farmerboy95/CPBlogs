@@ -39,4 +39,4 @@ hide:
     - Xác suất
         - [Xác suất](Misc/probability/probability/probability.md)
         - [Phân phối chuẩn tắc - Sắp ra mắt](Misc/probability/normal_distribution/normal_distribution.md)
-        - [Kỳ vọng tuyến tính - Sắp ra mắt](Misc/probability/linearity_of_expectation/linearity_of_expectation.md)
+        - [Kỳ vọng tuyến tính](Misc/probability/linearity_of_expectation/linearity_of_expectation.md)
