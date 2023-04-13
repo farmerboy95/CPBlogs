@@ -38,5 +38,4 @@ hide:
         - [Splay Tree: Một mình anh chấp hết](Misc/data_structures/splay_tree/splay_tree.md)
     - Xác suất
         - [Xác suất](Misc/probability/probability/probability.md)
-        - [Phân phối chuẩn tắc - Sắp ra mắt](Misc/probability/normal_distribution/normal_distribution.md)
         - [Kỳ vọng tuyến tính](Misc/probability/linearity_of_expectation/linearity_of_expectation.md)
