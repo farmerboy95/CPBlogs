@@ -43,6 +43,7 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - lightgallery
+  - admonition
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
