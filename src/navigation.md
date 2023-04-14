@@ -39,3 +39,6 @@ hide:
     - Xác suất
         - [Xác suất](Misc/probability/probability/probability.md)
         - [Kỳ vọng tuyến tính](Misc/probability/linearity_of_expectation/linearity_of_expectation.md)
+    - Kinh nghiệm
+        - [Làm thế nào để giỏi hơn trong lập trình thi đấu?](Misc/experience/being_better/being_better.md)
+        - [Chiến thuật khi thi ICPC](Misc/experience/icpc_strategy/icpc_strategy.md)
