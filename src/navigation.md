@@ -13,6 +13,7 @@ hide:
         - [Kĩ thuật Vector cơ sở cho các bài toán XOR](Codeforces/bit_manipulation/xor_basis/xor_basis.md)
     - Toán học
         - [Floor, ceiling và bất đẳng thức cho người mới học](Codeforces/math/floors_ceilings_inequalities/floors_ceilings_inequalities.md)
+        - [Tổng và Giá trị kỳ vọng - Sắp ra mắt](Codeforces/math/sums_and_expected_value/sums_and_expected_value.md)
         - [Xác suất 101, bí ẩn đằng sau Martingales và các bài tập ứng dụng - Sắp ra mắt](Codeforces/math/martingales/martingales.md)
 - cp-algorithms
     - Đại số
@@ -22,6 +23,7 @@ hide:
             - [Minimum Stack / Minimum Queue](cp-algorithms/data_structures/fundamentals/min_stack_min_queue/min_stack_min_queue.md)
             - [Sparse Table](cp-algorithms/data_structures/fundamentals/sparse_table/sparse_table.md)
         - Cây
+            - [Disjoint Set Union - Sắp ra mắt](cp-algorithms/data_structures/trees/dsu/dsu.md)
             - [Sqrt Tree](cp-algorithms/data_structures/trees/sqrt_tree/sqrt_tree.md)
 - Codechef
     - Cấu trúc dữ liệu
@@ -30,6 +32,7 @@ hide:
     - [Lấy mẫu hồ chứa (Reservoir Sampling)](LeetCode/reservoir_sampling/reservoir_sampling.md)
     - [Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay](LeetCode/search_in_rotated_sorted_array/search_in_rotated_sorted_array.md)
     - [Tính toán biểu thức từ xâu](LeetCode/basic_calculator/basic_calculator.md)
+    - [Các thuật toán sắp xếp - Sắp ra mắt](LeetCode/sorting/sorting.md)
 - Nguồn khác
     - Phân tích Độ phức tạp
         - [Các ký hiệu tiệm cận](Misc/complexity_analysis/asymptotic_notations/asymptotic_notations.md)
@@ -38,6 +41,7 @@ hide:
         - [Splay Tree: Một mình anh chấp hết](Misc/data_structures/splay_tree/splay_tree.md)
     - Xác suất
         - [Xác suất](Misc/probability/probability/probability.md)
+        - [Giá trị kỳ vọng](Misc/probability/expected_value/expected_value.md)
         - [Kỳ vọng tuyến tính](Misc/probability/linearity_of_expectation/linearity_of_expectation.md)
     - Kinh nghiệm
         - [Làm thế nào để giỏi hơn trong lập trình thi đấu?](Misc/experience/being_better/being_better.md)
