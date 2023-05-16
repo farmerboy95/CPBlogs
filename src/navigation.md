@@ -25,6 +25,7 @@ hide:
         - Cây
             - [Disjoint Set Union - Sắp ra mắt](cp-algorithms/data_structures/trees/dsu/dsu.md)
             - [Sqrt Tree](cp-algorithms/data_structures/trees/sqrt_tree/sqrt_tree.md)
+            - [Disjoint Set Union](cp-algorithms/data_structures/trees/dsu/dsu.md)
 - Codechef
     - Cấu trúc dữ liệu
         - [Disjoint Sparse Table](Codechef/data_structures/disjoint_sparse_table/disjoint_sparse_table.md)
