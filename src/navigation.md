@@ -23,7 +23,6 @@ hide:
             - [Minimum Stack / Minimum Queue](cp-algorithms/data_structures/fundamentals/min_stack_min_queue/min_stack_min_queue.md)
             - [Sparse Table](cp-algorithms/data_structures/fundamentals/sparse_table/sparse_table.md)
         - Cây
-            - [Disjoint Set Union - Sắp ra mắt](cp-algorithms/data_structures/trees/dsu/dsu.md)
             - [Sqrt Tree](cp-algorithms/data_structures/trees/sqrt_tree/sqrt_tree.md)
             - [Disjoint Set Union](cp-algorithms/data_structures/trees/dsu/dsu.md)
 - Codechef
