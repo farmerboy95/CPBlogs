@@ -470,6 +470,75 @@ Lần đầu tiên việc đánh giá $O(\alpha(n))$ được trình bày vào n
 
 Cuối cùng vào nằm 1989, Fredman và Sachs chứng minh rằng trong mô hình tính toán được chấp nhận, bất kỳ thuật toán DSU nào cũng phải hoạt động trong thời gian trung bình tối thiểu $O(\alpha(n))$ (Fredman, Saks, "The cell probe complexity of dynamic data structures").
 
+## Template
+
+Đây là template mình hay dùng cho việc cài đặt DSU. Template này được lấy từ code của thư viện AtCoder.
+
+```cpp
+struct DisjointSetUnion {
+  public:
+    // tạo đồ thị n đỉnh 0 cạnh
+    DisjointSetUnion() : _n(0) {}
+    DisjointSetUnion(int n) : _n(n), parent_or_size(n, -1) {}
+
+    // thêm cạnh (u, v)
+    // Nếu đỉnh u và v nằm trong cùng thành phần liên thông,
+    // hàm trả về đại diện của thành phần liên thông đó.
+    // Ngược lại, hàm trả về đại diện của thành phần liên thông mới.
+    int merge(int u, int v) {
+        assert(0 <= u && u < _n);
+        assert(0 <= v && v < _n);
+        int x = leader(u), y = leader(v);
+        if (x == y) return x;
+        if (-parent_or_size[x] < -parent_or_size[y]) swap(x, y);
+        parent_or_size[x] += parent_or_size[y];
+        parent_or_size[y] = x;
+        return x;
+    }
+
+    // Hàm trả về true khi u và v nằm trong cùng thành phần liên thông, ngược lại trả về false
+    bool same(int u, int v) {
+        assert(0 <= u && u < _n);
+        assert(0 <= v && v < _n);
+        return leader(u) == leader(v);
+    }
+
+    // Hàm trả về đại diện của thành phần liên thông chứa u
+    int leader(int u) {
+        assert(0 <= u && u < _n);
+        if (parent_or_size[u] < 0) return u;
+        return parent_or_size[u] = leader(parent_or_size[u]);
+    }
+
+    // Hàm trả về kích thước của thành phần liên thông chứa u
+    int size(int u) {
+        assert(0 <= u && u < _n);
+        return -parent_or_size[leader(u)];
+    }
+
+    // Hàm trả về tất cả các thành phần liên thông của đồ thị, mỗi thành phần nằm trong 1 mảng con
+    vector<vector<int>> groups() {
+        vector<int> leader_buf(_n), group_size(_n);
+        FOR(i,0,_n-1) {
+            leader_buf[i] = leader(i);
+            group_size[leader_buf[i]]++;
+        }
+        vector<vector<int>> result(_n);
+        FOR(i,0,_n-1) result[i].reserve(group_size[i]);
+        FOR(i,0,_n-1) result[leader_buf[i]].push_back(i);
+        result.erase(
+            std::remove_if(result.begin(), result.end(),
+                           [&](const std::vector<int>& v) { return v.empty(); }),
+            result.end());
+        return result;
+    }
+
+  private:
+    int _n;
+    vector<int> parent_or_size;
+};
+```
+
 ## Luyện tập
 
 | Problem | Status | Submission | Code | Date |
