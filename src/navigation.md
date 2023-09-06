@@ -14,8 +14,8 @@ comment: false
         - [Kĩ thuật Vector cơ sở cho các bài toán XOR](Codeforces/bit_manipulation/xor_basis/xor_basis.md)
     - Toán học
         - [Floor, ceiling và bất đẳng thức cho người mới học](Codeforces/math/floors_ceilings_inequalities/floors_ceilings_inequalities.md)
-        <!-- - [Tổng và Giá trị kỳ vọng](Codeforces/math/sums_and_expected_value/sums_and_expected_value.md)
-        - [Xác suất 101, bí ẩn đằng sau Martingales và các bài tập ứng dụng - Sắp ra mắt](Codeforces/math/martingales/martingales.md) -->
+        - [Tổng và Giá trị kỳ vọng - Sắp ra mắt](Codeforces/math/sums_and_expected_value/sums_and_expected_value.md)
+        - [Xác suất 101, bí ẩn đằng sau Martingales và các bài tập ứng dụng - Sắp ra mắt](Codeforces/math/martingales/martingales.md)
 - cp-algorithms
     - Đại số
         - [Luỹ thừa nhị phân](cp-algorithms/algebra/binary_exponentiation/binary_exponentiation.md)
