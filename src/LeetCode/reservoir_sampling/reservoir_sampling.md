@@ -115,7 +115,7 @@ def ReservoirSample(S[1..n], R[1..k])
             R[j] := S[i]
 ```
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 Ta tóm tắt ý tưởng thuật toán như sau:
 

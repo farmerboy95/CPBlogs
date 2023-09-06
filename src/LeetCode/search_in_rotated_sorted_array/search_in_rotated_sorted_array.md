@@ -22,15 +22,15 @@ Bạn phải giảm số thao tác tìm kiếm đến mức tối thiểu.
 
 Sau khi xoay một mảng đã sắp xếp, ta sẽ có 2 mảng đã sắp xếp chập vào nhau.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 Gọi mảng đã sắp xếp đầu tiên là `F`, còn mảng thứ hai là `S`.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Ta có thể thấy là tất cả các phần tử của mảng thứ hai `S` sẽ nhỏ hơn hoặc bằng phần tử đầu tiên `start` của `F` (cũng là phần tử đầu tiên của mảng ban đầu).
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Với observation này, ta có thể biết được phần tử `target` nằm trong mảng `F` hay `S` bằng cách so sánh nó với phần tử đầu tiên của mảng.
 
@@ -38,15 +38,15 @@ Giả sử ta đang tìm phần tử `target` trong mảng `arr`:
 
 - Trường hợp 1: Nếu `target > arr[start]`: `target` nằm trong mảng `F`
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 - Trường hợp 2: Nếu `target < arr[start]`: `target` nằm trong mảng `S`
 
-![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
+![](figure5.png){ style="display: block; margin: 0 auto" }
 
 - Trường hợp 3: Nếu `target == arr[start]`: `target` rõ ràng nằm trong mảng `F`, nhưng cũng có thể nằm trong mảng `S`.
 
-![!figure6](figure6.png){ style="display: block; margin: 0 auto" }
+![](figure6.png){ style="display: block; margin: 0 auto" }
 
 Hàm dưới đây cho ta biết phần tử `target` có thể nằm trong mảng `F` hay không:
 
@@ -65,23 +65,23 @@ Bằng cách xác định vị trí của `arr[mid]` và `target` trong `F` và 
 
 - Trường hợp 1: `arr[mid]` nằm trong `F`, `target` nằm trong `S`: Vì mảng `S` bắt đầu khi `F` hết, ta biết `target` nằm trong đoạn `(mid, end]`.
 
-![!figure7](figure7.png){ style="display: block; margin: 0 auto" }
+![](figure7.png){ style="display: block; margin: 0 auto" }
 
 - Trường hợp 2: `arr[mid]` nằm trong `S`, `target` nằm trong `F`: Tương tự, ta biết `target` nằm trong đoạn `[start, mid)`.
 
-![!figure8](figure8.png){ style="display: block; margin: 0 auto" }
+![](figure8.png){ style="display: block; margin: 0 auto" }
 
 - Trường hợp 3: `arr[mid]` và `target` nằm trong `F`: Vì cả hai nằm trong cùng một mảng đã sắp xếp, ta có thể so sánh `arr[mid]` và `target` để biết làm sao gia giảm không gian tìm kiếm.
 
-![!figure9](figure9.png){ style="display: block; margin: 0 auto" }
+![](figure9.png){ style="display: block; margin: 0 auto" }
 
 - Trường hợp 4: `arr[mid]` và `target` nằm trong `S`: Tương tự, vì cả hai nằm trong cùng một mảng đã sắp xếp, ta có thể so sánh `arr[mid]` và `target` để biết làm sao gia giảm không gian tìm kiếm.
 
-![!figure10](figure10.png){ style="display: block; margin: 0 auto" }
+![](figure10.png){ style="display: block; margin: 0 auto" }
 
 **Nhưng có một trường hợp đặc biệt**, nếu `arr[mid]` bằng `arr[start]`, ta biết rằng `arr[mid]` có thể nằm trong cả `F` lẫn `S`, nên ta không thể tìm vị trí tương đối của `target` từ đó.
 
-![!figure11](figure11.png){ style="display: block; margin: 0 auto" }
+![](figure11.png){ style="display: block; margin: 0 auto" }
 
 ```cpp
 // trả về true nếu ta có thể gia giảm không gian tìm kiếm với không gian tìm kiếm nhị phân hiện tại

@@ -437,7 +437,7 @@ Vậy kỳ vọng tổng số tiền thắng từ khi bắt đầu chơi đến 
 
 ### Bài 2
 
-![!figure1](figure1.jpeg){ style="display: block; margin: 0 auto" }
+![](figure1.jpeg){ style="display: block; margin: 0 auto" }
 
 Một con bọ đi từ một đỉnh A của một hình khối có 12 mặt, 20 đỉnh, mỗi mặt là một ngũ giác đều (dodecahedron). Gọi một đỉnh kề với đỉnh A là đỉnh B.
 
@@ -465,7 +465,7 @@ Mỗi giây nó đi ngẫu nhiên dọc theo một cạnh đến một đỉnh k
 
 ### Bài 3
 
-![!figure2](figure2.jpeg){ style="display: block; margin: 0 auto" }
+![](figure2.jpeg){ style="display: block; margin: 0 auto" }
 
 Có hai hộp bóng, hộp bên trái chứa 1 bóng đỏ và 2 bóng xanh, hộp bên phải chứa 2 bóng xanh và 3 bóng đỏ. Trong một trò chơi, bạn phải chọn ngẫu nhiên và đồng thời một bóng mỗi hộp với cả hai tay.
 
@@ -525,7 +525,7 @@ Bạn tung một đồng xu công bằng vài lần. Tìm kỳ vọng số lần
 
 ### Bài 5
 
-![!figure3](figure3.jpeg){ style="display: block; margin: 0 auto" }
+![](figure3.jpeg){ style="display: block; margin: 0 auto" }
 
 Một con bọ đi từ một đỉnh của một hình khối có 20 mặt, mỗi mặt là một tam giác đều (icosahedron). 
 
@@ -565,7 +565,7 @@ Mỗi giây nó đi ngẫu nhiên dọc theo một cạnh đến một đỉnh k
 
 ### Bài 6
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 Gọi các đỉnh của một tứ diện là A, B, C và D.
 

@@ -22,7 +22,7 @@ Kí hiệu Theta bao hàm **cận trên và cận dưới** của hàm. Vì nó 
 
 Gọi $g$ và $f$ là các hàm ánh xạ từ tập số tự nhiên đến chính nó. Hàm $f$ được coi là $\Theta(g)$, khi tồn tại hằng số $c_1, c_2 > 0$ và một số tự nhiên $n_0$ sao cho $c_1 * g(n) \leq f(n) \leq c_2 * g(n)$ với mọi $n \geq n_0$.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 Biểu diễn toán học của kí hiệu Theta:
 
@@ -48,7 +48,7 @@ Kí hiệu Big-O đại diện cho **cận trên** của thời gian chạy củ
 
 Nếu $f(n)$ mô tả thời gian chạy của thuật toán, $f(n)$ là $O(g(n))$ nếu tồn tại một hằng số dương $C$ và $n_0$ mà $0 \leq f(n) \leq C * g(n)$ với mọi $n \geq n_0$.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Biểu diễn toán học của kí hiệu Big-O:
 
@@ -79,7 +79,7 @@ Kí hiệu Omega đại diện cho **cận dưới** của thời gian chạy c�
 
 Gọi $g$ và $f$ là các hàm ánh xạ từ tập số tự nhiên đến chính nó. Hàm $f$ được coi là $\Omega(g)$, khi tồn tại hằng số $c > 0$ và một số tự nhiên $n_0$ sao cho $c * g(n) \leq f(n)$ với mọi $n \geq n_0$.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Biểu diễn toán học của kí hiệu Omega:
 

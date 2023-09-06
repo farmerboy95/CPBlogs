@@ -50,7 +50,7 @@ Giới hạn:
 - Thứ tự ưu tiên với dấu ngoặc đơn.
 - Các dấu cách (space) không làm ảnh hưởng đến việc tính toán biểu thức.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 ## Cách giải 1: Stack và Đảo xâu
 
@@ -60,7 +60,7 @@ Bài này rất hợp cho việc dùng stack. Vì biểu thức có thể có ng
 
 Ta đẩy từng phần tử của biểu thức vào stack cho đến khi nhận được dấu ngoặc đóng `)`. Sau đó ta lấy từng phần tử ra khỏi stack và tính biểu thức luôn. Điều này được thực hiện cho đến khi ta thấy dấu mở ngoặc `(` tương ứng. Cách tính này rất phổ biến khi dùng stack. Tuy nhiên, nếu bạn để ý đến cách ta sẽ tính ra đáp án, bạn sẽ nhận ra rằng ta sẽ xử lý các giá trị từ phải sang trái trong khi lẽ ra phải là ngược lại.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Với ví dụ trên, ta nhận ra rằng dùng push và pop đơn giản sẽ không thể giải được. Ta cần hiểu `+` và `-` hoạt động như thế nào. `+` có tính chất kết hợp. Với biểu thức $A + B + C$, ta có $(A + B) + C = A + (B + C)$. Tuy nhiên, `-` không có tính chất này, đây là nguyên nhân vì sao không thể làm như vậy.
 
@@ -68,7 +68,7 @@ Nếu ta dùng stack và đọc các phần tử của biểu thức từ trái 
 
 Bài này có thể giải rất dễ dàng bằng cách đảo xây và dùng stack. Đảo xâu hiệu quả vì giờ ta cho các phần tử của biểu thức vào stack từ phải sang trái và việc tính toán sẽ được thực hiện đúng từ trái sang phải.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 ### Thuật toán
 
@@ -176,7 +176,7 @@ Cần lưu ý là làm thế sẽ làm cho biểu thức phức tạp hơn, ngh�
 
 Ta có thể giải quyết vấn đề này bằng cách làm cơ bản, và kết hợp dấu với biểu thức bên phải nó. Tuy nhiên, cách này sẽ giúp ta tính hầu hết các biểu thức ngay lập tức. Điều này giúp giảm số lần push và pop.
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 ### Thuật toán
 
@@ -184,7 +184,7 @@ Ta có thể giải quyết vấn đề này bằng cách làm cơ bản, và k�
 2. Các toán hạng có thể được tạo thành từ nhiều ký tự. Một xâu `123` nghĩa là số $123$, được tạo thành như sau: `123` >> `120 + 3` >> `100 + 20 + 3`. Vì vậy, nếu ký tự đang đọc là chữ số, ta cần tạo toán hạng bằng cách nhân toán hạng với `10` thêm chữ số vào toán hạng đang tạo. Ta làm điều này vì ta đang xử lý xâu theo hướng ngược lại. Khi ta đọc một ký tự mà nó không phải chữ số, ta cho toán hạng vào stack.
 3. Khi ta gặp toán tử `+` hay `-`, ta tính biểu thức bên trái và lưu dấu cho lần tính tiếp theo.
 
-    ![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
+    ![](figure5.png){ style="display: block; margin: 0 auto" }
 
 4. Nếu ký tự là dấu mở ngoặc, ta cho kết quả đã tính và dấu vào stack (dấu và độ lớn), và tính biểu thức mới.
 5. Nếu ký tự là dấu đóng ngoặc, ta tính biểu thức bên trái. Kết quả sẽ là kết quả của biểu thức trong cặp ngoặc vừa kết thúc. Kết quả sau đó sẽ được nhân với dấu, nếu có trên đỉnh của stack. Nhớ rằng ta lưu dấu trên đỉnh stack khi mở ngoặc không? Dấu này sẽ kết hợp với dấu mở ngoặc sau nó, vì vậy nên khi biểu thức kết thúc, ta lấy dấu và nhân nó với kết quả của biểu thức. Sau đó nó được cộng vào phần tử tiếp theo trên đỉnh stack.

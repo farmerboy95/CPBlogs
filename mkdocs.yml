@@ -33,6 +33,7 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - attr_list
+  - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -42,7 +43,6 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-  - lightgallery
   - admonition
 
 extra_javascript:
@@ -55,23 +55,11 @@ extra:
   social:
     - icon: fontawesome/brands/github 
       link: https://github.com/farmerboy95
+  comments:
+    enabled: true
   analytics:
     provider: google
     property: G-W9EFM7GCX7
-    feedback:
-      title: Bài viết này có tốt không?
-      ratings:
-        - icon: material/thumb-up-outline
-          name: Bài viết rất hay
-          data: 1
-          note: >-
-            Cảm ơn phản hồi tích cực của bạn!
-        - icon: material/thumb-down-outline
-          name: Bài viết cần được cải thiện
-          data: 0
-          note: >- 
-            Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào 
-            <a href="https://github.com/farmerboy95/CPBlogs/issues" target="_blank">GitHub</a> của trang này.
 
 plugins:
   - literate-nav:
@@ -92,3 +80,16 @@ plugins:
       exclude:
         - index.md
         - navigation.md
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: true
+      caption_position: bottom

@@ -10,7 +10,7 @@ Trước khi đi vào cấu trúc của cấu trúc dữ liệu này, chúng ta 
 
 Cho một dãy $A$ có độ dài $N$ và $Q$ truy vấn. Mỗi truy vấn yêu cầu bạn thực hiện một hàm $F$ trên đoạn con $[L, R]$, nghĩa là $F(A_L, A_{L+1}, \ldots, A_R)$.
 
-Với [sparse table](/src/cp-algorithms/data_structures/fundamentals/sparse_table/sparse_table.md) bình thường, bạn có thể trả lời các truy vấn trong $O(\log  N)$ với $\Theta(N \log N)$ tiền xử lý.
+Với [sparse table](../../../cp-algorithms/data_structures/fundamentals/sparse_table/sparse_table.md) bình thường, bạn có thể trả lời các truy vấn trong $O(\log  N)$ với $\Theta(N \log N)$ tiền xử lý.
 
 Gọi $N' = 2 ^ {\lceil\log N\rceil}$, với Disjoint Sparse Table ta có thể trả lời các truy vấn trong $\Theta(1)$ với $\Theta(N' \log N')$ tiền xử lý.
 
@@ -27,7 +27,7 @@ Thực sự thì bạn không nhất thiết phải dùng cấu trúc dữ liệ
 
 Cấu trúc của nó giống hệt segment tree. Mỗi node lưu thông tin liên quan đến đoạn mà nó quản lý $[L, R)$.
 
-![!figure1](figure1.png){ style="background-color: white; display: block; margin: 0 auto" }
+![](figure1.png){ style="background-color: white; display: block; margin: 0 auto" }
 
 Xét một node quản lý đoạn $[L, R)$ và chỉ số ở giữa $M = \frac{L + R}{2}$.
 

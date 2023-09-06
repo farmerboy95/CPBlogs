@@ -26,7 +26,7 @@ Ta sẽ lưu các tập theo dạng các **cây**: mỗi cây sẽ tương ứng
 
 Hình sau sẽ cho thấy đại diện của những cây như thế.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 Ban đầu, mỗi phần tử là một tập, nên mỗi đỉnh cũng là một cây. Sau đó ta hợp nhất tập chứa phần tử 1 và tập chứa phần tử 2. Sau đó ta hợp nhất tập chứa phần tử 3 và tập chứa phần tử 4. Ở bước cuối cùng, hợp nhất tập chứa phần tử 1 và tập chứa phần tử 3.
 
@@ -73,7 +73,7 @@ Nếu ta gọi `find_set(v)` cho một node `v` nào đó, ta sẽ tìm đại d
 
 Bạn có thể thấy thao tác này trong hình dưới. Bên trái là một cái cây, còn bên phải là cái cây được nén sau khi gọi `find_set(7)`, nó sẽ làm cho đường đi ngắn hơn cho các node 7, 5, 3 và 2.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Cài đặt mới cho `find_set` như sau:
 
