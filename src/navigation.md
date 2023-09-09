@@ -16,6 +16,10 @@ comment: false
         - [Floor, ceiling và bất đẳng thức cho người mới học](Codeforces/math/floors_ceilings_inequalities/floors_ceilings_inequalities.md)
     - Hashing
         - [Giải mã và chống hack cho unordered_map trong C++](Codeforces/hashing/blowing_up_unordered_map/blowing_up_unordered_map.md)
+    - C++
+        - [Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++](Codeforces/c++/no_rand/no_rand.md)
+    - Các thuật toán ngẫu nhiên và gần đúng
+        - [Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó](Codeforces/randomized_algorithms/hacking_randomized_solutions/hacking_randomized_solutions.md)
 - cp-algorithms
     - Đại số
         - [Luỹ thừa nhị phân](cp-algorithms/algebra/binary_exponentiation/binary_exponentiation.md)

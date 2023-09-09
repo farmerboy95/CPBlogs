@@ -578,11 +578,11 @@ Tính kỳ vọng sức mạnh đội quân sau khi đội cung thủ địch d�
 | [Codeforces - A game (High)](https://codeforces.com/gym/100371/problem/K) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF100371-Gym-K.cpp) | 08/08/2023 |
 | [Codeforces - A dangerous game (High)](https://codeforces.com/gym/100371/problem/L) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF100371-Gym-L.cpp) | 21/08/2023 |
 | [Codeforces - Hash-table (High)](https://codeforces.com/gym/100371/problem/M) | | Unavailable public link | | |
-| [Codechef - MARTING1](https://www.codechef.com/problems/MARTING1) | | | | |
+| [Codechef - MARTING1](https://www.codechef.com/problems/MARTING1) | :white_check_mark: | Not submitted due to judge error | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20MARTING1.cpp) | 07/09/2023 |
 | [Codeforces - Lipshitz Sequence](https://codeforces.com/contest/602/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/601/submission/220110119) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF602-D2-D.cpp) | 24/08/2023 |
 | [Topcoder SRM 727 - DoubleLive](https://community.topcoder.com/stat?c=problem_statement&pm=14723) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/TopCoder/SRM727-D1-1500.cpp) | 20/07/2023 |
 | [Codechef - CUTTREE](https://www.codechef.com/problems/CUTTREE) | | | | |
 | [Codeforces - Rikka with Subsequences](https://codeforces.com/gym/102012/problem/D) | | | | |
-| [Codechef - FSSYNC](https://www.codechef.com/problems/FSSYNC) | | | | |
+| [Codechef - FSSYNC](https://www.codechef.com/problems/FSSYNC) | :white_check_mark | [Submission](https://www.codechef.com/viewsolution/1018924523) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20FSSYNC.cpp) | 07/09/2023 |
 | [Topcoder TCO Round 1C 2013 - TheKnights](https://community.topcoder.com/stat?c=problem_statement&pm=11541&rd=15585&rm=316561&cr=23003389) | | | | |
 | [Codeforces - Graph Game](https://codeforces.com/contest/235/problem/D) | | | | |
