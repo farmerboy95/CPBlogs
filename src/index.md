@@ -29,5 +29,4 @@ Ngoài ra, các bạn có thể tìm được các tài khoản của mình trê
 
 Nếu các bạn thấy website này hữu ích, có thể ủng hộ mình thông qua Buy Me A Coffee dưới đây:
 
-<a href="https://www.buymeacoffee.com/farmerboy"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=farmerboy&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
-
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="farmerboy" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
