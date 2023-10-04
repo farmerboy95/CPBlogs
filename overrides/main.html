@@ -1,36 +1,28 @@
 {% extends "base.html" %}
 
 {% block styles %}
-    {{ super() }}
-    <link rel="stylesheet" href="{{ base_url }}/css/lightgallery.min.css">
+  {{ super() }}
+  <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/extra.css">
 {% endblock styles %}
 
 {% block libs %}
-    {{ super() }}
-    <script src="{{ base_url }}/js/lightgallery.min.js"></script>
+  {{ super() }}
 {% endblock libs %}
 
 {% block scripts %}
-    {{ super() }}
-    <script>
-    var elements = document.getElementsByClassName("lightgallery");
-    for(var i=0; i<elements.length; i++) {
-       lightGallery(elements[i]);
-    }
-    </script>
-    
-    <script
-      data-name="BMC-Widget"
-      data-cfasync="false" 
-      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
-      data-id="farmerboy" 
-      data-description="Support me on Buy me a coffee!" 
-      data-message="" 
-      data-color="#5F7FFF" 
-      data-position="Right" 
-      data-x_margin="18" 
-      data-y_margin="18"
-    ></script>
+  {{ super() }}
+  <script
+    data-name="BMC-Widget"
+    data-cfasync="false" 
+    src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+    data-id="farmerboy" 
+    data-description="Support me on Buy me a coffee!" 
+    data-message="" 
+    data-color="#5F7FFF" 
+    data-position="Right" 
+    data-x_margin="18" 
+    data-y_margin="18"
+  ></script>
 {% endblock scripts %}
 
 {% block content %}
@@ -39,7 +31,7 @@
   {% if git_page_authors %}
     <div class="md-source-date">
       <small>
-          Authors: {{ git_page_authors | default('enable mkdocs-git-authors-plugin') }}
+        Authors: {{ git_page_authors | default('enable mkdocs-git-authors-plugin') }}
       </small>
     </div>
   {% endif %}

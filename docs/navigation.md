@@ -1,0 +1,53 @@
+---
+hide:
+  - feedback
+comment: false
+---
+
+- Trang chủ
+    - [Lời chào](index.md)
+    - [Các tài liệu](navigation.md)
+- Codeforces
+    - Đồ thị
+        - [Cây DFS và ứng dụng](Codeforces/graph/dfs_tree.md)
+    - Xử lý bit
+        - [Kĩ thuật Vector cơ sở cho các bài toán XOR](Codeforces/bit_manipulation/xor_basis.md)
+    - Toán học
+        - [Floor, ceiling và bất đẳng thức cho người mới học](Codeforces/math/floors_ceilings_inequalities.md)
+        - [Tổng và Giá trị kỳ vọng](Codeforces/math/sums_and_expected_value.md)
+    - Hashing
+        - [Giải mã và chống hack cho unordered_map trong C++](Codeforces/hashing/blowing_up_unordered_map.md)
+    - C++
+        - [Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++](Codeforces/c++/no_rand.md)
+    - Các thuật toán ngẫu nhiên và gần đúng
+        - [Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó](Codeforces/randomized_algorithms/hacking_randomized_solutions.md)
+- cp-algorithms
+    - Đại số
+        - [Luỹ thừa nhị phân](cp-algorithms/algebra/binary_exponentiation.md)
+    - Cấu trúc dữ liệu
+        - Cơ bản
+            - [Minimum Stack / Minimum Queue](cp-algorithms/data_structures/fundamentals/min_stack_min_queue.md)
+            - [Sparse Table](cp-algorithms/data_structures/fundamentals/sparse_table.md)
+        - Cây
+            - [Sqrt Tree](cp-algorithms/data_structures/trees/sqrt_tree.md)
+            - [Disjoint Set Union](cp-algorithms/data_structures/trees/dsu.md)
+- Codechef
+    - Cấu trúc dữ liệu
+        - [Disjoint Sparse Table](Codechef/data_structures/disjoint_sparse_table.md)
+- LeetCode
+    - [Lấy mẫu hồ chứa (Reservoir Sampling)](LeetCode/reservoir_sampling.md)
+    - [Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay](LeetCode/search_in_rotated_sorted_array.md)
+    - [Tính toán biểu thức từ xâu](LeetCode/basic_calculator.md)
+- Nguồn khác
+    - Phân tích Độ phức tạp
+        - [Các ký hiệu tiệm cận](Misc/complexity_analysis/asymptotic_notations.md)
+        - [Phương pháp Tiềm năng](Misc/complexity_analysis/potential_method.md)
+    - Cấu trúc dữ liệu
+        - [Splay Tree: Một mình anh chấp hết](Misc/data_structures/splay_tree.md)
+    - Xác suất
+        - [Xác suất](Misc/probability/probability.md)
+        - [Giá trị kỳ vọng](Misc/probability/expected_value.md)
+        - [Kỳ vọng tuyến tính](Misc/probability/linearity_of_expectation.md)
+    - Kinh nghiệm
+        - [Làm thế nào để giỏi hơn trong lập trình thi đấu?](Misc/experience/being_better.md)
+        - [Chiến thuật khi thi ICPC](Misc/experience/icpc_strategy.md)
