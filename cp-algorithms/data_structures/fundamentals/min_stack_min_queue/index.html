@@ -8,35 +8,35 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/navigation/">
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/cp-algorithms/data_structures/fundamentals/min_stack_min_queue/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../../../algebra/binary_exponentiation/">
       
       
-        <link rel="next" href="../Codeforces/graph/dfs_tree/">
+        <link rel="next" href="../sparse_table/">
       
       
-      <link rel="icon" href="../assets/images/logo.jpg">
+      <link rel="icon" href="../../../../assets/images/logo.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
     
     
       
-        <title>Các tài liệu - farmerboy's CP Blogs</title>
+        <title>Minimum Stack / Minimum Queue - farmerboy's CP Blogs</title>
       
     
     
   
-      <link rel="stylesheet" href="../assets/stylesheets/main.79e020e9.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.79e020e9.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
 
     
-  <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+  <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
 
     
   
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -70,7 +70,7 @@
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -81,7 +81,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -102,6 +102,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#minimum-stack-minimum-queue" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -112,9 +117,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+    <a href="../../../.." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
       
-  <img src="../assets/images/logo.jpg" alt="logo">
+  <img src="../../../../assets/images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -131,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Các tài liệu
+              Minimum Stack / Minimum Queue
             
           </span>
         </div>
@@ -233,13 +238,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href=".." class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
           
   
   Trang chủ
@@ -263,7 +266,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Codeforces/graph/dfs_tree/" class="md-tabs__link">
+        <a href="../../../../Codeforces/graph/dfs_tree/" class="md-tabs__link">
           
   
   Codeforces
@@ -280,17 +283,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../cp-algorithms/algebra/binary_exponentiation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../algebra/binary_exponentiation/" class="md-tabs__link">
           
   
   cp-algorithms
@@ -317,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Codechef/data_structures/disjoint_sparse_table/" class="md-tabs__link">
+        <a href="../../../../Codechef/data_structures/disjoint_sparse_table/" class="md-tabs__link">
           
   
   Codechef
@@ -338,7 +345,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../LeetCode/reservoir_sampling/" class="md-tabs__link">
+        <a href="../../../../LeetCode/reservoir_sampling/" class="md-tabs__link">
           
   
   LeetCode
@@ -362,7 +369,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Misc/complexity_analysis/asymptotic_notations/" class="md-tabs__link">
+        <a href="../../../../Misc/complexity_analysis/asymptotic_notations/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -387,8 +394,6 @@
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -400,9 +405,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+    <a href="../../../.." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
       
-  <img src="../assets/images/logo.jpg" alt="logo">
+  <img src="../../../../assets/images/logo.jpg" alt="logo">
 
     </a>
     farmerboy's CP Blogs
@@ -426,8 +431,6 @@
       
   
   
-    
-  
   
     
     
@@ -437,12 +440,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -456,7 +459,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Trang chủ
@@ -469,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,16 +490,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -505,7 +501,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -599,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/graph/dfs_tree/" class="md-nav__link">
+      <a href="../../../../Codeforces/graph/dfs_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -663,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/bit_manipulation/xor_basis/" class="md-nav__link">
+      <a href="../../../../Codeforces/bit_manipulation/xor_basis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/math/floors_ceilings_inequalities/" class="md-nav__link">
+      <a href="../../../../Codeforces/math/floors_ceilings_inequalities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -747,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/math/sums_and_expected_value/" class="md-nav__link">
+      <a href="../../../../Codeforces/math/sums_and_expected_value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/hashing/blowing_up_unordered_map/" class="md-nav__link">
+      <a href="../../../../Codeforces/hashing/blowing_up_unordered_map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -875,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/c%2B%2B/no_rand/" class="md-nav__link">
+      <a href="../../../../Codeforces/c%2B%2B/no_rand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -939,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/randomized_algorithms/hacking_randomized_solutions/" class="md-nav__link">
+      <a href="../../../../Codeforces/randomized_algorithms/hacking_randomized_solutions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -972,6 +967,8 @@
       
   
   
+    
+  
   
     
     
@@ -981,12 +978,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -1000,7 +997,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             cp-algorithms
@@ -1049,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/algebra/binary_exponentiation/" class="md-nav__link">
+      <a href="../../../algebra/binary_exponentiation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1075,18 +1072,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -1100,7 +1099,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Cấu trúc dữ liệu
@@ -1111,18 +1110,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
@@ -1136,7 +1137,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2_1">
             <span class="md-nav__icon md-icon"></span>
             Cơ bản
@@ -1147,9 +1148,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../cp-algorithms/data_structures/fundamentals/min_stack_min_queue/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Minimum Stack / Minimum Queue
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1158,6 +1179,134 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loi-tua" class="md-nav__link">
+    Lời tựa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bien-oi-stack" class="md-nav__link">
+    Biến đổi stack
+  </a>
+  
+    <nav class="md-nav" aria-label="Biến đổi stack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cai-at" class="md-nav__link">
+    Cài đặt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bien-oi-queue-phuong-phap-1" class="md-nav__link">
+    Biến đổi queue (phương pháp 1)
+  </a>
+  
+    <nav class="md-nav" aria-label="Biến đổi queue (phương pháp 1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cai-at_1" class="md-nav__link">
+    Cài đặt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bien-oi-queue-phuong-phap-2" class="md-nav__link">
+    Biến đổi queue (phương pháp 2)
+  </a>
+  
+    <nav class="md-nav" aria-label="Biến đổi queue (phương pháp 2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cai-at_2" class="md-nav__link">
+    Cài đặt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bien-oi-queue-phuong-phap-3" class="md-nav__link">
+    Biến đổi queue (phương pháp 3)
+  </a>
+  
+    <nav class="md-nav" aria-label="Biến đổi queue (phương pháp 3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cai-at_3" class="md-nav__link">
+    Cài đặt:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tim-min-cua-tat-ca-day-con-o-dai-m-khong-oi" class="md-nav__link">
+    Tìm min của tất cả dãy con độ dài M không đổi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luyen-tap" class="md-nav__link">
+    Luyện tập
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1169,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/data_structures/fundamentals/sparse_table/" class="md-nav__link">
+      <a href="../sparse_table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1233,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/data_structures/trees/sqrt_tree/" class="md-nav__link">
+      <a href="../../trees/sqrt_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,7 +1402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/data_structures/trees/dsu/" class="md-nav__link">
+      <a href="../../trees/dsu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1371,7 +1520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codechef/data_structures/disjoint_sparse_table/" class="md-nav__link">
+      <a href="../../../../Codechef/data_structures/disjoint_sparse_table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1445,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LeetCode/reservoir_sampling/" class="md-nav__link">
+      <a href="../../../../LeetCode/reservoir_sampling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LeetCode/search_in_rotated_sorted_array/" class="md-nav__link">
+      <a href="../../../../LeetCode/search_in_rotated_sorted_array/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1485,7 +1634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LeetCode/basic_calculator/" class="md-nav__link">
+      <a href="../../../../LeetCode/basic_calculator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1587,7 +1736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/complexity_analysis/asymptotic_notations/" class="md-nav__link">
+      <a href="../../../../Misc/complexity_analysis/asymptotic_notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1607,7 +1756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/complexity_analysis/potential_method/" class="md-nav__link">
+      <a href="../../../../Misc/complexity_analysis/potential_method/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1671,7 +1820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/data_structures/splay_tree/" class="md-nav__link">
+      <a href="../../../../Misc/data_structures/splay_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1735,7 +1884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/probability/probability/" class="md-nav__link">
+      <a href="../../../../Misc/probability/probability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1755,7 +1904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/probability/expected_value/" class="md-nav__link">
+      <a href="../../../../Misc/probability/expected_value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1775,7 +1924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/probability/linearity_of_expectation/" class="md-nav__link">
+      <a href="../../../../Misc/probability/linearity_of_expectation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1839,7 +1988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/experience/being_better/" class="md-nav__link">
+      <a href="../../../../Misc/experience/being_better/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1859,7 +2008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/experience/icpc_strategy/" class="md-nav__link">
+      <a href="../../../../Misc/experience/icpc_strategy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1896,8 +2045,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1907,6 +2054,124 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loi-tua" class="md-nav__link">
+    Lời tựa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bien-oi-stack" class="md-nav__link">
+    Biến đổi stack
+  </a>
+  
+    <nav class="md-nav" aria-label="Biến đổi stack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cai-at" class="md-nav__link">
+    Cài đặt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bien-oi-queue-phuong-phap-1" class="md-nav__link">
+    Biến đổi queue (phương pháp 1)
+  </a>
+  
+    <nav class="md-nav" aria-label="Biến đổi queue (phương pháp 1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cai-at_1" class="md-nav__link">
+    Cài đặt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bien-oi-queue-phuong-phap-2" class="md-nav__link">
+    Biến đổi queue (phương pháp 2)
+  </a>
+  
+    <nav class="md-nav" aria-label="Biến đổi queue (phương pháp 2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cai-at_2" class="md-nav__link">
+    Cài đặt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bien-oi-queue-phuong-phap-3" class="md-nav__link">
+    Biến đổi queue (phương pháp 3)
+  </a>
+  
+    <nav class="md-nav" aria-label="Biến đổi queue (phương pháp 3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cai-at_3" class="md-nav__link">
+    Cài đặt:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tim-min-cua-tat-ca-day-con-o-dai-m-khong-oi" class="md-nav__link">
+    Tìm min của tất cả dãy con độ dài M không đổi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luyen-tap" class="md-nav__link">
+    Luyện tập
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1925,117 +2190,214 @@
   
 
 
-  <h1>Các tài liệu</h1>
+<h1 id="minimum-stack-minimum-queue">Minimum Stack / Minimum Queue</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../../../assets/images/cpalgorithms.ico" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../../assets/images/cpalgorithms.ico" width="16" height="16"/></a> <a href="https://cp-algorithms.com/data_structures/stack_queue_modification.html">Minimum stack / Minimum queue</a></p>
+<h2 id="loi-tua">Lời tựa</h2>
+<p>Trong bài viết này chúng ta sẽ xem xét 3 bài toán: bài đầu tiên ta sẽ biến đổi một stack sao cho nó có thể tìm min của stack trong <span class="arithmatex">\(O(1)\)</span>, sau đó ta làm điều tương tự với queue, cuối cùng ta sẽ dùng những cấu trúc dữ liệu đó để tìm min của tất cả các dãy con độ dài <span class="arithmatex">\(M\)</span> không đổi của mảng trong <span class="arithmatex">\(O(n)\)</span>.</p>
+<h2 id="bien-oi-stack">Biến đổi stack</h2>
+<p>Ta muốn biến đổi cấu trúc dữ liệu stack mà nó có thể tìm min của stack trong thời gian <span class="arithmatex">\(O(1)\)</span> mà vẫn giữ các tính chất tương tự stack bình thường trong việc thêm và bớt đi phần tử. Một lưu ý nhỏ là trong stack ta chỉ thêm và bớt phần tử cuối cùng.</p>
+<p>Để làm được việc này, ta sẽ không chỉ lưu các phần tử trong stack, mà sẽ lưu chúng theo cặp: phần tử đó và min của stack từ phần tử này trở về trước.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">stack</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">st</span><span class="p">;</span>
+</code></pre></div>
+<p>Rõ ràng là tìm min của cả stack chỉ là giá trị <code>stack.top().second</code>.</p>
+<p>Cũng rất rõ ràng là việc thêm và bớt phần tử của stack có thể được thực hiện trong thời gian hằng số.</p>
+<h3 id="cai-at">Cài đặt</h3>
+<p>Thêm phần tử:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">new_min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">new_elem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">new_elem</span><span class="p">,</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">second</span><span class="p">);</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">st</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="n">new_elem</span><span class="p">,</span><span class="w"> </span><span class="n">new_min</span><span class="p">});</span>
+</code></pre></div>
+<p>Xoá phần tử:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">removed_element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">first</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">st</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</code></pre></div>
+<p>Tìm min:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">minimum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">second</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="bien-oi-queue-phuong-phap-1">Biến đổi queue (phương pháp 1)</h2>
+<p>Giờ ta muốn có kết quả tương tự như trên nhưng với một cái queue, nghĩa là ta muốn thêm phần tử vào phía sau và xoá phần tử ở phía trước.</p>
+<p>Ở đây ta xét một cách đơn giản để biến đổi queue. Nó có một yếu điểm lớn, vì queue sau khi biến đổi sẽ không lưu tất cả các phần tử.</p>
+<p>Mấu chốt là chỉ lưu các phần tử quyết định min trong queue mà thôi. Ta sẽ giữ lại các phần tử trong queue theo thử tự không giảm (min sẽ nằm ở đầu queue). Với cách này thì min sẽ luôn nằm ở đầu queue. Trước khi thêm phần tử vào queue, ta sẽ làm như sau: ta xoá tất cả các phần tử tính từ sau cùng về trước mà nó lớn hơn phần từ mới này, và thêm phần tử này vào queue. Với cách này ta sẽ không phá vỡ thứ tự của queue, và sẽ không làm mất đi phần tử hiện tại nếu nó là min ở bất kỳ bước nào. Tất cả các phần tử bị xoá không thể là min được. Khi ta muốn xem một phần tử ở đầu queue, nó có thể không có ở đó vì ta đã xoá nó khi thêm vào một phần tử nhỏ hơn rồi. Vì vậy khi xoá một phần tử trong queue, ta cần biết giá trị của phần tử đó. Nếu phần tử đầu queue có cùng giá trị, ta có thể xoá nó một cách an toàn, ngược lại ta không làm gì cả.</p>
+<h3 id="cai-at_1">Cài đặt</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">deque</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
+</code></pre></div>
+<p>Tìm min:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">minimum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+</code></pre></div></p>
+<p>Thêm phần tử:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">back</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">new_element</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">q</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">new_element</span><span class="p">);</span>
+</code></pre></div>
+<p>Xoá phần tử:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">remove_element</span><span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">pop_front</span><span class="p">();</span>
+</code></pre></div>
+<p>Ta thấy rõ rằng trung bình thì các thao tác này tốn thời gian <span class="arithmatex">\(O(1)\)</span> vì mọi phần tử chỉ có thể được thêm và bớt đi đúng một lần.</p>
+<h2 id="bien-oi-queue-phuong-phap-2">Biến đổi queue (phương pháp 2)</h2>
+<p>Đây là phương pháp 1 với một chút biến đổi. Ta muốn xoá phần tử mà không muốn biết phải xoá phần tử nào. Ta có thể làm được bằng cách lưu chỉ số của một phần tử của queue. Và ta cũng lưu số phần tử ta đã thêm và xoá đi.</p>
+<h3 id="cai-at_2">Cài đặt</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">deque</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">cnt_added</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">cnt_removed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</code></pre></div>
+<p>Tìm min:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">minimum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">first</span><span class="p">;</span>
+</code></pre></div>
+<p>Thêm phần tử:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">back</span><span class="p">().</span><span class="n">first</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">new_element</span><span class="p">)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">q</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">new_element</span><span class="p">,</span><span class="w"> </span><span class="n">cnt_added</span><span class="p">});</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">cnt_added</span><span class="o">++</span><span class="p">;</span>
+</code></pre></div>
+<p>Xoá phần tử:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">second</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cnt_removed</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">pop_front</span><span class="p">();</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">cnt_removed</span><span class="o">++</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="bien-oi-queue-phuong-phap-3">Biến đổi queue (phương pháp 3)</h2>
+<p>Ta xét một cách khác để biến đổi queue để tìm min trong <span class="arithmatex">\(O(1)\)</span>. Cách này cài đặt khá phức tạp, nhưng ta lưu tất cả các phần tử. Và ta cũng có thể xoá một phần tử ở đầu mà không cần biết giá trị của nó.</p>
+<p>Ý tưởng là quy bài toán về stack. Giờ ta chỉ cần biết cách mô phỏng một queue với 2 stack.</p>
+<p>Ta tạo 2 stack, <code>s1</code> và <code>s2</code>. Tất nhiên 2 stack này sẽ ở dạng đã biến đổi, nến ta tìm min được trong <span class="arithmatex">\(O(1)\)</span>. Ta sẽ thêm các phần tử mới vào trong <code>s1</code> và xoá phần tử khỏi <code>s2</code>. Nếu ở bất cứ thời điểm nào <code>s2</code> rỗng, ta di chuyển tất cả phần tử từ <code>s1</code> sang <code>s2</code> (lúc này thứ tự sẽ đảo ngược). Cuối cùng tìm min của queue sẽ là tìm min của 2 stack.</p>
+<p>Vậy ta thực hiện tất cả các thao tác trong trung bình là <span class="arithmatex">\(O(1)\)</span> (mỗi phần tử sẽ được thêm vào stack <code>s1</code> một lần, chuyển vào <code>s2</code> một lần, xoá khỏi <code>s2</code> một lần).</p>
+<h3 id="cai-at_3">Cài đặt:</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">stack</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">;</span>
+</code></pre></div>
+<p>Tìm min:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">minimum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">second</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">second</span><span class="p">;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">else</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="n">minimum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">second</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">second</span><span class="p">);</span>
+</code></pre></div>
+<p>Thêm phần tử:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">minimum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">new_element</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">new_element</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">second</span><span class="p">);</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">s1</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="n">new_element</span><span class="p">,</span><span class="w"> </span><span class="n">minimum</span><span class="p">});</span>
+</code></pre></div>
+<p>Xoá phần tử:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s2</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">s1</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">first</span><span class="p">;</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">        </span><span class="n">s1</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">minimum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">element</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">second</span><span class="p">);</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">        </span><span class="n">s2</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="n">element</span><span class="p">,</span><span class="w"> </span><span class="n">minimum</span><span class="p">});</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="p">}</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="kt">int</span><span class="w"> </span><span class="n">remove_element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">first</span><span class="p">;</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">s2</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</code></pre></div>
+<h2 id="tim-min-cua-tat-ca-day-con-o-dai-m-khong-oi">Tìm min của tất cả dãy con độ dài <span class="arithmatex">\(M\)</span> không đổi</h2>
+<p>Cho một mảng <span class="arithmatex">\(A\)</span> độ dài <span class="arithmatex">\(N\)</span> và số <span class="arithmatex">\(M \leq N\)</span>. Ta tìm min của mỗi dãy con độ dài <span class="arithmatex">\(M\)</span> trong mảng này, nghĩa là tìm:</p>
+<div class="arithmatex">\[ \min_{0 \le i \le M-1} A[i], \min_{1 \le i \le M} A[i], \min_{2 \le i \le M+1} A[i],~\dots~, \min_{N-M \le i \le N-1} A[i] \]</div>
+<p>Ta cần giải bài này trong thời gian <span class="arithmatex">\(O(N)\)</span>.</p>
+<p>Ta có thể dùng một trong 3 cách biến đổi queue ở trên để giải. Ta thêm vào queue <span class="arithmatex">\(M\)</span> phần tử đầu của mảng, tìm và in ra min của chúng, sau đó thêm phần tử tiếp theo vào queue và xoá phần tử đầu của mảng ra, tìm và in min của số còn lại, vân vân. Vì tất cả các thao tác được thực hiện trong thời gian trung bình hằng số, độ phức tạp của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+<h2 id="luyen-tap">Luyện tập</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Problem</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: center;">Submission</th>
+<th style="text-align: center;">Code</th>
+<th style="text-align: center;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="https://www.hackerrank.com/challenges/queries-with-fixed-length/problem">HackerRank - Queries with Fixed Length</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/HackerRank/HACKR%20queries-with-fixed-length.cpp">Code</a></td>
+<td style="text-align: center;">13/11/2022</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.codechef.com/problems/BINLAND">Codechef - Binary Land</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://www.codechef.com/viewsolution/79928542">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20BINLAND.cpp">Code</a></td>
+<td style="text-align: center;">14/11/2022</td>
+</tr>
+</tbody>
+</table>
 
-<ul>
-<li>Trang chủ<ul>
-<li><a href="../">Lời chào</a></li>
-<li><a href="./">Các tài liệu</a></li>
-</ul>
-</li>
-<li>Codeforces<ul>
-<li>Đồ thị<ul>
-<li><a href="../Codeforces/graph/dfs_tree/">Cây DFS và ứng dụng</a></li>
-</ul>
-</li>
-<li>Xử lý bit<ul>
-<li><a href="../Codeforces/bit_manipulation/xor_basis/">Kĩ thuật Vector cơ sở cho các bài toán XOR</a></li>
-</ul>
-</li>
-<li>Toán học<ul>
-<li><a href="../Codeforces/math/floors_ceilings_inequalities/">Floor, ceiling và bất đẳng thức cho người mới học</a></li>
-<li><a href="../Codeforces/math/sums_and_expected_value/">Tổng và Giá trị kỳ vọng</a></li>
-</ul>
-</li>
-<li>Hashing<ul>
-<li><a href="../Codeforces/hashing/blowing_up_unordered_map/">Giải mã và chống hack cho unordered_map trong C++</a></li>
-</ul>
-</li>
-<li>C++<ul>
-<li><a href="../Codeforces/c%2B%2B/no_rand/">Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++</a></li>
-</ul>
-</li>
-<li>Các thuật toán ngẫu nhiên và gần đúng<ul>
-<li><a href="../Codeforces/randomized_algorithms/hacking_randomized_solutions/">Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>cp-algorithms<ul>
-<li>Đại số<ul>
-<li><a href="../cp-algorithms/algebra/binary_exponentiation/">Luỹ thừa nhị phân</a></li>
-</ul>
-</li>
-<li>Cấu trúc dữ liệu<ul>
-<li>Cơ bản<ul>
-<li><a href="../cp-algorithms/data_structures/fundamentals/min_stack_min_queue/">Minimum Stack / Minimum Queue</a></li>
-<li><a href="../cp-algorithms/data_structures/fundamentals/sparse_table/">Sparse Table</a></li>
-</ul>
-</li>
-<li>Cây<ul>
-<li><a href="../cp-algorithms/data_structures/trees/sqrt_tree/">Sqrt Tree</a></li>
-<li><a href="../cp-algorithms/data_structures/trees/dsu/">Disjoint Set Union</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Codechef<ul>
-<li>Cấu trúc dữ liệu<ul>
-<li><a href="../Codechef/data_structures/disjoint_sparse_table/">Disjoint Sparse Table</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>LeetCode<ul>
-<li><a href="../LeetCode/reservoir_sampling/">Lấy mẫu hồ chứa (Reservoir Sampling)</a></li>
-<li><a href="../LeetCode/search_in_rotated_sorted_array/">Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay</a></li>
-<li><a href="../LeetCode/basic_calculator/">Tính toán biểu thức từ xâu</a></li>
-</ul>
-</li>
-<li>Nguồn khác<ul>
-<li>Phân tích Độ phức tạp<ul>
-<li><a href="../Misc/complexity_analysis/asymptotic_notations/">Các ký hiệu tiệm cận</a></li>
-<li><a href="../Misc/complexity_analysis/potential_method/">Phương pháp Tiềm năng</a></li>
-</ul>
-</li>
-<li>Cấu trúc dữ liệu<ul>
-<li><a href="../Misc/data_structures/splay_tree/">Splay Tree: Một mình anh chấp hết</a></li>
-</ul>
-</li>
-<li>Xác suất<ul>
-<li><a href="../Misc/probability/probability/">Xác suất</a></li>
-<li><a href="../Misc/probability/expected_value/">Giá trị kỳ vọng</a></li>
-<li><a href="../Misc/probability/linearity_of_expectation/">Kỳ vọng tuyến tính</a></li>
-</ul>
-</li>
-<li>Kinh nghiệm<ul>
-<li><a href="../Misc/experience/being_better/">Làm thế nào để giỏi hơn trong lập trình thi đấu?</a></li>
-<li><a href="../Misc/experience/icpc_strategy/">Chiến thuật khi thi ICPC</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-  
-
-
-  
+  <hr>
+<div class="md-source-file">
+  <small>
     
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">04/10/2023 (GMT+07)</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">14/11/2022 (GMT+07)</span>
+      
+    
+  </small>
+</div>
+
+
   
 
 
 
 
-  
 
 
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/CPBlogs"
+    data-repo-id="R_kgDOIA7h_g"
+    data-category="General"
+    data-category-id="DIC_kwDOIA7h_s4CVvKI"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
 
+  
+    <div class="md-source-date">
+      <small>
+        Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
   
 
               </article>
@@ -2095,11 +2457,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top"], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
   
-      <script src="../assets/javascripts/bundle.6eac0284.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.6eac0284.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

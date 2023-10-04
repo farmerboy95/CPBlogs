@@ -8,35 +8,35 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/navigation/">
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/Misc/complexity_analysis/potential_method/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../asymptotic_notations/">
       
       
-        <link rel="next" href="../Codeforces/graph/dfs_tree/">
+        <link rel="next" href="../../data_structures/splay_tree/">
       
       
-      <link rel="icon" href="../assets/images/logo.jpg">
+      <link rel="icon" href="../../../assets/images/logo.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
     
     
       
-        <title>Các tài liệu - farmerboy's CP Blogs</title>
+        <title>Phương pháp Tiềm năng - farmerboy's CP Blogs</title>
       
     
     
   
-      <link rel="stylesheet" href="../assets/stylesheets/main.79e020e9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.79e020e9.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
 
     
-  <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+  <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
 
     
   
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -70,7 +70,7 @@
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -81,7 +81,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -102,6 +102,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#phuong-phap-tiem-nang" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -112,9 +117,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+    <a href="../../.." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
       
-  <img src="../assets/images/logo.jpg" alt="logo">
+  <img src="../../../assets/images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -131,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Các tài liệu
+              Phương pháp Tiềm năng
             
           </span>
         </div>
@@ -233,13 +238,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href=".." class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
           
   
   Trang chủ
@@ -263,7 +266,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Codeforces/graph/dfs_tree/" class="md-tabs__link">
+        <a href="../../../Codeforces/graph/dfs_tree/" class="md-tabs__link">
           
   
   Codeforces
@@ -290,7 +293,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../cp-algorithms/algebra/binary_exponentiation/" class="md-tabs__link">
+        <a href="../../../cp-algorithms/algebra/binary_exponentiation/" class="md-tabs__link">
           
   
   cp-algorithms
@@ -317,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Codechef/data_structures/disjoint_sparse_table/" class="md-tabs__link">
+        <a href="../../../Codechef/data_structures/disjoint_sparse_table/" class="md-tabs__link">
           
   
   Codechef
@@ -338,7 +341,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../LeetCode/reservoir_sampling/" class="md-tabs__link">
+        <a href="../../../LeetCode/reservoir_sampling/" class="md-tabs__link">
           
   
   LeetCode
@@ -352,17 +355,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../Misc/complexity_analysis/asymptotic_notations/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../asymptotic_notations/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -387,8 +394,6 @@
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -400,9 +405,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+    <a href="../../.." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
       
-  <img src="../assets/images/logo.jpg" alt="logo">
+  <img src="../../../assets/images/logo.jpg" alt="logo">
 
     </a>
     farmerboy's CP Blogs
@@ -426,8 +431,6 @@
       
   
   
-    
-  
   
     
     
@@ -437,12 +440,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -456,7 +459,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Trang chủ
@@ -469,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,16 +490,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -505,7 +501,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -599,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/graph/dfs_tree/" class="md-nav__link">
+      <a href="../../../Codeforces/graph/dfs_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -663,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/bit_manipulation/xor_basis/" class="md-nav__link">
+      <a href="../../../Codeforces/bit_manipulation/xor_basis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/math/floors_ceilings_inequalities/" class="md-nav__link">
+      <a href="../../../Codeforces/math/floors_ceilings_inequalities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -747,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/math/sums_and_expected_value/" class="md-nav__link">
+      <a href="../../../Codeforces/math/sums_and_expected_value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/hashing/blowing_up_unordered_map/" class="md-nav__link">
+      <a href="../../../Codeforces/hashing/blowing_up_unordered_map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -875,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/c%2B%2B/no_rand/" class="md-nav__link">
+      <a href="../../../Codeforces/c%2B%2B/no_rand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -939,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/randomized_algorithms/hacking_randomized_solutions/" class="md-nav__link">
+      <a href="../../../Codeforces/randomized_algorithms/hacking_randomized_solutions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1049,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/algebra/binary_exponentiation/" class="md-nav__link">
+      <a href="../../../cp-algorithms/algebra/binary_exponentiation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1149,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/data_structures/fundamentals/min_stack_min_queue/" class="md-nav__link">
+      <a href="../../../cp-algorithms/data_structures/fundamentals/min_stack_min_queue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1169,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/data_structures/fundamentals/sparse_table/" class="md-nav__link">
+      <a href="../../../cp-algorithms/data_structures/fundamentals/sparse_table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1233,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/data_structures/trees/sqrt_tree/" class="md-nav__link">
+      <a href="../../../cp-algorithms/data_structures/trees/sqrt_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/data_structures/trees/dsu/" class="md-nav__link">
+      <a href="../../../cp-algorithms/data_structures/trees/dsu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1371,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codechef/data_structures/disjoint_sparse_table/" class="md-nav__link">
+      <a href="../../../Codechef/data_structures/disjoint_sparse_table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1445,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LeetCode/reservoir_sampling/" class="md-nav__link">
+      <a href="../../../LeetCode/reservoir_sampling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LeetCode/search_in_rotated_sorted_array/" class="md-nav__link">
+      <a href="../../../LeetCode/search_in_rotated_sorted_array/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1485,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LeetCode/basic_calculator/" class="md-nav__link">
+      <a href="../../../LeetCode/basic_calculator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1510,6 +1505,8 @@
       
   
   
+    
+  
   
     
     
@@ -1519,12 +1516,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -1538,7 +1535,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Nguồn khác
@@ -1549,18 +1546,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -1574,7 +1573,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
             Phân tích Độ phức tạp
@@ -1587,7 +1586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/complexity_analysis/asymptotic_notations/" class="md-nav__link">
+      <a href="../asymptotic_notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1605,9 +1604,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Misc/complexity_analysis/potential_method/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Phương pháp Tiềm năng
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1616,6 +1635,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loi-tua" class="md-nav__link">
+    Lời tựa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inh-nghia-thoi-gian-phan-bo-amortized-time" class="md-nav__link">
+    Định nghĩa Thời gian phân bổ (Amortized time)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quan-he-giua-thoi-gian-phan-bo-va-thoi-gian-thuc" class="md-nav__link">
+    Quan hệ giữa thời gian phân bổ và thời gian thực
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phan-tich-phan-bo-trong-truong-hop-xau-nhat" class="md-nav__link">
+    Phân tích Phân bổ trong trường hợp xấu nhất
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-vi-du" class="md-nav__link">
+    Các ví dụ
+  </a>
+  
+    <nav class="md-nav" aria-label="Các ví dụ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mang-ong" class="md-nav__link">
+    Mảng động
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-pop-stack" class="md-nav__link">
+    Multi-Pop Stack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bo-em-nhi-phan" class="md-nav__link">
+    Bộ đếm nhị phân
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ung-dung" class="md-nav__link">
+    Ứng dụng
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1671,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/data_structures/splay_tree/" class="md-nav__link">
+      <a href="../../data_structures/splay_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1735,7 +1850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/probability/probability/" class="md-nav__link">
+      <a href="../../probability/probability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1755,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/probability/expected_value/" class="md-nav__link">
+      <a href="../../probability/expected_value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1775,7 +1890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/probability/linearity_of_expectation/" class="md-nav__link">
+      <a href="../../probability/linearity_of_expectation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1839,7 +1954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/experience/being_better/" class="md-nav__link">
+      <a href="../../experience/being_better/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1859,7 +1974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/experience/icpc_strategy/" class="md-nav__link">
+      <a href="../../experience/icpc_strategy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1896,8 +2011,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1907,6 +2020,92 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loi-tua" class="md-nav__link">
+    Lời tựa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inh-nghia-thoi-gian-phan-bo-amortized-time" class="md-nav__link">
+    Định nghĩa Thời gian phân bổ (Amortized time)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quan-he-giua-thoi-gian-phan-bo-va-thoi-gian-thuc" class="md-nav__link">
+    Quan hệ giữa thời gian phân bổ và thời gian thực
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phan-tich-phan-bo-trong-truong-hop-xau-nhat" class="md-nav__link">
+    Phân tích Phân bổ trong trường hợp xấu nhất
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-vi-du" class="md-nav__link">
+    Các ví dụ
+  </a>
+  
+    <nav class="md-nav" aria-label="Các ví dụ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mang-ong" class="md-nav__link">
+    Mảng động
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-pop-stack" class="md-nav__link">
+    Multi-Pop Stack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bo-em-nhi-phan" class="md-nav__link">
+    Bộ đếm nhị phân
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ung-dung" class="md-nav__link">
+    Ứng dụng
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1925,117 +2124,152 @@
   
 
 
-  <h1>Các tài liệu</h1>
-
+<h1 id="phuong-phap-tiem-nang">Phương pháp Tiềm năng</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../../assets/images/wikipedia.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/wikipedia.png" width="16" height="16"/></a> <a href="https://en.wikipedia.org/wiki/Potential_method">Potential method - Wikipedia</a></p>
+<h2 id="loi-tua">Lời tựa</h2>
+<p>Trong lý thuyết tính toán độ phức tạp, Phương pháp Tiềm năng là một phương pháp dùng để phân tích độ phức tạp phân bổ (Amortized complexity) về mặt thời gian và bộ nhớ của một cấu trúc dữ liệu. Nó cũng là một thước đo hiệu suất thông qua một chuỗi các thao tác để loại bỏ chi phí của các thao tác không thường xuyên nhưng tốn kém.</p>
+<h2 id="inh-nghia-thoi-gian-phan-bo-amortized-time">Định nghĩa Thời gian phân bổ (Amortized time)</h2>
+<p>Trong phương pháp Tiềm năng, một hàm <span class="arithmatex">\(\Phi\)</span> được chọn để ánh xạ các trạng thái của cấu trúc dữ liệu với các số không âm. Nếu <span class="arithmatex">\(S\)</span> là một trạng thái của cấu trúc dữ liệu, <span class="arithmatex">\(\Phi(S)\)</span> tượng trưng cho lượng công việc được giữ (hay "được trả tiền") trong phân tích phân bổ nhưng chưa được thực thi. Vì vậy, <span class="arithmatex">\(\Phi(S)\)</span> có thể được hiểu là việc tính phần năng lượng tiềm năng lưu trong trạng thái đó. Giá trị tiềm năng trước khi khởi tạo cấu trúc dữ liệu là <span class="arithmatex">\(0\)</span>. Ngoài ra, <span class="arithmatex">\(\Phi(S)\)</span> có thể được hiểu là lượng hỗn loạn trong trạng thái <span class="arithmatex">\(S\)</span> hoặc là khoảng cách của trạng thái hiện tại đến trạng thái lý tưởng.</p>
+<p>Gọi <span class="arithmatex">\(o\)</span> là bất cứ thao tác đơn lẻ nào trong một dãy các thao tác trên một cấu trúc dữ liệu nào đó, với <span class="arithmatex">\(S_{trước}\)</span> là trạng thái của cấu trúc dữ liệu trước thao tác <span class="arithmatex">\(o\)</span> này và <span class="arithmatex">\(S_{sau}\)</span> là trạng thái sau khi thao tác <span class="arithmatex">\(o\)</span> kết thúc. Một khi <span class="arithmatex">\(\Phi\)</span> được chọn, thời gian phân bổ của thao tác <span class="arithmatex">\(o\)</span> được định nghĩa là:</p>
+<div class="arithmatex">\[T_{\text{phân bổ} }(o) = T_{thực}(o) + C \times (\Phi(S_{trước}) - \Phi(S_{sau}))\]</div>
+<p>Trong đó <span class="arithmatex">\(C\)</span> là hằng số tỉ lệ không âm (tính theo đơn vị thời gian) phải cố định trong suốt quá trình phân tích. Nghĩa là, thời gian phân bổ được định nghĩa là thời gian thực tiêu tốn bởi thao tác cộng với <span class="arithmatex">\(C\)</span> lần chênh lệch tiềm năng tạo ra bởi thao tác đó.</p>
+<p>Khi nghiên cứu độ phức tạp tính toán tiệm cận bằng cách sử dụng ký hiệu big O, các yếu tố hằng số không liên quan và do đó hằng số <span class="arithmatex">\(C\)</span> thường bị bỏ qua.</p>
+<h2 id="quan-he-giua-thoi-gian-phan-bo-va-thoi-gian-thuc">Quan hệ giữa thời gian phân bổ và thời gian thực</h2>
+<p>Mặc dù có vẻ hơi trừu tượng, tổng thời gian phân bổ của một chuỗi thao tác cung cấp cho chúng ta một cận trên tốt so với thời gian thực trên cùng một nhóm thao tác đó.</p>
+<p>Với mọi chuỗi thao tác <span class="arithmatex">\(O = o_1, o_2, ..., o_n\)</span>, ta định nghĩa:</p>
 <ul>
-<li>Trang chủ<ul>
-<li><a href="../">Lời chào</a></li>
-<li><a href="./">Các tài liệu</a></li>
+<li>Tổng thời gian phân bổ: <span class="arithmatex">\(T_{\text{phân bổ} }(O) = \sum_{i=1}^{n} T_{\text{phân bổ} }(o_i)\)</span></li>
+<li>Tổng thời gian thực: <span class="arithmatex">\(T_{thực}(O) = \sum_{i=1}^{n} T_{thực}(o_i)\)</span></li>
 </ul>
-</li>
-<li>Codeforces<ul>
-<li>Đồ thị<ul>
-<li><a href="../Codeforces/graph/dfs_tree/">Cây DFS và ứng dụng</a></li>
+<p>Nên:</p>
+<div class="arithmatex">\[T_{\text{phân bổ} }(O) = \sum_{i=1}^{n} (T_{thực}(o_i) + C \times (\Phi(S_i) - \Phi(S_{i-1}))) = T_{thực}(O) + C \times (\Phi(S_n) - \Phi(S_0))\]</div>
+<p>Trong đó dãy các giá trị của hàm Tiềm năng tạo ra một chuỗi lồng nhau, trong đó tất cả các số hạng không phải đầu tiên và cuối cùng huỷ nhau theo cặp. Chuyển vế ta có:</p>
+<div class="arithmatex">\[T_{thực}(O) = T_{\text{phân bổ} }(O) - C \times (\Phi(S_n) - \Phi(S_0))\]</div>
+<p>Do <span class="arithmatex">\(\Phi(S_0) = 0\)</span> và <span class="arithmatex">\(\Phi(S_n) \geq 0\)</span>, <span class="arithmatex">\(T_{thực}(O) \leq T_{\text{phân bổ} }(O)\)</span>, nên thời gian phân bổ có thể được dùng để tính cận trên của thời gian thực trên một dãy các thao tác, ngay cả khi thời gian phân bổ của một thao tác nào đó có biên độ lớn so với thời gian thực.</p>
+<h2 id="phan-tich-phan-bo-trong-truong-hop-xau-nhat">Phân tích Phân bổ trong trường hợp xấu nhất</h2>
+<p>Thông thường, phân tích phân bổ được dùng kết hợp với trường hợp xấu nhất của đầu vào. Với trường hợp xấu nhất này, nếu <span class="arithmatex">\(X\)</span> là loại thao tác được sử dụng trong cấu trúc dữ liệu, và số nguyên <span class="arithmatex">\(n\)</span> là kích thước của cấu trúc dữ liệu được cho (ví dụ như nó chứa bao nhiêu biến chẳng hạn), thì thời gian phân bổ của các thao tác loại <span class="arithmatex">\(X\)</span> được định nghĩa là thời gian phân bổ lớn nhất trong tất cả các dãy thao tác có thể có trên cấu trúc dữ liệu kích thước <span class="arithmatex">\(n\)</span>, chỉ tính các thao tác <span class="arithmatex">\(o_i\)</span> loại <span class="arithmatex">\(X\)</span> trong nhóm.</p>
+<p>Với định nghĩa này, thời gian để thực hiện dãy thao tác có thể được ước lượng bằng cách nhân thời gian phân bổ của mỗi loại thao tác trong dãy với số thao tác của loại thao tác đó.</p>
+<h2 id="cac-vi-du">Các ví dụ</h2>
+<h3 id="mang-ong">Mảng động</h3>
+<p>Mảng động là một cấu trúc dữ liệu dùng để duy trì một dãy các phần tử, cho phép truy cập nhờ vào vị trí trong mảng và khả năng tăng giới hạn mảng lên 1. Trong Java nó là ArrayList còn trong Python nó là list.</p>
+<p>Mảng động có thể được cài như một cấu trúc dữ liệu gồm một mảng <span class="arithmatex">\(A\)</span> các phần tử, có độ dài <span class="arithmatex">\(N\)</span> nào đó, với một số <span class="arithmatex">\(n \leq N\)</span> là các vị trí trong mảng chúng ta đã dùng. Với cấu trúc dữ liệu như thế này, việc truy cập vào mảng động có thể được cài bằng cách truy cập vào cùng ô nhớ trong mảng <span class="arithmatex">\(A\)</span> đó, và khi <span class="arithmatex">\(n &lt; N\)</span>, thao tác tăng size của mảng động có thể được cài bằng cách tăng n lên. Tuy nhiên, khi <span class="arithmatex">\(n=N\)</span>, ta cần resize lại <span class="arithmatex">\(A\)</span>, một cách phổ biến là tăng gấp đôi size của nó, thay <span class="arithmatex">\(A\)</span> bằng một mảng có độ dài <span class="arithmatex">\(2n\)</span>.</p>
+<p>Cấu trúc dữ liệu này có thể được phân tích nhờ hàm Tiềm năng sau:</p>
+<div class="arithmatex">\[\Phi = 2n - N\]</div>
+<p>Vì việc resize này làm cho <span class="arithmatex">\(A\)</span> luôn có số phần tử lớn hơn hoặc bằng nửa kích thước, nên hàm tiềm năng luôn không âm.</p>
+<p>Thao tác tăng kích thước mảng không phải lúc nào cũng dẫn đến việc resize, <span class="arithmatex">\(\Phi\)</span> tăng lên 2, một hằng số. Vì vậy, thời gian thực của thao tác và thời gian tăng lên tiềm năng kết hợp lại để tạo ra thời gian phân bổ của thao tác loại này.</p>
+<p>Tuy nhiên, nếu việc tăng kích thước dẫn đến resize mảng, <span class="arithmatex">\(\Phi\)</span> giảm về <span class="arithmatex">\(0\)</span> sau khi resize. Tạo mảng mới <span class="arithmatex">\(A\)</span> và sao chép tất cả các giá trị cũ của vào mảng mới này tôn <span class="arithmatex">\(O(n)\)</span> thời gian thực, nhưng (với hằng số tỉ lệ <span class="arithmatex">\(C\)</span> tốt) cái này bị tiêu huỷ bới việc giảm hàm tiềm năng, trả về một tổng thời gian phân bổ là hằng số cho thao tác này.</p>
+<p>Những thao tác khác của cấu trúc dữ liệu (đọc ghi mảng mà không thay đổi kích thước) không tạo ra thay đổi cho hàm tiềm năng và có cùng thời gian phân bổ hằng số như thời gian thực.</p>
+<p>Vì vậy, với việc resize như thế này cộng với hàm tiềm năng, phương pháp tiềm năng cho thấy rằng tất cả các thao tác trên mảng động tốn thời gian phân bổ hằng số. Kết hợp điều này với bất đẳng thức giữa thời gian phân bổ và thời gian thực trên dãy các thao tác, điều này cho thấy rằng bất kỳ dãy <span class="arithmatex">\(n\)</span> thao tác trên mảng động tốn <span class="arithmatex">\(O(n)\)</span> thời gian thực trong trường hợp xấu nhất, dù cho một số thao tác đơn lẻ có thể tiêu tốn hơn thời gian tuyến tính.</p>
+<p>Khi mảng động chứa các thao tác giảm kích thước mảng cũng như tăng kích thước, hàm tiềm năng cũng phải được thay đổi để tránh việc hàm bị âm. Một cách để làm đó là thêm trị tuyệt đối vào hàm tiềm năng ở trên.</p>
+<h3 id="multi-pop-stack">Multi-Pop Stack</h3>
+<p>Cho một stack hỗ trợ các thao tác sau:</p>
+<ul>
+<li><span class="arithmatex">\(Init\)</span>: tạo một stack rỗng.</li>
+<li><span class="arithmatex">\(Push\)</span>: thêm một phần tử lên đỉnh stack, tăng size của nó lên 1.</li>
+<li><span class="arithmatex">\(Pop(k)\)</span>: xoá <span class="arithmatex">\(k\)</span> phần tử từ đỉnh stack, trong đó <span class="arithmatex">\(k\)</span> không lớn hơn số phần tử hiện thời của stack.</li>
 </ul>
-</li>
-<li>Xử lý bit<ul>
-<li><a href="../Codeforces/bit_manipulation/xor_basis/">Kĩ thuật Vector cơ sở cho các bài toán XOR</a></li>
+<p><span class="arithmatex">\(Pop(k)\)</span> tốn <span class="arithmatex">\(O(k)\)</span> thời gian, nhưng ta có thể chứng minh được tất cả các thao tác tốn <span class="arithmatex">\(O(1)\)</span> thời gian phân bổ.</p>
+<p>Cấu trúc dữ liệu này có thể được phân tích nhờ hàm Tiềm năng sau:</p>
+<div class="arithmatex">\[\Phi = \text{số phần tử trong stack}\]</div>
+<p>Rõ ràng số phần tử thì luôn không âm.</p>
+<p>Một thao tác <span class="arithmatex">\(Push\)</span> tốn <span class="arithmatex">\(O(1)\)</span> và tăng <span class="arithmatex">\(\Phi\)</span> lên <span class="arithmatex">\(1\)</span>, nên thời gian phân bổ là hằng số.</p>
+<p>Một thao tác <span class="arithmatex">\(Pop\)</span> tốn <span class="arithmatex">\(O(k)\)</span> và giảm <span class="arithmatex">\(\Phi\)</span> đi <span class="arithmatex">\(k\)</span>, nên thời gian phân bổ cũng là hằng số.</p>
+<p>Điều này chứng tỏ bất kì chuỗi <span class="arithmatex">\(m\)</span> thao tác nào cũng tổn <span class="arithmatex">\(O(m)\)</span> thời gian trong trường hợp xấu nhất.</p>
+<h3 id="bo-em-nhi-phan">Bộ đếm nhị phân</h3>
+<p>Xét một bộ đếm dùng số nhị phân với các thao tác như sau:</p>
+<ul>
+<li><span class="arithmatex">\(Init\)</span>: tạo bộ đếm với giá trị là <span class="arithmatex">\(0\)</span>.</li>
+<li><span class="arithmatex">\(Inc\)</span>: thêm <span class="arithmatex">\(1\)</span> vào giá trị của bộ đếm.</li>
+<li><span class="arithmatex">\(Read\)</span>: trả về giá trị hiện thời của bộ đếm.</li>
 </ul>
-</li>
-<li>Toán học<ul>
-<li><a href="../Codeforces/math/floors_ceilings_inequalities/">Floor, ceiling và bất đẳng thức cho người mới học</a></li>
-<li><a href="../Codeforces/math/sums_and_expected_value/">Tổng và Giá trị kỳ vọng</a></li>
-</ul>
-</li>
-<li>Hashing<ul>
-<li><a href="../Codeforces/hashing/blowing_up_unordered_map/">Giải mã và chống hack cho unordered_map trong C++</a></li>
-</ul>
-</li>
-<li>C++<ul>
-<li><a href="../Codeforces/c%2B%2B/no_rand/">Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++</a></li>
-</ul>
-</li>
-<li>Các thuật toán ngẫu nhiên và gần đúng<ul>
-<li><a href="../Codeforces/randomized_algorithms/hacking_randomized_solutions/">Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>cp-algorithms<ul>
-<li>Đại số<ul>
-<li><a href="../cp-algorithms/algebra/binary_exponentiation/">Luỹ thừa nhị phân</a></li>
-</ul>
-</li>
-<li>Cấu trúc dữ liệu<ul>
-<li>Cơ bản<ul>
-<li><a href="../cp-algorithms/data_structures/fundamentals/min_stack_min_queue/">Minimum Stack / Minimum Queue</a></li>
-<li><a href="../cp-algorithms/data_structures/fundamentals/sparse_table/">Sparse Table</a></li>
-</ul>
-</li>
-<li>Cây<ul>
-<li><a href="../cp-algorithms/data_structures/trees/sqrt_tree/">Sqrt Tree</a></li>
-<li><a href="../cp-algorithms/data_structures/trees/dsu/">Disjoint Set Union</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Codechef<ul>
-<li>Cấu trúc dữ liệu<ul>
-<li><a href="../Codechef/data_structures/disjoint_sparse_table/">Disjoint Sparse Table</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>LeetCode<ul>
-<li><a href="../LeetCode/reservoir_sampling/">Lấy mẫu hồ chứa (Reservoir Sampling)</a></li>
-<li><a href="../LeetCode/search_in_rotated_sorted_array/">Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay</a></li>
-<li><a href="../LeetCode/basic_calculator/">Tính toán biểu thức từ xâu</a></li>
-</ul>
-</li>
-<li>Nguồn khác<ul>
-<li>Phân tích Độ phức tạp<ul>
-<li><a href="../Misc/complexity_analysis/asymptotic_notations/">Các ký hiệu tiệm cận</a></li>
-<li><a href="../Misc/complexity_analysis/potential_method/">Phương pháp Tiềm năng</a></li>
-</ul>
-</li>
-<li>Cấu trúc dữ liệu<ul>
-<li><a href="../Misc/data_structures/splay_tree/">Splay Tree: Một mình anh chấp hết</a></li>
-</ul>
-</li>
-<li>Xác suất<ul>
-<li><a href="../Misc/probability/probability/">Xác suất</a></li>
-<li><a href="../Misc/probability/expected_value/">Giá trị kỳ vọng</a></li>
-<li><a href="../Misc/probability/linearity_of_expectation/">Kỳ vọng tuyến tính</a></li>
-</ul>
-</li>
-<li>Kinh nghiệm<ul>
-<li><a href="../Misc/experience/being_better/">Làm thế nào để giỏi hơn trong lập trình thi đấu?</a></li>
-<li><a href="../Misc/experience/icpc_strategy/">Chiến thuật khi thi ICPC</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>Trong ví dụ này ta coi việc tăng giá trị tốn 1 đơn vị thời gian cho mỗi thao tác bit. Ta muốn chứng minh là thao tác <span class="arithmatex">\(Inc\)</span> tốn <span class="arithmatex">\(O(1)\)</span> thời gian phân bổ.</p>
+<p>Cấu trúc dữ liệu này có thể được phân tích nhờ hàm Tiềm năng sau:</p>
+<div class="arithmatex">\[\Phi = \text{số bit 1 của giá trị bộ đếm} = \text{khoảng-cách-hamming}(\text{bộ đếm})\]</div>
+<p>Rõ ràng số phần tử thì luôn không âm.</p>
+<p>Một thao tác <span class="arithmatex">\(Inc\)</span> đảo bit đầu tiên (bit bên phải ngoài cùng). Sau đó, nếu bit đầu tiên bị đảo từ <span class="arithmatex">\(1\)</span> về <span class="arithmatex">\(0\)</span>, bit tiếp theo cũng phải bị đảo. Việc này tiếp tục đến khi một bit được đảo từ <span class="arithmatex">\(0\)</span> sang <span class="arithmatex">\(1\)</span>. Đến đây thì nó dừng đảo. Nếu giá trị ban đầu có <span class="arithmatex">\(k\)</span> bit <span class="arithmatex">\(1\)</span> thì ta đảo tổng cộng <span class="arithmatex">\(k+1\)</span> bit, với thời gian thực là <span class="arithmatex">\(k+1\)</span>, trừ đi phần Tiềm năng là <span class="arithmatex">\(k-1\)</span> (trước thao tác ta có <span class="arithmatex">\(k\)</span> bit <span class="arithmatex">\(1\)</span>, sau thao tác ta có <span class="arithmatex">\(1\)</span> bit <span class="arithmatex">\(1\)</span>, nên <span class="arithmatex">\(\Phi(S_{trước}) - \Phi(S_{sau}) = k - 1\)</span>), thì thời gian phân bổ là <span class="arithmatex">\(2\)</span>. Vậy thời gian thực để chạy <span class="arithmatex">\(m\)</span> thao tác là <span class="arithmatex">\(O(m)\)</span>.</p>
+<h2 id="ung-dung">Ứng dụng</h2>
+<p>Hàm Tiềm năng thường được sử dung để phân tích Fibonacci Heap, một loại hàng chờ ưu tiên (priority queue) cho phép xoá phần tử với thời gian phân bổ là <span class="arithmatex">\(log\)</span>, và tất cả các thao tác khác với thời gian phân bổ là hằng số. Nó cũng được dùng để phân tích <a href="../../data_structures/splay_tree/">Splay Tree</a>, một loại cây nhị phân tìm kiếm tự biến đổi với thời gian phân bổ của mỗi thao tác là <span class="arithmatex">\(log\)</span>.</p>
 
-
-  
-
-
-  
+  <hr>
+<div class="md-source-file">
+  <small>
     
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">04/10/2023 (GMT+07)</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">06/11/2022 (GMT+07)</span>
+      
+    
+  </small>
+</div>
+
+
   
 
 
 
 
-  
 
 
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/CPBlogs"
+    data-repo-id="R_kgDOIA7h_g"
+    data-category="General"
+    data-category-id="DIC_kwDOIA7h_s4CVvKI"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
 
+  
+    <div class="md-source-date">
+      <small>
+        Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
   
 
               </article>
@@ -2095,11 +2329,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top"], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
   
-      <script src="../assets/javascripts/bundle.6eac0284.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6eac0284.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

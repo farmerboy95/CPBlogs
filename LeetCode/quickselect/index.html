@@ -8,35 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/navigation/">
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/LeetCode/quickselect/">
       
       
-        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../Codeforces/graph/dfs_tree/">
-      
-      
-      <link rel="icon" href="../assets/images/logo.jpg">
+      <link rel="icon" href="../../assets/images/logo.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
     
     
       
-        <title>Các tài liệu - farmerboy's CP Blogs</title>
+        <title>Quickselect - farmerboy's CP Blogs</title>
       
     
     
   
-      <link rel="stylesheet" href="../assets/stylesheets/main.79e020e9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.79e020e9.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
 
     
-  <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+  <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
 
     
   
@@ -53,7 +49,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -70,7 +66,7 @@
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -81,7 +77,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -112,9 +108,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
       
-  <img src="../assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -131,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Các tài liệu
+              Quickselect
             
           </span>
         </div>
@@ -233,13 +229,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href=".." class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
           
   
   Trang chủ
@@ -263,7 +257,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Codeforces/graph/dfs_tree/" class="md-tabs__link">
+        <a href="../../Codeforces/graph/dfs_tree/" class="md-tabs__link">
           
   
   Codeforces
@@ -290,7 +284,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../cp-algorithms/algebra/binary_exponentiation/" class="md-tabs__link">
+        <a href="../../cp-algorithms/algebra/binary_exponentiation/" class="md-tabs__link">
           
   
   cp-algorithms
@@ -317,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Codechef/data_structures/disjoint_sparse_table/" class="md-tabs__link">
+        <a href="../../Codechef/data_structures/disjoint_sparse_table/" class="md-tabs__link">
           
   
   Codechef
@@ -338,7 +332,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../LeetCode/reservoir_sampling/" class="md-tabs__link">
+        <a href="../reservoir_sampling/" class="md-tabs__link">
           
   
   LeetCode
@@ -362,7 +356,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Misc/complexity_analysis/asymptotic_notations/" class="md-tabs__link">
+        <a href="../../Misc/complexity_analysis/asymptotic_notations/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -387,8 +381,6 @@
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -400,9 +392,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
       
-  <img src="../assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     farmerboy's CP Blogs
@@ -426,8 +418,6 @@
       
   
   
-    
-  
   
     
     
@@ -437,12 +427,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -456,7 +446,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Trang chủ
@@ -469,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,16 +477,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -505,7 +488,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -599,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/graph/dfs_tree/" class="md-nav__link">
+      <a href="../../Codeforces/graph/dfs_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -663,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/bit_manipulation/xor_basis/" class="md-nav__link">
+      <a href="../../Codeforces/bit_manipulation/xor_basis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/math/floors_ceilings_inequalities/" class="md-nav__link">
+      <a href="../../Codeforces/math/floors_ceilings_inequalities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -747,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/math/sums_and_expected_value/" class="md-nav__link">
+      <a href="../../Codeforces/math/sums_and_expected_value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/hashing/blowing_up_unordered_map/" class="md-nav__link">
+      <a href="../../Codeforces/hashing/blowing_up_unordered_map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -875,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/c%2B%2B/no_rand/" class="md-nav__link">
+      <a href="../../Codeforces/c%2B%2B/no_rand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -939,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces/randomized_algorithms/hacking_randomized_solutions/" class="md-nav__link">
+      <a href="../../Codeforces/randomized_algorithms/hacking_randomized_solutions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1049,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/algebra/binary_exponentiation/" class="md-nav__link">
+      <a href="../../cp-algorithms/algebra/binary_exponentiation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1149,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/data_structures/fundamentals/min_stack_min_queue/" class="md-nav__link">
+      <a href="../../cp-algorithms/data_structures/fundamentals/min_stack_min_queue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1169,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/data_structures/fundamentals/sparse_table/" class="md-nav__link">
+      <a href="../../cp-algorithms/data_structures/fundamentals/sparse_table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1233,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/data_structures/trees/sqrt_tree/" class="md-nav__link">
+      <a href="../../cp-algorithms/data_structures/trees/sqrt_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp-algorithms/data_structures/trees/dsu/" class="md-nav__link">
+      <a href="../../cp-algorithms/data_structures/trees/dsu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1371,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codechef/data_structures/disjoint_sparse_table/" class="md-nav__link">
+      <a href="../../Codechef/data_structures/disjoint_sparse_table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1445,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LeetCode/reservoir_sampling/" class="md-nav__link">
+      <a href="../reservoir_sampling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LeetCode/search_in_rotated_sorted_array/" class="md-nav__link">
+      <a href="../search_in_rotated_sorted_array/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1485,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LeetCode/basic_calculator/" class="md-nav__link">
+      <a href="../basic_calculator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1587,7 +1569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/complexity_analysis/asymptotic_notations/" class="md-nav__link">
+      <a href="../../Misc/complexity_analysis/asymptotic_notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1607,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/complexity_analysis/potential_method/" class="md-nav__link">
+      <a href="../../Misc/complexity_analysis/potential_method/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1671,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/data_structures/splay_tree/" class="md-nav__link">
+      <a href="../../Misc/data_structures/splay_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1735,7 +1717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/probability/probability/" class="md-nav__link">
+      <a href="../../Misc/probability/probability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1755,7 +1737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/probability/expected_value/" class="md-nav__link">
+      <a href="../../Misc/probability/expected_value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1775,7 +1757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/probability/linearity_of_expectation/" class="md-nav__link">
+      <a href="../../Misc/probability/linearity_of_expectation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1839,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/experience/being_better/" class="md-nav__link">
+      <a href="../../Misc/experience/being_better/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1859,7 +1841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/experience/icpc_strategy/" class="md-nav__link">
+      <a href="../../Misc/experience/icpc_strategy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1896,8 +1878,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1925,117 +1905,89 @@
   
 
 
-  <h1>Các tài liệu</h1>
-
-<ul>
-<li>Trang chủ<ul>
-<li><a href="../">Lời chào</a></li>
-<li><a href="./">Các tài liệu</a></li>
-</ul>
-</li>
-<li>Codeforces<ul>
-<li>Đồ thị<ul>
-<li><a href="../Codeforces/graph/dfs_tree/">Cây DFS và ứng dụng</a></li>
-</ul>
-</li>
-<li>Xử lý bit<ul>
-<li><a href="../Codeforces/bit_manipulation/xor_basis/">Kĩ thuật Vector cơ sở cho các bài toán XOR</a></li>
-</ul>
-</li>
-<li>Toán học<ul>
-<li><a href="../Codeforces/math/floors_ceilings_inequalities/">Floor, ceiling và bất đẳng thức cho người mới học</a></li>
-<li><a href="../Codeforces/math/sums_and_expected_value/">Tổng và Giá trị kỳ vọng</a></li>
-</ul>
-</li>
-<li>Hashing<ul>
-<li><a href="../Codeforces/hashing/blowing_up_unordered_map/">Giải mã và chống hack cho unordered_map trong C++</a></li>
-</ul>
-</li>
-<li>C++<ul>
-<li><a href="../Codeforces/c%2B%2B/no_rand/">Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++</a></li>
-</ul>
-</li>
-<li>Các thuật toán ngẫu nhiên và gần đúng<ul>
-<li><a href="../Codeforces/randomized_algorithms/hacking_randomized_solutions/">Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>cp-algorithms<ul>
-<li>Đại số<ul>
-<li><a href="../cp-algorithms/algebra/binary_exponentiation/">Luỹ thừa nhị phân</a></li>
-</ul>
-</li>
-<li>Cấu trúc dữ liệu<ul>
-<li>Cơ bản<ul>
-<li><a href="../cp-algorithms/data_structures/fundamentals/min_stack_min_queue/">Minimum Stack / Minimum Queue</a></li>
-<li><a href="../cp-algorithms/data_structures/fundamentals/sparse_table/">Sparse Table</a></li>
-</ul>
-</li>
-<li>Cây<ul>
-<li><a href="../cp-algorithms/data_structures/trees/sqrt_tree/">Sqrt Tree</a></li>
-<li><a href="../cp-algorithms/data_structures/trees/dsu/">Disjoint Set Union</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Codechef<ul>
-<li>Cấu trúc dữ liệu<ul>
-<li><a href="../Codechef/data_structures/disjoint_sparse_table/">Disjoint Sparse Table</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>LeetCode<ul>
-<li><a href="../LeetCode/reservoir_sampling/">Lấy mẫu hồ chứa (Reservoir Sampling)</a></li>
-<li><a href="../LeetCode/search_in_rotated_sorted_array/">Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay</a></li>
-<li><a href="../LeetCode/basic_calculator/">Tính toán biểu thức từ xâu</a></li>
-</ul>
-</li>
-<li>Nguồn khác<ul>
-<li>Phân tích Độ phức tạp<ul>
-<li><a href="../Misc/complexity_analysis/asymptotic_notations/">Các ký hiệu tiệm cận</a></li>
-<li><a href="../Misc/complexity_analysis/potential_method/">Phương pháp Tiềm năng</a></li>
-</ul>
-</li>
-<li>Cấu trúc dữ liệu<ul>
-<li><a href="../Misc/data_structures/splay_tree/">Splay Tree: Một mình anh chấp hết</a></li>
-</ul>
-</li>
-<li>Xác suất<ul>
-<li><a href="../Misc/probability/probability/">Xác suất</a></li>
-<li><a href="../Misc/probability/expected_value/">Giá trị kỳ vọng</a></li>
-<li><a href="../Misc/probability/linearity_of_expectation/">Kỳ vọng tuyến tính</a></li>
-</ul>
-</li>
-<li>Kinh nghiệm<ul>
-<li><a href="../Misc/experience/being_better/">Làm thế nào để giỏi hơn trong lập trình thi đấu?</a></li>
-<li><a href="../Misc/experience/icpc_strategy/">Chiến thuật khi thi ICPC</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+  <h1>Quickselect</h1>
 
 
-  
 
-
-  
+  <hr>
+<div class="md-source-file">
+  <small>
     
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">04/10/2023 (GMT+07)</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">06/09/2023 (GMT+07)</span>
+      
+    
+  </small>
+</div>
+
+
   
 
 
 
 
-  
 
 
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/CPBlogs"
+    data-repo-id="R_kgDOIA7h_g"
+    data-category="General"
+    data-category-id="DIC_kwDOIA7h_s4CVvKI"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
 
+  
+    <div class="md-source-date">
+      <small>
+        Authors: <span class='git-page-authors git-authors'></span>
+      </small>
+    </div>
   
 
               </article>
@@ -2095,11 +2047,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top"], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
   
-      <script src="../assets/javascripts/bundle.6eac0284.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
