@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/Misc/probability/probability/">
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/cp-algorithms/algebra/binary-exponentiation/">
       
       
+        <link rel="prev" href="../../../Codeforces/randomized-algorithms/hacking-randomized-solutions/">
+      
+      
+        <link rel="next" href="../../data-structures/fundamentals/min-stack-min-queue/">
       
       
       <link rel="icon" href="../../../assets/images/logo.jpg">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Xác suất - farmerboy's CP Blogs</title>
+        <title>Luỹ thừa nhị phân - farmerboy's CP Blogs</title>
       
     
     
@@ -99,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#xac-suat" class="md-skip">
+        <a href="#luy-thua-nhi-phan" class="md-skip">
           Skip to content
         </a>
       
@@ -132,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Xác suất
+              Luỹ thừa nhị phân
             
           </span>
         </div>
@@ -279,17 +283,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../cp-algorithms/algebra/binary-exponentiation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   cp-algorithms
@@ -959,6 +967,8 @@
       
   
   
+    
+  
   
     
     
@@ -968,12 +978,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -987,7 +997,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             cp-algorithms
@@ -998,18 +1008,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -1023,7 +1035,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             Đại số
@@ -1034,9 +1046,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../cp-algorithms/algebra/binary-exponentiation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Luỹ thừa nhị phân
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1045,6 +1077,116 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#khai-niem" class="md-nav__link">
+    Khái niệm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thuat-toan" class="md-nav__link">
+    Thuật toán
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cai-at" class="md-nav__link">
+    Cài đặt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ung-dung" class="md-nav__link">
+    Ứng dụng
+  </a>
+  
+    <nav class="md-nav" aria-label="Ứng dụng">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tinh-nhanh-so-mu-modulo-mot-so-khac" class="md-nav__link">
+    Tính nhanh số mũ modulo một số khác
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tinh-nhanh-so-fibonacci" class="md-nav__link">
+    Tính nhanh số Fibonacci
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hoan-vi-k-lan" class="md-nav__link">
+    Hoán vị k lần
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ap-dung-nhanh-mot-nhom-cac-phep-toan-hinh-hoc-len-mot-nhom-cac-iem" class="md-nav__link">
+    Áp dụng nhanh một nhóm các phép toán hình học lên một nhóm các điểm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-uong-i-o-dai-k-trong-o-thi" class="md-nav__link">
+    Số đường đi độ dài k trong đồ thị
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bien-the-cua-luy-thua-nhi-phan-nhan-2-so-modulo-m" class="md-nav__link">
+    Biến thể của luỹ thừa nhị phân: nhân 2 số modulo m
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luyen-tap" class="md-nav__link">
+    Luyện tập
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1136,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/data-structures/fundamentals/min-stack-min-queue/" class="md-nav__link">
+      <a href="../../data-structures/fundamentals/min-stack-min-queue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1156,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/data-structures/fundamentals/sparse-table/" class="md-nav__link">
+      <a href="../../data-structures/fundamentals/sparse-table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1220,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/data-structures/trees/sqrt-tree/" class="md-nav__link">
+      <a href="../../data-structures/trees/sqrt-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1240,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/data-structures/trees/dsu/" class="md-nav__link">
+      <a href="../../data-structures/trees/dsu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1909,36 +2051,84 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#loi-tua" class="md-nav__link">
-    Lời tựa
+  <a href="#khai-niem" class="md-nav__link">
+    Khái niệm
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#giai-thich-xac-suat" class="md-nav__link">
-    Giải thích xác suất
+  <a href="#thuat-toan" class="md-nav__link">
+    Thuật toán
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#xac-suat-trong-tai-chinh-va-kinh-te" class="md-nav__link">
-    Xác suất trong tài chính và kinh tế
+  <a href="#cai-at" class="md-nav__link">
+    Cài đặt
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#xac-suat-trong-duoc-hoc" class="md-nav__link">
-    Xác suất trong dược học
+  <a href="#ung-dung" class="md-nav__link">
+    Ứng dụng
   </a>
+  
+    <nav class="md-nav" aria-label="Ứng dụng">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tinh-nhanh-so-mu-modulo-mot-so-khac" class="md-nav__link">
+    Tính nhanh số mũ modulo một số khác
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tinh-nhanh-so-fibonacci" class="md-nav__link">
+    Tính nhanh số Fibonacci
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hoan-vi-k-lan" class="md-nav__link">
+    Hoán vị k lần
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ap-dung-nhanh-mot-nhom-cac-phep-toan-hinh-hoc-len-mot-nhom-cac-iem" class="md-nav__link">
+    Áp dụng nhanh một nhóm các phép toán hình học lên một nhóm các điểm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-uong-i-o-dai-k-trong-o-thi" class="md-nav__link">
+    Số đường đi độ dài k trong đồ thị
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bien-the-cua-luy-thua-nhi-phan-nhan-2-so-modulo-m" class="md-nav__link">
+    Biến thể của luỹ thừa nhị phân: nhân 2 số modulo m
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#xac-suat-trong-san-xuat" class="md-nav__link">
-    Xác suất trong sản xuất
+  <a href="#luyen-tap" class="md-nav__link">
+    Luyện tập
   </a>
   
 </li>
@@ -1962,70 +2152,268 @@
   
 
 
-<h1 id="xac-suat">Xác suất</h1>
+<h1 id="luy-thua-nhi-phan">Luỹ thừa nhị phân</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a class="glightbox" href="../../../assets/images/brilliant.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/brilliant.png" width="16" height="16"/></a> <a href="https://brilliant.org/wiki/probability/">Probability - Brilliant</a></p>
-<h2 id="loi-tua">Lời tựa</h2>
-<p>Một <strong>xác suất</strong> là một con số biểu diễn khả năng xảy ra của một biến cố không chắc chắn. Xác suất thường có giá trị nằm trong đoạn <span class="arithmatex">\([0, 1]\)</span>. Xác suất càng cao thì biến cố càng có khả năng xảy ra. Xác suất bằng <span class="arithmatex">\(0\)</span> nghĩa là biến cố sẽ không xảy ra. Xác suất bằng <span class="arithmatex">\(1\)</span> nghĩa là biến cố luôn xảy ra. Tất cả các giá trị còn lại nằm giữa <span class="arithmatex">\(0\)</span> và <span class="arithmatex">\(1\)</span> thể hiện nhiều cấp độ của khả năng xảy ra của biến cố.</p>
-<p>Nghiên cứu về xác suất rất quan trọng vì nó giải quyết các vấn đề định lượng với kết quả không chắc chắn. Ví dụ, trong sản xuất, ta không thể chắc chắn được rằng quy trình sản xuất sẽ không tạo ra các sản phẩm lỗi. Sẽ cực kỳ tốn kém và mất thì giờ để kiểm tra từng sản phẩm khi xuất xưởng. Hiểu được xác suất lỗi này sẽ giúp công ty xử lý lỗi thông minh hơn nhiều.</p>
-<p>Các ứng dụng của xác suất gần như là vô hạn, nhưng ta sẽ chỉ đề cập đến một vài trong số đó.</p>
-<h2 id="giai-thich-xac-suat">Giải thích xác suất</h2>
-<p>Có hai cách hiểu chính về xác suất: <strong>xác suất theo chủ nghĩa khách quan (objectivist probability)</strong> và <strong>xác suất theo chủ nghĩa chủ quan (subjectivist probability)</strong>.</p>
-<p><strong>Xác suất khách quan</strong> đề cập đến các phép thử có thể được lặp lại nhiều lần để phân tích kết quả, ví dụ như việc phân tích các thử nghiệm thuốc lâm sàng. Các nhà khoa học và bác sĩ sẽ đưa cho những người tham gia thử nghiệm một loại thuốc mới, và trong suốt quá trình thử nghiệm, họ sẽ phân tích hiệu quả của loại thuốc đó. Vì có nhiều người tham gia thử nghiệm thuốc nên một thí nghiệm hiệu quả sẽ cho phép các bác sĩ và nhà khoa học chỉ định xác suất hiệu quả của loại thuốc đó. Xác suất này sẽ đại diện cho tỉ lệ người tham gia nhận được tác dụng có lợi từ thuốc.</p>
-<p>Một số biến cố không chắc chắn khác không có cơ hội được kiểm tra qua nhiều lần thử, nhưng vẫn mong muốn có một xác suất nào đó. Trong trường hợp này, các nhà toán học sẽ coi xác suất là một thước đo mức độ tin tưởng rằng biến cố nào đó sẽ xảy ra. Điều này được gọi là <strong>xác suất chủ quan</strong>, chẳng hạn như việc dự báo thời tiết. Các nhà khí tượng học sẽ gán xác suất cho một số sự kiện thời tiết xảy ra, như khả năng có mưa ở một khu vực nhất định. Xác xác suất này được tính bằng cách sử dụng dữ liệu thu thập từ vệ tinh cũng như dữ liệu lịch sử. Không giống như xác suất khách quan, xác suất này không thể được kiểm tra qua nhiều thử nghiệm vì các tình huống chính xác dẫn đến dự đoán sẽ không bao giờ lặp lại nữa.</p>
-<h2 id="xac-suat-trong-tai-chinh-va-kinh-te">Xác suất trong tài chính và kinh tế</h2>
-<p>Mỗi khi một người đi đầu tư, người đó đang tham gia vào phân tích xác suất, dù người đó có nhận ra hay không. Mỗi khoản đầu tử đều có một số mức độ không chắc chắn. Không ai có thể chắc chắn giá trị của khoản đầu tư đó sẽ như thế nào trong tương lai. Bằng cách chi tiền cho một khoản đầu tư, về cơ bản, bạn đang nói rằng có <em>khả năng cao</em> là khoản đầu tư đó sẽ tằng giá trị.</p>
-<p>Các nhà phân tích tài chính chuyên nghiệp có xu hướng nhấn mạnh rõ ràng hơn về xác suất khi thực hiện phân tích các khoản đầu tư. Họ sẽ dùng các dữ liệu lịch sử và luồng thông tin hàng ngày để ấn định xác suất mà một khoản đầu tư sẽ tăng hoặc giảm giá trị. Các phân tích này sẽ được đưa vào thị trường và ảnh hưởng đến giá cả hàng hoá.</p>
-<p><strong>Ví dụ:</strong> Một nhà phân tích tài chính đã phân tích một công ty mới và ước tính các thông tin sau về nó:</p>
-<p>Giá trị hiện tại của công ty là 1,1 triệu USD.</p>
-<p>Có một xác suất 0,8 rằng công ty sẽ trị giá 0,9 triệu USD trong một năm.</p>
-<p>Có một xác suất 0,15 rằng công ty sẽ trị giá 1,3 triệu USD trong một năm.</p>
-<p>Có một xác suất 0,05 rằng công ty sẽ trị giá 2,0 triệu USD trong một năm.</p>
-<p>Nếu triển vọng đầu tư dựa trên giá trị dự kiến trong tương lai của công ty, thì triển vọng đầu tư hiện tại vào công ty là gì?</p>
-<details class="tip">
-<summary>Lời giải</summary>
-<p>Có vài kết quả khác nhau về cách thức hoạt động của công ty này nhưng chúng ta có thể ước tính giá trị tương lai của công ty bằng cách dùng xác suất.</p>
-<p>Giá trị tương lai ước tính của công ty tính bằng triệu USD là:</p>
-<div class="arithmatex">\[(0.8 \times 0.9) + (0.15 \times 1.3) + (0.05 \times 2.0) = 1.015\]</div>
-<p>Con số này thấp hơn giá trị hiện tại của công ty, vì vậy một nhà đầu tư thông minh sẽ bán cổ phần của họ trong công ty.</p>
-</details>
-<p>Trong ví dụ này, nếu nhiều nhà phân tích tài chính thu được cùng một kết quả khi họ tính toán giá trị tương lai của công ty, thì thị trường sẽ điều chỉnh và giá trị của công ty sẽ thay đổi.</p>
-<h2 id="xac-suat-trong-duoc-hoc">Xác suất trong dược học</h2>
-<p>Xác suất được sử dụng trong nghiên cứu y học để định lượng hiệu quả của thuốc và các thủ thuật y tế. Trước khi một loại thuốc có thể đưa ra thị trường, nó phải vượt qua các thử nghiệm lâm sàng. Trong một thử nghiệm lâm sàng, nhiều người tham gia được cho dùng một loại thuốc và hiệu quả của loại thuốc đó được đo lường theo thời gian. Ngoài ra còn có một nhóm người tham gia được gọi là "nhóm đối chứng". Trong nhóm này, những người tham gia được làm cho tin rằng họ được cho dùng thuốc, nhưng thực tế họ được cho dùng giả dược (một viên đường chẳng hạn).</p>
-<p>Các nhà khoa học đo lường hiệu quả của nhóm thuốc so với hiệu quả của nhóm đối chứng. Rất nhiều phân tích được thực hiện để đảm bảo rằng thuốc không chỉ hiệu quả mà còn tốt hơn là không làm gì cả (nhóm đối chứng). Việc một loại thuốc có <em>thực sự</em> hiệu quả hay không có thể là một nguồn gây tranh cãi lớn trong cộng đồng nghiên cứu y học.</p>
-<p><strong>Ví dụ:</strong></p>
-<p>Các nhà khoa học dược phẩm vừa phát triển một loại thuốc cảm mới, được đặt tên là MiraQuil.</p>
-<p>Các nhà khoa học đã đưa loại thuốc này qua nhiều thử nghiệm lâm sàng. Họ phát hiện ra rằng trong số những người tham gia (bị cảm và sau đó được dùng thuốc), 98% trong số họ không có triệu chứng cảm sau một tuần!</p>
-<p>Các nhà khoa học đã chứng minh rằng thuốc của họ có hiệu quả chưa? Họ có nên bắt đầu bán thuốc hay không?</p>
-<details class="tip">
-<summary>Lời giải</summary>
-<p>Phần thông tin quan trọng nhất còn thiếu trong các thử nghiệm lâm sàng là hiệu suất của nhóm đối chứng. Nếu không biết những người bị cảm lạnh sẽ như thế nào khi họ không dùng thuốc, thì không thể biết hiệu quả của thuốc.</p>
-<p>Khá hợp lý khi cho rằng nhiều triệu chứng cảm lạnh sẽ biến mất sau một tuần, ngay cả khi không dùng bất kỳ loại thuốc nào. Rất có thể nhóm đối chứng cũng có kết quả "thần kỳ" không kém. Tuy nhiên, không xem số liệu thì không thể biết được.</p>
-<p>Câu trả lời là KHÔNG.</p>
-</details>
-<h2 id="xac-suat-trong-san-xuat">Xác suất trong sản xuất</h2>
-<p>Nghiên cứu về xác suất cho phép đưa ra quyết định thông minh trong sản xuất. Đặc biệt, nó cho phép các nhà quản lý nhà máy đưa ra quyết định hiệu quả về chi phí khi kiểm soát chất lượng. Bằng cách phân tích xác suất của một sản phẩm bị lỗi và hậu quả tài chính của một sản phẩm bị lỗi, các nhà quản lý nhà máy có thể sử dụng tiền và nguồn lực của họ một cách hiệu quả nhất để giúp sản xuất các sản phẩm có chất lượng.</p>
-<p><strong>Ví dụ:</strong></p>
-<p>Một nhà máy sản xuất bàn chải đánh răng sản xuất <span class="arithmatex">\(200000\)</span> bàn chải đánh răng mỗi ngày. Quy trình sản xuất không hoàn hảo và đôi khi có những bàn chải đánh răng bị lỗi.</p>
-<p>Một nhà phân tích đã tính toán rằng mỗi bàn chải đánh răng có xác suất bị lỗi là 0,004. Nếu một khách hàng nhận được một sản phẩm bị lỗi, thì công ty sẽ phải trả 5 đô la để thay thế sản phẩm và làm hài lòng khách hàng.</p>
-<p>Giám đốc nhà máy có thể chọn thuê một nhóm Đảm bảo Chất lượng để tìm và sửa chữa tất cả các bàn chải đánh răng bị lỗi khi chúng được sản xuất. Số tiền tối đa mà giám đốc nhà máy sẵn sàng chi cho đội này mỗi ngày là bao nhiêu?</p>
-<details class="tip">
-<summary>Lời giải</summary>
-<p>Nếu nhà máy sản xuất <span class="arithmatex">\(200000\)</span> bàn chải mỗi ngày, mỗi bàn chải có xác suất lỗi là <span class="arithmatex">\(0.004\)</span>, ta có thể ước lượng rằng nhà máy sản xuất <span class="arithmatex">\(200000 \times 0.004 = 800\)</span> bản chải lỗi mỗi ngày.</p>
-<p>Mỗi bàn chải lỗi làm công ty mất <span class="arithmatex">\(\$5\)</span> đô, thì tổng thiệt hại một ngày là <span class="arithmatex">\(\$5 \times 800 = \$4000\)</span>.</p>
-<p>Nếu đội đảm bảo chất lượng có thể tìm ra tất cả sản phẩm lỗi, thì chi phí cho đội này phải ít hơn chi phí cho các sản phẩm lỗi. Vì vậy, người quản lý sẽ phải trả tối đa <span class="arithmatex">\(\$4000\)</span> mỗi ngày cho đội này.</p>
-</details>
+<p><a class="glightbox" href="../../../assets/images/cpalgorithms.ico" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/cpalgorithms.ico" width="16" height="16"/></a> <a href="https://cp-algorithms.com/algebra/binary-exp.html">Binary Exponentiation</a></p>
+<h2 id="khai-niem">Khái niệm</h2>
+<p>Luỹ thừa nhị phân (còn được biết đến là luỹ thừa bằng bình phương) là một thủ thuật để tính <span class="arithmatex">\(a^n\)</span> mà chỉ sử dụng <span class="arithmatex">\(O(\log n)\)</span> phép nhân (thay vì <span class="arithmatex">\(O(n)\)</span> phép nhân như trong các phương pháp đơn giản).</p>
+<p>Nó còn có những ứng dụng quan trọng trong rất nhiều vấn đề không liên quan đến số học, vì nó có thể được sử dụng trong bất kì phép toán nào có tính chất <strong>kết hợp</strong>:</p>
+<div class="arithmatex">\[(X \cdot Y) \cdot Z = X \cdot (Y \cdot Z)\]</div>
+<p>Rõ ràng nhất là nó được áp dụng cho phép nhân modulo, phép nhân ma trận và các bài toán khác mà chúng ta sẽ thảo luận dưới đây.</p>
+<h2 id="thuat-toan">Thuật toán</h2>
+<p><span class="arithmatex">\(a^n\)</span> được biểu thị đơn giản là nhân <span class="arithmatex">\(a\)</span> <span class="arithmatex">\(n-1\)</span> lần: <span class="arithmatex">\(a^{n} = a \cdot a \cdot \ldots \cdot a\)</span>. Nhưng rõ ràng cách này không hữu dụng với <span class="arithmatex">\(a\)</span> lớn hoặc <span class="arithmatex">\(n\)</span> lớn.</p>
+<p><span class="arithmatex">\(a^{b+c} = a^b \cdot a^c\)</span> và <span class="arithmatex">\(a^{2b} = a^b \cdot a^b = (a^b)^2\)</span>.</p>
+<p>Ý tưởng của luỹ thừa nhị phân là việc chúng ta biểu diễn số mũ thành dạng nhị phân của nó, tiến hành tính từng bit 1 theo hệ thập phân và nhân lại với nhau.</p>
+<p>Ví dụ ta biểu diễn <span class="arithmatex">\(n\)</span> theo hệ nhị phân, ta có:</p>
+<div class="arithmatex">\[3^{13} = 3^{1101_2} = 3^8 \cdot 3^4 \cdot 3^1\]</div>
+<p>Vì số <span class="arithmatex">\(n\)</span> có <span class="arithmatex">\(\lfloor \log_2 n \rfloor + 1\)</span> chữ số khi biểu diễn ở hệ nhị phân, ta chỉ cần dùng <span class="arithmatex">\(O(\log n)\)</span> phép nhân, nếu ta biết kết quả của <span class="arithmatex">\(a^1, a^2, a^4, a^8, \dots, a^{2^{\lfloor \log n \rfloor}}\)</span>.</p>
+<p>Vậy ta chỉ cần biết cách tính nhanh của những số mũ trên. Thật may điều này rất đơn giản, vì mỗi số trong dãy trên là bình phương của số ngay trước nó trong dãy.</p>
+<div class="arithmatex">\[\begin{align}
+3^1 &amp;= 3 \\
+3^2 &amp;= \left(3^1\right)^2 = 3^2 = 9 \\
+3^4 &amp;= \left(3^2\right)^2 = 9^2 = 81 \\
+3^8 &amp;= \left(3^4\right)^2 = 81^2 = 6561
+\end{align}\]</div>
+<p>Vậy để tính <span class="arithmatex">\(3^{13}\)</span>, ta chỉ cần nhân 3 trong số các số trên (bỏ qua <span class="arithmatex">\(3^2\)</span> vì bit tương ứng trong <span class="arithmatex">\(n\)</span> không có): <span class="arithmatex">\(3^{13} = 6561 \cdot 81 \cdot 3 = 1594323\)</span></p>
+<p>Độ phức tạp của thuật toán là <span class="arithmatex">\(O(\log n)\)</span>: ta cần tính <span class="arithmatex">\(\log n\)</span> số mũ của <span class="arithmatex">\(a\)</span>, và sau đó ta phải thực hiện nhiều nhất <span class="arithmatex">\(\log n\)</span> phép nhân để có được kết quả cuối cùng.</p>
+<p>Công thức sau cũng biểu thị ý tưởng ở trên:</p>
+<div class="arithmatex">\[a^n = \begin{cases}
+1 &amp;\text{nếu } n == 0 \\
+\left(a^{\frac{n}{2}}\right)^2 &amp;\text{nếu } n &gt; 0 \text{ và } n \text{ chẵn}\\
+\left(a^{\frac{n - 1}{2}}\right)^2 \cdot a &amp;\text{nếu } n &gt; 0 \text{ và } n \text{ lẻ}\\
+\end{cases}\]</div>
+<h2 id="cai-at">Cài đặt</h2>
+<p>Đầu tiên là cách cài đệ quy, cũng là để biểu thị cho công thức đệ quy ở trên</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">binpow</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">binpow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="k">else</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+</code></pre></div>
+<p>Cách thứ 2 chúng ta làm không dùng đệ quy. Nó tính tất cả các số mũ trong một vòng lặp, và nhân vào kết quả khi bit tương ứng của <span class="arithmatex">\(n\)</span> được set. Mặc dù độ phức tạp như nhau, cách này sẽ nhanh hơn cách đầu tiên một chút trong thực tết vì nó không có các hao phí của việc gọi đệ quy.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">binpow</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">            </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="ung-dung">Ứng dụng</h2>
+<h3 id="tinh-nhanh-so-mu-modulo-mot-so-khac">Tính nhanh số mũ modulo một số khác</h3>
+<p><strong>Bài toán:</strong>
+Tính <span class="arithmatex">\(x^n \bmod m\)</span>. Đây là một bài rất phổ biến. Ví dụ như nó được dùng để tính <a href="">nghịch đảo modulo</a>.</p>
+<p><strong>Lời giải:</strong>
+Vì ta biết rằng toán tử modulo không can thiệp vào các phép nhân (<span class="arithmatex">\(a \cdot b \equiv (a \bmod m) \cdot (b \bmod m) \pmod m\)</span>), ta có thể dùng lại code ở trên, chỉ cần thay thế mỗi phép nhân bằng phép nhân modulo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">binpow</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">            </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Lưu ý:</strong> Nếu <span class="arithmatex">\(m\)</span> là số nguyên tố, ta có thể tăng tốc tính toán một chút bằng cách tính <span class="arithmatex">\(x^{n \bmod (m-1)}\)</span> thay vì tính <span class="arithmatex">\(x ^ n\)</span>. Đây là ứng dụng của <a href="">Định lý Fermat nhỏ</a></p>
+<h3 id="tinh-nhanh-so-fibonacci">Tính nhanh số Fibonacci</h3>
+<p><strong>Bài toán:</strong> Tính số Fibonacci thứ <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(F_n\)</span>).</p>
+<p><strong>Lời giải:</strong> 
+Ở đây chúng ta sẽ chỉ đi sơ lược về thuật toán. Nếu bạn muốn tìm hiểu thêm, xin hãy đọc bài <a href="">Số Fibonacci</a>. Để tính số Fibonacci tiếp theo, ta chỉ cần 2 số trước đó, vì <span class="arithmatex">\(F_n = F_{n-1} + F_{n-2}\)</span>. Ta có thể tạo một ma trận <span class="arithmatex">\(2 \times 2\)</span> để mô tả sự biến đổi như sau: sự chuyển tiếp từ <span class="arithmatex">\(F_i\)</span> và <span class="arithmatex">\(F_{i+1}\)</span> sang <span class="arithmatex">\(F_{i+1}\)</span> và <span class="arithmatex">\(F_{i+2}\)</span>. Ví dụ, sau khi dùng phép biến đổi này, cặp <span class="arithmatex">\(F_0\)</span> và <span class="arithmatex">\(F_1\)</span> sẽ chuyển thành <span class="arithmatex">\(F_1\)</span> và <span class="arithmatex">\(F_2\)</span>. Vì vậy, ta có thể luỹ thừa phép biến đổi này lên mũ <span class="arithmatex">\(n\)</span> để tìm <span class="arithmatex">\(F_n\)</span> trong độ phức tạp <span class="arithmatex">\(O(\log n)\)</span>.</p>
+<h3 id="hoan-vi-k-lan">Hoán vị <span class="arithmatex">\(k\)</span> lần</h3>
+<p><strong>Bài toán:</strong> Cho dãy độ dài <span class="arithmatex">\(n\)</span>. Hoán vị <span class="arithmatex">\(k\)</span> lần dãy đó bằng một hoán vị khác</p>
+<p><strong>Lời giải:</strong> Hoán vị cái hoán vị được cho lên <span class="arithmatex">\(k\)</span> lần dùng luỹ thừa nhị phân, sau đó áp dụng lên dãy độ dài <span class="arithmatex">\(n\)</span> đã cho. Độ phức tạp của lời giải này là <span class="arithmatex">\(O(n \log k)\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">applyPermutation</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sequence</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">permutation</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">newSequence</span><span class="p">(</span><span class="n">sequence</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">sequence</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="n">newSequence</span><span class="p">[</span><span class="n">permutation</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sequence</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">newSequence</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">permute</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sequence</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">permutation</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">            </span><span class="n">sequence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">applyPermutation</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span><span class="w"> </span><span class="n">permutation</span><span class="p">);</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="n">permutation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">applyPermutation</span><span class="p">(</span><span class="n">permutation</span><span class="p">,</span><span class="w"> </span><span class="n">permutation</span><span class="p">);</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sequence</span><span class="p">;</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Lưu ý:</strong> Bài toán này có thể được giải một cách hiệu quả hơn với độ phức tạp tuyến tính bằng cách tạo một đồ thị hoán vị và xét từng chu trình riêng lẻ. Sau đó bạn có thể tính modulo <span class="arithmatex">\(k\)</span> kích thước của chu kỳ và tìm vị trí cuối cùng của mỗi số nằm trong chu trình đó.</p>
+<h3 id="ap-dung-nhanh-mot-nhom-cac-phep-toan-hinh-hoc-len-mot-nhom-cac-iem">Áp dụng nhanh một nhóm các phép toán hình học lên một nhóm các điểm</h3>
+<p><strong>Bài toán:</strong> Cho <span class="arithmatex">\(n\)</span> điểm <span class="arithmatex">\(p_i\)</span>, áp dụng <span class="arithmatex">\(m\)</span> phép biến đổi cho mỗi điểm này. Mỗi phép biến đổi có thể là phép dịch chuyển, phép nhân toạ độ, hoặc phép xoay quanh một trục toạ độ theo một góc cho trước. Ngoài ra cũng có thể có một "vòng lặp" bao gồm một số phép biến đổi và vòng lặp đó được lặp <span class="arithmatex">\(k\)</span> lần (thậm chí các vòng lặp có thể lồng nhau). Độ phức tạp của bài toán nên là <span class="arithmatex">\(O(n \cdot length)\)</span> trong đó <span class="arithmatex">\(length\)</span> là tổng số các phép biến đổi có thể được thực hiện (sau khi mở các vòng lặp).</p>
+<p><strong>Solution:</strong> Chúng ta hãy xem các phép biến đổi thay đổi toạ độ của một điểm như thế nào</p>
+<ul>
+<li>Phép dịch chuyển: Thêm một hằng số vào mỗi toạ độ.</li>
+<li>Phép nhân toạ độ: Nhân mỗi toạ độ với một hằng số khác nhau.</li>
+<li>Phép xoay: phép này sẽ hơi phức tạp một chút (chúng ta sẽ không đi sâu vào nó), nhưng mỗi toạ độ của điểm sẽ được thể hiện bằng một hàm tuyến tính của toạ độ trước.</li>
+</ul>
+<p>Như các bạn có thể thấy, mỗi phép biến đổi có thể được thể hiện bằng một hàm tuyến tính trên các toạ độ điểm. Vì vậy, một phép biến đổi có thể được viết ra một ma trận <span class="arithmatex">\(4 \times 4\)</span> như sau:</p>
+<div class="arithmatex">\[\begin{pmatrix}
+a_{11} &amp; a_ {12} &amp; a_ {13} &amp; a_ {14} \\
+a_{21} &amp; a_ {22} &amp; a_ {23} &amp; a_ {24} \\
+a_{31} &amp; a_ {32} &amp; a_ {33} &amp; a_ {34} \\
+a_{41} &amp; a_ {42} &amp; a_ {43} &amp; a_ {44}
+\end{pmatrix}\]</div>
+<p>Lúc đó, khi được nhân với một vector với các toạ độ điểm và một số đơn vị (1) thì ta cũng nhận được một vector mới với toạ độ điểm mới và một số đơn vị.</p>
+<div class="arithmatex">\[\begin{pmatrix} x &amp; y &amp; z &amp; 1 \end{pmatrix} \cdot
+\begin{pmatrix}
+a_{11} &amp; a_ {12} &amp; a_ {13} &amp; a_ {14} \\
+a_{21} &amp; a_ {22} &amp; a_ {23} &amp; a_ {24} \\
+a_{31} &amp; a_ {32} &amp; a_ {33} &amp; a_ {34} \\
+a_{41} &amp; a_ {42} &amp; a_ {43} &amp; a_ {44}
+\end{pmatrix}
+ = \begin{pmatrix} x' &amp; y' &amp; z' &amp; 1 \end{pmatrix}\]</div>
+<p>(Tại sao cần chiều thứ 4 vây? Vì nếu không có nó, chùng ta không thể làm phép dịch chuyển được. Phép này yêu cầu chúng ta thêm một hằng số vào các toạ độ điểm. Nếu không có chiều thứ 4, chùng ta sẽ chỉ áp dụng được các phép kết hợp tuyến tính vào thôi, không thêm hằng số vào được.)</p>
+<p>Sau đây là một số ví dụ làm thế nào để chuyển phép biến đổi thành ma trận:</p>
+<ul>
+<li>Phép dịch chuyển: dịch chuyển <span class="arithmatex">\(x\)</span> lên <span class="arithmatex">\(5\)</span>, <span class="arithmatex">\(y\)</span> lên <span class="arithmatex">\(7\)</span> và <span class="arithmatex">\(z\)</span> lên <span class="arithmatex">\(9\)</span>.</li>
+</ul>
+<div class="arithmatex">\[\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+5 &amp; 7 &amp; 9 &amp; 1
+\end{pmatrix}\]</div>
+<ul>
+<li>Phép nhân toạ độ: nhân toạ độ <span class="arithmatex">\(x\)</span> lên <span class="arithmatex">\(10\)</span> và <span class="arithmatex">\(y\)</span>, <span class="arithmatex">\(z\)</span> lên <span class="arithmatex">\(5\)</span>.</li>
+</ul>
+<div class="arithmatex">\[\begin{pmatrix}
+10 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 5 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 5 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}\]</div>
+<ul>
+<li>Phép xoay: xoay <span class="arithmatex">\(\theta\)</span> độ quanh trục <span class="arithmatex">\(x\)</span> theo quy tắc bàn tay phải (hướng ngược chiều kim đồng hồ).</li>
+</ul>
+<div class="arithmatex">\[\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \cos \theta &amp; -\sin \theta &amp; 0 \\
+0 &amp; \sin \theta &amp; \cos \theta &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}\]</div>
+<p>Bây giờ, một phép biến đổi được biểu diễn bởi một ma trận, dãy phép biến đổi sẽ được biểu diễn bởi tích các ma trận đó, và một vòng lặp <span class="arithmatex">\(k\)</span> được biểu diễn bởi ma trận luỹ thừa <span class="arithmatex">\(k\)</span> (dễ dàng tính được nếu dùng luỹ thừa nhị phân trong <span class="arithmatex">\(O(\log{k})\)</span>). Bằng cách này, ma trận biểu diễn tất cả các phép biến đổi sẽ được tính trong <span class="arithmatex">\(O(m \log{k})\)</span>, sau đó nó sẽ được áp dụng vào từng điểm trong số <span class="arithmatex">\(n\)</span> điểm trong <span class="arithmatex">\(O(n)\)</span> với độ phức tạp cuối cùng là <span class="arithmatex">\(O(n + m \log{k})\)</span>.</p>
+<h3 id="so-uong-i-o-dai-k-trong-o-thi">Số đường đi độ dài <span class="arithmatex">\(k\)</span> trong đồ thị</h3>
+<p><strong>Bài toán:</strong> Cho đồ thị có hướng không trọng số gồm <span class="arithmatex">\(n\)</span> đỉnh, tìm số đường đi độ dài <span class="arithmatex">\(k\)</span> từ bất kỳ đỉnh <span class="arithmatex">\(u\)</span> nào đến bất kỳ đỉnh <span class="arithmatex">\(v\)</span> nào.</p>
+<p><strong>Lời giải:</strong> Bài này đã được để cập kỹ hơn trong một <a href="">bài viết khác</a>. Thuật toán bao gồm việc luỹ thừa ma trận kề <span class="arithmatex">\(M\)</span> của đồ thị (ma trận có <span class="arithmatex">\(m_{ij} = 1\)</span> nếu có cạnh từ <span class="arithmatex">\(i\)</span> đến <span class="arithmatex">\(j\)</span>, hoặc <span class="arithmatex">\(0\)</span> nếu không có) lên mũ <span class="arithmatex">\(k\)</span>. Giờ <span class="arithmatex">\(m_{ij}\)</span> sẽ là số đường đi độ dài <span class="arithmatex">\(k\)</span> từ <span class="arithmatex">\(i\)</span> đến <span class="arithmatex">\(j\)</span>. Độ phức tạp của thuật toán này là <span class="arithmatex">\(O(n^3 \log k)\)</span>.</p>
+<p><strong>Lưu ý:</strong> Trong cùng bài viết đó, một biến thể khác của bài này cũng được nhắc đến: khi các cạnh có trọng số và bạn cần phải tìm đường đi có trọng số nhỏ nhất mà có <span class="arithmatex">\(k\)</span> cạnh. Bài này cũng có thể được giải bằng việc luỹ thừa ma trận kề. Ma trận sẽ có trọng số của các cạnh từ <span class="arithmatex">\(i\)</span> đến <span class="arithmatex">\(j\)</span>, hoặc <span class="arithmatex">\(\infty\)</span> nếu không có cạnh như vậy. Bạn cũng phải dùng một toán tử khác để nhân 2 ma trận: 2 giá trị được cộng vào nhau và sau đó lấy min (thay vì nhân và cộng như nhân ma trận bình thường). Nghĩa là: <span class="arithmatex">\(result_{ij} = \min\limits_{1\ \leq\ k\ \leq\ n}(a_{ik} + b_{kj})\)</span>.</p>
+<h3 id="bien-the-cua-luy-thua-nhi-phan-nhan-2-so-modulo-m">Biến thể của luỹ thừa nhị phân: nhân 2 số modulo <span class="arithmatex">\(m\)</span></h3>
+<p><strong>Bài toán:</strong> Nhân 2 số <span class="arithmatex">\(a\)</span> và <span class="arithmatex">\(b\)</span> modulo <span class="arithmatex">\(m\)</span>. Cho <span class="arithmatex">\(a\)</span> và <span class="arithmatex">\(b\)</span> nằm trong các kiểu dữ liệu có sẵn trong ngôn ngữ lập trình, nhưng tích của chúng to hơn số 64-bit. Ý tưởng là tính <span class="arithmatex">\(a \cdot b \pmod m\)</span> mà không dùng xử lý số lớn.</p>
+<p><strong>Lời giải:</strong> Chúng ta sẽ dùng cách xây dựng nhị phân ở trên, và chỉ dùng phép cộng thay vì phép nhân. Nói cách khác, chúng ta mở rộng phép nhân 2 số thành <span class="arithmatex">\(O (\log m)\)</span> phép cộng và nhân đôi (mà thực ra vẫn là phép cộng 2 số giống nhau thôi).</p>
+<div class="arithmatex">\[a \cdot b = \begin{cases}
+0 &amp;\text{nếu }a = 0 \\
+2 \cdot \frac{a}{2} \cdot b &amp;\text{nếu }a &gt; 0 \text{ và }a \text{ chẵn} \\
+2 \cdot \frac{a-1}{2} \cdot b + b &amp;\text{nếu }a &gt; 0 \text{ và }a \text{ lẻ}
+\end{cases}\]</div>
+<p><strong>Lưu ý:</strong> Bạn có thể giải bài này bằng cách dùng các phép toán liên quan đến dấu chấm động. Đầu tiên tính <span class="arithmatex">\(\frac{a \cdot b}{m}\)</span> dùng số thực và ép kiểu nó về số nguyên (unsigned) <span class="arithmatex">\(q\)</span>. Lấy <span class="arithmatex">\(a \cdot b\)</span> trừ <span class="arithmatex">\(q \cdot m\)</span> dùng các toán tử số nguyên (unsigned) và modulo <span class="arithmatex">\(m\)</span> kết quả để tìm ra đáp án. Lời giải này nghe có vẻ không đáng tin lắm, nhưng nó rất nhanh và rất dễ cài đặt. Đọc <a href="https://cs.stackexchange.com/questions/77016/modular-multiplication">ở đây</a> để biết thêm thông tin.</p>
+<h2 id="luyen-tap">Luyện tập</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Problem</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: center;">Submission</th>
+<th style="text-align: center;">Code</th>
+<th style="text-align: center;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=24&amp;page=show_problem&amp;problem=3671">UVa 1230 - MODEX</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%201230.cpp">Code</a></td>
+<td style="text-align: center;">03/10/2019</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=24&amp;page=show_problem&amp;problem=310">UVa 374 - Big Mod</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%20374.cpp">Code</a></td>
+<td style="text-align: center;">03/10/2019</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1970">UVa 11029 - Leading and Trailing</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%2011029.cpp">Code</a></td>
+<td style="text-align: center;">04/10/2019</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://codeforces.com/problemset/problem/630/I">Codeforces - Parking Lot</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://codeforces.com/contest/630/submission/62216039">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF630-D12-I.cpp">Code</a></td>
+<td style="text-align: center;">09/10/2019</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://www.spoj.com/problems/LASTDIG/">SPOJ - LASTDIG</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20LASTDIG.cpp">Code</a></td>
+<td style="text-align: center;">04/10/2019</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://www.spoj.com/problems/LOCKER/">SPOJ - LOCKER</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20LOCKER.cpp">Code</a></td>
+<td style="text-align: center;">12/10/2019</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1723">LA - 3722 Jewel-eating Monsters</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LiveArchive/LIVEARCHIVE%203722.cpp">Code</a></td>
+<td style="text-align: center;">21/03/2020</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://www.spoj.com/problems/ZSUM/">SPOJ - ZSUM</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20ZSUM.cpp">Code</a></td>
+<td style="text-align: center;">21/03/2020</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.codechef.com/problems/RIFFLES">Codechef RIFFLES</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://www.codechef.com/viewsolution/76714669">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20RIFFLES.cpp">Code</a></td>
+<td style="text-align: center;">11/10/2022</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/count-good-numbers/">Leetcode - Count good numbers</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC1922-count-good-numbers.cpp">Code</a></td>
+<td style="text-align: center;">11/10/2022</td>
+</tr>
+</tbody>
+</table>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">04/10/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">11/10/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">05/04/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">11/10/2022 (GMT+07)</span>
       
     
   </small>

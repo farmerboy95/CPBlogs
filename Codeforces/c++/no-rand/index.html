@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/Misc/probability/probability/">
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/Codeforces/c%2B%2B/no-rand/">
       
       
+        <link rel="prev" href="../../hashing/blowing-up-unordered-map/">
+      
+      
+        <link rel="next" href="../../randomized-algorithms/hacking-randomized-solutions/">
       
       
       <link rel="icon" href="../../../assets/images/logo.jpg">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Xác suất - farmerboy's CP Blogs</title>
+        <title>Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++ - farmerboy's CP Blogs</title>
       
     
     
@@ -99,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#xac-suat" class="md-skip">
+        <a href="#ngung-xai-rand-tong-quan-ve-cac-trinh-sinh-so-ngau-nhien-trong-c" class="md-skip">
           Skip to content
         </a>
       
@@ -132,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Xác suất
+              Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++
             
           </span>
         </div>
@@ -252,17 +256,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../Codeforces/graph/dfs-tree/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../graph/dfs-tree/" class="md-tabs__link">
           
   
   Codeforces
@@ -509,6 +517,8 @@
       
   
   
+    
+  
   
     
     
@@ -518,12 +528,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -537,7 +547,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Codeforces
@@ -586,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/graph/dfs-tree/" class="md-nav__link">
+      <a href="../../graph/dfs-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/bit-manipulation/xor-basis/" class="md-nav__link">
+      <a href="../../bit-manipulation/xor-basis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/math/floors-ceilings-inequalities/" class="md-nav__link">
+      <a href="../../math/floors-ceilings-inequalities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/math/sums-and-expected-value/" class="md-nav__link">
+      <a href="../../math/sums-and-expected-value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -798,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/hashing/blowing-up-unordered-map/" class="md-nav__link">
+      <a href="../../hashing/blowing-up-unordered-map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -824,18 +834,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -849,7 +861,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             C++
@@ -860,9 +872,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../Codeforces/c%2B%2B/no-rand/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -871,6 +903,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tinh-huong" class="md-nav__link">
+    Tình huống
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cai-quai-gi-ang-xay-ra-vay" class="md-nav__link">
+    Cái quái gì đang xảy ra vậy?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roi-giai-phap-la-sao" class="md-nav__link">
+    Rồi giải pháp là sao?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tham-khao" class="md-nav__link">
+    Tham khảo
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -926,7 +1013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/randomized-algorithms/hacking-randomized-solutions/" class="md-nav__link">
+      <a href="../../randomized-algorithms/hacking-randomized-solutions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1909,36 +1996,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#loi-tua" class="md-nav__link">
-    Lời tựa
+  <a href="#tinh-huong" class="md-nav__link">
+    Tình huống
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#giai-thich-xac-suat" class="md-nav__link">
-    Giải thích xác suất
+  <a href="#cai-quai-gi-ang-xay-ra-vay" class="md-nav__link">
+    Cái quái gì đang xảy ra vậy?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#xac-suat-trong-tai-chinh-va-kinh-te" class="md-nav__link">
-    Xác suất trong tài chính và kinh tế
+  <a href="#roi-giai-phap-la-sao" class="md-nav__link">
+    Rồi giải pháp là sao?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#xac-suat-trong-duoc-hoc" class="md-nav__link">
-    Xác suất trong dược học
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xac-suat-trong-san-xuat" class="md-nav__link">
-    Xác suất trong sản xuất
+  <a href="#tham-khao" class="md-nav__link">
+    Tham khảo
   </a>
   
 </li>
@@ -1962,70 +2042,133 @@
   
 
 
-<h1 id="xac-suat">Xác suất</h1>
+<h1 id="ngung-xai-rand-tong-quan-ve-cac-trinh-sinh-so-ngau-nhien-trong-c">Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a class="glightbox" href="../../../assets/images/brilliant.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/brilliant.png" width="16" height="16"/></a> <a href="https://brilliant.org/wiki/probability/">Probability - Brilliant</a></p>
-<h2 id="loi-tua">Lời tựa</h2>
-<p>Một <strong>xác suất</strong> là một con số biểu diễn khả năng xảy ra của một biến cố không chắc chắn. Xác suất thường có giá trị nằm trong đoạn <span class="arithmatex">\([0, 1]\)</span>. Xác suất càng cao thì biến cố càng có khả năng xảy ra. Xác suất bằng <span class="arithmatex">\(0\)</span> nghĩa là biến cố sẽ không xảy ra. Xác suất bằng <span class="arithmatex">\(1\)</span> nghĩa là biến cố luôn xảy ra. Tất cả các giá trị còn lại nằm giữa <span class="arithmatex">\(0\)</span> và <span class="arithmatex">\(1\)</span> thể hiện nhiều cấp độ của khả năng xảy ra của biến cố.</p>
-<p>Nghiên cứu về xác suất rất quan trọng vì nó giải quyết các vấn đề định lượng với kết quả không chắc chắn. Ví dụ, trong sản xuất, ta không thể chắc chắn được rằng quy trình sản xuất sẽ không tạo ra các sản phẩm lỗi. Sẽ cực kỳ tốn kém và mất thì giờ để kiểm tra từng sản phẩm khi xuất xưởng. Hiểu được xác suất lỗi này sẽ giúp công ty xử lý lỗi thông minh hơn nhiều.</p>
-<p>Các ứng dụng của xác suất gần như là vô hạn, nhưng ta sẽ chỉ đề cập đến một vài trong số đó.</p>
-<h2 id="giai-thich-xac-suat">Giải thích xác suất</h2>
-<p>Có hai cách hiểu chính về xác suất: <strong>xác suất theo chủ nghĩa khách quan (objectivist probability)</strong> và <strong>xác suất theo chủ nghĩa chủ quan (subjectivist probability)</strong>.</p>
-<p><strong>Xác suất khách quan</strong> đề cập đến các phép thử có thể được lặp lại nhiều lần để phân tích kết quả, ví dụ như việc phân tích các thử nghiệm thuốc lâm sàng. Các nhà khoa học và bác sĩ sẽ đưa cho những người tham gia thử nghiệm một loại thuốc mới, và trong suốt quá trình thử nghiệm, họ sẽ phân tích hiệu quả của loại thuốc đó. Vì có nhiều người tham gia thử nghiệm thuốc nên một thí nghiệm hiệu quả sẽ cho phép các bác sĩ và nhà khoa học chỉ định xác suất hiệu quả của loại thuốc đó. Xác suất này sẽ đại diện cho tỉ lệ người tham gia nhận được tác dụng có lợi từ thuốc.</p>
-<p>Một số biến cố không chắc chắn khác không có cơ hội được kiểm tra qua nhiều lần thử, nhưng vẫn mong muốn có một xác suất nào đó. Trong trường hợp này, các nhà toán học sẽ coi xác suất là một thước đo mức độ tin tưởng rằng biến cố nào đó sẽ xảy ra. Điều này được gọi là <strong>xác suất chủ quan</strong>, chẳng hạn như việc dự báo thời tiết. Các nhà khí tượng học sẽ gán xác suất cho một số sự kiện thời tiết xảy ra, như khả năng có mưa ở một khu vực nhất định. Xác xác suất này được tính bằng cách sử dụng dữ liệu thu thập từ vệ tinh cũng như dữ liệu lịch sử. Không giống như xác suất khách quan, xác suất này không thể được kiểm tra qua nhiều thử nghiệm vì các tình huống chính xác dẫn đến dự đoán sẽ không bao giờ lặp lại nữa.</p>
-<h2 id="xac-suat-trong-tai-chinh-va-kinh-te">Xác suất trong tài chính và kinh tế</h2>
-<p>Mỗi khi một người đi đầu tư, người đó đang tham gia vào phân tích xác suất, dù người đó có nhận ra hay không. Mỗi khoản đầu tử đều có một số mức độ không chắc chắn. Không ai có thể chắc chắn giá trị của khoản đầu tư đó sẽ như thế nào trong tương lai. Bằng cách chi tiền cho một khoản đầu tư, về cơ bản, bạn đang nói rằng có <em>khả năng cao</em> là khoản đầu tư đó sẽ tằng giá trị.</p>
-<p>Các nhà phân tích tài chính chuyên nghiệp có xu hướng nhấn mạnh rõ ràng hơn về xác suất khi thực hiện phân tích các khoản đầu tư. Họ sẽ dùng các dữ liệu lịch sử và luồng thông tin hàng ngày để ấn định xác suất mà một khoản đầu tư sẽ tăng hoặc giảm giá trị. Các phân tích này sẽ được đưa vào thị trường và ảnh hưởng đến giá cả hàng hoá.</p>
-<p><strong>Ví dụ:</strong> Một nhà phân tích tài chính đã phân tích một công ty mới và ước tính các thông tin sau về nó:</p>
-<p>Giá trị hiện tại của công ty là 1,1 triệu USD.</p>
-<p>Có một xác suất 0,8 rằng công ty sẽ trị giá 0,9 triệu USD trong một năm.</p>
-<p>Có một xác suất 0,15 rằng công ty sẽ trị giá 1,3 triệu USD trong một năm.</p>
-<p>Có một xác suất 0,05 rằng công ty sẽ trị giá 2,0 triệu USD trong một năm.</p>
-<p>Nếu triển vọng đầu tư dựa trên giá trị dự kiến trong tương lai của công ty, thì triển vọng đầu tư hiện tại vào công ty là gì?</p>
-<details class="tip">
-<summary>Lời giải</summary>
-<p>Có vài kết quả khác nhau về cách thức hoạt động của công ty này nhưng chúng ta có thể ước tính giá trị tương lai của công ty bằng cách dùng xác suất.</p>
-<p>Giá trị tương lai ước tính của công ty tính bằng triệu USD là:</p>
-<div class="arithmatex">\[(0.8 \times 0.9) + (0.15 \times 1.3) + (0.05 \times 2.0) = 1.015\]</div>
-<p>Con số này thấp hơn giá trị hiện tại của công ty, vì vậy một nhà đầu tư thông minh sẽ bán cổ phần của họ trong công ty.</p>
-</details>
-<p>Trong ví dụ này, nếu nhiều nhà phân tích tài chính thu được cùng một kết quả khi họ tính toán giá trị tương lai của công ty, thì thị trường sẽ điều chỉnh và giá trị của công ty sẽ thay đổi.</p>
-<h2 id="xac-suat-trong-duoc-hoc">Xác suất trong dược học</h2>
-<p>Xác suất được sử dụng trong nghiên cứu y học để định lượng hiệu quả của thuốc và các thủ thuật y tế. Trước khi một loại thuốc có thể đưa ra thị trường, nó phải vượt qua các thử nghiệm lâm sàng. Trong một thử nghiệm lâm sàng, nhiều người tham gia được cho dùng một loại thuốc và hiệu quả của loại thuốc đó được đo lường theo thời gian. Ngoài ra còn có một nhóm người tham gia được gọi là "nhóm đối chứng". Trong nhóm này, những người tham gia được làm cho tin rằng họ được cho dùng thuốc, nhưng thực tế họ được cho dùng giả dược (một viên đường chẳng hạn).</p>
-<p>Các nhà khoa học đo lường hiệu quả của nhóm thuốc so với hiệu quả của nhóm đối chứng. Rất nhiều phân tích được thực hiện để đảm bảo rằng thuốc không chỉ hiệu quả mà còn tốt hơn là không làm gì cả (nhóm đối chứng). Việc một loại thuốc có <em>thực sự</em> hiệu quả hay không có thể là một nguồn gây tranh cãi lớn trong cộng đồng nghiên cứu y học.</p>
-<p><strong>Ví dụ:</strong></p>
-<p>Các nhà khoa học dược phẩm vừa phát triển một loại thuốc cảm mới, được đặt tên là MiraQuil.</p>
-<p>Các nhà khoa học đã đưa loại thuốc này qua nhiều thử nghiệm lâm sàng. Họ phát hiện ra rằng trong số những người tham gia (bị cảm và sau đó được dùng thuốc), 98% trong số họ không có triệu chứng cảm sau một tuần!</p>
-<p>Các nhà khoa học đã chứng minh rằng thuốc của họ có hiệu quả chưa? Họ có nên bắt đầu bán thuốc hay không?</p>
-<details class="tip">
-<summary>Lời giải</summary>
-<p>Phần thông tin quan trọng nhất còn thiếu trong các thử nghiệm lâm sàng là hiệu suất của nhóm đối chứng. Nếu không biết những người bị cảm lạnh sẽ như thế nào khi họ không dùng thuốc, thì không thể biết hiệu quả của thuốc.</p>
-<p>Khá hợp lý khi cho rằng nhiều triệu chứng cảm lạnh sẽ biến mất sau một tuần, ngay cả khi không dùng bất kỳ loại thuốc nào. Rất có thể nhóm đối chứng cũng có kết quả "thần kỳ" không kém. Tuy nhiên, không xem số liệu thì không thể biết được.</p>
-<p>Câu trả lời là KHÔNG.</p>
-</details>
-<h2 id="xac-suat-trong-san-xuat">Xác suất trong sản xuất</h2>
-<p>Nghiên cứu về xác suất cho phép đưa ra quyết định thông minh trong sản xuất. Đặc biệt, nó cho phép các nhà quản lý nhà máy đưa ra quyết định hiệu quả về chi phí khi kiểm soát chất lượng. Bằng cách phân tích xác suất của một sản phẩm bị lỗi và hậu quả tài chính của một sản phẩm bị lỗi, các nhà quản lý nhà máy có thể sử dụng tiền và nguồn lực của họ một cách hiệu quả nhất để giúp sản xuất các sản phẩm có chất lượng.</p>
-<p><strong>Ví dụ:</strong></p>
-<p>Một nhà máy sản xuất bàn chải đánh răng sản xuất <span class="arithmatex">\(200000\)</span> bàn chải đánh răng mỗi ngày. Quy trình sản xuất không hoàn hảo và đôi khi có những bàn chải đánh răng bị lỗi.</p>
-<p>Một nhà phân tích đã tính toán rằng mỗi bàn chải đánh răng có xác suất bị lỗi là 0,004. Nếu một khách hàng nhận được một sản phẩm bị lỗi, thì công ty sẽ phải trả 5 đô la để thay thế sản phẩm và làm hài lòng khách hàng.</p>
-<p>Giám đốc nhà máy có thể chọn thuê một nhóm Đảm bảo Chất lượng để tìm và sửa chữa tất cả các bàn chải đánh răng bị lỗi khi chúng được sản xuất. Số tiền tối đa mà giám đốc nhà máy sẵn sàng chi cho đội này mỗi ngày là bao nhiêu?</p>
-<details class="tip">
-<summary>Lời giải</summary>
-<p>Nếu nhà máy sản xuất <span class="arithmatex">\(200000\)</span> bàn chải mỗi ngày, mỗi bàn chải có xác suất lỗi là <span class="arithmatex">\(0.004\)</span>, ta có thể ước lượng rằng nhà máy sản xuất <span class="arithmatex">\(200000 \times 0.004 = 800\)</span> bản chải lỗi mỗi ngày.</p>
-<p>Mỗi bàn chải lỗi làm công ty mất <span class="arithmatex">\(\$5\)</span> đô, thì tổng thiệt hại một ngày là <span class="arithmatex">\(\$5 \times 800 = \$4000\)</span>.</p>
-<p>Nếu đội đảm bảo chất lượng có thể tìm ra tất cả sản phẩm lỗi, thì chi phí cho đội này phải ít hơn chi phí cho các sản phẩm lỗi. Vì vậy, người quản lý sẽ phải trả tối đa <span class="arithmatex">\(\$4000\)</span> mỗi ngày cho đội này.</p>
-</details>
+<p><a class="glightbox" href="../../../assets/images/codeforces.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/codeforces.png" width="16" height="16"/></a> <a href="https://codeforces.com/blog/entry/61587">Don't use rand(): a guide to random number generators in C++</a></p>
+<h2 id="tinh-huong">Tình huống</h2>
+<p>Nói chung cả bài này sẽ tựu chung lại thành một câu: Đừng dùng <code>rand</code> trong C++. Vì sao à? Ta xét code sau.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdlib&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ITERATIONS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e7</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ITERATIONS</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">1000000</span><span class="p">;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Average value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ITERATIONS</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
+</code></pre></div>
+<p>Giá trị được in ra mà bạn có thể đoán là xấp xỉ bao nhiêu?</p>
+<p>Chắc nó phải nằm quanh 500000 nhỉ? Nhưng không, hoá ra nó lại tuỳ vào trình biên dịch, và trên Codeforces nó in ra 16382, quá xa so với giá trị kỳ vọng. Bạn có thể tự thử trên Codeforces với Custom Invocation.</p>
+<h2 id="cai-quai-gi-ang-xay-ra-vay">Cái quái gì đang xảy ra vậy?</h2>
+<p>Nếu bạn đã đọc về rand() trên <a href="https://en.cppreference.com/w/cpp/numeric/random/rand">cppreference</a>, bạn sẽ thấy nó trả về "một giá trị tích phân giả ngẫu nhiên giữa <code>0</code> và <code>RAND_MAX</code>". Xem thử <code>RAND_MAX</code> trên <a href="https://en.cppreference.com/w/cpp/numeric/random/RAND_MAX">cppreference</a> nào, nó ghi là "Giá trị này tuỳ vào cài đặt. Nhưng nó được đảm bảo là ít nhất <code>32767</code>". Trên Codeforces thì <code>RAND_MAX</code> là <code>32767</code> luôn. Nhỏ vãi!!!</p>
+<p>Chưa dừng lại ở đó, <code>random_shuffle()</code> cũng dùng <code>rand()</code> bên trong. Nhớ lại rằng để thực hiện xáo mảng ngẫu nhiên, ta cần <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm">sinh các chỉ số ngẫu nhiên</a> đến <span class="arithmatex">\(n\)</span> - độ dài mảng. Nhưng nếu <code>rand()</code> chỉ lên được đến <code>32767</code>, điều gì sẽ xảy ra nếu ta gọi <code>random_shuffle()</code> trên một mảng nhiều phần tử hơn như vậy, thậm chí hơn như vậy nhiều? Xét thử một đoạn code nữa nào. Bạn nghĩ nó sẽ in ra gì?</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3000000</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kt">double</span><span class="w"> </span><span class="nf">average_distance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">permutation</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">distance_sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="n">distance_sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">permutation</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">distance_sum</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">N</span><span class="p">;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">permutation</span><span class="p">(</span><span class="n">N</span><span class="p">);</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="n">permutation</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="n">random_shuffle</span><span class="p">(</span><span class="n">permutation</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">permutation</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">average_distance</span><span class="p">(</span><span class="n">permutation</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="p">}</span>
+</code></pre></div>
+<p>Cái code trên tính kỳ vọng khoảng cách mà mỗi giá trị sẽ đi xa khỏi vị trí ban đầu của nó nếu ta xáo mảng ngẫu nhiên. Nếu bạn tính một chút thì sẽ thấy rằng kết quả cho một lần xáo mảng hoàn hảo sẽ là <span class="arithmatex">\(\frac{N}{3} = 1000000\)</span>. Nếu bạn lười quá không muốn làm toán thì bạn cũng có thể thấy kết quả sẽ nằm giữa <span class="arithmatex">\(\frac{N}{2} = 1500000\)</span> (khoảng cách trung bình của chỉ số <span class="arithmatex">\(0\)</span>) và <span class="arithmatex">\(\frac{N}{4} = 750000\)</span> (khoảng cách trung bình của chỉ số <span class="arithmatex">\(\frac{N}{2}\)</span>).</p>
+<p>Vâng, kết quả in ra lại làm bạn thất vọng rồi, nó là 64463. Tự thử trên Codeforces nhé. Nói cách khác, <code>random_shuffle()</code> chỉ di chuyển mỗi phần tử một khoảng cách trung bình bằng tầm khoảng 2% độ dài mảng. Dựa trên những lần test của mình thì cài đặt của <code>random_shuffle()</code> trên Codeforces về cơ bản sẽ y hệt như sau:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">swap</span><span class="p">(</span><span class="n">permutation</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">permutation</span><span class="p">[</span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)]);</span>
+</code></pre></div>
+<p>Nói chung là nếu <code>RAND_MAX</code> nhỏ hơn nhiều so với <span class="arithmatex">\(N\)</span>, xáo mảng sẽ khá là chán đấy.</p>
+<p><code>rand()</code> cũng có nhiều vấn đề về chất lượng hơn là chỉ có việc <code>RAND_MAX</code> bị nhỏ. Nó thường được cài đặt như một trình sinh đồng dư tuyến tính (<a href="https://en.wikipedia.org/wiki/Linear_congruential_generator">linear congruential generator - LCG</a>) đơn giản. Trên trình biên dịch Codeforces, nó trông như thế này:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">static</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">holdrand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1L</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">srand</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">seed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">holdrand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="w"> </span><span class="n">seed</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="kt">int</span><span class="w"> </span><span class="nf">rand</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(((</span><span class="n">holdrand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">holdrand</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">214013L</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2531011L</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x7fff</span><span class="p">);</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+</code></pre></div>
+<p>Cụ thể, các trình sinh đồng dư tuyến tính có nhược điểm là các bit thấp có khả năng dự đoán cực cao. Bit thứ k (bắt đầu từ k = 0, bit nhỏ nhất) có chu kỳ tối đa là <span class="arithmatex">\(2^{k+1}\)</span> (tức là mất bao lâu cho đến khi chuỗi lặp lại). Vậy bit nhỏ nhất có chu kỳ là 2, bit thứ hai có chu kỳ là 4, v.v. Đây là lý do tại sao hàm trên bỏ đi 16 bit nhỏ nhất, và kết quả thu được tối đa là 32767 (nghĩa là bỏ 16 bit, ta còn lại 16 bit).</p>
+<h2 id="roi-giai-phap-la-sao">Rồi giải pháp là sao?</h2>
+<p>Đừng lo, C++11 cho ta những trình sinh số ngẫu nhiên (RNG) tốt hơn nhiều. Điều duy nhất bạn cần làm là nhớ dùng <code>mt19937</code>, nằm trong header <code>&lt;random&gt;</code>. Đây là một thuật toán <a href="https://en.wikipedia.org/wiki/Mersenne_Twister">Mersenne Twister</a> dựa trên số nguyên tố <span class="arithmatex">\(2^{19937} - 1\)</span>, cũng là chu kỳ của nó luôn. Đây là một RNG tốt hơn rất nhiều so với <code>rand()</code>, và cũng nhanh hơn nhiều nữa (389 ms để sinh và thêm <span class="arithmatex">\(10^8\)</span> số từ <code>mt19937</code> trong Custom Invocation, so với 1170 ms với <code>rand()</code>). Nó cũng sinh được số 32-bit không dấu nằm giữa <span class="arithmatex">\(0\)</span> và <span class="arithmatex">\(2^{32} - 1 = 4294967295\)</span>, tốt hơn nhiều so với <span class="arithmatex">\(32767\)</span> của <code>rand()</code>.</p>
+<p>Để thay thế <code>random_shuffle()</code>, ta có thể dùng <code>shuffle()</code> và truyền <code>mt19937</code> của bạn vào tham số thứ 3, thuật toán xáo sẽ dùng trình sinh của bạn để thực hiện xáo.</p>
+<p>C++11 cũng cho ta một số cách <a href="https://en.cppreference.com/w/cpp/numeric/random">phân phối</a> tiện lợi. <code>uniform_int_distribution</code> cho ta phân phối đều các số nguyên trong một khoảng, mà không bị sai lệch về mod, ví dụ, <code>rand() % 10000</code> sẽ có xu hướng cho ra các số nằm giữa 0 và 999 hơn là các số nằm giữa 9000 và 9999, vì 32767 không phải là bội của 10000. Có nhiều cách phân phối hay ho khác, ví dụ như <code>normal_distribution</code> và <code>exponential_distribution</code>.</p>
+<p>Để dễ hiểu hơn, bên dưới sẽ là code sử dụng một số thứ được nói ở trên. Lưu ý rằng code khởi tạo RNG bằng cách dùng clock có độ chính xác cao. Điều này rất quan trọng để tránh hack được thiết kế riêng cho code của bạn, vì việc sử dụng seed cố định cũng có nghĩa là bất kỳ ai cũng có thể biết được rằng RNG của bạn sẽ xuất ra gì. Để biết thêm chi tiết, bạn có thể đọc bài <a href="https://codeforces.com/blog/entry/61675">Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó</a>.</p>
+<p>Cuối cùng, nếu bạn muốn sinh số ngẫu nhiên 64-bit, bạn chỉ cần dùng <code>mt19937_64</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;random&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3000000</span><span class="p">;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kt">double</span><span class="w"> </span><span class="nf">average_distance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">permutation</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">distance_sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="n">distance_sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">permutation</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">distance_sum</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">N</span><span class="p">;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="p">}</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="n">mt19937</span><span class="w"> </span><span class="n">rng</span><span class="p">(</span><span class="n">chrono</span><span class="o">::</span><span class="n">steady_clock</span><span class="o">::</span><span class="n">now</span><span class="p">().</span><span class="n">time_since_epoch</span><span class="p">().</span><span class="n">count</span><span class="p">());</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">permutation</span><span class="p">(</span><span class="n">N</span><span class="p">);</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">        </span><span class="n">permutation</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="n">shuffle</span><span class="p">(</span><span class="n">permutation</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">permutation</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">rng</span><span class="p">);</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">average_distance</span><span class="p">(</span><span class="n">permutation</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">        </span><span class="n">permutation</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">        </span><span class="n">swap</span><span class="p">(</span><span class="n">permutation</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">permutation</span><span class="p">[</span><span class="n">uniform_int_distribution</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)(</span><span class="n">rng</span><span class="p">)]);</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">average_distance</span><span class="p">(</span><span class="n">permutation</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="p">}</span>
+</code></pre></div>
+<p>Kết quả của cả hai phép xáo đều gần khoảng cách kì vọng <span class="arithmatex">\(10^6\)</span>, giống như ta muốn.</p>
+<h2 id="tham-khao">Tham khảo</h2>
+<p>Bài này được lấy cảm hứng từ một phần từ <a href="https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful">bài nói chuyện của Stephan T. Lavavej</a>.</p>
+<p>Nếu bạn muốn một trình sinh số ngẫu nhiên nhanh và chất lượng cao, hãy ghé qua <a href="http://xoshiro.di.unimi.it/">trang này của Sebastiano Vigna</a>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">04/10/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">11/10/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">05/04/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">09/09/2023 (GMT+07)</span>
       
     
   </small>

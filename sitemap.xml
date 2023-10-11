@@ -2,147 +2,152 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://farmerboy95.github.io/CPBlogs/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/CPBlogs/navigation/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Codechef/data_structures/disjoint_sparse_table/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/Codechef/data-structures/disjoint-sparse-table/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/bit_manipulation/xor_basis/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/bit-manipulation/xor-basis/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/c%2B%2B/no_rand/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/c%2B%2B/no-rand/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/graph/dfs_tree/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/graph/dfs-tree/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/hashing/blowing_up_unordered_map/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/hashing/blowing-up-unordered-map/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/math/floors_ceilings_inequalities/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/math/floors-ceilings-inequalities/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/math/martingales/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/math/sums_and_expected_value/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/math/sums-and-expected-value/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/randomized_algorithms/hacking_randomized_solutions/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/Codeforces/randomized-algorithms/hacking-randomized-solutions/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/LeetCode/basic_calculator/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/LeetCode/basic-calculator/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/CPBlogs/LeetCode/quickselect/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/LeetCode/reservoir_sampling/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/LeetCode/reservoir-sampling/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/LeetCode/search_in_rotated_sorted_array/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/LeetCode/search-in-rotated-sorted-array/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/CPBlogs/LeetCode/sorting/</loc>
-         <lastmod>2023-10-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Misc/complexity_analysis/asymptotic_notations/</loc>
-         <lastmod>2023-10-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Misc/complexity_analysis/potential_method/</loc>
-         <lastmod>2023-10-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Misc/data_structures/splay_tree/</loc>
-         <lastmod>2023-10-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Misc/experience/being_better/</loc>
-         <lastmod>2023-10-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Misc/experience/icpc_strategy/</loc>
-         <lastmod>2023-10-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Misc/probability/expected_value/</loc>
-         <lastmod>2023-10-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/Misc/probability/linearity_of_expectation/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/CPBlogs/Misc/probability/probability/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/cp-algorithms/algebra/binary_exponentiation/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/cp-algorithms/algebra/binary-exponentiation/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/cp-algorithms/data_structures/fundamentals/min_stack_min_queue/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/cp-algorithms/data-structures/fundamentals/min-stack-min-queue/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/cp-algorithms/data_structures/fundamentals/sparse_table/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/cp-algorithms/data-structures/fundamentals/sparse-table/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/cp-algorithms/data_structures/trees/dsu/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/cp-algorithms/data-structures/trees/dsu/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://farmerboy95.github.io/CPBlogs/cp-algorithms/data_structures/trees/sqrt_tree/</loc>
-         <lastmod>2023-10-04</lastmod>
+         <loc>https://farmerboy95.github.io/CPBlogs/cp-algorithms/data-structures/trees/sqrt-tree/</loc>
+         <lastmod>2023-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/CPBlogs/misc/complexity-analysis/asymptotic-notations/</loc>
+         <lastmod>2023-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/CPBlogs/misc/complexity-analysis/potential-method/</loc>
+         <lastmod>2023-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/CPBlogs/misc/data-structures/splay-tree/</loc>
+         <lastmod>2023-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/CPBlogs/misc/experience/being-better/</loc>
+         <lastmod>2023-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/CPBlogs/misc/experience/icpc-strategy/</loc>
+         <lastmod>2023-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/CPBlogs/misc/probability/expected-value/</loc>
+         <lastmod>2023-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/CPBlogs/misc/probability/linearity-of-expectation/</loc>
+         <lastmod>2023-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/CPBlogs/misc/probability/probability/</loc>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

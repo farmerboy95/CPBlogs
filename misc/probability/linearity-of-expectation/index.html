@@ -1,0 +1,2565 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/misc/probability/linearity-of-expectation/">
+      
+      
+        <link rel="prev" href="../expected-value/">
+      
+      
+        <link rel="next" href="../../experience/being-better/">
+      
+      
+      <link rel="icon" href="../../../assets/images/logo.jpg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+    
+    
+      
+        <title>Kỳ vọng tuyến tính - farmerboy's CP Blogs</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6a10b989.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+  <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+
+    
+  
+      
+    
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-W9EFM7GCX7"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-W9EFM7GCX7",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-W9EFM7GCX7",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ky-vong-tuyen-tinh" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            farmerboy's CP Blogs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kỳ vọng tuyến tính
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/farmerboy95/CPBlogs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    farmerboy95/CPBlogs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  Trang chủ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Codeforces/graph/dfs-tree/" class="md-tabs__link">
+          
+  
+  Codeforces
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cp-algorithms/algebra/binary-exponentiation/" class="md-tabs__link">
+          
+  
+  cp-algorithms
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Codechef/data-structures/disjoint-sparse-table/" class="md-tabs__link">
+          
+  
+  Codechef
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../LeetCode/reservoir-sampling/" class="md-tabs__link">
+          
+  
+  LeetCode
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../complexity-analysis/asymptotic-notations/" class="md-tabs__link">
+          
+  
+  Nguồn khác
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.jpg" alt="logo">
+
+    </a>
+    farmerboy's CP Blogs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/farmerboy95/CPBlogs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    farmerboy95/CPBlogs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Trang chủ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Trang chủ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lời chào
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các tài liệu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Codeforces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Codeforces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Đồ thị
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Đồ thị
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codeforces/graph/dfs-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cây DFS và ứng dụng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Xử lý bit
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Xử lý bit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codeforces/bit-manipulation/xor-basis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kĩ thuật Vector cơ sở cho các bài toán XOR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Toán học
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Toán học
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codeforces/math/floors-ceilings-inequalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Floor, ceiling và bất đẳng thức cho người mới học
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codeforces/math/sums-and-expected-value/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tổng và Giá trị kỳ vọng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hashing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Hashing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codeforces/hashing/blowing-up-unordered-map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giải mã và chống hack cho unordered-map trong C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codeforces/c%2B%2B/no-rand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Các thuật toán ngẫu nhiên và gần đúng
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Các thuật toán ngẫu nhiên và gần đúng
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codeforces/randomized-algorithms/hacking-randomized-solutions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    cp-algorithms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            cp-algorithms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Đại số
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Đại số
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/algebra/binary-exponentiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Luỹ thừa nhị phân
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cấu trúc dữ liệu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cấu trúc dữ liệu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cơ bản
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Cơ bản
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/data-structures/fundamentals/min-stack-min-queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Minimum Stack / Minimum Queue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/data-structures/fundamentals/sparse-table/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sparse Table
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cây
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cây
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/data-structures/trees/sqrt-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sqrt Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/data-structures/trees/dsu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disjoint Set Union
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Codechef
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Codechef
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cấu trúc dữ liệu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Cấu trúc dữ liệu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codechef/data-structures/disjoint-sparse-table/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disjoint Sparse Table
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    LeetCode
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            LeetCode
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LeetCode/reservoir-sampling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lấy mẫu hồ chứa (Reservoir Sampling)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LeetCode/search-in-rotated-sorted-array/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LeetCode/basic-calculator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tính toán biểu thức từ xâu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Nguồn khác
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Nguồn khác
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phân tích Độ phức tạp
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Phân tích Độ phức tạp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complexity-analysis/asymptotic-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các ký hiệu tiệm cận
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complexity-analysis/potential-method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phương pháp Tiềm năng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cấu trúc dữ liệu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cấu trúc dữ liệu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/splay-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Splay Tree: Một mình anh chấp hết
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Xác suất
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Xác suất
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Xác suất
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../expected-value/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giá trị kỳ vọng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Kỳ vọng tuyến tính
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Kỳ vọng tuyến tính
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loi-tua" class="md-nav__link">
+    Lời tựa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inh-nghia-va-chung-minh" class="md-nav__link">
+    Định nghĩa và chứng minh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-vi-du-co-ban" class="md-nav__link">
+    Các ví dụ cơ bản
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu-problem-solving" class="md-nav__link">
+    Giới thiệu Problem-solving
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#su-dung-bien-chi-bao" class="md-nav__link">
+    Sử dụng biến chỉ báo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#su-dung-trang-thai" class="md-nav__link">
+    Sử dụng trạng thái
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ung-dung" class="md-nav__link">
+    Ứng dụng
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kinh nghiệm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kinh nghiệm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experience/being-better/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Làm thế nào để giỏi hơn trong lập trình thi đấu?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experience/icpc-strategy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chiến thuật khi thi ICPC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loi-tua" class="md-nav__link">
+    Lời tựa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inh-nghia-va-chung-minh" class="md-nav__link">
+    Định nghĩa và chứng minh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-vi-du-co-ban" class="md-nav__link">
+    Các ví dụ cơ bản
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu-problem-solving" class="md-nav__link">
+    Giới thiệu Problem-solving
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#su-dung-bien-chi-bao" class="md-nav__link">
+    Sử dụng biến chỉ báo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#su-dung-trang-thai" class="md-nav__link">
+    Sử dụng trạng thái
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ung-dung" class="md-nav__link">
+    Ứng dụng
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+  
+  
+
+
+<h1 id="ky-vong-tuyen-tinh">Kỳ vọng tuyến tính</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../../assets/images/brilliant.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/brilliant.png" width="16" height="16"/></a> <a href="https://brilliant.org/wiki/linearity-of-expectation/">Linearity of Expectation - Brilliant</a></p>
+<h2 id="loi-tua">Lời tựa</h2>
+<p><strong>Kỳ vọng tuyến tính (Linearity of Expectation)</strong> là tính chất thể hiện rằng <a href="https://brilliant.org/wiki/expected-value-definition/">giá trị kỳ vọng</a> (Expected Value) của tổng các biến ngẫu nhiên sẽ bằng tổng của các giá trì kỳ vọng của từng biến ngẫu nhiên mà không cần quan tâm rằng các biến ngẫu nhiên có độc lập hay không.</p>
+<p>Giá trị kỳ vọng của một biến ngẫu nhiên là trung bình có trọng số của tất cả các kết quả có thể xảy ra. Ta thường chỉ quan tâm đến giá trị kỳ vọng của tổng các biến ngẫu nhiên. Ví dụ, giả sử ta có một trò chơi, ta sẽ lấy tổng các số khi gieo hai con xúc xắc:</p>
+<p><a class="glightbox" href="../../../assets/misc/probability/linearity-of-expectation/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../../assets/misc/probability/linearity-of-expectation/figure1.png" /></a></p>
+<p>Với phương pháp thông thường, việc tính giá trị kỳ vọng tổng các số sẽ rất là chán. Thay vào đó, ta làm như sau: <em>"Giá trị kỳ vọng của mỗi lần gieo xúc xắc là <span class="arithmatex">\(3.5\)</span>, và hai lần gieo là hai <a href="https://brilliant.org/wiki/probability-independent-events/">biến cố độc lập</a>, nên kỳ vọng của tổng của chúng sẽ là <span class="arithmatex">\(3.5 + 3.5 = 7\)</span>"</em>.</p>
+<p>Và điều này đúng - lấy tổng các giá trị kỳ vọng. Nhưng còn hơn thế nữa! Tính tuyến tính của kỳ vọng rất mạnh mẽ vì nó cho ta biết rằng <strong>ta có thể cộng giá trị kỳ vọng ngay cả khi các biến ngẫu nhiên không độc lập</strong>.</p>
+<p>Nghe có vẻ khá là phản khoa học. Ví dụ, điều đó có nghĩa là giá trị kỳ vọng của lượng mưa vào cuối tuần sẽ là giá trị kỳ vọng của lượng mưa vào thứ bảy cộng với giá trị kỳ vọng của lượng mưa vào ngày chủ nhật, cho dù ta không nghĩ rằng lượng mưa vào ngày thứ bảy độc lập với lượng mưa của ngày chủ nhật (một ngày thứ bảy mưa tầm tã có thể tăng khả năng mưa vào ngày chủ nhật chẳng hạn).</p>
+<p>Bài viết này sẽ tìm hiểu tính chất này của giá trị kỳ vọng. Ta sẽ giải vài bài cơ bản, rồi đi sâu vào các kỹ thuật nâng cao để giải các bài toán tổ hợp, từ đơn giản đến phức tạp. Cuối cùng, ta sẽ tìm hiểu các ứng dụng của nó trong các lĩnh vực khác như khoa học máy tính hay hình học.</p>
+<h2 id="inh-nghia-va-chung-minh">Định nghĩa và chứng minh</h2>
+<p>Đầu tiên, ta sẽ đi vào làm rõ tính tuyến tính của hàm giá trị kỳ vọng (thường được gọi đơn giản là "tuyến tính của kỳ vọng", hay "kỳ vọng tuyến tính"):</p>
+<div class="admonition info">
+<p class="admonition-title">Định lý</p>
+<p>Với các biến ngẫu nhiên <span class="arithmatex">\(X\)</span> và <span class="arithmatex">\(Y\)</span> (có thể phụ thuộc),</p>
+<div class="arithmatex">\[ E[X + Y] = E[X] + E[Y] \]</div>
+<p>Tổng quát hơn, với các biến ngẫu nhiên <span class="arithmatex">\(X_1, X_2, \ldots, X_n\)</span> và các hằng số <span class="arithmatex">\(c_1, c_2, \ldots, c_n,\)</span></p>
+<div class="arithmatex">\[E[\sum_{i=1}^n c_i X_i] = \sum_{i=1}^n (c_i \cdot E[X_i])\]</div>
+</div>
+<details class="tip">
+<summary>Chứng minh</summary>
+<p>Ta sẽ đi vào chứng minh định lý này với các <a href="https://brilliant.org/wiki/discrete-random-variables-definition/">biến ngẫu nhiên rời rạc</a> <span class="arithmatex">\(X\)</span> và <span class="arithmatex">\(Y\)</span>. Theo định nghĩa cơ bản của giá trị kỳ vọng,</p>
+<div class="arithmatex">\[\begin{align}
+E[X + Y] &amp;= \sum_{x} \sum_{y} [(x + y) \cdot P(X = x, Y = y)]\\
+&amp;= \sum_{x} \sum_{y} [x \cdot P(X = x, Y = y)] + \sum_{x} \sum_{y} [y \cdot P(X = x, Y = y)] \\
+&amp;= \sum_{x} x \underbrace{\sum_{y} P(X = x, Y = y)}_\textrm{P(X = x)} + \sum_{y} y \underbrace{\sum_{x} P(X = x, Y = y)}_\textrm{P(Y = y)} \\
+&amp;= \sum_{x} x \cdot P(X = x) + \sum_{y} y \cdot P(Y = y) \\
+&amp;= E[X] + E[Y] \\
+\end{align}\]</div>
+<p>Kết quả này có thể được mở rộng với <span class="arithmatex">\(n\)</span> biến bằng quy nạp.</p>
+<p>Lưu ý rằng ta không sử dụng bất cứ tính chất độc lập nào nên kỳ vọng tuyến tính vẫn đúng với tất cả các biến ngẫu nhiên!</p>
+<p>Với <a href="https://brilliant.org/wiki/continuous-random-variables-definition/">biến ngẫu nhiên liên tục</a>, chứng minh trên vẫn như vậy, chỉ khác là phép cộng được thay bằng tích phân. Ngoài ra, có thể dễ dàng mở rộng chứng minh cho hai biến ngẫu nhiên sang trường hợp tổng quát hơn bằng các sử dụng <a href="https://brilliant.org/wiki/expected-value-properties/">các tính chất của giá trị kỳ vọng</a>.</p>
+</details>
+<p>Hi vọng rằng chứng minh trên là đủ để ta hiểu tại sao có tính chất như vậy, mà không quan tâm đến việc các biến ngẫu nhiên có độc lập hay không. Đây là mấu chốt của kỳ vọng tuyến tính, nên là hãy đọc kỹ chứng minh nếu bạn chưa rõ.</p>
+<h2 id="cac-vi-du-co-ban">Các ví dụ cơ bản</h2>
+<p>Trước khi đi vào các kỹ thuật problem-solving, ta sẽ xem làm thế nào để trực tiếp áp dụng kỳ vọng tuyến tính. Ví dụ, tung hai con xúc xắc. Ta đã tìm được ra giá trị kỳ vọng của tổng là <span class="arithmatex">\(7\)</span>, vì kỳ vọng của mỗi con xúc xắc là <span class="arithmatex">\(3.5\)</span>.</p>
+<p>Tuy nhiên, nhớ rằng ta có một trong những tính chất quan trọng nhất của kỳ vọng tuyến tính là nó có thể áp dụng cho biến ngẫu nhiên <strong>phụ thuộc</strong>. Hãy thử với một ví dụ khác.</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 1</p>
+<p>Vẫn là hai con xúc xắc đó. Nếu tổng các số tung ra được là <span class="arithmatex">\(A\)</span>, và tích các số tung ra được là <span class="arithmatex">\(B\)</span>, tính <span class="arithmatex">\(E[A + B]\)</span>.</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Ta biết rằng <span class="arithmatex">\(E[A] = 7\)</span>, và hai số độc lập, ta có <span class="arithmatex">\(E[B] = 3.5 \cdot 3.5 = 12.25\)</span>. Vì vậy, ngay cả khi <span class="arithmatex">\(A\)</span> và <span class="arithmatex">\(B\)</span> phụ thuộc lẫn nhau, kỳ vọng tuyến tính cho ta kết quả</p>
+<div class="arithmatex">\[E[A + B] = E[A] + E[B] = 7 + 12.25 = 19.25\]</div>
+</details>
+<p>Giờ thử với bài này xem sao</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 2</p>
+<p>Kỳ vọng lượng mưa trong ngày thứ bảy và chủ nhật lần lượt là 2 inch và 3 inch. Có 50% khả năng mưa trong ngày thứ bày. Nếu trời mưa vào ngày thứ bảy, có 75% khả năng chủ nhật cũng mưa, nhưng nếu thứ bảy không mưa, khả năng chủ nhật mưa chỉ còn 50%.</p>
+<p>Vậy thì cuối tuần kỳ vọng lượng mưa (tính theo inch) là bao nhiêu?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Kỳ vọng lượng mưa vào cuối tuần sẽ bằng tổng kỳ vọng lượng mưa ngày thứ bảy và kỳ vọng lượng mưa ngày chủ nhật. Nếu để ý, bạn sẽ thấy nó đã được cho ngay trong câu đầu tiên, các chi tiết còn lại chỉ để đánh lạc hướng. Như vậy kết quả sẽ là <span class="arithmatex">\(5\)</span>.</p>
+</details>
+<p>Giờ ta đã thấy một số ứng dụng trực tiếp của kỳ vọng tuyến tính, ta sẽ đến với một số kỹ thuật nhé!</p>
+<h2 id="gioi-thieu-problem-solving">Giới thiệu Problem-solving</h2>
+<p>Một trong những ứng dụng phổ biến nhất của kỳ vọng tuyến tính trong problem-solving là khi nào nó có thể được áp dụng để tìm kỳ vọng của một biến ngẫu nhiên. Bạn có thể đang tự hỏi rằng "Làm thế nào để áp dụng một công cụ nói về tổng các biến ngẫu nhiên cho một biến ngẫu nhiên?".</p>
+<p>Trong các trường hợp kỳ vọng tuyến tính hữu ích nhất, bạn thường sẽ không thể thấy ngay rằng bạn nên dùng nó. Thay vào đó, ta phải sử dụng kỹ năng giải quyết vấn đề để điều chỉnh lại biến ngẫu nhiên duy nhất của chúng ta thành tổng một số biến ngẫu nhiên khác.</p>
+<p>Đầu tiên, lưu ý hai dấu hiệu quan trọng cho việc ta có thể áp dụng kỳ vọng tuyến tính để giải quyết một bài toán kỳ vọng:</p>
+<ol>
+<li>Việc tính kỳ vọng theo công thức trung bình trọng số là rất khó / tốn thời gian vì xác suất của các khả năng cũng khó tính ra.</li>
+<li>Biến ngẫu nhiên được cho có thể được viết thành tổng một số biến ngẫu nhiên khác.</li>
+</ol>
+<p>Cùng xem một ví dụ nhé:</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 1</p>
+<p>Caroline muốn tung 10 đồng xu. Nếu chị tung ra được <span class="arithmatex">\(n\)</span> mặt ngửa, chị sẽ được trả <span class="arithmatex">\(n\)</span> đô. Kỳ vọng số tiền được trả là bao nhiêu?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi số tiền Caroline được trả là <span class="arithmatex">\(X\)</span> đô. Thông thường điều đầu tiên mà ta làm là tìm xác suất khi <span class="arithmatex">\(X = 0, 1, 2, \ldots\)</span> và lấy trung bình, nhưng tính toán xác suất để lấy kỳ vọng ở đây khá là mệt - dấu hiệu đầu tiên để cân nhắc sử dụng kỳ vọng tuyến tính! Nhưng làm thế nào ta có thể biểu diễn <span class="arithmatex">\(X\)</span> thành tổng của các biến ngẫu nhiên con?</p>
+<p>Lưu ý rằng được trả <span class="arithmatex">\(n\)</span> đô cho <span class="arithmatex">\(n\)</span> mặt ngửa đồng xu nghĩa là Caroline nhận <span class="arithmatex">\(1\)</span> đô với mỗi mặt ngửa, nên ta có thể xem tổng tiền nhận được là tổng số lần nhận được tiền cho mỗi đồng xu. Vì vậy, nếu ta cho <span class="arithmatex">\(X_i = 1\)</span> nếu đồng xu thứ <span class="arithmatex">\(i\)</span> là mặt ngửa, và <span class="arithmatex">\(X_i = 0\)</span> khi gặp mặt sấp, ta có thể tính tổng tiền là</p>
+<div class="arithmatex">\[X = X_1 + X_2 + \ldots + X_{10}\]</div>
+<p>Để tìm kỳ vọng của <span class="arithmatex">\(X\)</span>, ta cần tìm kỳ vọng của <span class="arithmatex">\(<span class="arithmatex">\(X_1 + X_2 + \ldots + X_{10}\)</span>\)</span>. Giờ nó trông giống một bài toán kỳ vọng tuyến tính rồi!</p>
+<p>Dĩ nhiên, vì xác suất có mặt ngửa là <span class="arithmatex">\(\frac{1}{2}\)</span>, <span class="arithmatex">\(E[X_i] = 1 \cdot \frac{1}{2} + 0 \cdot \frac{1}{2} = \frac{1}{2}\)</span> với mọi <span class="arithmatex">\(i\)</span>. Vì vậy,</p>
+<div class="arithmatex">\[E[X] = E[X_1 + X_2 + \ldots + X_{10}] = 10 \cdot \frac{1}{2} = 5\]</div>
+<p>suy ra kỳ vọng số tiền nhận được là <span class="arithmatex">\(5\)</span> đô.</p>
+</details>
+<p>Ta thấy rằng, kỳ vọng tuyến tính có thể đơn giản hoá rất nhiều việc tính toán kỳ vọng. Hãy để ý cách ta thấy việc tính kỳ vọng theo cách thông thường khá là phức tạp để cân nhắc việc dùng kỳ vọng tuyến tính, sau đó biến đổi biến ngẫu nhiên được cho thành tổng các biến ngẫu nhiên đơn giản hơn. Tiếp tục thử các bài sau nhé:</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 2</p>
+<p>Sammy bị lạc và mất phương hướng. Với mỗi phút, cậu ấy tiến về phía trước <span class="arithmatex">\(1\)</span> mét với xác suất <span class="arithmatex">\(\frac{1}{2}\)</span>, đứng yên với xác suất <span class="arithmatex">\(\frac{1}{3}\)</span>, và đi lùi <span class="arithmatex">\(1\)</span> mét với xác suất <span class="arithmatex">\(\frac{1}{6}\)</span>.</p>
+<p>Sau một giờ, kỳ vọng quãng đường di chuyển về phía trước (tính theo mét) của Sammy là bao nhiêu?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(X_i\)</span> là quãng đường di chuyển về phía trước của Sammy trong phút thứ <span class="arithmatex">\(i\)</span> và để ý rằng:</p>
+<div class="arithmatex">\[E[X_i] = \frac{1}{2} \cdot (1) + \frac{1}{3} \cdot (0) + \frac{1}{6} \cdot (-1) = \frac{1}{3}\]</div>
+<p>với mọi <span class="arithmatex">\(i\)</span>. Vì vậy, quãng đường di chuyển về phía trước sau một giờ là <span class="arithmatex">\(X_1 + X_2 + \ldots + X_{60}\)</span>. Dùng kỳ vọng tuyến tính,</p>
+<div class="arithmatex">\[E[\sum_{i=1}^{60} X_i] = \sum_{i=1}^{60} E[X_i] = 60 \cdot \frac{1}{3} = 20\]</div>
+</details>
+<p>Trong hai ví dụ trên, ta đã áp dụng kỳ vọng tuyến tính để lấy tổng các biến ngẫu nhiên độc lập. Tuy nhiên hãy nhớ rằng khả năng mạnh nhất của kỳ vọng tuyến tính là nó có thể được dùng cho biến ngẫu nhiên phụ thuộc! Hãy xem xét ví dụ có tổng các biến ngẫu nhiên phụ thuộc sau</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 3</p>
+<p>Các chữ số <span class="arithmatex">\(1\)</span>, <span class="arithmatex">\(2\)</span>, <span class="arithmatex">\(3\)</span> và <span class="arithmatex">\(4\)</span> được dùng để tạo ngẫu nhiên hai số có hai chữ số, <span class="arithmatex">\(\overline{AB}\)</span> và <span class="arithmatex">\(\overline{CD}\)</span>. Ví dụ ta có thể có <span class="arithmatex">\(\overline{AB} = 42\)</span> và <span class="arithmatex">\(\overline{CD} = 13\)</span>. Kỳ vọng của <span class="arithmatex">\(\overline{AB} \cdot \overline{CD}\)</span> là bao nhiêu?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Thông thường ta sẽ đi tính <span class="arithmatex">\(E[\overline{AB}]\)</span> và <span class="arithmatex">\(E[\overline{CD}]\)</span> và lấy tích. Tuy nhiên nhớ rằng <span class="arithmatex">\(E[xy] = E[x] \times E[y]\)</span> <a href="https://brilliant.org/wiki/expected-value-independent-variables/">chỉ đúng khi các biến ngẫu nhiên độc lập</a>. Rõ ràng là <span class="arithmatex">\(\overline{AB}\)</span> và <span class="arithmatex">\(\overline{CD}\)</span> không độc lập vì các chữ số chỉ được dùng một lần. Ví dụ <span class="arithmatex">\(\overline{AB} = 13\)</span> thì <span class="arithmatex">\(\overline{CD}\)</span> chỉ có thể là <span class="arithmatex">\(24\)</span> hoặc <span class="arithmatex">\(42\)</span>. Tuy nhiên ta có thể thử biến nó thành tổng gì đó.</p>
+<p>Vì các biến ngẫu nhiên đơn giản ở đây là các chữ số, ta có thể viết nó thành</p>
+<div class="arithmatex">\[(10A + B) \cdot (10C + D) = 100 \cdot AC + 10 \cdot AD + 10 \cdot BC + BD\]</div>
+<p>Tuy nhiên, rõ ràng là kỳ vọng của bất cữ tích nào có dạng <span class="arithmatex">\(AC\)</span> là như nhau vì có sự đối xứng giữa <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span>, <span class="arithmatex">\(C\)</span>, <span class="arithmatex">\(D\)</span>. Ta có thể tính</p>
+<div class="arithmatex">\[E[AC] = \frac{1 \cdot 2 + 1 \cdot 3 + 1 \cdot 4 + 2 \cdot 3 + 2 \cdot 4 + 3 \cdot 4}{6} = \frac{35}{6}\]</div>
+<p>Vì vậy, theo kỳ vọng tuyến tính,</p>
+<div class="arithmatex">\[E[\overline{AB} \cdot \overline{CD}] = E[100 \cdot AC] + E[10 \cdot AD] + E[10 \cdot BC] + E[BD] = 121 \cdot E[AC] = \frac{4235}{6} = 705.83\]</div>
+</details>
+<p>Ta đã có được các kiến thức nền. Giờ hãy đi vào các kỹ thuật problem-solving phức tạp hơn nhé.</p>
+<h2 id="su-dung-bien-chi-bao">Sử dụng biến chỉ báo</h2>
+<p>Trong phần này, ta sẽ tiếp tục khám phá các kỹ thuật giúp <strong>giải các bài toán tổ hợp</strong> bằng cách sử dụng kỳ vọng tuyến tính, cùng với việc giới thiệu một công cụ mới được gọi là các <a href="https://brilliant.org/wiki/discrete-random-variables-indicator-variables/">biến chỉ báo</a>. Kỹ thuật này rất hữu ích khi biến ngẫu nhiên đang <em>đếm</em> số lần xuất hiện của các sự kiện đơn giản.</p>
+<p>Với các dạng bài này, việc biến ngẫu nhiên đang xét có thể viết dưới dạng tổng của các biến ngẫu nhiên khác sẽ ít rõ ràng hơn so với phần trước. Nhưng với những kiến thức đã học, ta có thể giải chúng trong nháy mắt.</p>
+<p>Ta cùng đi vào một ví dụ về những cách thông minh để viết biến ngẫu nhiên dưới dạng tổng các biến ngẫu nhiên đơn giản hơn:</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 1</p>
+<p>Cho một cái hộp chứa một quả bóng vàng, một bóng cam, một bóng xanh lá và một bóng xanh da trời. Billy chọn ngẫu nhiên 4 bóng trong hộp (có thay thế). Kỳ vọng số màu khác nhau là bao nhiêu?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Ta muốn tìm kỳ vọng số màu khác nhau. Ta có thể tính trực tiếp xác suất Billy chonk <span class="arithmatex">\(k = 1, 2, 3, 4\)</span> màu khác nhau, nhưng trông khá là mệt (và còn mệt hơn khi có nhiều hơn 4 bóng). Đây là một gợi ý cho việc dùng kỳ vọng tuyến tính.</p>
+<p>Giờ ta cần nghĩ xem làm sao để viết số màu khác nhau dưới dạng tổng các biến ngẫu nhiên khác. Để bắt đầu, giả sử 4 lựa chọn của Billy lần lượt là: cam, xanh là, cam, xanh da trời.</p>
+<p>Làm sao bạn có thể xác định số màu khác nhau? Ta thấy rằng có 3 màu khác nhau. Bạn có thể nghĩ là "Ờ tôi biết đếm rồi mà". Tuy nhiên, đây là lúc điều kỳ diệu xảy ra.</p>
+<p>Vì biến ngẫu nhiên của chúng ta là đếm số màu được chọn, ta có thể biến nó thành tổng của 4 biến ngẫu nhiên: mỗi biến cho một màu, bằng 1 khi có màu đó và bằng 0 khi không có. Vì vậy, trong ví dụ trên, biến ngẫu nhiên cho màu cam, xanh lá và xanh da trời sẽ là 1, cho màu vàng thì sẽ là 0. Tổng chúng lại sẽ là 3.</p>
+<p>Thêm vào đó, kỳ vọng của các biến này cũng dễ tính. Trong thực tế, với định nghĩa của kỳ vọng, ta có thể thấy rằng kỳ vọng của nó bằng với xác suất màu đó được chọn. Sử dụng kỹ thuật <a href="https://brilliant.org/wiki/probability-by-complement/">xác suất bù</a>, ta thấy rằng xác suất của một màu nào đó (ví dụ như vàng) là</p>
+<div class="arithmatex">\[ 1 - P(\text{vàng dược chọn}) = 1 - (\frac{3}{4})^4 = \frac{175}{256}\]</div>
+<p>Cuối cùng, với kỳ vọng tuyến tính, kỳ vọng số màu khác nhau là</p>
+<div class="arithmatex">\[4 \cdot \frac{175}{256} = \frac{175}{64} \approx 2.73\]</div>
+</details>
+<p>Với ví dụ trên, ta chốt được các ý tưởng sau:</p>
+<ul>
+<li>Kỳ vọng tuyến tính giúp ta tính một kỳ vọng có vẻ phức tạp theo một cách cực kỳ đơn giản (dù phải dùng cách thông minh - nhưng bạn sẽ sớm đạt được khi luyện nhiều)</li>
+<li>Kỳ vọng tuyến tính cho phép ta không phải lo về việc các biến ngẫu nhiên đơn giản có phụ thuộc nhau hay không. Rõ ràng là chúng phụ thuộc rồi: ví dụ, nếu có 3 biến là 0 thì biến thứ 4 phải là 1 (vì có ít nhất 1 màu được chọn). Tuy nhiên, ta đã chứng minh rằng kỳ vọng tuyến tính đúng với mọi biến ngẫu nhiên, không quan trọng có phụ thuộc hay không.</li>
+<li>Vì biến ngẫu nhiên của ta đếm cái gì đó (như số màu khác nhau), ta có thể viết nó thành tổng các biến ngẫu nhiên cho biết những thứ gì sẽ được đếm (như 1 cho mỗi màu được chọn).</li>
+</ul>
+<p>Với điểm cuối cùng, nó thực sự khá gợi nhớ đến cách ta xử lý ví dụ tung đồng xu của Caroline khi đến số mặt ngửa bằng cách tính tổng các biến ngẫu nhiên cho biết rằng nó có phải mặt ngửa không. Trên thực tế, có một thuật ngữ chính thức cho một biến ngẫu nhiên như vậy:</p>
+<div class="admonition info">
+<p class="admonition-title">Định nghĩa</p>
+<p>Một <strong>biến ngẫu nhiên chỉ báo</strong> cho một biến cố <span class="arithmatex">\(t\)</span>, thường đặt là <span class="arithmatex">\(1_t\)</span> là biến ngẫu nhiên bằng <span class="arithmatex">\(1\)</span> nếu <span class="arithmatex">\(t\)</span> xảy ra, và bằng <span class="arithmatex">\(0\)</span> nếu <span class="arithmatex">\(t\)</span> không xảy ra. Theo định nghĩa kỳ vọng,</p>
+<div class="arithmatex">\[E[1_t] = P(\text{t xảy ra}) \cdot 1 + P(\text{t không xảy ra}) \cdot 0 = P(\text{t xảy ra})\]</div>
+</div>
+<p>Các biến ngẫu nhiên chỉ báo này rất hữu dụng để giải các bài toán kỳ vọng tuyến tính, đặc biệt là khi tính kỳ vọng (cũng là xác suất biến cố xảy ra). Với ý tưởng này, bạn có thể giải các bài tập mà nếu không dùng cách này thì sẽ rất khó để giải.</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 2</p>
+<p>Tung 25 đồng xu lần lượt. Kỳ vọng số cặp ngửa ngửa liên tiếp nhau là bao nhiêu? Ví dụ, nếu 6 đồng xu được tung cho ra NNSNNN (ngửa-ngửa-sấp-ngửa-ngửa-ngửa), số cặp ngửa-ngửa là 3.</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Ta sẽ có <span class="arithmatex">\(24\)</span> cặp đồng xu <span class="arithmatex">\([1,2], [2,3], \ldots, [24,25]\)</span>. Đánh dấu chúng là <span class="arithmatex">\(X_1, X_2, \ldots, X_{24}\)</span>.</p>
+<p>Gọi <span class="arithmatex">\(x_i (1 \le i \le 24)\)</span> là một biến ngẫu nhiên chỉ báo được định nghĩa như sau</p>
+<div class="arithmatex">\[x_i = \begin{cases}
+1 &amp;\text{nếu } P_i \text{ là cặp NN} \\
+0 &amp;\text{nếu } P_i \text{ không là cặp NN}
+\end{cases}\]</div>
+<p>Ta sẽ có </p>
+<div class="arithmatex">\[\begin{align}
+E[x_i] &amp;= 1 \cdot P(X_i \text{ là cặp NN}) + 0 \cdot P(X_i \text{ không là cặp NN})\\
+&amp;= 1 \cdot (\frac{1}{2})(\frac{1}{2}) + 0\\
+&amp;= \frac{1}{4}\\
+\end{align}\]</div>
+<p>Vậy kỳ vọng số cặp ngửa ngửa là</p>
+<div class="arithmatex">\[E\left[\sum_{i=1}^{24} x_i \right] = \sum_{i=1}^{24} E[x_i] = 24 \cdot \frac{1}{4} = 6\]</div>
+</details>
+<p>Tổng kết lại, việc sử dụng kỳ vọng tuyến tính với biến ngẫu nhiên chỉ báo sẽ có ích khi:</p>
+<ul>
+<li>bài toán trông có vẻ giải được bằng kỳ vọng tuyến tính;</li>
+<li>không có cách rõ ràng nào để viết biến ngẫu nhiên đang xét dưới dạng tổng các biến ngẫu nhiên đơn giản hơn;</li>
+<li>biến ngẫu nhiên đang xét đang đến số lần xảy ra của một số cho trước các biến cố đơn giản.</li>
+</ul>
+<h2 id="su-dung-trang-thai">Sử dụng trạng thái</h2>
+<p>Trong phần này, ta sẽ giới thiệu một kỹ thuật áp dụng kỳ vọng tuyến tính khi biến ngẫu nhiên đang xét tính toán thời gian hoặc số bước cần để hoàn tất một quá trình nào đó. Nếu nghe có vẻ mù mờ, ta sẽ đi vào một ví dụ để xem "trạng thái" có nghĩa là gì:</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 1</p>
+<p>Allison có một dồng xu không công bằng với xác suất tung được mặt ngửa là <span class="arithmatex">\(p\)</span>. Kỳ vọng số lần tung để có mặt ngửa là bao nhiêu?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Mới nhìn qua thì biến ngẫu nhiên là đếm một số biến cố đơn giản, nên có vẻ là biến ngẫu nhiên chỉ báo sẽ có ích. Ta chỉ cần đếm số mặt sấp khi tung, và mỗi lần tung mặt sấp sẽ có xác suất <span class="arithmatex">\(1-p\)</span>. Nhưng vấn đề ở đây là ta không biết sẽ tung bao nhiêu lần để tính tổng. Trên thực tế, đó gần như chính xác là câu hỏi được đặt ra.</p>
+<p>Thay vào đó, ta coi bài toán như là việc "hoàn thành một quy trình", trong đó ta có nhiều trạng thái. Trong trường hợp này, trạng thái khá đơn giản: ta chưa tung ra được mặt ngửa (gọi trạng thái này là <span class="arithmatex">\(0\)</span>), hoặc ta tung được mặt ngửa (trạng thái này gọi là <span class="arithmatex">\(1\)</span>).</p>
+<p>Gọi <span class="arithmatex">\(E[X_i]\)</span> là kỳ vọng số lần tung để hoàn thành quy trình (ra được mặt ngửa) khi đang ở trạng thái <span class="arithmatex">\(i\)</span>. Rõ ràng là <span class="arithmatex">\(E[X_1] = 0\)</span>, vì trạng thái <span class="arithmatex">\(1\)</span> nghĩa là ta đã có mặt ngửa nên quy trình hoàn tất. Ngược lại, khi ta tung đồng xu trong trạng thái <span class="arithmatex">\(0\)</span>, ta sẽ ở lại trạng thái này với xác suất <span class="arithmatex">\(1-p\)</span>, và sẽ sang trạng thái <span class="arithmatex">\(1\)</span> với xác suất là <span class="arithmatex">\(p\)</span>. Vì vậy, xét trạng thái sau khi ta tung ở trạng thái <span class="arithmatex">\(0\)</span>, ta có</p>
+<div class="arithmatex">\[E[X_0] = 1 + (1 - p) \cdot E[X_0] + p \cdot \underbrace{E[X_1]}_\textrm{0}\]</div>
+<p>nên <span class="arithmatex">\(p \cdot E[X_0] = 1\)</span>, suy ra <span class="arithmatex">\(E[X_0] = \frac{1}{p}\)</span></p>
+<p>Đây là một cách để tính kỳ vọng của <a href="https://brilliant.org/wiki/bernoulli-distribution/">phân phối Bernoulli</a>.</p>
+</details>
+<p>Sang một ví dụ phức tạp hơn với trạng thái, ở đây ta sẽ áp dụng trực tiếp kết quả ta vừa tìm được.</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 2</p>
+<p>Với mỗi lần mua sắm ở SlurpeeShack, ta sẽ nhận được một mảnh ngẫu nhiên của hình dưới (12 mảnh). Khi ta có tất cả 12 mảnh, ta sẽ nhận được một ly nước miễn phí. Kỳ vọng số lần mua hàng để có được tất cả các mảnh là bao nhiêu?</p>
+<p><a class="glightbox" href="../../../assets/misc/probability/linearity-of-expectation/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../../assets/misc/probability/linearity-of-expectation/figure2.png" /></a></p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Ở đây, các trạng thái của chúng ta là số mảnh khác nhau mà ta có. Gọi <span class="arithmatex">\(X_i\)</span> là số lần mua hàng để có được mảnh thứ <span class="arithmatex">\(i\)</span>, nên biến ngẫu nhiên được xét là <span class="arithmatex">\(\sum_{i=1}^{12} X_i\)</span>.</p>
+<p>Khi có được <span class="arithmatex">\(i-1\)</span> mảnh khác nhau, xác suất có được mảnh tiếp theo là <span class="arithmatex">\(\frac{12-(i-1)}{12}\)</span>. Với ví dụ trước, kỳ vọng số lần mua hàng sẽ là <span class="arithmatex">\(E[X_i] = \frac{12}{12 - (i-1)}\)</span>. Nên theo kỳ vọng tuyến tính</p>
+<div class="arithmatex">\[E\left[\sum_{i=1}^{12} X_i \right] = \sum_{i=1}^{12} E[X_i] = \sum_{i=1}^{12} \frac{12}{12 - (i-1)} = \frac{12}{12} + \frac{12}{11} + \ldots + \frac{12}{1} = \frac{86021}{2310} \approx 37\]</div>
+<p><strong>Bonus</strong>: Đây là bài toán khá nổi tiếng, thường được nhắc đến với tên là <strong>bài toán thu gom coupon</strong>. Tổng quát thì với <span class="arithmatex">\(n\)</span> coupon, kỳ vọng số lần mua hàng sẽ là <span class="arithmatex">\(nH_n\)</span>, với <span class="arithmatex">\(H_n = \sum_{i=1}^{n} \frac{1}{i}\)</span> là số hài hoà thứ <span class="arithmatex">\(n\)</span>. Với vi tích phân thì ta có, với <span class="arithmatex">\(n\)</span> lớn, <span class="arithmatex">\(H_n \approx \ln n\)</span>, nên kỳ vọng sẽ xấp xỉ <span class="arithmatex">\(n \ln n\)</span></p>
+</details>
+<p>Ta có thể thấy rằng, trạng thái sẽ hữu ích khi ta có thể viết các biến ngẫu nhiên thành tổng các biến ngẫu nhiên khác có thể tính thời gian / số bước cần để đi từ trạng thái này sang trạng thái tiếp theo. Ta sẽ có các ví dụ như sau:</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 3</p>
+<p>Sóc Sarah đang tìm quả sồi nhưng không nhớ đã để nó ở đâu.</p>
+<p><a class="glightbox" href="../../../assets/misc/probability/linearity-of-expectation/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../../assets/misc/probability/linearity-of-expectation/figure3.png" /></a></p>
+<p>Sarah bắt đầu từ góc trái dưới của lưới <span class="arithmatex">\(2 \times 2\)</span>, và ở mỗi đỉnh, nó đi đến đỉnh kề với đỉnh hiện tại (nên có thể sẽ đi qua một cạnh nhiều lần).</p>
+<p>Hỏi rằng kỳ vọng số bước để đi đến góc phải trên, nơi chứa quả sồi là bao nhiêu?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p><a class="glightbox" href="../../../assets/misc/probability/linearity-of-expectation/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../../assets/misc/probability/linearity-of-expectation/figure4.png" /></a></p>
+<p>Gọi <span class="arithmatex">\(E_i\)</span> là kỳ vọng số bước cần đi để đi từ trạng thái <span class="arithmatex">\(i\)</span> đến trạng thái <span class="arithmatex">\(i+1\)</span>, với <span class="arithmatex">\(1 \le i \le 4\)</span>, trạng thái 5 là trạng thái kết thúc.</p>
+<p>Ta có thể thấy rằng xác suất để đi từ trạng thái <span class="arithmatex">\(i\)</span> đến trạng thái <span class="arithmatex">\(i+1\)</span> hay <span class="arithmatex">\(i-1\)</span> đều nhất quán, ví dụ, trạng thái 1 chắc chắn đi đến trạng thái 2 (xác suất bằng 1), trạng thái 2 có xác suất <span class="arithmatex">\(\frac{2}{3}\)</span> đi đến trạng thái 3 và xác suất <span class="arithmatex">\(\frac{1}{3}\)</span> đi về trạng thái 1 (dù ta có 2 chỗ có trạng thái 2 nhưng xác suất của chúng như nhau), tương tự với trạng thái 3 (<span class="arithmatex">\(\frac{1}{2}\)</span> khả năng đi tới, <span class="arithmatex">\(\frac{1}{2}\)</span> khả năng đi lùi) và 4 (<span class="arithmatex">\(\frac{1}{3}\)</span> khả năng đi tới, <span class="arithmatex">\(\frac{2}{3}\)</span> khả năng đi lùi).</p>
+<p>Như vậy, từ trạng thái 1, ta cần đúng 1 bước để đến trạng thái 2, vậy <span class="arithmatex">\(E_1 = 1\)</span>.</p>
+<p>Từ trạng thái 2, với xác suất <span class="arithmatex">\(\frac{2}{3}\)</span>, ta có thể đi tới trạng thái 3 trong 1 bước, và với xác suất <span class="arithmatex">\(\frac{1}{3}\)</span>, ta có thể đi về trạng thái 1, sau đó cần <span class="arithmatex">\(E_1\)</span> bước để đến lại trạng thái 2, và <span class="arithmatex">\(E_2\)</span> bước để đến trạng thái 3. Vì vậy:</p>
+<div class="arithmatex">\[E_2 = \frac{2}{3} \cdot 1 + \frac{1}{3} \cdot (1 + E_1 + E_2)\]</div>
+<p>Giải ra ta có <span class="arithmatex">\(E_2 = 2\)</span>.</p>
+<p>Tương tự:</p>
+<div class="arithmatex">\[E_3 = \frac{1}{2} \cdot 1 + \frac{1}{2} \cdot (1 + E_2 + E_3)\]</div>
+<div class="arithmatex">\[E_4 = \frac{1}{3} \cdot 1 + \frac{2}{3} \cdot (1 + E_3 + E_4)\]</div>
+<p>Giải lần lượt ra thì ta có <span class="arithmatex">\(E_3 = 4\)</span> và <span class="arithmatex">\(E_4 = 11\)</span>.</p>
+<p>Kết quả sẽ là tổng kỳ vọng số bước để đi từ trạng thái 1 lên 2, 2 lên 3, 3 lên 4 và 4 lên 5, nghĩa là <span class="arithmatex">\(E_1 + E_2 + E_3 + E_4 = 18\)</span>.</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 4</p>
+<p>Jorge có một con xúc xắc công bằng <span class="arithmatex">\(N\)</span> mặt, các mặt là các số khác nhau từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(N\)</span> và đang muốn xem phải tung nó bao nhiêu lần để có tất cả các số từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(N\)</span> (theo bất kỳ thứ tự nào). Jorge tính nhanh và tìm ra kỳ vọng số lần tung là 91 khi làm tròn về số nguyên gần nhất. </p>
+<p>Vậy con xúc xắc có bao nhiêu mặt nhỉ?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Giống với bài coupon ta sẽ có kỳ vọng số lần tung để có tất cả các số là:</p>
+<div class="arithmatex">\[E\left[\sum_{i=1}^{N} X_i \right] = \sum_{i=1}^{N} E[X_i] = \sum_{i=1}^{N} \frac{N}{N - (i-1)} = \frac{N}{N} + \frac{N}{N} + \ldots + \frac{N}{1} \]</div>
+<p>Đây là hàm tăng, nên ta có thể dùng tìm kiếm nhị phân để tìm ra đáp án. Đó là <span class="arithmatex">\(24\)</span> lần tung.</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 5</p>
+<p>Một hàng các cục đá nằm trên một cái hồ to vô hạn.</p>
+<p>Một con ếch khởi đầu từ hòn đá thứ 2 từ bờ.</p>
+<p>Mỗi giây, nó nhảy đến hòn đá bên cạnh, với xác suất 60% là hướng về bờ, và 40% hướng xa bờ.</p>
+<p>Kỳ vọng số lần nhảy để quay lại hòn đá đầu tiên (hòn đá gần bờ nhất) là bao nhiêu?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(E_n\)</span> là kỳ vọng số bước nhảy để đến hòn đá đầu tiên từ hòn đá thứ <span class="arithmatex">\(n\)</span>.</p>
+<p>Từ hòn đá thứ hai, con ếch có xác suất <span class="arithmatex">\(0.6\)</span> nhảy về hòn đá thứ nhất, và <span class="arithmatex">\(0.4\)</span> nhảy đến hòn đá tiếp theo. Vì vậy,</p>
+<div class="arithmatex">\[E_2 = 0.6 \cdot (1 + E_1) + 0.4 \cdot (1 + E_3) = 1 + 0.6 \cdot E_1 + 0.4 \cdot E_3\]</div>
+<p>Vì <span class="arithmatex">\(E_1 = 0\)</span>, nó trở thành</p>
+<div class="arithmatex">\[E_2 = 1 + 0.4 \cdot E_3\]</div>
+<p>Tuy nhiên, vì xác suất ở mỗi hòn đá là như nhau, nên kỳ vọng số bước để đi từ hòn đá <span class="arithmatex">\(i\)</span> đến hòn đá <span class="arithmatex">\(i-1\)</span> là như nhau với mọi <span class="arithmatex">\(i\)</span>. Nghĩa là <span class="arithmatex">\(E_2\)</span> bằng với kỳ vọng đi từ hòn đá thứ 3 đến hòn đá thứ 2. Mà <span class="arithmatex">\(E_3\)</span> lại bằng kỳ vọng đi từ hòn đá thứ 3 về hòn đá đầu tiên, nghĩa là từ 3 về 2 xong từ 2 về 1. Suy ra <span class="arithmatex">\(E_3 = 2 \cdot E_2\)</span>.</p>
+<p>Như vậy <span class="arithmatex">\(E_2 = 1 + 0.4 \cdot 2 \cdot E_2\)</span>. Suy ra <span class="arithmatex">\(E_2 = 5\)</span>.</p>
+</details>
+<h2 id="ung-dung">Ứng dụng</h2>
+<p>Ta đã xem cách để giải các bài toán tổ hợp với kỳ vọng tuyến tính. Tuy nhiên, vẫn còn rất nhiều ứng dụng thực tế của kỳ vọng tuyến tính, hãy cùng xem xét một vài ví dụ nhé.</p>
+<p>Đầu tiên là trò xổ số.</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 1</p>
+<p>Có một cuộc thi xổ số. Người chơi trả 1 đô để chọn 5 số khác nhau từ 1 đến 50. Công ty xổ số sẽ trả 2.5 triệu đô tiền thường nếu ai đoán trúng cả 5 số (và tiền giải sẽ chia đều ra cho tất cả những người đoán trúng).</p>
+<p>Với <a href="https://brilliant.org/wiki/combinations/">tổ hợp</a> thì ta biết rằng có <span class="arithmatex">\(\binom{50}{5} = 2118760\)</span> cách chọn. Nhưng với <a href="https://brilliant.org/wiki/pigeonhole-principle-definition/">nguyên tắc chuồng chim</a>, nếu ta có chừng đó người, mỗi người đoán một bộ số khác nhau, ta có thể lời tiền!</p>
+<p>Điều đó đúng, tuy nhiên, các công ty xổ số biết rằng người chơi không có đủ tài nguyên để chơi kiểu đó. Thay vào đó, họ sẽ giả dụ rằng mỗi người sẽ chọn các số một cách ngẫu nhiêu. Trong trường hợp này, <span class="arithmatex">\(n\)</span> người tham gia chơi với <span class="arithmatex">\(m\)</span> cách chọn, xác suất để ai đó thắng là bao nhiêu?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(X_i\)</span> là biến ngẫu nhiên chỉ báo cho biến cố tổ hợp xổ số <span class="arithmatex">\(1 \le i \le m\)</span> không được chọn bởi bất kỳ người chơi nào. Vì ai cũng chọn ngẫu nhiên,</p>
+<div class="arithmatex">\[E[X_i] = (1 - \frac{1}{m}) ^ n\]</div>
+<p>với mọi <span class="arithmatex">\(i\)</span>. Dùng kỳ vọng tuyến tính, kỳ vọng số tổ hợp không được chọn là</p>
+<div class="arithmatex">\[E[\sum_{i=1}^{m} X_i] = \sum_{i=1}^{m} E[X_i] = m \cdot (1 - \frac{1}{m})^n\]</div>
+<p>Vì tổ hợp thắng cuộc được chọn ngẫu nhiên nên,</p>
+<div class="arithmatex">\[1 - \frac{m \cdot (1-\frac{1}{m})^n}{m} = 1 - (1 - \frac{1}{m})^n\]</div>
+<p>Ví dụ, nếu xổ số có <span class="arithmatex">\(2118760\)</span> tổ hợp và <span class="arithmatex">\(2118760\)</span> người chơi (chọn tổ hợp ngẫu nhiên), xác suất ai đó thắng là khoảng 63%.</p>
+<p><strong>Bonus</strong>: Điều gì xảy ra khi <span class="arithmatex">\(m\)</span> quá lớn? Làm thế nào công ty xổ số đối phó khi số người tham gia tăng lên? Gợi ý: Kết quả này liên quan đến một <a href="https://brilliant.org/wiki/limits-of-sequences/">giới hạn dãy</a> nổi tiếng liên quan đến hằng số <span class="arithmatex">\(e\)</span>. Ngoài ra, đọc <a href="https://math.stackexchange.com/a/347172/476627">đáp án</a> này để thấy được sự liên quan giữa <span class="arithmatex">\(e\)</span> và tổ hợp.</p>
+</details>
+<p>Thật thú vị khi thấy cách để áp dụng kỳ vọng tuyến tính để khám phá một sự thật thú vị về xổ số. Giờ ta hãy sang một chủ đề khác: một bài toán <a href="https://brilliant.org/wiki/1-dimensional-geometric-probability/#2-dimensional-geometric-probability">xác suất hình học</a> nổi tiếng:</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 2</p>
+<p>Giả sử một cây kim độ dài 1 đơn vị bị rơi xuống sàn nhà, sàn nhà này có các dải gỗ cách nhau 1 đơn vị. Xác suất cây kim nằm trên hai dải gỗ là bao nhiêu?</p>
+<p><a class="glightbox" href="../../../assets/misc/probability/linearity-of-expectation/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../../assets/misc/probability/linearity-of-expectation/figure5.png" /></a></p>
+<p>Bài này thường được giải bằng vi tích phân, nhưng ta sẽ dùng kỳ vọng tuyến tính để giải nó.</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Đầu tiên, ta sẽ thảo luận rằng kỳ vọng số lần cây kim nằm trên hai dải gỗ tỉ lệ trực tiếp với độ dài <span class="arithmatex">\(l\)</span> của cây kim. Giả sử rằng cây kim được làm từ <span class="arithmatex">\(n\)</span> mảnh có độ dài bằng nhau. và gọi <span class="arithmatex">\(X_i\)</span> là biến chỉ báo cho biến cố mảnh thứ <span class="arithmatex">\(i\)</span> chạm hai dải gỗ. Thì kỳ vọng tất cả các lần chạm vạch, theo kỳ vọng tuyến tính, là</p>
+<div class="arithmatex">\[E\left[\sum_{i=1}^{n} X_i \right] = \sum_{i=1}^{n} E[X_i] = n \cdot E[X_1]\]</div>
+<p>Giữ chiều dài các mảnh nhỏ này không đổi, ta thấy rằng kỳ vọng sẽ tỉ lệ thuận với chiều dài kim.</p>
+<p>Vậy nên, với hàm của độ dài <span class="arithmatex">\(l\)</span>, kỳ vọng số lần chạm vạch sẽ là <span class="arithmatex">\(cl\)</span> với hằng số <span class="arithmatex">\(c\)</span> nào đó. Tuy nhiên, xét một hình tròn đường kính là <span class="arithmatex">\(1\)</span> (chu vi sẽ là <span class="arithmatex">\(\pi\)</span>); với xác suất <span class="arithmatex">\(1\)</span>, hình tròn này sẽ giao với đúng hai dải gỗ. Vì thế <span class="arithmatex">\(c\pi = 2\)</span>, nên <span class="arithmatex">\(c = \frac{2}{\pi}\)</span>. Nếu bạn không thoải mái với ý tưởng hình tròn, xét hình kiểu tròn với rất nhiều các mảnh nhỏ là đoạn thẳng.</p>
+<p>Với bất kỳ cây kim nào giao nhiều nhất một dải gỗ, <span class="arithmatex">\(\sum_{i=1}^{n}\)</span> thực ra là một biến chỉ báo cho biến cố cây kim nằm trên hai dải gỗ, nên kỳ vọng sẽ là xác suất việc này xảy ra. Vậy xác suất để chạm vạch với kim độ dài <span class="arithmatex">\(1\)</span> là <span class="arithmatex">\(\frac{2}{\pi} \approx 64%\)</span>.</p>
+<p><strong>Bonus</strong>: Bạn có thể nghĩ xem làm sao ta có thể dùng kết quả này để ước lượng giá trị của <span class="arithmatex">\(\pi\)</span> thông qua mô phỏng <a href="https://brilliant.org/wiki/monte-carlo/">Monte-Carlo</a> không?</p>
+</details>
+<p>Sau đây là một số ví dụ khác có thể được giải bằng kỳ vọng tuyến tính:</p>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 3</p>
+<p>Nhiều bài toán về kỳ vọng trong đồ thị ngẫu nhiên có thể được giải bằng kỳ vọng tuyến tính. Ví dụ, giả sử có một nhóm <span class="arithmatex">\(n\)</span> người có khả năng trở thành bạn, và mỗi cặp có khả năng trở thành bạn với xác suất <span class="arithmatex">\(\frac{1}{2}\)</span>. Vậy thì kỳ vọng số bộ ba bạn bè là bao nhiêu (nhóm 3 người có khả năng trở thành bạn của nhau)?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Có <span class="arithmatex">\(\binom{n}{3}\)</span> bộ ba, mỗi bộ ba là bộ ba bạn bè với xác suất <span class="arithmatex">\((\frac{1}{2})^3 = \frac{1}{8}\)</span>. Nếu gọi <span class="arithmatex">\(X_i\)</span> là biến ngẫu nhiên chỉ báo cho biến cố bộ ba thứ <span class="arithmatex">\(i\)</span> là bộ ba bạn bè, thì kỳ vọng số bộ ba bạn bè là</p>
+<div class="arithmatex">\[E\left[\sum_{i=1}^{\binom{n}{3}} X_i \right] = \sum_{i=1}^{\binom{n}{3}} E[X_i] = \frac{\binom{n}{3}}{8}\]</div>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 4</p>
+<p>Có <span class="arithmatex">\(n\)</span> người trong một phòng, kỳ vọng số ngày sinh nhật khác nhau là bao nhiêu? Giả sử năm nào cũng có 365 ngày. Việc này liên quan gì đến bài toán <a href="https://brilliant.org/wiki/birthday-paradox/">nghịch lý ngày sinh nhật</a>?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(X_i\)</span> là biến ngẫu nhiên chỉ báo cho ngày thứ <span class="arithmatex">\(i\)</span> (trong 365 ngày) là ngày sinh nhật của một người nào đó. Giả sử ngày sinh nhật của một người là ngẫu nhiên, ta có,</p>
+<div class="arithmatex">\[E[X_i] = 1 - (1 - \frac{1}{365})^n = 1 - (\frac{364}{365})^n\]</div>
+<p>Như vậy số ngày sinh nhật khác nhau sẽ là tổng kỳ vọng mỗi ngày trong 365 ngày, tức là</p>
+<div class="arithmatex">\[E[X] = 365 \cdot (1 - (\frac{364}{365})^n)\]</div>
+<p>Lấy ví dụ <span class="arithmatex">\(n = 30\)</span> thì số <span class="arithmatex">\(E[X] \approx 28.83\)</span>, nghĩa là có tồn tại 1 ngày sinh nhật bị trùng của hai người nào đó, trong khi <span class="arithmatex">\(n\)</span> không quá lớn.</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Ví dụ 5</p>
+<p>Trong khoa học máy tính, thuật toán ngẫu nhiên <a href="https://brilliant.org/wiki/quicksort/">quicksort</a> có thời gian chạy kỳ vọng là <span class="arithmatex">\(O(n \log n)\)</span>. Làm sao để chứng minh với kỳ vọng tuyến tính?</p>
+</div>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Xem phần Theorem 3.3 của <a href="https://www.cs.cmu.edu/afs/cs/academic/class/15451-s07/www/lecture_notes/lect0123.pdf">bài giảng này</a>, nó có liên quan đến số hài hoà mà ta có đề cập ở trên.</p>
+</details>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">11/10/2023 (GMT+07)</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">13/04/2023 (GMT+07)</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/CPBlogs"
+    data-repo-id="R_kgDOIA7h_g"
+    data-category="General"
+    data-category-id="DIC_kwDOIA7h_s4CVvKI"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+        Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 farmerboy
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/farmerboy95" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+  
+      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script
+    data-name="BMC-Widget"
+    data-cfasync="false" 
+    src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+    data-id="farmerboy" 
+    data-description="Support me on Buy me a coffee!" 
+    data-message="" 
+    data-color="#5F7FFF" 
+    data-position="Right" 
+    data-x_margin="18" 
+    data-y_margin="18"
+  ></script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
