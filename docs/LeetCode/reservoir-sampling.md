@@ -115,7 +115,7 @@ def ReservoirSample(S[1..n], R[1..k])
             R[j] := S[i]
 ```
 
-![](../assets/LeetCode/reservoir_sampling/figure1.png){:class="centered-img"}
+![](../assets/LeetCode/reservoir-sampling/figure1.png){:class="centered-img"}
 
 Ta tóm tắt ý tưởng thuật toán như sau:
 

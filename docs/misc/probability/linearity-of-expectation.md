@@ -10,7 +10,7 @@
 
 Giá trị kỳ vọng của một biến ngẫu nhiên là trung bình có trọng số của tất cả các kết quả có thể xảy ra. Ta thường chỉ quan tâm đến giá trị kỳ vọng của tổng các biến ngẫu nhiên. Ví dụ, giả sử ta có một trò chơi, ta sẽ lấy tổng các số khi gieo hai con xúc xắc:
 
-![](../../assets/Misc/probability/linearity_of_expectation/figure1.png){:class="centered-img" }
+![](../../assets/misc/probability/linearity-of-expectation/figure1.png){:class="centered-img" }
 
 Với phương pháp thông thường, việc tính giá trị kỳ vọng tổng các số sẽ rất là chán. Thay vào đó, ta làm như sau: *"Giá trị kỳ vọng của mỗi lần gieo xúc xắc là $3.5$, và hai lần gieo là hai [biến cố độc lập](https://brilliant.org/wiki/probability-independent-events/), nên kỳ vọng của tổng của chúng sẽ là $3.5 + 3.5 = 7$"*.
 
@@ -246,7 +246,7 @@ Sang một ví dụ phức tạp hơn với trạng thái, ở đây ta sẽ áp
 !!! question "Ví dụ 2"
     Với mỗi lần mua sắm ở SlurpeeShack, ta sẽ nhận được một mảnh ngẫu nhiên của hình dưới (12 mảnh). Khi ta có tất cả 12 mảnh, ta sẽ nhận được một ly nước miễn phí. Kỳ vọng số lần mua hàng để có được tất cả các mảnh là bao nhiêu?
 
-    ![](../../assets/Misc/probability/linearity_of_expectation/figure2.png){:class="centered-img" }
+    ![](../../assets/misc/probability/linearity-of-expectation/figure2.png){:class="centered-img" }
 
 ??? tip "Lời giải"
     Ở đây, các trạng thái của chúng ta là số mảnh khác nhau mà ta có. Gọi $X_i$ là số lần mua hàng để có được mảnh thứ $i$, nên biến ngẫu nhiên được xét là $\sum_{i=1}^{12} X_i$.
@@ -262,14 +262,14 @@ Ta có thể thấy rằng, trạng thái sẽ hữu ích khi ta có thể viế
 !!! question "Ví dụ 3"
     Sóc Sarah đang tìm quả sồi nhưng không nhớ đã để nó ở đâu.
 
-    ![](../../assets/Misc/probability/linearity_of_expectation/figure3.png){:class="centered-img h-300" }
+    ![](../../assets/misc/probability/linearity-of-expectation/figure3.png){:class="centered-img h-300" }
 
     Sarah bắt đầu từ góc trái dưới của lưới $2 \times 2$, và ở mỗi đỉnh, nó đi đến đỉnh kề với đỉnh hiện tại (nên có thể sẽ đi qua một cạnh nhiều lần).
 
     Hỏi rằng kỳ vọng số bước để đi đến góc phải trên, nơi chứa quả sồi là bao nhiêu?
 
 ??? tip "Lời giải"
-    ![](../../assets/Misc/probability/linearity_of_expectation/figure4.png){:class="centered-img h-300" }
+    ![](../../assets/misc/probability/linearity-of-expectation/figure4.png){:class="centered-img h-300" }
     
     Gọi $E_i$ là kỳ vọng số bước cần đi để đi từ trạng thái $i$ đến trạng thái $i+1$, với $1 \le i \le 4$, trạng thái 5 là trạng thái kết thúc.
 
@@ -364,7 +364,7 @@ Thật thú vị khi thấy cách để áp dụng kỳ vọng tuyến tính đ�
 !!! question "Ví dụ 2"
     Giả sử một cây kim độ dài 1 đơn vị bị rơi xuống sàn nhà, sàn nhà này có các dải gỗ cách nhau 1 đơn vị. Xác suất cây kim nằm trên hai dải gỗ là bao nhiêu?
 
-    ![](../../assets/Misc/probability/linearity_of_expectation/figure5.png){:class="centered-img h-300" }
+    ![](../../assets/misc/probability/linearity-of-expectation/figure5.png){:class="centered-img h-300" }
 
     Bài này thường được giải bằng vi tích phân, nhưng ta sẽ dùng kỳ vọng tuyến tính để giải nó.
 

@@ -2,7 +2,7 @@
 
 ## Nguồn
 
-<img src="../../../../assets/images/cpalgorithms.ico" width="16" height="16"/> [Disjoint Set Union](https://cp-algorithms.com/data_structures/disjoint_set_union.html)
+<img src="../../../../assets/images/cpalgorithms.ico" width="16" height="16"/> [Disjoint Set Union](https://cp-algorithms.com/data-structures/disjoint_set_union.html)
 
 ## Mở đầu
 
@@ -26,7 +26,7 @@ Ta sẽ lưu các tập theo dạng các **cây**: mỗi cây sẽ tương ứng
 
 Hình sau sẽ cho thấy đại diện của những cây như thế.
 
-![](../../../assets/cp-algorithms/data_structures/trees/dsu/figure1.png){:class="centered-img" }
+![](../../../assets/cp-algorithms/data-structures/trees/dsu/figure1.png){:class="centered-img" }
 
 Ban đầu, mỗi phần tử là một tập, nên mỗi đỉnh cũng là một cây. Sau đó ta hợp nhất tập chứa phần tử 1 và tập chứa phần tử 2. Sau đó ta hợp nhất tập chứa phần tử 3 và tập chứa phần tử 4. Ở bước cuối cùng, hợp nhất tập chứa phần tử 1 và tập chứa phần tử 3.
 
@@ -73,7 +73,7 @@ Nếu ta gọi `find_set(v)` cho một node `v` nào đó, ta sẽ tìm đại d
 
 Bạn có thể thấy thao tác này trong hình dưới. Bên trái là một cái cây, còn bên phải là cái cây được nén sau khi gọi `find_set(7)`, nó sẽ làm cho đường đi ngắn hơn cho các node 7, 5, 3 và 2.
 
-![](../../../assets/cp-algorithms/data_structures/trees/dsu/figure2.png){:class="centered-img" }
+![](../../../assets/cp-algorithms/data-structures/trees/dsu/figure2.png){:class="centered-img" }
 
 Cài đặt mới cho `find_set` như sau:
 

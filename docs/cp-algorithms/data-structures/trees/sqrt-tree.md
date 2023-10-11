@@ -2,7 +2,7 @@
 
 ## Nguồn
 
-<img src="../../../../assets/images/cpalgorithms.ico" width="16" height="16"/> [Sqrt Tree](https://cp-algorithms.com/data_structures/sqrt-tree.html)
+<img src="../../../../assets/images/cpalgorithms.ico" width="16" height="16"/> [Sqrt Tree](https://cp-algorithms.com/data-structures/sqrt-tree.html)
 
 ## Lời tựa
 

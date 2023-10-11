@@ -9,45 +9,45 @@ comment: false
     - [Các tài liệu](navigation.md)
 - Codeforces
     - Đồ thị
-        - [Cây DFS và ứng dụng](Codeforces/graph/dfs_tree.md)
+        - [Cây DFS và ứng dụng](Codeforces/graph/dfs-tree.md)
     - Xử lý bit
-        - [Kĩ thuật Vector cơ sở cho các bài toán XOR](Codeforces/bit_manipulation/xor_basis.md)
+        - [Kĩ thuật Vector cơ sở cho các bài toán XOR](Codeforces/bit-manipulation/xor-basis.md)
     - Toán học
-        - [Floor, ceiling và bất đẳng thức cho người mới học](Codeforces/math/floors_ceilings_inequalities.md)
-        - [Tổng và Giá trị kỳ vọng](Codeforces/math/sums_and_expected_value.md)
+        - [Floor, ceiling và bất đẳng thức cho người mới học](Codeforces/math/floors-ceilings-inequalities.md)
+        - [Tổng và Giá trị kỳ vọng](Codeforces/math/sums-and-expected-value.md)
     - Hashing
-        - [Giải mã và chống hack cho unordered_map trong C++](Codeforces/hashing/blowing_up_unordered_map.md)
+        - [Giải mã và chống hack cho unordered-map trong C++](Codeforces/hashing/blowing-up-unordered-map.md)
     - C++
-        - [Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++](Codeforces/c++/no_rand.md)
+        - [Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++](Codeforces/c++/no-rand.md)
     - Các thuật toán ngẫu nhiên và gần đúng
-        - [Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó](Codeforces/randomized_algorithms/hacking_randomized_solutions.md)
+        - [Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó](Codeforces/randomized-algorithms/hacking-randomized-solutions.md)
 - cp-algorithms
     - Đại số
-        - [Luỹ thừa nhị phân](cp-algorithms/algebra/binary_exponentiation.md)
+        - [Luỹ thừa nhị phân](cp-algorithms/algebra/binary-exponentiation.md)
     - Cấu trúc dữ liệu
         - Cơ bản
-            - [Minimum Stack / Minimum Queue](cp-algorithms/data_structures/fundamentals/min_stack_min_queue.md)
-            - [Sparse Table](cp-algorithms/data_structures/fundamentals/sparse_table.md)
+            - [Minimum Stack / Minimum Queue](cp-algorithms/data-structures/fundamentals/min-stack-min-queue.md)
+            - [Sparse Table](cp-algorithms/data-structures/fundamentals/sparse-table.md)
         - Cây
-            - [Sqrt Tree](cp-algorithms/data_structures/trees/sqrt_tree.md)
-            - [Disjoint Set Union](cp-algorithms/data_structures/trees/dsu.md)
+            - [Sqrt Tree](cp-algorithms/data-structures/trees/sqrt-tree.md)
+            - [Disjoint Set Union](cp-algorithms/data-structures/trees/dsu.md)
 - Codechef
     - Cấu trúc dữ liệu
-        - [Disjoint Sparse Table](Codechef/data_structures/disjoint_sparse_table.md)
+        - [Disjoint Sparse Table](Codechef/data-structures/disjoint-sparse-table.md)
 - LeetCode
-    - [Lấy mẫu hồ chứa (Reservoir Sampling)](LeetCode/reservoir_sampling.md)
-    - [Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay](LeetCode/search_in_rotated_sorted_array.md)
-    - [Tính toán biểu thức từ xâu](LeetCode/basic_calculator.md)
+    - [Lấy mẫu hồ chứa (Reservoir Sampling)](LeetCode/reservoir-sampling.md)
+    - [Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay](LeetCode/search-in-rotated-sorted-array.md)
+    - [Tính toán biểu thức từ xâu](LeetCode/basic-calculator.md)
 - Nguồn khác
     - Phân tích Độ phức tạp
-        - [Các ký hiệu tiệm cận](Misc/complexity_analysis/asymptotic_notations.md)
-        - [Phương pháp Tiềm năng](Misc/complexity_analysis/potential_method.md)
+        - [Các ký hiệu tiệm cận](misc/complexity-analysis/asymptotic-notations.md)
+        - [Phương pháp Tiềm năng](misc/complexity-analysis/potential-method.md)
     - Cấu trúc dữ liệu
-        - [Splay Tree: Một mình anh chấp hết](Misc/data_structures/splay_tree.md)
+        - [Splay Tree: Một mình anh chấp hết](misc/data-structures/splay-tree.md)
     - Xác suất
-        - [Xác suất](Misc/probability/probability.md)
-        - [Giá trị kỳ vọng](Misc/probability/expected_value.md)
-        - [Kỳ vọng tuyến tính](Misc/probability/linearity_of_expectation.md)
+        - [Xác suất](misc/probability/probability.md)
+        - [Giá trị kỳ vọng](misc/probability/expected-value.md)
+        - [Kỳ vọng tuyến tính](misc/probability/linearity-of-expectation.md)
     - Kinh nghiệm
-        - [Làm thế nào để giỏi hơn trong lập trình thi đấu?](Misc/experience/being_better.md)
-        - [Chiến thuật khi thi ICPC](Misc/experience/icpc_strategy.md)
+        - [Làm thế nào để giỏi hơn trong lập trình thi đấu?](misc/experience/being-better.md)
+        - [Chiến thuật khi thi ICPC](misc/experience/icpc-strategy.md)

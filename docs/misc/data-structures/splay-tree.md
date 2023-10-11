@@ -26,7 +26,7 @@ Chắc hẳn các bạn đã biết rằng danh sách liên kết (DSLK) có th�
 
 Đầu tiên, ta cần phải thiết lập mối tương quan giữa 1 cái cây nhị phân và 1 dãy. Ta thử cách dễ trước: giả sử tất cả các phần tử nằm ở cây con trái thì nằm trước phần tử hiện tại trong dãy, và tất cả các phần tử nằm ở cây con phải thì nằm bên phải phần tử hiện tại trong dãy. Để ý là định nghĩa này tạo ra một dãy duy nhất từ 1 cây nhị phân (thứ tự *in-order*, nếu bạn đã biết). Ví dụ dãy ở trên có thể được tạo từ cây nhị phân như sau:
 
-![](../../assets/Misc/data_structures/splay_tree/figure1.svg){:class="centered-img white-bg"}
+![](../../assets/misc/data-structures/splay-tree/figure1.svg){:class="centered-img white-bg"}
 
 Đến đây việc cài đặt để tìm phần tử thứ $i$ và thêm phần tử vào CTDL rất dễ dàng.
 
@@ -118,7 +118,7 @@ Giờ chúng ta xét độ phức tạp của thuật toán này. Ta có thể s
 
 Tuy nhiên, dùng một cây đơn giản như trên để giải là điều không dễ dàng. Một cây nhị phân có thể trở thành một "cây gậy" nếu ta không để ý. Xét cây như sau, cây này cũng có thể biểu thị dãy ban đầu:
 
-![](../../assets/Misc/data_structures/splay_tree/figure2.svg){:class="centered-img white-bg" }
+![](../../assets/misc/data-structures/splay-tree/figure2.svg){:class="centered-img white-bg" }
 
 Cây gậy này có chiều cao $n$, làm cho giả thiết về độ phức tạp của chúng ta không thành hiện thực. Vì vậy, ta cần một cách nào đó để duy trì chiều cao cây là $O(\log n)$ để giữ độ phức tạp như lý thuyết. Việc này được gọi là **cân bằng cây**, và có nhiều cách để làm như AVL, Red-Black Tree, Scapegoat Tree... Tuy nhiên, chúng ta sẽ tìm hiểu một loại cây có thể không chỉ tự cân bằng, mà còn duy trì được các thông tin bổ trợ để giúp ta tìm được những thông tin khó chịu như tổng đoạn - **Splay Tree**!
 
@@ -128,7 +128,7 @@ Cây gậy này có chiều cao $n$, làm cho giả thiết về độ phức t�
 
 Để cân bằng cây nhị phân, ta cần một thao tác nào đó. Một thao tác phổ biến là phép xoay cây
 
-![](../../assets/Misc/data_structures/splay_tree/figure3.svg){:class="centered-img white-bg" }
+![](../../assets/misc/data-structures/splay-tree/figure3.svg){:class="centered-img white-bg" }
 
 Node $n$ và $p$ là 2 node mà ta cần chú ý, và $A$, $B$, $C$ là 3 cây con của các node này. Để ý rằng 2 cây bên trái và bên phải trong hình có thứ tự in-order là $(A,n,B,p,C)$, nhưng chúng có chiều cao hơi khác nhau một chút. Cũng cần để ý rằng ta có thể thay đổi gốc của cây thành node $n$ qua một phép xoay (là xoay $n$ lên trên)
 
@@ -172,7 +172,7 @@ void rotate(Node *node) {
 
 Tuy nhiên, cách này không thực sự hiệu quả. Xoay node dưới cùng trên một "cây gậy" lại tạo ra một cây dạng "gậy" khác, không làm giảm độ phức tạp đi được:
 
-![](../../assets/Misc/data_structures/splay_tree/figure4.svg){:class="centered-img white-bg" }
+![](../../assets/misc/data-structures/splay-tree/figure4.svg){:class="centered-img white-bg" }
 
 Vì vậy, ta cần tìm cách để xoay một node lên gốc. Hãy xem thao tác Splay nhé!
 
@@ -180,18 +180,18 @@ Vì vậy, ta cần tìm cách để xoay một node lên gốc. Hãy xem thao t
 
 Trong thao tác splay, ta thường xoay node $n$ lên 2 lần liên tiếp để giảm độ cao của node đó đi 2 (cách này gọi là *Zig-Zag*) (độ cao của node gốc là thấp nhất):
 
-![](../../assets/Misc/data_structures/splay_tree/figure5.svg){:class="centered-img white-bg" }
+![](../../assets/misc/data-structures/splay-tree/figure5.svg){:class="centered-img white-bg" }
 
 Tuy nhiên, nếu node $n$ và cha $m$ của nó nằm cùng phía (nghĩa là cả 2 đều là node con trái hoặc đều là node con phải), thay vì xoay n lên 2 lần, ta xoay $m$ lên 1 lần, rồi xoay $n$ lên một lần nữa thì cũng có thể giảm độ cao của node đó đi 2, như sau (cách này gọi là *Zig-Zig*, vì 2 lần xoay đều theo cùng một hướng):
 
-![](../../assets/Misc/data_structures/splay_tree/figure6.svg){:class="centered-img white-bg" }
+![](../../assets/misc/data-structures/splay-tree/figure6.svg){:class="centered-img white-bg" }
 
 *Lưu ý: Trong trường hợp cha của $n$ là node gốc, chỉ cần xoay $n$ lên gốc một lần là đủ (cách này gọi là Zig).*
 
 Ta không thể thấy ngay rằng vì sao nó hoạt động: cây bên dưới giống "cây gậy" trước và sau thao tác. Nhưng nếu làm theo ví dụ trước, nó trở nên rõ ràng hơn.
 Ở hình dưới, ta áp dụng Zig-Zag, sau đó dùng Zig-Zig là sẽ ra được cây sau cùng.
 
-![](../../assets/Misc/data_structures/splay_tree/figure7.svg){:class="centered-img white-bg" }
+![](../../assets/misc/data-structures/splay-tree/figure7.svg){:class="centered-img white-bg" }
 
 Zig-Zig bằng một cách nào đó có thể làm cây có chiều cao thấp hơn sau một thao tác splay về gốc. Để biết tại sao nó hoạt động, ta cần dùng một chút toán ở đây.
 
@@ -205,7 +205,7 @@ Xét một dynamic rotating tree $T$ trên một dãy các thao tác tìm và sp
 
 Đầu tiên, ta thấy rằng việc tìm một node có cùng độ phức tạp thời gian với việc splay một node lên root, bởi vì chúng đều truy cập vào đường đi từ node lên root và chấm hết. Ta sẽ chỉ nói về độ phức tạp của việc splay một node lên root theo phân tích sau đây.
 
-Một giải pháp phổ biến là [Phương pháp Tiềm năng](../complexity_analysis/potential_method.md) (bạn nên đọc bài viết trong link để hiểu hơn), tiếng Anh gọi là the Potential Method. Ở đây ví dụ ta có một cục pin, ta sẽ thực hiện được các hành động như sau:
+Một giải pháp phổ biến là [Phương pháp Tiềm năng](../complexity-analysis/potential-method.md) (bạn nên đọc bài viết trong link để hiểu hơn), tiếng Anh gọi là the Potential Method. Ở đây ví dụ ta có một cục pin, ta sẽ thực hiện được các hành động như sau:
 
 - Ta có thể sạc pin bất kì lúc nào với $k$ thao tác. Hành động này tốn $k$ thời gian.
 - Ta có thể dùng pin cho $k$ thao tác. Hành động này tiết kiệm $k$ thời gian.
@@ -229,7 +229,7 @@ k&=\text{số thao tác cần để thực hiện một thao tác Splay}\\
 
 Xét một thao tác Zig-Zag:
 
-![](../../assets/Misc/data_structures/splay_tree/figure8.svg){:class="centered-img white-bg" }
+![](../../assets/misc/data-structures/splay-tree/figure8.svg){:class="centered-img white-bg" }
 
 $$\begin{align}
 \text{TIME}(\text{Zig-Zag})&=k+k(\text{rank}'(n)+\text{rank}'(m)+\text{rank}'(l)-\text{rank}(n)-\text{rank}(m)-\text{rank}(l))\\
@@ -259,7 +259,7 @@ $$\text{TIME}(\text{Zig-Zag})<k(2\text{rank}'(n)-2\text{rank}(n))=2k(\text{rank}
 
 Tương tự với thao tác Zig-Zig:
 
-![](../../assets/Misc/data_structures/splay_tree/figure9.svg){:class="centered-img white-bg" }
+![](../../assets/misc/data-structures/splay-tree/figure9.svg){:class="centered-img white-bg" }
 
 $$\begin{align}
 \text{TIME}(\text{Zig-Zig})&=k+k(\text{rank}'(n)+\text{rank}'(m)+\text{rank}'(l)-\text{rank}(n)-\text{rank}(m)-\text{rank}(l))\\
@@ -354,7 +354,7 @@ Bạn có thể rất ngạc nhiên khi ta đã có cách cài đặt (kiểu th
 
 Cách giải khá là đơn giản: ta có thể splay node $x_{r+1}$ về root, và node $x_{l-1}$ về làm con của node $x_{r+1}$. Thì cây con ứng với $[x_l,x_r]$ sẽ xuất hiện:
 
-![](../../assets/Misc/data_structures/splay_tree/figure10.svg){:class="centered-img white-bg" }
+![](../../assets/misc/data-structures/splay-tree/figure10.svg){:class="centered-img white-bg" }
 
 *Lưu ý: Trong trường hợp này ta giả sử $x_{l-1}$ và $x_{r+1}$ đều có tồn tại. Trong thực tế, ta có thể thêm node đầu và node đuôi giả để điều kiện trên luôn thoả mãn.*
 

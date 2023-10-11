@@ -22,15 +22,15 @@ Bạn phải giảm số thao tác tìm kiếm đến mức tối thiểu.
 
 Sau khi xoay một mảng đã sắp xếp, ta sẽ có 2 mảng đã sắp xếp chập vào nhau.
 
-![](../assets/LeetCode/search_in_rotated_sorted_array/figure1.png){:class="centered-img"}
+![](../assets/LeetCode/search-in-rotated-sorted-array/figure1.png){:class="centered-img"}
 
 Gọi mảng đã sắp xếp đầu tiên là `F`, còn mảng thứ hai là `S`.
 
-![](../assets/LeetCode/search_in_rotated_sorted_array/figure2.png){:class="centered-img"}
+![](../assets/LeetCode/search-in-rotated-sorted-array/figure2.png){:class="centered-img"}
 
 Ta có thể thấy là tất cả các phần tử của mảng thứ hai `S` sẽ nhỏ hơn hoặc bằng phần tử đầu tiên `start` của `F` (cũng là phần tử đầu tiên của mảng ban đầu).
 
-![](../assets/LeetCode/search_in_rotated_sorted_array/figure3.png){:class="centered-img"}
+![](../assets/LeetCode/search-in-rotated-sorted-array/figure3.png){:class="centered-img"}
 
 Với observation này, ta có thể biết được phần tử `target` nằm trong mảng `F` hay `S` bằng cách so sánh nó với phần tử đầu tiên của mảng.
 
@@ -38,15 +38,15 @@ Giả sử ta đang tìm phần tử `target` trong mảng `arr`:
 
 - Trường hợp 1: Nếu `target > arr[start]`: `target` nằm trong mảng `F`
 
-![](../assets/LeetCode/search_in_rotated_sorted_array/figure4.png){:class="centered-img"}
+![](../assets/LeetCode/search-in-rotated-sorted-array/figure4.png){:class="centered-img"}
 
 - Trường hợp 2: Nếu `target < arr[start]`: `target` nằm trong mảng `S`
 
-![](../assets/LeetCode/search_in_rotated_sorted_array/figure5.png){:class="centered-img"}
+![](../assets/LeetCode/search-in-rotated-sorted-array/figure5.png){:class="centered-img"}
 
 - Trường hợp 3: Nếu `target == arr[start]`: `target` rõ ràng nằm trong mảng `F`, nhưng cũng có thể nằm trong mảng `S`.
 
-![](../assets/LeetCode/search_in_rotated_sorted_array/figure6.png){:class="centered-img"}
+![](../assets/LeetCode/search-in-rotated-sorted-array/figure6.png){:class="centered-img"}
 
 Hàm dưới đây cho ta biết phần tử `target` có thể nằm trong mảng `F` hay không:
 
@@ -65,23 +65,23 @@ Bằng cách xác định vị trí của `arr[mid]` và `target` trong `F` và 
 
 - Trường hợp 1: `arr[mid]` nằm trong `F`, `target` nằm trong `S`: Vì mảng `S` bắt đầu khi `F` hết, ta biết `target` nằm trong đoạn `(mid, end]`.
 
-![](../assets/LeetCode/search_in_rotated_sorted_array/figure7.png){:class="centered-img"}
+![](../assets/LeetCode/search-in-rotated-sorted-array/figure7.png){:class="centered-img"}
 
 - Trường hợp 2: `arr[mid]` nằm trong `S`, `target` nằm trong `F`: Tương tự, ta biết `target` nằm trong đoạn `[start, mid)`.
 
-![](../assets/LeetCode/search_in_rotated_sorted_array/figure8.png){:class="centered-img"}
+![](../assets/LeetCode/search-in-rotated-sorted-array/figure8.png){:class="centered-img"}
 
 - Trường hợp 3: `arr[mid]` và `target` nằm trong `F`: Vì cả hai nằm trong cùng một mảng đã sắp xếp, ta có thể so sánh `arr[mid]` và `target` để biết làm sao gia giảm không gian tìm kiếm.
 
-![](../assets/LeetCode/search_in_rotated_sorted_array/figure9.png){:class="centered-img"}
+![](../assets/LeetCode/search-in-rotated-sorted-array/figure9.png){:class="centered-img"}
 
 - Trường hợp 4: `arr[mid]` và `target` nằm trong `S`: Tương tự, vì cả hai nằm trong cùng một mảng đã sắp xếp, ta có thể so sánh `arr[mid]` và `target` để biết làm sao gia giảm không gian tìm kiếm.
 
-![](../assets/LeetCode/search_in_rotated_sorted_array/figure10.png){:class="centered-img"}
+![](../assets/LeetCode/search-in-rotated-sorted-array/figure10.png){:class="centered-img"}
 
 **Nhưng có một trường hợp đặc biệt**, nếu `arr[mid]` bằng `arr[start]`, ta biết rằng `arr[mid]` có thể nằm trong cả `F` lẫn `S`, nên ta không thể tìm vị trí tương đối của `target` từ đó.
 
-![](../assets/LeetCode/search_in_rotated_sorted_array/figure11.png){:class="centered-img"}
+![](../assets/LeetCode/search-in-rotated-sorted-array/figure11.png){:class="centered-img"}
 
 ```cpp
 // trả về true nếu ta có thể gia giảm không gian tìm kiếm với không gian tìm kiếm nhị phân hiện tại

@@ -111,4 +111,4 @@ Một thao tác $Inc$ đảo bit đầu tiên (bit bên phải ngoài cùng). Sa
 
 ## Ứng dụng
 
-Hàm Tiềm năng thường được sử dung để phân tích Fibonacci Heap, một loại hàng chờ ưu tiên (priority queue) cho phép xoá phần tử với thời gian phân bổ là $log$, và tất cả các thao tác khác với thời gian phân bổ là hằng số. Nó cũng được dùng để phân tích [Splay Tree](../data_structures/splay_tree.md), một loại cây nhị phân tìm kiếm tự biến đổi với thời gian phân bổ của mỗi thao tác là $log$.
+Hàm Tiềm năng thường được sử dung để phân tích Fibonacci Heap, một loại hàng chờ ưu tiên (priority queue) cho phép xoá phần tử với thời gian phân bổ là $log$, và tất cả các thao tác khác với thời gian phân bổ là hằng số. Nó cũng được dùng để phân tích [Splay Tree](../data-structures/splay-tree.md), một loại cây nhị phân tìm kiếm tự biến đổi với thời gian phân bổ của mỗi thao tác là $log$.

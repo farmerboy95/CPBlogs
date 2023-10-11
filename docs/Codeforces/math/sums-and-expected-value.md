@@ -8,7 +8,7 @@
 
 ## Mở đầu
 
-Đầu tiên thì bạn cần biết về xác suất và một chút về giá trị kỳ vọng. Về kỳ vọng tuyến tính thì mình có một bài dịch khá dễ hiểu ở [đây](../../Misc/probability/expected_value.md), các bạn có thể tìm đọc.
+Đầu tiên thì bạn cần biết về xác suất và một chút về giá trị kỳ vọng. Về kỳ vọng tuyến tính thì mình có một bài dịch khá dễ hiểu ở [đây](../../misc/probability/expected-value.md), các bạn có thể tìm đọc.
 
 ## Sơ bộ về giá trị kỳ vọng
 
