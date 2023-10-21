@@ -34,6 +34,9 @@ comment: false
     - Đồ thị
         - Đường đi ngắn nhất một nguồn
             - [0-1 BFS](cp-algorithms/graph/sssp/01-bfs.md)
+    - Khác
+        - Khác
+            - [Thuật toán Floyd tìm chu trình trong Linked List](cp-algorithms/misc/misc/tortoise-and-hare.md)
 - Codechef
     - Cấu trúc dữ liệu
         - [Disjoint Sparse Table](Codechef/data-structures/disjoint-sparse-table.md)
