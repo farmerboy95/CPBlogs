@@ -8,35 +8,35 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/cp-algorithms/graph/sssp/01-bfs/">
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/Codeforces/math/inclusion-exclusion/">
       
       
-        <link rel="prev" href="../../../data-structures/trees/dsu/">
+        <link rel="prev" href="../sums-and-expected-value/">
       
       
-        <link rel="next" href="../../../misc/misc/tortoise-and-hare/">
+        <link rel="next" href="../../hashing/blowing-up-unordered-map/">
       
       
-      <link rel="icon" href="../../../../assets/images/logo.jpg">
+      <link rel="icon" href="../../../assets/images/logo.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
-        <title>0-1 BFS - farmerboy's CP Blogs</title>
+        <title>Nguyên tắc Bao hàm - Loại trừ - farmerboy's CP Blogs</title>
       
     
     
   
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b4a2bd9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
 
     
-  <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+  <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
 
     
   
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -70,7 +70,7 @@
     
     
     
-   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -81,7 +81,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -103,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#0-1-bfs" class="md-skip">
+        <a href="#nguyen-tac-bao-ham-loai-tru" class="md-skip">
           Skip to content
         </a>
       
@@ -117,9 +117,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+    <a href="../../.." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
       
-  <img src="../../../../assets/images/logo.jpg" alt="logo">
+  <img src="../../../assets/images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -136,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              0-1 BFS
+              Nguyên tắc Bao hàm - Loại trừ
             
           </span>
         </div>
@@ -242,40 +242,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
   Trang chủ
 
         </a>
       </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../Codeforces/graph/dfs-tree/" class="md-tabs__link">
-          
-  
-  Codeforces
-
-        </a>
-      </li>
-    
-  
-
     
   
 
@@ -297,7 +270,34 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../algebra/binary-exponentiation/" class="md-tabs__link">
+        <a href="../../graph/dfs-tree/" class="md-tabs__link">
+          
+  
+  Codeforces
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cp-algorithms/algebra/binary-exponentiation/" class="md-tabs__link">
           
   
   cp-algorithms
@@ -324,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../Codechef/data-structures/disjoint-sparse-table/" class="md-tabs__link">
+        <a href="../../../Codechef/data-structures/disjoint-sparse-table/" class="md-tabs__link">
           
   
   Codechef
@@ -345,7 +345,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../LeetCode/reservoir-sampling/" class="md-tabs__link">
+        <a href="../../../LeetCode/reservoir-sampling/" class="md-tabs__link">
           
   
   LeetCode
@@ -369,7 +369,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../misc/complexity-analysis/asymptotic-notations/" class="md-tabs__link">
+        <a href="../../../misc/complexity-analysis/asymptotic-notations/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -405,9 +405,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+    <a href="../../.." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
       
-  <img src="../../../../assets/images/logo.jpg" alt="logo">
+  <img src="../../../assets/images/logo.jpg" alt="logo">
 
     </a>
     farmerboy's CP Blogs
@@ -472,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -492,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../navigation/" class="md-nav__link">
+      <a href="../../../navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -517,6 +517,8 @@
       
   
   
+    
+  
   
     
     
@@ -526,12 +528,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -545,7 +547,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Codeforces
@@ -594,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Codeforces/graph/dfs-tree/" class="md-nav__link">
+      <a href="../../graph/dfs-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -658,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Codeforces/bit-manipulation/xor-basis/" class="md-nav__link">
+      <a href="../../bit-manipulation/xor-basis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -684,18 +686,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -709,7 +713,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Toán học
@@ -722,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Codeforces/math/floors-ceilings-inequalities/" class="md-nav__link">
+      <a href="../floors-ceilings-inequalities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -742,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Codeforces/math/sums-and-expected-value/" class="md-nav__link">
+      <a href="../sums-and-expected-value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -760,9 +764,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../../Codeforces/math/inclusion-exclusion/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Nguyên tắc Bao hàm - Loại trừ
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -771,6 +795,114 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nhac-lai-cac-ky-hieu-ve-tap-hop" class="md-nav__link">
+    Nhắc lại các ký hiệu về tập hợp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-inh-nghia" class="md-nav__link">
+    Các định nghĩa
+  </a>
+  
+    <nav class="md-nav" aria-label="Các định nghĩa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nguyen-tac-bao-ham-loai-tru-han-che-the-restricted-inclusion-exclusion-principle" class="md-nav__link">
+    Nguyên tắc Bao hàm - Loại trừ hạn chế (The Restricted Inclusion-Exclusion Principle)
+  </a>
+  
+    <nav class="md-nav" aria-label="Nguyên tắc Bao hàm - Loại trừ hạn chế (The Restricted Inclusion-Exclusion Principle)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-1" class="md-nav__link">
+    Ví dụ 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nguyen-tac-bao-ham-loai-tru-the-inclusion-exclusion-principle" class="md-nav__link">
+    Nguyên tắc Bao hàm - Loại trừ (The Inclusion-Exclusion Principle)
+  </a>
+  
+    <nav class="md-nav" aria-label="Nguyên tắc Bao hàm - Loại trừ (The Inclusion-Exclusion Principle)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-2" class="md-nav__link">
+    Ví dụ 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-3" class="md-nav__link">
+    Ví dụ 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-4" class="md-nav__link">
+    Ví dụ 4
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luyen-tap" class="md-nav__link">
+    Luyện tập
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -826,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Codeforces/hashing/blowing-up-unordered-map/" class="md-nav__link">
+      <a href="../../hashing/blowing-up-unordered-map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -890,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Codeforces/c%2B%2B/no-rand/" class="md-nav__link">
+      <a href="../../c%2B%2B/no-rand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -954,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Codeforces/randomized-algorithms/hacking-randomized-solutions/" class="md-nav__link">
+      <a href="../../randomized-algorithms/hacking-randomized-solutions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -987,8 +1119,6 @@
       
   
   
-    
-  
   
     
     
@@ -998,12 +1128,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -1017,7 +1147,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             cp-algorithms
@@ -1066,7 +1196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../algebra/binary-exponentiation/" class="md-nav__link">
+      <a href="../../../cp-algorithms/algebra/binary-exponentiation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1166,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../data-structures/fundamentals/min-stack-min-queue/" class="md-nav__link">
+      <a href="../../../cp-algorithms/data-structures/fundamentals/min-stack-min-queue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1186,7 +1316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../data-structures/fundamentals/sparse-table/" class="md-nav__link">
+      <a href="../../../cp-algorithms/data-structures/fundamentals/sparse-table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1250,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../data-structures/trees/sqrt-tree/" class="md-nav__link">
+      <a href="../../../cp-algorithms/data-structures/trees/sqrt-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1270,7 +1400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../data-structures/trees/dsu/" class="md-nav__link">
+      <a href="../../../cp-algorithms/data-structures/trees/dsu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1304,20 +1434,18 @@
                 
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1331,7 +1459,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Đồ thị
@@ -1342,20 +1470,18 @@
                 
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
@@ -1369,7 +1495,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3_1">
             <span class="md-nav__icon md-icon"></span>
             Đường đi ngắn nhất một nguồn
@@ -1380,29 +1506,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    0-1 BFS
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/graph/sssp/01-bfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1411,61 +1517,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    Nguồn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gioi-thieu" class="md-nav__link">
-    Giới thiệu
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#thuat-toan" class="md-nav__link">
-    Thuật toán
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#thuat-toan-dial" class="md-nav__link">
-    Thuật toán Dial
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#luyen-tap" class="md-nav__link">
-    Luyện tập
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1565,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/misc/tortoise-and-hare/" class="md-nav__link">
+      <a href="../../../cp-algorithms/misc/misc/tortoise-and-hare/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1683,7 +1734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Codechef/data-structures/disjoint-sparse-table/" class="md-nav__link">
+      <a href="../../../Codechef/data-structures/disjoint-sparse-table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1757,7 +1808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../LeetCode/reservoir-sampling/" class="md-nav__link">
+      <a href="../../../LeetCode/reservoir-sampling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1777,7 +1828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../LeetCode/search-in-rotated-sorted-array/" class="md-nav__link">
+      <a href="../../../LeetCode/search-in-rotated-sorted-array/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1797,7 +1848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../LeetCode/basic-calculator/" class="md-nav__link">
+      <a href="../../../LeetCode/basic-calculator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1899,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../misc/complexity-analysis/asymptotic-notations/" class="md-nav__link">
+      <a href="../../../misc/complexity-analysis/asymptotic-notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1919,7 +1970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../misc/complexity-analysis/potential-method/" class="md-nav__link">
+      <a href="../../../misc/complexity-analysis/potential-method/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1983,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../misc/data-structures/splay-tree/" class="md-nav__link">
+      <a href="../../../misc/data-structures/splay-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2047,7 +2098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../misc/probability/probability/" class="md-nav__link">
+      <a href="../../../misc/probability/probability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2067,7 +2118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../misc/probability/expected-value/" class="md-nav__link">
+      <a href="../../../misc/probability/expected-value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2087,7 +2138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../misc/probability/linearity-of-expectation/" class="md-nav__link">
+      <a href="../../../misc/probability/linearity-of-expectation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2151,7 +2202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../misc/experience/being-better/" class="md-nav__link">
+      <a href="../../../misc/experience/being-better/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2171,7 +2222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../misc/experience/icpc-strategy/" class="md-nav__link">
+      <a href="../../../misc/experience/icpc-strategy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2234,23 +2285,76 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gioi-thieu" class="md-nav__link">
-    Giới thiệu
+  <a href="#nhac-lai-cac-ky-hieu-ve-tap-hop" class="md-nav__link">
+    Nhắc lại các ký hiệu về tập hợp
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#thuat-toan" class="md-nav__link">
-    Thuật toán
+  <a href="#cac-inh-nghia" class="md-nav__link">
+    Các định nghĩa
+  </a>
+  
+    <nav class="md-nav" aria-label="Các định nghĩa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nguyen-tac-bao-ham-loai-tru-han-che-the-restricted-inclusion-exclusion-principle" class="md-nav__link">
+    Nguyên tắc Bao hàm - Loại trừ hạn chế (The Restricted Inclusion-Exclusion Principle)
+  </a>
+  
+    <nav class="md-nav" aria-label="Nguyên tắc Bao hàm - Loại trừ hạn chế (The Restricted Inclusion-Exclusion Principle)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-1" class="md-nav__link">
+    Ví dụ 1
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#thuat-toan-dial" class="md-nav__link">
-    Thuật toán Dial
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nguyen-tac-bao-ham-loai-tru-the-inclusion-exclusion-principle" class="md-nav__link">
+    Nguyên tắc Bao hàm - Loại trừ (The Inclusion-Exclusion Principle)
   </a>
+  
+    <nav class="md-nav" aria-label="Nguyên tắc Bao hàm - Loại trừ (The Inclusion-Exclusion Principle)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-2" class="md-nav__link">
+    Ví dụ 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-3" class="md-nav__link">
+    Ví dụ 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-4" class="md-nav__link">
+    Ví dụ 4
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2280,60 +2384,117 @@
   
 
 
-<h1 id="0-1-bfs">0-1 BFS</h1>
+<h1 id="nguyen-tac-bao-ham-loai-tru">Nguyên tắc Bao hàm - Loại trừ</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a class="glightbox" href="../../../../assets/images/cpalgorithms.ico" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../../assets/images/cpalgorithms.ico" width="16" height="16"/></a> <a href="https://cp-algorithms.com/graph/01_bfs.html">0-1 BFS</a></p>
-<h2 id="gioi-thieu">Giới thiệu</h2>
-<p>Bạn chắc hẳn đã quen thuộc với việc tìm đường đi ngắn nhất từ một nguồn đến tất cả các node khác trong <strong>đồ thị không trọng số</strong> trong thời gian <span class="arithmatex">\(O(|E|)\)</span> bằng thuật toán BFS (khoảng cách là số cạnh nhỏ nhất từ nguồn đến đích). Ta có thể xem đồ thị không trọng số như một đồ thị có trọng số, trong đó mỗi cạnh có trọng số là <span class="arithmatex">\(1\)</span>. Nếu trọng số của các cạnh không bằng nhau, ta cần một thuật toán tổng quát hơn, như Dijkstra, chạy trong thời gian <span class="arithmatex">\(O(|V|^2 + |E|)\)</span> hoặc <span class="arithmatex">\(O(|E| \log |V|)\)</span>.</p>
-<p>Tuy nhiên, nếu trọng số của các cạnh có một số ràng buộc, ta có thể làm tốt hơn. Trong bài viết này, ta sẽ đi vào tìm hiểu cách sử dụng BFS để giải quyết bài toán tìm đường đi ngắn nhất từ một nguồn đến tất cả các node khác trong đồ thị có trọng số <span class="arithmatex">\(0\)</span> hoặc <span class="arithmatex">\(1\)</span> trong thời gian <span class="arithmatex">\(O(|E|)\)</span>.</p>
-<h2 id="thuat-toan">Thuật toán</h2>
-<p>Trước hết ta đi vào nghiên cứu thuật toán Dijkstra và xem thử đồ thị đặc biệt của chúng ta có thể có những hệ quả nào. Dạng tổng quát của thuật toán Dijkstra như sau (ở đây ta sử dụng <code>set</code> để làm hàng đợi ưu tiên):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">d</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">INF</span><span class="p">);</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">set</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">q</span><span class="p">.</span><span class="n">insert</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">});</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">adj</span><span class="p">[</span><span class="n">v</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edge</span><span class="p">.</span><span class="n">first</span><span class="p">;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edge</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="n">q</span><span class="p">.</span><span class="n">erase</span><span class="p">({</span><span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">u</span><span class="p">});</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">            </span><span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="p">;</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">            </span><span class="n">q</span><span class="p">.</span><span class="n">insert</span><span class="p">({</span><span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">u</span><span class="p">});</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">}</span>
-</code></pre></div>
-<p>Trong trường hợp đồ thị của ta (cạnh có trọng số bằng <span class="arithmatex">\(0\)</span> hoặc <span class="arithmatex">\(1\)</span>), ta thấy rằng <span class="arithmatex">\(|d[i] - d[j]|\)</span> (với <span class="arithmatex">\(i\)</span> và <span class="arithmatex">\(j\)</span> là 2 node bất kỳ trong hàng đợi) không quá 1. Đặc biệt, ta biết rằng <span class="arithmatex">\(d[v] \le d[u] \le d[v] + 1\)</span> với mọi <span class="arithmatex">\(u \in Q\)</span>. Đó là bởi vì, ta chỉ thêm các node có khoảng cách bằng nhau hoặc khoảng cách lớn hơn 1 so với node hiện tại vào hàng đợi trong mỗi lần lặp. Giả sử tồn tại một node <span class="arithmatex">\(u\)</span> trong hàng đợi với <span class="arithmatex">\(d[u] - d[v] &gt; 1\)</span>, thì <span class="arithmatex">\(u\)</span> phải được thêm vào hàng đợi thông qua một node khác <span class="arithmatex">\(t\)</span> với <span class="arithmatex">\(d[t] \ge d[u] - 1 &gt; d[v]\)</span>. Tuy nhiên điều này là không thể, vì thuật toán Dijkstra lặp qua các node theo thứ tự tăng dần.</p>
-<p>Điều này có nghĩa là, thứ tự của hàng đợi sẽ như sau:</p>
-<div class="arithmatex">\[Q = \underbrace{v}_{d[v]}, \dots, \underbrace{u}_{d[v]}, \underbrace{m}_{d[v]+1} \dots \underbrace{n}_{d[v]+1}\]</div>
-<p>Cấu trúc này đơn giản đến mức ta không cần một hàng đợi ưu tiên, tức là ta không cần một cây nhị phân cân bằng. Ta có thể sử dụng một hàng đợi thông thường, và thêm các node mới vào đầu hàng đợi nếu cạnh tương ứng có trọng số <span class="arithmatex">\(0\)</span>, tức là <span class="arithmatex">\(d[u] = d[v]\)</span>, hoặc thêm vào cuối hàng đợi nếu cạnh có trọng số <span class="arithmatex">\(1\)</span>, tức là <span class="arithmatex">\(d[u] = d[v] + 1\)</span>. Như vậy, hàng đợi sẽ giữ nguyên thứ tự sắp xếp.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">d</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">INF</span><span class="p">);</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">deque</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">q</span><span class="p">.</span><span class="n">push_front</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">pop_front</span><span class="p">();</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">adj</span><span class="p">[</span><span class="n">v</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edge</span><span class="p">.</span><span class="n">first</span><span class="p">;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edge</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="p">;</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">w</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">                </span><span class="n">q</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="k">else</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">                </span><span class="n">q</span><span class="p">.</span><span class="n">push_front</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">}</span>
-</code></pre></div>
-<h2 id="thuat-toan-dial">Thuật toán Dial</h2>
-<p>Ta có thể mở rộng thuật toán trên nếu ta cho phép trọng số của các cạnh lớn hơn <span class="arithmatex">\(1\)</span>. Nếu mỗi cạnh có trọng số <span class="arithmatex">\(\le k\)</span>, thì khoảng cách của các node trong hàng đợi sẽ chênh lệch tối đa <span class="arithmatex">\(k\)</span> so với khoảng cách của node hiện tại đến nguồn. Vì vậy, ta có thể sử dụng <span class="arithmatex">\(k + 1\)</span> hàng đợi để lưu trữ các node trong hàng đợi, và mỗi khi hàng đợi có khoảng cách nhỏ nhất trở thành rỗng, ta dịch chuyển các hàng đợi để lấy hàng đợi có khoảng cách nhỏ nhất tiếp theo. Biến thể mở rộng này được gọi là <strong>Thuật toán Dial</strong>.</p>
+<p><a class="glightbox" href="../../../assets/images/codeforces.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/codeforces.png" width="16" height="16"/></a> <a href="https://codeforces.com/blog/entry/64625">[Tutorial] Inclusion-Exclusion Principle</a></p>
+<h2 id="nhac-lai-cac-ky-hieu-ve-tap-hop">Nhắc lại các ký hiệu về tập hợp</h2>
+<ul>
+<li><span class="arithmatex">\(\cap\)</span> là giao của hai tập hợp.</li>
+<li><span class="arithmatex">\(\cup\)</span> là hợp của hai tập hợp.</li>
+<li><span class="arithmatex">\(\setminus\)</span> là hiệu của hai tập hợp.</li>
+<li><span class="arithmatex">\(\emptyset\)</span> là tập hợp rỗng.</li>
+<li><span class="arithmatex">\(\mathbb{N}\)</span> là tập hợp các số tự nhiên.</li>
+<li><span class="arithmatex">\(\mathbb{Z}\)</span> là tập hợp các số nguyên.</li>
+<li><span class="arithmatex">\(\mathbb{Q}\)</span> là tập hợp các số hữu tỉ.</li>
+<li><span class="arithmatex">\(\mathbb{R}\)</span> là tập hợp các số thực.</li>
+<li><span class="arithmatex">\(\mathbb{C}\)</span> là tập hợp các số phức.</li>
+<li><span class="arithmatex">\(|X|\)</span> là kích thước của tập hợp <span class="arithmatex">\(X\)</span>.</li>
+<li><span class="arithmatex">\(\in\)</span> là ký hiệu cho phần tử thuộc tập hợp.</li>
+<li><span class="arithmatex">\(\subset\)</span> là ký hiệu cho tập hợp con.</li>
+<li><span class="arithmatex">\(\subseteq\)</span> là ký hiệu cho tập hợp con hoặc bằng.</li>
+<li><span class="arithmatex">\(\supset\)</span> là ký hiệu cho tập hợp chứa.</li>
+<li><span class="arithmatex">\(\supseteq\)</span> là ký hiệu cho tập hợp chứa hoặc bằng.</li>
+</ul>
+<h2 id="cac-inh-nghia">Các định nghĩa</h2>
+<p>Cho tập hữu hạn <span class="arithmatex">\(X\)</span> và ba tập con <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span>, <span class="arithmatex">\(C\)</span>. Để có được <span class="arithmatex">\(|A \cup B \cup C|\)</span>, ta lấy tổng <span class="arithmatex">\(|A| + |B| + |C|\)</span>. Trừ khi <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span>, <span class="arithmatex">\(C\)</span> đôi một không có phần tử chung, ta sẽ đếm bị thừa, vì các phần tử của <span class="arithmatex">\(A \cap B\)</span>, <span class="arithmatex">\(A \cap C\)</span>, <span class="arithmatex">\(B \cap C\)</span> được đếm hai lần. Vậy nên ta trừ <span class="arithmatex">\(|A \cap B| + |A \cap C| + |B \cap C|\)</span>. Giờ kết quả lại bị thiếu các phần tử trong <span class="arithmatex">\(A \cap B \cap C\)</span>, do nó được thêm 3 lần, nhưng cũng bị trừ đi 3 lần. Vậy kết quả là:</p>
+<div class="arithmatex">\[|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|\]</div>
+<p>hay tương đương với</p>
+<div class="arithmatex">\[|X \setminus (A \cup B \cup C) = |X| - |A| - |B| - |C| + |A \cap B| + |A \cap C| + |B \cap C| - |A \cap B \cap C|\]</div>
+<p>Công thức sau đây sẽ giải quyết trường hợp có nhiều tập hợp hơn.</p>
+<h3 id="nguyen-tac-bao-ham-loai-tru-han-che-the-restricted-inclusion-exclusion-principle">Nguyên tắc Bao hàm - Loại trừ hạn chế (The Restricted Inclusion-Exclusion Principle)</h3>
+<p>Cho <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> là các tập con của <span class="arithmatex">\(X\)</span>. Ta có:</p>
+<div class="arithmatex">\[|X \setminus \bigcup_{i=1}^n A_i| = |X| - \sum_{i=1}^n |A_i| + \sum_{1 \leq i &lt; j \leq n} |A_i \cap A_j| - \sum_{1 \leq i &lt; j &lt; k \leq n} |A_i \cap A_j \cap A_k| + \dots + (-1)^n |A_1 \cap A_2 \cap \dots \cap A_n|\]</div>
+<p>Đây là công thức rất quen thuộc với nhiều bạn, mình sẽ gọi nó là Nguyên tắc Bao hàm - Loại trừ hạn chế (The Restricted Inclusion-Exclusion Principle). Nó có thể chuyển bài toán tính kích thước hợp của các tập hợp thành bài toán tính kích thước giao của các tập hợp.</p>
+<p>Không khó để chứng minh tính đúng đắn của công thức này, ta chỉ cần kiểm tra xem một phần tử <span class="arithmatex">\(x \in X\)</span> được đếm bao nhiêu lần trong cả hai vế. Nếu <span class="arithmatex">\(x \notin \bigcup_{i=1}^n A_i\)</span> thì nó được đếm một lần trong cả hai vế. Ngược lại, nếu <span class="arithmatex">\(x \in \bigcup_{i=1}^n A_i\)</span>, hay chính xác hơn là <span class="arithmatex">\(x\)</span> nằm trong <span class="arithmatex">\(m\)</span> tập hợp trong các tập <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span>, vế trái nó sẽ không xuất hiện, còn vế phải thì số lần xuất hiện là:</p>
+<div class="arithmatex">\[1 - \binom{m}{1} + \binom{m}{2} - \binom{m}{3} + \dots + (-1)^m \binom{m}{m} = 0\]</div>
+<p>với mọi <span class="arithmatex">\(m \le 1\)</span>, nên dấu bằng xảy ra.</p>
+<h4 id="vi-du-1">Ví dụ 1</h4>
+<p>Đây là bài <a href="https://acm.hdu.edu.cn/showproblem.php?pid=4135">Co-prime</a> trên HDU Online Judge. Đây là một bài rất nổi tiếng sử dụng Nguyên tắc Bao hàm - Loại trừ.</p>
+<p>Cho <span class="arithmatex">\(N\)</span>, <span class="arithmatex">\(L\)</span>, <span class="arithmatex">\(R\)</span>, bạn cần tính số số nguyên <span class="arithmatex">\(x\)</span> trong đoạn <span class="arithmatex">\([L, R]\)</span> sao cho <span class="arithmatex">\(x\)</span> nguyên tố cùng nhau với <span class="arithmatex">\(N\)</span>, hay nói cách khác là <span class="arithmatex">\(\gcd(x, N) = 1\)</span>. Có <span class="arithmatex">\(1 \le T \le 100\)</span> test. Giới hạn là <span class="arithmatex">\(1 \le N \le 10^9\)</span>, <span class="arithmatex">\(1 \le L \le R \le 10^{15}\)</span>.</p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Nếu ta có thể tính số số nguyên <span class="arithmatex">\(x\)</span> trong đoạn <span class="arithmatex">\([1, X]\)</span> mà <span class="arithmatex">\(x\)</span> nguyên tố cùng nhau vơi <span class="arithmatex">\(N\)</span>, ký hiệu là <span class="arithmatex">\(f(X)\)</span>, thì đáp án cuối cùng sẽ là <span class="arithmatex">\(f(R) - f(L-1)\)</span>. Vậy tính <span class="arithmatex">\(f(X)\)</span> kiểu gì?</p>
+<p>Thay vì đếm số số nguyên tố cùng nhau với <span class="arithmatex">\(N\)</span>, ta có thể đếm số số không nguyên tố cùng nhau với <span class="arithmatex">\(N\)</span>, nghĩa là các số có chung ít nhất một thừa số nguyên tố với <span class="arithmatex">\(N\)</span>. Để làm được điều này, đầu tiên ta có thể sàng tất cả các số nguyên tố không vượt quá <span class="arithmatex">\(O(\sqrt N)\)</span>, sau đó tìm tất cả các thừa số nguyên tố <span class="arithmatex">\(p_1, p_2, \dots, p_k\)</span> của <span class="arithmatex">\(N\)</span>. Gọi <span class="arithmatex">\(A_i\)</span> là tập các số chia hết cho <span class="arithmatex">\(p_i\)</span>, thì số số không nguyên tố cùng nhau với <span class="arithmatex">\(N\)</span> trong đoạn <span class="arithmatex">\([1, X]\)</span> sẽ là <span class="arithmatex">\(|\bigcup_{i=1}^n A_i|\)</span>, cái này khá khó để tính trực tiếp. Tuy nhiên, nếu sử dụng Nguyên tắc Bao hàm - Loại trừ, ta có thể chuyển bài toán này thành bài toán tính kích thước giao của các tập hợp <span class="arithmatex">\(A_i\)</span>, sẽ dễ hơn.</p>
+<p>Độ phức tạp sẽ là <span class="arithmatex">\(O(\sqrt N + T \cdot 2^k)\)</span>, với <span class="arithmatex">\(k &lt; 10\)</span> là số thừa số nguyên tố khác nhau của <span class="arithmatex">\(N\)</span>.</p>
+</details>
+<p>Diễn giải chuẩn sẽ đưa ta đến với Nguyên tắc Bao hàm - Loại trừ. Giả sử ta có một tập <span class="arithmatex">\(X\)</span>, gọi là <em>universe</em> đi, và một tập <span class="arithmatex">\(E = \{e_1, e_2, \dots, e_n\}\)</span> các <strong>tính chất</strong> (properties) mà các phần tử của <span class="arithmatex">\(X\)</span> có thể có hoặc không. Ta có thể định nghĩa bất kỳ tính chất nào mà ta muốn, như là <span class="arithmatex">\(e = ''\le 5''\)</span>, <span class="arithmatex">\(e = ''\text{là một số nguyên}''\)</span>, hay thậm chí <span class="arithmatex">\(e = ''\text{thích ăn táo}''\)</span> chẳng hạn. Gọi <span class="arithmatex">\(A_i\)</span> là tập con của các phần tử của X có tính chất <span class="arithmatex">\(e_i\)</span> (và các phần tử đó có thể có một số tính chất khác, nhưng vẫn có chung tính chất <span class="arithmatex">\(e_i\)</span>). Vậy thì <span class="arithmatex">\(|X \setminus \bigcup_{i=1}^n A_i|\)</span> là số phần tử trong X <strong>không có</strong> tính chất nào trong <span class="arithmatex">\(E\)</span>. Rõ ràng, <span class="arithmatex">\(A_{i_1}, A_{i_2}, \dots, A_{i_t}\)</span> là lần lượt là các tập con các phần tử của X có chung tính chất lần lượt là <span class="arithmatex">\(e_{i_1}, e_{i_2}, \dots, e_{i_t}\)</span> (mỗi phần tử trong một tập có thể có các tính chất khác, nhưng tất cả chúng trong một tập đều phải có chung tính chất được chỉ định). Với các kí hiệu</p>
+<div class="arithmatex">\[N_{\supseteq T} := \#\{x \in X : \text{T là tập con của tập các tính chất của x}\}\]</div>
+<p>(tức là đếm số phần tử <span class="arithmatex">\(x\)</span> của <span class="arithmatex">\(X\)</span> sao cho tập các tính chất mà <span class="arithmatex">\(x\)</span> đang có sẽ là tập chứa tập các tính chất T cho trước) và</p>
+<div class="arithmatex">\[N_{=T} := \#\{x \in X : \text{T chính là tập các tính chất của x}\}\]</div>
+<p>(tức là đếm số phần tử <span class="arithmatex">\(x\)</span> của <span class="arithmatex">\(X\)</span> sao cho tập các tính chất mà <span class="arithmatex">\(x\)</span> đang có sẽ bằng tập các tính chất T cho trước), ta đến với Nguyên tắc Bao hàm - Loại trừ.</p>
+<h3 id="nguyen-tac-bao-ham-loai-tru-the-inclusion-exclusion-principle">Nguyên tắc Bao hàm - Loại trừ (The Inclusion-Exclusion Principle)</h3>
+<p>Cho tập <span class="arithmatex">\(X\)</span>, và tập <span class="arithmatex">\(E = \{e_1, e_2, \dots, e_n\}\)</span> là tập các tính chất. Ta có</p>
+<div class="arithmatex">\[N_{= \emptyset} = \sum_{T \subseteq E} (-1)^{|T|} N_{\supseteq T} = \sum_{k=0}^n (-1)^k \sum_{T:|T|=k} N_{\supseteq T}\]</div>
+<p>Công thức này còn trở nên đơn giản hơn trong trường hợp <span class="arithmatex">\(N_{\supseteq T}\)</span> chỉ phụ thuộc vào kích thước <span class="arithmatex">\(|T| = k\)</span>. Từ đây ta có thể viết <span class="arithmatex">\(N_{\supseteq T} = N_{\le k}\)</span> với <span class="arithmatex">\(|T| = k\)</span>, và gọi <span class="arithmatex">\(E\)</span> là một tập <em>đồng nhất</em> các tính chất, và trong trường hợp này <span class="arithmatex">\(N_{= T} = N_{= k}\)</span> cũng chỉ phụ thuộc vào kích thước của <span class="arithmatex">\(T\)</span>. Vậy với các tính chất đồng nhất, ta có</p>
+<div class="arithmatex">\[N_{= \emptyset} = N_{= 0} = \sum_{k=0}^n (-1)^k \binom{n}{k} N_{\ge k}\]</div>
+<p>Đây là bản chất của Nguyên tắc Bao hàm - Loại trừ. Hãy cố gắng hiểu tất cả các ký hiệu trước khi đọc tiếp. Từ đây ta có thể thấy rằng, khi cho <span class="arithmatex">\(e_i = \{i \in A_i\}\)</span>, ta sẽ có Nguyên tắc Bao hàm - Loại trừ hạn chế.</p>
+<h4 id="vi-du-2">Ví dụ 2</h4>
+<p>Đây là bài <a href="http://acm.hdu.edu.cn/showproblem.php?pid=6397">Character Encoding</a> trên HDU Online Judge.</p>
+<p>Bài này yêu cầu bạn tính số nghiệm nguyên của phương trình <span class="arithmatex">\(x_1 + x_2 + \dots + x_n = k\)</span> thoả mãn <span class="arithmatex">\(0 \le x_i &lt; m\)</span>, lấy dư với <span class="arithmatex">\(998244353\)</span>.</p>
+<p>Giới hạn: <span class="arithmatex">\(1 \le n, m \le 10^5\)</span>, <span class="arithmatex">\(0 \le k \le 10^5\)</span>, <span class="arithmatex">\(0 \le \sum n, \sum m, \sum k \le 5 \times 10^6\)</span>.</p>
+<p>Lưu ý rằng nếu bạn thực sự submit bài này thì để ý là vai trò của <span class="arithmatex">\(n\)</span> và <span class="arithmatex">\(m\)</span> sẽ đổi chỗ cho nhau nhé.</p>
+<details class="tip">
+<summary>Gợi ý</summary>
+<p>Số nghiệm nguyên không âm của <span class="arithmatex">\(x_1 + x_2 + \dots + x_n = k\)</span> là <span class="arithmatex">\(\binom{n+k-1}{k} = \binom{n+k-1}{n-1}\)</span>.</p>
+<p>Làm sao để tính được? Ta có thể tưởng tượng rằng ta trải <span class="arithmatex">\(k\)</span> viên bi trên một đường thẳng, và ta muốn chia <span class="arithmatex">\(k\)</span> viên bi này thành <span class="arithmatex">\(n\)</span> phần, mỗi phần có thể có hoặc không có viên bi nào, mỗi phần gồm các viên bi liên tiếp nhau. Như vậy ta cần có <span class="arithmatex">\(n-1\)</span> vách ngăn để chia <span class="arithmatex">\(k\)</span> viên bi thành <span class="arithmatex">\(n\)</span> phần. Số phần tử trên đường thẳng ta có tất cả là <span class="arithmatex">\(k + n - 1\)</span>, trong đó <span class="arithmatex">\(k\)</span> viên bi và <span class="arithmatex">\(n-1\)</span> vách ngăn. Vì mỗi phần có thể có hoặc không có viên bi nào, ta có thể tự do chọn <span class="arithmatex">\(n-1\)</span> chỗ trong <span class="arithmatex">\(k+n-1\)</span> chỗ để đặt vách ngăn (các viên bi sẽ được tự dộng đặt vào phần còn lại). Vậy kết quả là <span class="arithmatex">\(\binom{n+k-1}{n-1}\)</span>, cũng bằng với <span class="arithmatex">\(\binom{n+k-1}{k}\)</span>.</p>
+</details>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Ta thấy rằng nếu không có điều kiện <span class="arithmatex">\(x &lt; m\)</span>, việc tính số nghiệm sẽ rất dễ dàng, cho nên ta sẽ thử tìm cách bỏ đi được cái điều kiện này. Ta áp dụng Nguyên tắc Bao hàm - Loại trừ ở đây.</p>
+<p>Ta định nghĩa tính chất <span class="arithmatex">\(e_i  = ''x_i \ge m''\)</span>, ta thấy <span class="arithmatex">\(N_{= \emptyset}\)</span> sẽ là kết quả ta cần. Rõ ràng là tập các tính chất này đồng nhất. Gọi <span class="arithmatex">\(T = \{1,2, \dots, j\} (j \le n)\)</span>, ta có <span class="arithmatex">\(N_{\supseteq T}\)</span> sẽ là số nghiệm <span class="arithmatex">\(x_1 \ge m, x_2 \ge m, \dots, x_j \ge m\)</span>. Đặt <span class="arithmatex">\(y_i = x_i - m\)</span> khi <span class="arithmatex">\(i \le j\)</span>, <span class="arithmatex">\(y_i = x_i\)</span> khi <span class="arithmatex">\(i &gt; j\)</span> và bài toán trở thành số nghiệm của</p>
+<div class="arithmatex">\[y_1 + y_2 + \dots + y_n = k - j \cdot m\]</div>
+<p>Giờ nó không phụ thuộc vào điều kiện nữa, nên ta có thể áp dụng gợi ý ở trên để có được số nghiệm là</p>
+<div class="arithmatex">\[N_{= \emptyset} = N_{= 0} = \sum_{j=0}^{n} (-1)^j \binom{n}{j} \binom{n+k-jm-1}{n-1}\]</div>
+<p>Độ phức tạp sẽ là <span class="arithmatex">\(O(n)\)</span>, vì cần phải tính trước các giai thừa và modulo nghịch đảo của chúng.</p>
+</details>
+<h4 id="vi-du-3">Ví dụ 3</h4>
+<p>Đây là bài <a href="https://www.hackerrank.com/contests/101hack43/challenges/k-inversion-permutations/problem">K-Inversion Permutations</a> trên HackerRank.</p>
+<p>Cho <span class="arithmatex">\(N\)</span>, <span class="arithmatex">\(K\)</span>, tìm số hoán vị <span class="arithmatex">\(N\)</span> phần tử mà có <span class="arithmatex">\(K\)</span> nghịch thế (inversion), lấy dư với <span class="arithmatex">\(10^9 + 7\)</span>.</p>
+<p>Giới hạn: <span class="arithmatex">\(1 \le N \le 10^5\)</span>, <span class="arithmatex">\(1 \le K \le \min(10^5, \binom{N}{2})\)</span>.</p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Thường thì mọi người có thể có một ý là gọi <span class="arithmatex">\(dp[i][j]\)</span> là số hoán vị độ dài <span class="arithmatex">\(i\)</span> có <span class="arithmatex">\(j\)</span> nghịch thế. Công thức thì cũng đơn giản: <span class="arithmatex">\(dp[i][j] = \sum_{k=0}^{i-1} dp[i-1][j-k]\)</span>, bởi vì khi ta thêm <span class="arithmatex">\(i\)</span> vào hoán vị từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(i-1\)</span>, số nghich thế sẽ càng tăng khi <span class="arithmatex">\(i\)</span> càng nằm gần đầu dãy. Độ phức tạp sẽ là <span class="arithmatex">\(O(NK^2)\)</span>, và có thể rút thành <span class="arithmatex">\(O(NK)\)</span> với prefix sum, nhưng tối ưu như thế vẫn là quá ít để AC.</p>
+<p>Với công thức như trên, ta biết rằng, với phần tử thứ <span class="arithmatex">\(i\)</span>, ta sẽ thêm được <span class="arithmatex">\(0 \le x \le i-1\)</span> vào tổng số nghích thế, như vậy đáp án sẽ bằng số nghiệm của phương trình <span class="arithmatex">\(x_1 + x_2 + \dots + x_n = K\)</span> với <span class="arithmatex">\(0 \le x_i \le i-1\)</span>.</p>
+<p>Giống với ví dụ 2, ta áp dụng Nguyên tắc Bao hàm - Loại trừ. Gọi <span class="arithmatex">\(e_i = ''x_i \ge i''\)</span>, ta có <span class="arithmatex">\(N_{= \emptyset}\)</span> sẽ là kết quả ta cần. Áp dụng cách tương tự như với ví dụ 2, ta có thể nhận ra rằng nếu tổng các phần tử của <span class="arithmatex">\(T\)</span> bằng <span class="arithmatex">\(s\)</span>, thì số nghiệm của phương trình sẽ là <span class="arithmatex">\(N_{\supseteq T} = \binom{N-1+(K-s)}{N-1}\)</span>. Vậy ta có thể gộp các tập như vậy lại với nhau. Theo Nguyên tắc Bao hàm - Loại trừ, ta có</p>
+<div class="arithmatex">\[N_{\supseteq T} = \sum_{s=0}^{K} \binom{N-1+(K-s)}{N-1} \cdot f(s)\]</div>
+<p>với <span class="arithmatex">\(f(n) = \sum_{i \ge 0} (-1)^i g(n,i)\)</span> và <span class="arithmatex">\(g(i, j)\)</span> là số cách dùng <span class="arithmatex">\(j\)</span> số khác nhau trong đoạn <span class="arithmatex">\([1, N]\)</span> để có tổng bằng <span class="arithmatex">\(i\)</span>.</p>
+<p>Như vậy bài toán trở thành tính tất cả các <span class="arithmatex">\(g(i, j)\)</span>. Để tính <span class="arithmatex">\(g(i,j)\)</span> thành 2 trường hợp là:</p>
+<ul>
+<li>Tập <span class="arithmatex">\(j\)</span> phần tử có chứa <span class="arithmatex">\(1\)</span>: ta cộng <span class="arithmatex">\(g(i-j, j-1)\)</span> vào kết quả.</li>
+<li>Tập <span class="arithmatex">\(j\)</span> phần tử không chứa <span class="arithmatex">\(1\)</span>: ta cộng <span class="arithmatex">\(g(i-j, j)\)</span> vào kết quả.</li>
+</ul>
+<p>Bạn nghĩ đến đây là đủ sao? Không. Các tập trong <span class="arithmatex">\(g(i-j, j-1)\)</span> và <span class="arithmatex">\(g(i-j, j)\)</span> đều có thể chứa <span class="arithmatex">\(N\)</span>, mà vì chứa <span class="arithmatex">\(N\)</span> nên khi tính vào <span class="arithmatex">\(g(i, j)\)</span> chúng sẽ thành <span class="arithmatex">\(N+1\)</span>, không thoả điều kiện của chúng ta, nên ta cần phải trừ đi các tập đó. Nên ta trừ đi <span class="arithmatex">\(g(i - (N+1), j-1)\)</span>.</p>
+<p>Vậy <span class="arithmatex">\(g(i, j) = g(i-j, j-1) + g(i-j, j) - g(i - (N+1), j-1)\)</span>.</p>
+<p>Một nhận xét quan trọng nữa là có nhiều nhất <span class="arithmatex">\(O(\sqrt{K})\)</span> giá trị cho <span class="arithmatex">\(j\)</span>. Vì vậy bài toán có thể được giải trong <span class="arithmatex">\(O(K \sqrt{K})\)</span>.</p>
+</details>
+<h4 id="vi-du-4">Ví dụ 4</h4>
+<p>Đây là bài <a href="https://www.acmicpc.net/problem/19313">Problem K</a> trong kỳ thi <code>XVIII Open Cup named after E.V. Pankratiev. - Grand Prix of Gomel</code>.</p>
+<p>Cho số nguyên <span class="arithmatex">\(m\)</span>, tìm số tập không rỗng chứa các số nguyên dương, mà ước chung lớn nhất của chúng bằng <span class="arithmatex">\(1\)</span>, bội chung nhỏ nhất của chúng bằng <span class="arithmatex">\(m\)</span>, lấy dư với <span class="arithmatex">\(998244353\)</span>.</p>
+<p>Giới hạn: <span class="arithmatex">\(1 \le m \le 10^{18}\)</span>.</p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Rõ ràng ta cần phân tích <span class="arithmatex">\(m\)</span> ra thừa số nguyên tố. Bạn có thể dùng thuật toán Pollard-Rho ở đây. Nhưng có một cách đơn giản hơn: Đoạn sau bạn có thể thấy rằng chỉ có số mũ của số nguyên tố là quan trọng, chứ chính cái số nguyên tố đó thì không. Nên ta có thể thử chia nó cho tất cả các số nguyên tố đến <span class="arithmatex">\(10^6\)</span> để xem ta còn gì, một số nguyên tố <span class="arithmatex">\(p\)</span>, một bình phương của số nguyên tố <span class="arithmatex">\(p^2\)</span>, hoặc tích của hai số nguyên tố khác nhau <span class="arithmatex">\(pq\)</span>. Ta có thể kiểm tra trường hợp đầu tiên với thuật toán Rabin-Miller, duyệt qua <span class="arithmatex">\([\sqrt{m} - 10, \sqrt{m} + 10]\)</span> để kiểm tra trường hợp thứ hai, ngược lại nó là trường hợp cuối cùng.</p>
+<p>Sau khi phân tích thừa số nguyên tố, ta có <span class="arithmatex">\(m = p_1^{a_1} p_2^{a_2} \dots p_k^{a_k}\)</span> (viết vậy thôi chứ <span class="arithmatex">\(p_i\)</span> vẫn không quan trọng nhé). Rõ ràng ta muốn chọn một tập con các ước của <span class="arithmatex">\(m\)</span> (để bội chung nhỏ nhất của chúng bằng <span class="arithmatex">\(m\)</span>).</p>
+<p>Ta cần tránh đếm các trường hợp có <span class="arithmatex">\(GCD \neq 1\)</span> và <span class="arithmatex">\(LCM \neq m\)</span>, nên ta có thể áp dụng Nguyên tắc Bao hàm - Loại trừ. Gọi <span class="arithmatex">\(e_{i,1} = \text{GCD chia hết cho } p_i\)</span> và <span class="arithmatex">\(e_{i,2} = \text{LCM không chia hết cho } p_i^{a_i}\)</span>, nên đáp án là <span class="arithmatex">\(N_{= \emptyset}\)</span>. Ta có <span class="arithmatex">\(2k\)</span> tính chất cần xét ở đây. Như vậy thì ta cần có <span class="arithmatex">\(2^{2k} = 4^k\)</span> tập giao, và với mỗi tập giao ta cần tính <span class="arithmatex">\(t\)</span>, là số phần tử trong tập thoả mãn trường hợp tập giao đó, sau đó ta thêm <span class="arithmatex">\(2^t - 1\)</span> vào đáp án với dấu phù hợp.</p>
+<p>Với mỗi thừa số nguyên tố thì ta có 4 trường hợp tập giao là <span class="arithmatex">\(\emptyset\)</span>, <span class="arithmatex">\(e_{i, 1}\)</span>, <span class="arithmatex">\(e_{i, 2}\)</span> và <span class="arithmatex">\(e_{i, 1} \cap e_{i, 2}\)</span>. Vì mỗi thừa số nguyên tố (theo cách ta đặt tính chất) độc lập với nhau nên <span class="arithmatex">\(t\)</span> sẽ là tích kết quả của mỗi thừa số nguyên tố. Cụ thể như sau:</p>
+<ul>
+<li><span class="arithmatex">\(\emptyset\)</span>: ta có <span class="arithmatex">\(a_i+1\)</span> cách chọn.</li>
+<li><span class="arithmatex">\(e_{i,1}\)</span>: ta muốn <span class="arithmatex">\(\min(a'_i) \ge 1\)</span> nên ta có <span class="arithmatex">\(a_i\)</span> cách chọn.</li>
+<li><span class="arithmatex">\(e_{i,2}\)</span>: ta muốn <span class="arithmatex">\(\max(a'_i) &lt; a_i\)</span> nên ta cũng có <span class="arithmatex">\(a_i\)</span> cách chọn.</li>
+<li><span class="arithmatex">\(e_{i, 1} \cap e_{i, 2}\)</span>: gộp 2 trường hợp trên lại ta có <span class="arithmatex">\(a_i - 1\)</span> cách chọn.</li>
+</ul>
+<p>Tính trực tiếp ra sẽ tốn <span class="arithmatex">\(O(4^k)\)</span>, sẽ dẫn đến TLE với <span class="arithmatex">\(k=15\)</span> trong trường hợp xấu nhất. Tuy nhiên, thấy rằng với mỗi thừa số nguyên tố <span class="arithmatex">\(e_{i,1}\)</span> và <span class="arithmatex">\(e_{i,2}\)</span> dẫn đến cùng một cách tính, ta có thể gộp chúng lại và độ phức tạp có thể giảm còn <span class="arithmatex">\(O(3^k)\)</span>.</p>
+</details>
 <h2 id="luyen-tap">Luyện tập</h2>
 <table>
 <thead>
@@ -2347,74 +2508,32 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><a href="https://codeforces.com/contest/1063/problem/B">Codeforces - Labyrinth</a></td>
-<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-<td style="text-align: center;"><a href="https://codeforces.com/contest/1063/submission/228375510">Submission</a></td>
-<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1063-D1-B.cpp">Code</a></td>
-<td style="text-align: center;">16/10/2023</td>
-</tr>
-<tr>
-<td style="text-align: center;"><a href="http://www.spoj.com/problems/KATHTHI/">SPOJ - KATHTHI</a></td>
+<td style="text-align: center;"><a href="https://acm.hdu.edu.cn/showproblem.php?pid=4135">HDU 4135 - Co-prime</a></td>
 <td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
 <td style="text-align: center;">Unavailable public link</td>
-<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20KATHTHI.cpp">Code</a></td>
-<td style="text-align: center;">16/10/2023</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/HDU/HDU%204135.cpp">Code</a></td>
+<td style="text-align: center;">08/11/2023</td>
 </tr>
 <tr>
-<td style="text-align: center;"><a href="https://community.topcoder.com/stat?c=problem_statement&amp;pm=10337">TopCoder SRM 436 Round 1 - DoNotTurn</a></td>
+<td style="text-align: center;"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6397">HDU 6397 - Character Encoding</a></td>
 <td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
 <td style="text-align: center;">Unavailable public link</td>
-<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/TopCoder/SRM436-D1-500.cpp">Code</a></td>
-<td style="text-align: center;">17/10/2023</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/HDU/HDU%206397.cpp">Code</a></td>
+<td style="text-align: center;">12/11/2023</td>
 </tr>
 <tr>
-<td style="text-align: center;"><a href="https://onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2620">UVA 11573 - Ocean Currents</a></td>
+<td style="text-align: center;"><a href="https://www.hackerrank.com/contests/101hack43/challenges/k-inversion-permutations/problem">HackerRank - K-Inversion Permutations</a></td>
 <td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
 <td style="text-align: center;">Unavailable public link</td>
-<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%2011573.cpp">Code</a></td>
-<td style="text-align: center;">16/10/2023</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/HackerRank/HACKR%20k-inversion-permutations.cpp">Code</a></td>
+<td style="text-align: center;">14/11/2023</td>
 </tr>
 <tr>
-<td style="text-align: center;"><a href="https://codeforces.com/contest/877/problem/D">Codeforces - Olya and Energy Drinks</a></td>
-<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-<td style="text-align: center;"><a href="https://codeforces.com/contest/877/submission/228506864">Submission</a></td>
-<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF877-D2-D.cpp">Code</a></td>
-<td style="text-align: center;">17/10/2023</td>
-</tr>
-<tr>
-<td style="text-align: center;"><a href="https://codeforces.com/contest/590/problem/C">Codeforces - Three States</a></td>
-<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-<td style="text-align: center;"><a href="https://codeforces.com/contest/590/submission/228627852">Submission</a></td>
-<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF590-D1-C.cpp">Code</a></td>
-<td style="text-align: center;">18/10/2023</td>
-</tr>
-<tr>
-<td style="text-align: center;"><a href="https://onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2621">UVA 11574 - Colliding Traffic</a></td>
+<td style="text-align: center;"><a href="https://www.acmicpc.net/problem/19313">XVIII Open Cup named after E.V. Pankratiev. - Grand Prix of Gomel - Problem K</a></td>
 <td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
 <td style="text-align: center;">Unavailable public link</td>
-<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%2011574.cpp">Code</a></td>
-<td style="text-align: center;">18/10/2023</td>
-</tr>
-<tr>
-<td style="text-align: center;"><a href="https://codeforces.com/contest/173/problem/B">Codeforces - Chamber of Secrets</a></td>
-<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-<td style="text-align: center;"><a href="https://codeforces.com/contest/173/submission/228530106">Submission</a></td>
-<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF173-D12-B.cpp">Code</a></td>
-<td style="text-align: center;">17/10/2023</td>
-</tr>
-<tr>
-<td style="text-align: center;"><a href="https://codeforces.com/contest/173/problem/C">Codeforces - Spiral Maximum</a></td>
-<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-<td style="text-align: center;"><a href="https://codeforces.com/contest/173/submission/228555646">Submission</a></td>
-<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF173-D12-C.cpp">Code</a></td>
-<td style="text-align: center;">17/10/2023</td>
-</tr>
-<tr>
-<td style="text-align: center;"><a href="https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid">LeetCode 1368 - Minimum Cost to Make at Least One Valid Path in a Grid</a></td>
-<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
-<td style="text-align: center;">Unavailable public link</td>
-<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid.cpp">Code</a></td>
-<td style="text-align: center;">16/10/2023</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/OpenCup/XVIIIOpenCup-GPGomel2018-K.cpp">Code</a></td>
+<td style="text-align: center;">16/11/2023</td>
 </tr>
 </tbody>
 </table>
@@ -2424,11 +2543,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">18/10/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">16/11/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">18/10/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">16/11/2023 (GMT+07)</span>
       
     
   </small>
@@ -2557,11 +2676,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
   
-      <script src="../../../../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
