@@ -15,6 +15,7 @@ comment: false
     - Toán học
         - [Floor, ceiling và bất đẳng thức cho người mới học](Codeforces/math/floors-ceilings-inequalities.md)
         - [Tổng và Giá trị kỳ vọng](Codeforces/math/sums-and-expected-value.md)
+        - [Nguyên tắc Bao hàm - Loại trừ](Codeforces/math/inclusion-exclusion.md)
     - Hashing
         - [Giải mã và chống hack cho unordered-map trong C++](Codeforces/hashing/blowing-up-unordered-map.md)
     - C++
