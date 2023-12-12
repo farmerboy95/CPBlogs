@@ -1,0 +1,3601 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/Codeforces/math/permutations-for-beginners/">
+      
+      
+        <link rel="prev" href="../inclusion-exclusion/">
+      
+      
+        <link rel="next" href="../../hashing/blowing-up-unordered-map/">
+      
+      
+      <link rel="icon" href="../../../assets/images/logo.jpg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Hoán vị cho người mới bắt đầu - farmerboy's CP Blogs</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+  <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+
+    
+  
+      
+    
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-W9EFM7GCX7"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-W9EFM7GCX7",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-W9EFM7GCX7",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hoan-vi-cho-nguoi-moi-bat-au" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            farmerboy's CP Blogs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hoán vị cho người mới bắt đầu
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/farmerboy95/CPBlogs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    farmerboy95/CPBlogs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  Trang chủ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../graph/dfs-tree/" class="md-tabs__link">
+          
+  
+  Codeforces
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cp-algorithms/algebra/binary-exponentiation/" class="md-tabs__link">
+          
+  
+  cp-algorithms
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Codechef/data-structures/disjoint-sparse-table/" class="md-tabs__link">
+          
+  
+  Codechef
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../LeetCode/reservoir-sampling/" class="md-tabs__link">
+          
+  
+  LeetCode
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../misc/complexity-analysis/asymptotic-notations/" class="md-tabs__link">
+          
+  
+  Nguồn khác
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.jpg" alt="logo">
+
+    </a>
+    farmerboy's CP Blogs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/farmerboy95/CPBlogs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    farmerboy95/CPBlogs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Trang chủ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Trang chủ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lời chào
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các tài liệu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Codeforces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Codeforces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Đồ thị
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Đồ thị
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/dfs-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cây DFS và ứng dụng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Xử lý bit
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Xử lý bit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bit-manipulation/xor-basis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kĩ thuật Vector cơ sở cho các bài toán XOR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Toán học
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Toán học
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../floors-ceilings-inequalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Floor, ceiling và bất đẳng thức cho người mới học
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sums-and-expected-value/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tổng và Giá trị kỳ vọng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inclusion-exclusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nguyên tắc Bao hàm - Loại trừ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hoán vị cho người mới bắt đầu
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Hoán vị cho người mới bắt đầu
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nguồn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inh-nghia-cac-tinh-chat-co-ban-va-cac-ky-hieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Định nghĩa, các tính chất cơ bản và các ký hiệu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Định nghĩa, các tính chất cơ bản và các ký hiệu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inh-nghia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Định nghĩa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ky-hieu-hai-dong-two-line-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ký hiệu hai dòng (Two-line notation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cac-gia-tri-bat-bien-cua-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các giá trị bất biến của hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goc-nhin-thu-tu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Góc nhìn thứ tự
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Góc nhìn thứ tự">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cac-iem-co-inh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các điểm cố định
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cac-derangement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các derangement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Các derangement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#giai-cac-phuong-trinh-tuyen-tinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giải các phương trình tuyến tính
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-quy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Đệ quy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dung-nguyen-tac-bao-ham-va-loai-tru" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dùng nguyên tắc bao hàm và loại trừ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cac-nghich-the" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các nghịch thế
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-con-tang-dai-nhat-longest-increasing-subsequence-lis-va-inh-ly-erdosszekeres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dãy con tăng dài nhất (Longest Increasing Subsequence - LIS) và định lý Erdős–Szekeres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hoan-vi-tiep-theo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hoán vị tiếp theo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cac-hoan-vi-ngau-nhien" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các hoán vị ngẫu nhiên
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goc-nhin-phan-ra-chu-trinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Góc nhìn phân rã chu trình
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Góc nhìn phân rã chu trình">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chu-trinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chu trình
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ky-hieu-chu-trinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ký hiệu chu trình
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tim-gia-tri-thu-k-tiep-theo-o-thi-chuc-nang" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tìm giá trị thứ k tiếp theo, đồ thị chức năng
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oi-cho-chuyen-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Đổi chỗ / chuyển vị
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oi-cho-trong-chu-trinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Đổi chỗ trong chu trình
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goc-nhin-ket-hop-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Góc nhìn kết hợp hoán vị
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Góc nhìn kết hợp hoán vị">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inh-nghia_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Định nghĩa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-chu-trinh-va-oi-cho" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ví dụ - chu trình và đổi chỗ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tinh-chan-le-cua-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tính chẵn lẻ của hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tinh-chan-le-khi-ket-hop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tính chẵn lẻ khi kết hợp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nghich-ao-cua-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nghịch đảo của hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#involution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Involution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mu-k-cua-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mũ k của hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thu-tu-cua-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thứ tự của hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-bac-hai-cua-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Căn bậc hai của hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lien-hop-va-lop-lien-hop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liên hợp và lớp liên hợp
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-topic-khac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các topic khác
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Các topic khác">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ly-thuyet-nhom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lý thuyết nhóm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#em-burnside-liet-ke-polya-so-stirling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Đếm: Burnside, liệt kê Polya, số Stirling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nen-toa-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nén toạ độ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dp-tren-thanh-phan-lien-thong" class="md-nav__link">
+    <span class="md-ellipsis">
+      DP trên thành phần liên thông
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#young-tableaus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Young tableaus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thuat-toan-schreier-sims" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thuật toán Schreier Sims
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cay-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cây hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luyen-tap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Luyện tập
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hashing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Hashing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hashing/blowing-up-unordered-map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giải mã và chống hack cho unordered-map trong C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c%2B%2B/no-rand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Các thuật toán ngẫu nhiên và gần đúng
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Các thuật toán ngẫu nhiên và gần đúng
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../randomized-algorithms/hacking-randomized-solutions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    cp-algorithms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            cp-algorithms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Đại số
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Đại số
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/algebra/binary-exponentiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Luỹ thừa nhị phân
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cấu trúc dữ liệu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cấu trúc dữ liệu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cơ bản
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Cơ bản
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/data-structures/fundamentals/min-stack-min-queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Minimum Stack / Minimum Queue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/data-structures/fundamentals/sparse-table/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sparse Table
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cây
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cây
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/data-structures/trees/sqrt-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sqrt Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/data-structures/trees/dsu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disjoint Set Union
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Đồ thị
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Đồ thị
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Đường đi ngắn nhất một nguồn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Đường đi ngắn nhất một nguồn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/graph/sssp/01-bfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0-1 BFS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Khác
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Khác
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Khác
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Khác
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cp-algorithms/misc/misc/tortoise-and-hare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thuật toán Floyd tìm chu trình trong Linked List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Codechef
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Codechef
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cấu trúc dữ liệu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Cấu trúc dữ liệu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codechef/data-structures/disjoint-sparse-table/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disjoint Sparse Table
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    LeetCode
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            LeetCode
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LeetCode/reservoir-sampling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lấy mẫu hồ chứa (Reservoir Sampling)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LeetCode/search-in-rotated-sorted-array/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LeetCode/basic-calculator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tính toán biểu thức từ xâu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Nguồn khác
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Nguồn khác
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phân tích Độ phức tạp
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Phân tích Độ phức tạp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/complexity-analysis/asymptotic-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các ký hiệu tiệm cận
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/complexity-analysis/potential-method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phương pháp Tiềm năng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cấu trúc dữ liệu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cấu trúc dữ liệu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/data-structures/splay-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Splay Tree: Một mình anh chấp hết
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Xác suất
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Xác suất
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/probability/probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Xác suất
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/probability/expected-value/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giá trị kỳ vọng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/probability/linearity-of-expectation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kỳ vọng tuyến tính
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kinh nghiệm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kinh nghiệm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/experience/being-better/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Làm thế nào để giỏi hơn trong lập trình thi đấu?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/experience/icpc-strategy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chiến thuật khi thi ICPC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nguồn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inh-nghia-cac-tinh-chat-co-ban-va-cac-ky-hieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Định nghĩa, các tính chất cơ bản và các ký hiệu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Định nghĩa, các tính chất cơ bản và các ký hiệu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inh-nghia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Định nghĩa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ky-hieu-hai-dong-two-line-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ký hiệu hai dòng (Two-line notation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cac-gia-tri-bat-bien-cua-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các giá trị bất biến của hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goc-nhin-thu-tu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Góc nhìn thứ tự
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Góc nhìn thứ tự">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cac-iem-co-inh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các điểm cố định
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cac-derangement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các derangement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Các derangement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#giai-cac-phuong-trinh-tuyen-tinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giải các phương trình tuyến tính
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-quy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Đệ quy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dung-nguyen-tac-bao-ham-va-loai-tru" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dùng nguyên tắc bao hàm và loại trừ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cac-nghich-the" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các nghịch thế
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-con-tang-dai-nhat-longest-increasing-subsequence-lis-va-inh-ly-erdosszekeres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dãy con tăng dài nhất (Longest Increasing Subsequence - LIS) và định lý Erdős–Szekeres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hoan-vi-tiep-theo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hoán vị tiếp theo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cac-hoan-vi-ngau-nhien" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các hoán vị ngẫu nhiên
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goc-nhin-phan-ra-chu-trinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Góc nhìn phân rã chu trình
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Góc nhìn phân rã chu trình">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chu-trinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chu trình
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ky-hieu-chu-trinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ký hiệu chu trình
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tim-gia-tri-thu-k-tiep-theo-o-thi-chuc-nang" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tìm giá trị thứ k tiếp theo, đồ thị chức năng
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oi-cho-chuyen-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Đổi chỗ / chuyển vị
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oi-cho-trong-chu-trinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Đổi chỗ trong chu trình
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goc-nhin-ket-hop-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Góc nhìn kết hợp hoán vị
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Góc nhìn kết hợp hoán vị">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inh-nghia_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Định nghĩa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-chu-trinh-va-oi-cho" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ví dụ - chu trình và đổi chỗ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tinh-chan-le-cua-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tính chẵn lẻ của hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tinh-chan-le-khi-ket-hop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tính chẵn lẻ khi kết hợp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nghich-ao-cua-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nghịch đảo của hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#involution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Involution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mu-k-cua-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mũ k của hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thu-tu-cua-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thứ tự của hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-bac-hai-cua-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Căn bậc hai của hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lien-hop-va-lop-lien-hop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liên hợp và lớp liên hợp
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-topic-khac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các topic khác
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Các topic khác">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ly-thuyet-nhom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lý thuyết nhóm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#em-burnside-liet-ke-polya-so-stirling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Đếm: Burnside, liệt kê Polya, số Stirling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nen-toa-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nén toạ độ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dp-tren-thanh-phan-lien-thong" class="md-nav__link">
+    <span class="md-ellipsis">
+      DP trên thành phần liên thông
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#young-tableaus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Young tableaus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thuat-toan-schreier-sims" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thuật toán Schreier Sims
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cay-hoan-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cây hoán vị
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luyen-tap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Luyện tập
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+  
+  
+
+
+<h1 id="hoan-vi-cho-nguoi-moi-bat-au">Hoán vị cho người mới bắt đầu</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../../assets/images/codeforces.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/codeforces.png" width="16" height="16"/></a> <a href="https://codeforces.com/blog/entry/111187">[Tutorial] A comprehensive guide to permutations for beginners</a></p>
+<h2 id="inh-nghia-cac-tinh-chat-co-ban-va-cac-ky-hieu">Định nghĩa, các tính chất cơ bản và các ký hiệu</h2>
+<h3 id="inh-nghia">Định nghĩa</h3>
+<p>Để bắt đầu thì ta sẽ cùng xem xét định nghĩa của hoán vị mà chắc bạn đã thấy rất nhiều lần trên Codeforces.</p>
+<p><strong>Định nghĩa</strong>: Một hoán vị kích thước <span class="arithmatex">\(n\)</span> là một mảng kích thước <span class="arithmatex">\(n\)</span> chứa các số nguyên từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(n\)</span> mà mỗi số chỉ xuất hiện đúng một lần.</p>
+<p>Nhưng tại sao ta lại quan tâm đến mấy cái mảng hay dãy số như thế? Lý do thực ra khá đơn giản.</p>
+<p>Xét dãy <span class="arithmatex">\(a\)</span> chứa <span class="arithmatex">\(n\)</span> số nguyên. Ta có thể đánh dấu chúng với các số nguyên từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(n\)</span>, vậy số nguyên thứ <span class="arithmatex">\(i\)</span> trong dãy là <span class="arithmatex">\(a_i\)</span>. Để hiểu những điều sau đây, sẽ rất hữu ích khi ta xét ví dụ với <span class="arithmatex">\(a_i = i\)</span> với mọi <span class="arithmatex">\(i\)</span>.</p>
+<p>Giờ ta xáo mảng này lên (một số phần tử có thể ở yên tại chỗ sau khi xáo). Ta sẽ tạo một hoán vị từ việc xáo này theo hai cách:</p>
+<ol>
+<li>Chỉ số của phần tử lúc đầu ở vị trí <span class="arithmatex">\(i\)</span> là gì? (Trong trường hợp <span class="arithmatex">\(a_i = i\)</span>, điều này có nghĩa là tìm vị trí của <span class="arithmatex">\(i\)</span> trong mảng sau khi xáo). Gọi chỉ số này là <span class="arithmatex">\(f(i)\)</span>. Thì <span class="arithmatex">\(f\)</span> là hàm ánh xạ từ tập <span class="arithmatex">\(\{1, 2, \dots, n\}\)</span> đến chính nó. Giờ để ý rằng khi ta có mảng <span class="arithmatex">\([f(1), f(2), \dots, f(n)]\)</span>, nó thoả mãn định nghĩa của hoán vị! Ví dụ, ban đầu ta có mảng <span class="arithmatex">\(1, 2, 3, 4, 5\)</span>, sau khi xáo ta có mảng <span class="arithmatex">\(2, 4, 1, 5, 3\)</span>. Vậy thì mảng <span class="arithmatex">\(f\)</span> sẽ là <span class="arithmatex">\(3, 1, 5, 2, 4\)</span>.</li>
+<li>Chỉ số cũ của phần tử ở vị trí <span class="arithmatex">\(i\)</span> bây giờ là gì? (Trong trường hợp <span class="arithmatex">\(a_i\)</span> = i$, điều này có nghĩa là xem số ở vị trí <span class="arithmatex">\(i\)</span> bây giờ là bao nhiêu). Gọi chỉ số này là <span class="arithmatex">\(g(i)\)</span>. Thì <span class="arithmatex">\(g\)</span> cũng là hàm ánh xạ từ tập <span class="arithmatex">\(\{1, 2, \dots, n\}\)</span> đến chính nó. Khi ta có mảng <span class="arithmatex">\([g(1), g(2), \dots, g(n)]\)</span>, nó cũng thoả mãn định nghĩa của hoán vị! Ví dụ, ban đầu ta có mảng <span class="arithmatex">\(1, 2, 3, 4, 5\)</span>, sau khi xáo ta có mảng <span class="arithmatex">\(2, 4, 1, 5, 3\)</span>. Trong trường hợp này mảng <span class="arithmatex">\(g\)</span> cũng sẽ là <span class="arithmatex">\(2, 4, 1, 5, 3\)</span>. Để ý rằng <span class="arithmatex">\(f\)</span> và <span class="arithmatex">\(g\)</span> không được định nghĩa giống nhau, và các hoán vị được sinh ra cũng khác nhau. Thực tế, không khó để nhận ra rằng <span class="arithmatex">\(f(g(x)) = g(f(x)) = x\)</span> với mọi <span class="arithmatex">\(x\)</span> trong tập <span class="arithmatex">\(\{1, 2, \dots, n\}\)</span>. </li>
+</ol>
+<p>Như vậy việc xáo các phần tử (hay việc đổi chỗ / hoán vị các phần tử) là một cách khác để thể hiện hoán vị.</p>
+<p>Nó cho thấy rằng làm thế nào các hoán vị lại liên quan đến các hàm ánh xạ từ tập <span class="arithmatex">\(\{1, 2, \dots, n\}\)</span> đến chính nó sao cho tất cả các ảnh đều khác nhau (và tất cả các ảnh đều tương ứng với một vị trí gốc duy nhất). Nói cách khác, một hoán vị có thể được coi là một <a href="https://vi.wikipedia.org/wiki/Song_%C3%A1nh">song ánh</a> trên một tập, đây là định nghĩa tự nhiên nhất để sử dụng cho khá nhiều ứng dụng. Góc nhìn thứ hai (hàm <span class="arithmatex">\(g\)</span>) là cái tương ứng với định nghĩa này, trong khi hoán vị trong cách thứ nhất (hàm <span class="arithmatex">\(f\)</span>) là cái mà ta thường gọi là <strong>mảng vị trí</strong> của hoán vị trong cách thứ hai (tên này không chuẩn lắm). Sau này ta sẽ thấy rằng nó chính là cái được gọi là <strong>nghịch đảo</strong> của hoán vị.</p>
+<p>Lưu ý rằng giải thích vừa rồi khá quan trọng trong việc hiểu rõ hoán vị là gì. Hãy đọc lại một vài lần và thử một vài ví dụ cho đến khi bạn hiểu được hoán vị, cũng như cách các hàm <span class="arithmatex">\(f\)</span> và <span class="arithmatex">\(g\)</span> tương tác với nhau.</p>
+<h3 id="ky-hieu-hai-dong-two-line-notation">Ký hiệu hai dòng (Two-line notation)</h3>
+<p>Để ý rằng hoán vị <span class="arithmatex">\([a_1, a_2, \dots, a_n]\)</span> của <span class="arithmatex">\([1, 2, \dots, n]\)</span> tương ứng với một hàm <span class="arithmatex">\(f\)</span> trên tập <span class="arithmatex">\({1, 2, \dots, n}\)</span> định nghĩa bởi hàm <span class="arithmatex">\(f(i) = a_i\)</span>. Nghĩa là, tập các cặp <span class="arithmatex">\((i, a_i)\)</span> xác định một hoán vị duy nhất (nó chỉ là một tập các ánh xạ từ vị trí đến phần tử) và ngược lại. Để hiểu kết hợp và nghịch đảo (giới thiệu ở các phần sau) rõ hơn, ta xét ký hiệu sau đây:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+\begin{pmatrix} 1 &amp; 2 &amp; \cdots &amp; n \\ a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix}
+\end{equation*}
+\]</div>
+<p>Ở đây ta đặt các cặp trên từng cột, từ trái sang phải. Lưu ý rằng các cặp này có thể bị xáo trộn (như domino ấy), dẫn đến một số tính chất thú vị sau:</p>
+<ol>
+<li>Điều gì sẽ xảy ra khi ta đảo các cặp (thay <span class="arithmatex">\((i, a_i)\)</span> bằng <span class="arithmatex">\((a_i, i)\)</span> với mọi <span class="arithmatex">\(i\)</span>, tương ứng với việc đổi chỗ hai dòng ấy)? Nếu hoán vị ban đầu tương ứng với hàm <span class="arithmatex">\(g\)</span>, hoán vị sau khi đảo sẽ tương ứng với hàm <span class="arithmatex">\(f\)</span>! Điều này sẽ cho thấy rõ hơn về mối quan hệ giữa <span class="arithmatex">\(f\)</span> và <span class="arithmatex">\(g\)</span>. Vậy nên thao tác này sẽ nghịch đảo hàm.</li>
+<li>Giả sử ta có hai hoán vị <span class="arithmatex">\(p_1\)</span> và <span class="arithmatex">\(p_2\)</span>. Ta sắp xếp các cặp của <span class="arithmatex">\(p_2\)</span> sao cho hàng trên của nó giống hệt hàng dưới của <span class="arithmatex">\(p_1\)</span>, chuyện gì sẽ xảy ra? Nếu hàm <span class="arithmatex">\(g\)</span> của <span class="arithmatex">\(p_1\)</span> là <span class="arithmatex">\(g_1\)</span>, của <span class="arithmatex">\(p_2\)</span> là <span class="arithmatex">\(g_2\)</span>, thì có thể xác định rằng hàm <span class="arithmatex">\(g\)</span> của hoán vị mới sẽ là hàm được tạo ra bởi việc áp dụng <span class="arithmatex">\(g_1\)</span>, rồi <span class="arithmatex">\(g_2\)</span>. Vậy nên thao tác này sẽ kết hợp hàm.</li>
+</ol>
+<h3 id="cac-gia-tri-bat-bien-cua-hoan-vi">Các giá trị bất biến của hoán vị</h3>
+<p>Để ý rằng khi một hoán vị được sắp xếp, nó sẽ là <span class="arithmatex">\([1, 2, \dots, n]\)</span>. Vậy nên bất kỳ thao tác tích luỹ nào trên mảng hoán vị (như tổng, tích, xor, tổng bình phương, số số lẻ, vân vân) mà không phụ thuộc vào thứ tự của các phần tử trong mảng sẽ cho ra kết quả như nhau với mọi hoán vị cùng kích thước.</p>
+<h2 id="goc-nhin-thu-tu">Góc nhìn thứ tự</h2>
+<h3 id="cac-iem-co-inh">Các điểm cố định</h3>
+<p>Một điểm cố định của hoán vị <span class="arithmatex">\(a\)</span> là một chỉ số <span class="arithmatex">\(i\)</span> sao cho <span class="arithmatex">\(a_i = i\)</span>. Các điểm này là các điểm không bị ảnh hưởng bởi hoán vị, vậy nên nếu ta bỏ qua những gì xảy ra với các điểm này, ta sẽ không bị mất đi bất kỳ thông tin nào về hoán vị đó. Đây cũng là lý do tại sao các chỉ số <span class="arithmatex">\(i\)</span> này thường được bỏ qua trong ký hiệu hai dòng (và cũng trong ký hiệu chu trình, sẽ được giới thiệu ở phần sau).</p>
+<p><strong>Lưu ý</strong>: nếu bạn đã quen với chu trình hoặc đang đọc lại bài viết này, bạn có thể nhận thấy rằng ý này phù hợp hơn với chu trình và tổ hợp, nhưng mình vẫn để nó ở đây vì nó có chung một số ý tưởng với các phần nhỏ khác trong phần này. Tương tự, điều này cũng áp dụng cho phần tiếp theo.</p>
+<h3 id="cac-derangement">Các derangement</h3>
+<p>Một derangement là một hoán vị không có điểm cố định nào. Nghĩa là với mọi <span class="arithmatex">\(i\)</span>, ta có <span class="arithmatex">\(a_i \neq i\)</span>. Gọi <span class="arithmatex">\(D_n\)</span> là số hoán vị độ dài <span class="arithmatex">\(n\)</span> là derangement. Có ít nhất 3 cách khác nhau để đếm:</p>
+<h4 id="giai-cac-phuong-trinh-tuyen-tinh">Giải các phương trình tuyến tính</h4>
+<p>Ta nhóm tất cả các hoán vị bằng số điểm cố định của chúng. Nếu có <span class="arithmatex">\(i\)</span> điểm cố dịnh, ta đánh số <span class="arithmatex">\(n-i\)</span> phần tử còn lại từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(n-i\)</span> thì ta sẽ có một derangement. Vậy số hoán vị <span class="arithmatex">\(n\)</span> phần tử với <span class="arithmatex">\(i\)</span> điểm cố định sẽ là <span class="arithmatex">\(\binom{n}{i} \cdot D_{n-i}\)</span>.</p>
+<p>Tổng hết lại trên mọi <span class="arithmatex">\(i\)</span> sẽ cho ta identity là <span class="arithmatex">\(n! = \sum_{i=0}^{n} \binom{n}{i} \cdot D_{n-i}\)</span>.</p>
+<p>Cùng với <span class="arithmatex">\(D_0 = 1\)</span> và <span class="arithmatex">\(D_1 = 0\)</span>, ta có thể dùng quy nạp để có <span class="arithmatex">\(D_n = n! \cdot \sum_{i=0}^{n} \frac{(-1)^i}{i!}\)</span>. Ta cũng có thể dùng identity sau để có được kết quả này:</p>
+<details class="note">
+<summary>Trường hợp đặc biệt của nghịch đảo Mobius</summary>
+<p>Nếu có các hàm <span class="arithmatex">\(f\)</span> và <span class="arithmatex">\(g\)</span> ánh xạ từ <span class="arithmatex">\(\mathbb{Z}_{\ge 0}\)</span> đến <span class="arithmatex">\(\mathbb{R}\)</span>, thì hai mệnh đề sau đây tương đương:</p>
+<ol>
+<li><span class="arithmatex">\(g(n) = \sum_{i = 0}^n (-1)^i \binom{n}{i} f(i)\)</span></li>
+<li><span class="arithmatex">\(f(n) = \sum_{i = 0}^n (-1)^i \binom{n}{i} g(i)\)</span></li>
+</ol>
+</details>
+<h4 id="e-quy">Đệ quy</h4>
+<p>Giả sử <span class="arithmatex">\(a_n = k \neq n\)</span>. Xét <span class="arithmatex">\(a_k\)</span>. Nếu <span class="arithmatex">\(a_k = n\)</span> thì ta có <span class="arithmatex">\(D_{n-2}\)</span> cách để hoán vị các phần tử còn lại. Nếu <span class="arithmatex">\(a_k \neq n\)</span>, ta để ý rằng bài toán sẽ quay về tính số derangement cho <span class="arithmatex">\(n-1\)</span> phần tử bằng cách thay <span class="arithmatex">\(n\)</span> (được gán trong <span class="arithmatex">\(n-2\)</span> slot còn lại) bằng <span class="arithmatex">\(k\)</span>.</p>
+<p>Như vậy công thức sẽ là <span class="arithmatex">\(D_n = (n-1) \cdot (D_{n-1} + D_{n-2})\)</span>, dùng quy nạp cũng có thể giải ra được.</p>
+<h4 id="dung-nguyen-tac-bao-ham-va-loai-tru">Dùng nguyên tắc bao hàm và loại trừ</h4>
+<p>Gọi <span class="arithmatex">\(S_i\)</span> là tập các hoán vị có <span class="arithmatex">\(i\)</span> là điểm cố định (phần còn lại hoán vị thoải mái). Ta sẽ có đáp án là <span class="arithmatex">\(n! - |\cup_{i} S_i|\)</span>. Với nguyên tắc Bao hàm - Loại trừ, vì giao của bất kỳ <span class="arithmatex">\(k\)</span> thằng <span class="arithmatex">\(S_i\)</span> nào cũng có kích thước là <span class="arithmatex">\((n - k)!\)</span>, ta sẽ có công thức tương tự cho <span class="arithmatex">\(D_n\)</span>.</p>
+<h3 id="cac-nghich-the">Các nghịch thế</h3>
+<p>Một nghịch thế trong một mảng (không nhất thiết là mảng hoán vị) là bất kỳ cặp chỉ số <span class="arithmatex">\((i, j)\)</span> sao cho <span class="arithmatex">\(i &lt; j\)</span> và <span class="arithmatex">\(a_i &gt; a_j\)</span>. Số nghịch thế ít nhất là bao nhiêu? Là 0, vì ta chỉ cần cho <span class="arithmatex">\(a_i = i\)</span>. Số nghịch thế nhiều nhất là bao nhiêu? Là <span class="arithmatex">\(\frac{n \cdot (n-1)}{2}\)</span> vì ta chỉ cần cho <span class="arithmatex">\(a_i = n - i + 1\)</span>, khi đó thì bất kỳ cặp chỉ số nào cũng là nghịch thế.</p>
+<p>Xét bài tập sau. Cho một hoán vị (hay một mảng các phần tử đôi một khác nhau), ta được phép thực hiện thao tác sau vô số lần: Chọn bất kỳ chỉ số <span class="arithmatex">\(1 \le i &lt; n\)</span> nào và đổi chỗ <span class="arithmatex">\(a_i\)</span> và <span class="arithmatex">\(a_{i+1}\)</span>. Có hai câu hỏi ở đây:</p>
+<ol>
+<li>Ta có thể sắp xếp mảng mà chỉ dùng các thao tác như trên không?</li>
+<li>Nếu có, số lần thao tác ít nhất ta cần là bao nhiêu?</li>
+</ol>
+<p>Lưu ý rằng nếu ta làm được trên hoán vị, ta cũng làm được trên mảng các phần tử đôi một khác nhau (chỉ cần thay các phần tử bằng chỉ số của chúng trong mảng đã sắp xếp).</p>
+<p>Với câu hỏi đầu tiên, câu trả lời là <strong>có</strong>. Ý tưởng chính ở đây là tìm số bé nhất rồi cứ đổi chỗ nó với phần tử trước nó cho đến khi đến được vị trí đầu tiên, sau đó làm tương tự với số bé nhì, và tiếp tục như vậy.</p>
+<p>Còn số thao tác thì sao nhỉ? Để chuyển số bé nhất thì ta cần bao nhiêu thao tác? Lưu ý rằng tất cả các số trước <span class="arithmatex">\(1\)</span> trong hoán vị ban đầu sẽ góp phần tạo ra một nghịch thế trong đó phần tử thứ hai là <span class="arithmatex">\(1\)</span> (là <span class="arithmatex">\(j\)</span> trong cặp chỉ số <span class="arithmatex">\((i, j)\)</span> ấy). Giờ sau khi <span class="arithmatex">\(1\)</span> đã ở đúng vị trí của nó (vị trí đầu tiên), sẽ không còn nghịch thế nào liên quan đến <span class="arithmatex">\(1\)</span> nữa. Với phần còn lại của hoán vị, ta có thể tiếp tục dùng cách này, với phần tử bé nhất là <span class="arithmatex">\(2\)</span>. Nhưng để làm được điều đó, ta cần xem chuyện gì sẽ xảy ra với các nghịch thế không có <span class="arithmatex">\(1\)</span> trong đó. Lưu ý rằng thứ tự tương đối của các cặp khác không thay đổi nên các nghịch thế còn lại vẫn y nguyên. Vậy tổng số thao tác rõ ràng là số nghịch thế trong hoán vị.</p>
+<p>Đó có phải là số thao tác ít nhất để sắp xếp mảng không? Hoá ra câu trả lời là <strong>có</strong>. Xét một thao tác nào đó đã xong. Vì nó đổi chỗ hai phần tử kề nhau, sẽ có nhiều nhất một nghịch thế mất đi. Vậy tổng số nghịch thế giảm đi nhiều nhất là <span class="arithmatex">\(1\)</span>. Trong mảng đã sắp xếp, không có nghịch thế nào cả. Vậy số thao tác sẽ ít nhất là số nghịch thế trong hoán vị.</p>
+<p>Giờ bạn có thể nghĩ, làm sao ta có thể đếm số nghịch thế trong một hoán vị đây? Bạn có thể dùng merge sort hoặc các cấu trúc dữ liệu trên đoạn như Fenwick tree hay Segment tree. Giải bằng merge sort thì bạn có thể xem tại <a href="https://www.cp.eng.chula.ac.th/~prabhas//teaching/algo/algo2008/count-inv.htm">đây</a>, còn với cấu trúc dữ liệu thì như sau:</p>
+<ul>
+<li>Ban đầu, ta có mảng <span class="arithmatex">\(A\)</span> độ dài <span class="arithmatex">\(n\)</span> gồm toàn số <span class="arithmatex">\(0\)</span> (khi khởi tạp cấu trúc dữ liệu).</li>
+<li>Với mỗi <span class="arithmatex">\(i\)</span> từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(n\)</span>, tìm tổng tiền tố của <span class="arithmatex">\(A\)</span> từ <span class="arithmatex">\(0\)</span> đến <span class="arithmatex">\(a_i - 1\)</span>, và thêm nó vào đáp án. Sau đó, tăng <span class="arithmatex">\(A_i\)</span> lên <span class="arithmatex">\(1\)</span>.</li>
+</ul>
+<h3 id="day-con-tang-dai-nhat-longest-increasing-subsequence-lis-va-inh-ly-erdosszekeres">Dãy con tăng dài nhất (Longest Increasing Subsequence - LIS) và định lý Erdős–Szekeres</h3>
+<p>Một dãy con tăng của một mảng <span class="arithmatex">\(a\)</span> (không nhất thiết phải là hoán vị) là một dãy các chỉ số <span class="arithmatex">\(i_1 &lt; i_2 &lt; \dots &lt; i_k\)</span> sao cho <span class="arithmatex">\(a_{i_1} &lt; a_{i_2} &lt; \dots &lt; a_{i_k}\)</span>. Dãy con giảm cũng được định nghĩa tương tự.</p>
+<p>Bạn có thể xem thuật toán tìm dãy con tăng dài nhất (hoặc dãy con không giảm dài nhất) của một mảng tại <a href="https://youtu.be/watch?v=22s1xxRvy28">đây</a>. Nhưng ở đây ta sẽ không quan tâm đến phần này cho lắm.</p>
+<p>Cái ta quan tâm là giới hạn độ dài của bất kỳ dãy con tăng dài nhất nào (từ giờ gọi là <strong>LIS</strong> - Longest Increasing Subsequence nhé). Tuy nhiên, với dãy con giảm, LIS có độ dài là <span class="arithmatex">\(1\)</span>. Định lý Erdős–Szekeres cho ta biết rằng trong những trường hợp như vậy, độ dài dãy con giảm dài nhất sẽ lớn.</p>
+<p>Định lý phát biểu rằng trong bất kỳ hoán vị nào (hoặc mảng có các phần tử đôi một khác nhau) độ dài <span class="arithmatex">\(xy + 1\)</span>, ta sẽ luôn có một dãy con tăng dài <span class="arithmatex">\(x + 1\)</span> hoặc một dãy con giảm dài <span class="arithmatex">\(y + 1\)</span>.</p>
+<p>Cách dễ nhất để chứng minh định lý này là dùng nguyên tắc chuồng chim (Pigeonhole principle).</p>
+<p>Ta phản chứng rằng định lý sai với một hoán vị <span class="arithmatex">\(a\)</span> nào đó. Với mọi <span class="arithmatex">\(i\)</span>, xét độ dài dãy con tăng dài nhất kết thúc ở vị trí <span class="arithmatex">\(i\)</span> và độ dài dãy con giảm dài nhất cũng kết thúc ở vị trí <span class="arithmatex">\(i\)</span>. Gọi các số này là <span class="arithmatex">\(x_i\)</span> và <span class="arithmatex">\(y_i\)</span>. Lưu ý rằng tất cả <span class="arithmatex">\(x_i\)</span> là số nguyên và nằm giữa <span class="arithmatex">\(1\)</span> và <span class="arithmatex">\(x\)</span>, và tất cả <span class="arithmatex">\(y_i\)</span> là số nguyên và nằm giữa <span class="arithmatex">\(1\)</span> và <span class="arithmatex">\(y\)</span>. Vậy nên ta sẽ có nhiều nhất <span class="arithmatex">\(xy\)</span> cặp <span class="arithmatex">\((x_i, y_i)\)</span> khác nhau. Theo nguyên tắc chuồng chim, sẽ tồn tại <span class="arithmatex">\(i &lt; j\)</span> sao cho <span class="arithmatex">\(x_i = x_j\)</span> và <span class="arithmatex">\(y_i = y_j\)</span>. Vì tất cả các phần tử đều khác nhau, <span class="arithmatex">\(a_i &lt; a_j\)</span> hoặc <span class="arithmatex">\(a_i &gt; a_j\)</span>, trong trường hợp đầu, không thể xảy ra chuyện <span class="arithmatex">\(x_i = x_j\)</span> và trong trường hợp sau, không thể xảy ra chuyện <span class="arithmatex">\(y_i = y_j\)</span>. Điều này mâu thuẫn với giả thiết ban đầu, vậy nên định lý đúng.</p>
+<p>Có một chứng minh tinh tế và sâu hơn dùng định lý Dilworth. <a href="https://codeforces.com/blog/entry/100910">Blog này</a> dùng nó để chứng minh một trường hợp đặc biệt của định lý, mặc dù ta cũng có thể sửa nó một chút để chứng minh toàn bộ định lý.</p>
+<h3 id="hoan-vi-tiep-theo">Hoán vị tiếp theo</h3>
+<p>Hoán vị chỉ là một dãy số nguyên, nên ta có thể sắp xếp tập tất cả các dãy độ dài <span class="arithmatex">\(n\)</span> theo thứ tự từ điển. Điều này định ra thứ tự tự nhiên của mỗi hoán vị. Giờ làm sao để tìm hoán vị tiếp theo của một hoán vị cho trước?</p>
+<p>Cách dễ nhất (trong C++) là dùng <code>std::next_permutation</code>, nhưng ta sẽ xem sơ lược về cách nó hoạt động.</p>
+<p>Đầu tiên ta cần tìm chỉ số <span class="arithmatex">\(i\)</span> từ phải sang sao cho <span class="arithmatex">\(a_i &lt; a_{i+1}\)</span>. Vì <span class="arithmatex">\(i\)</span> là chỉ số đầu tiên thoả mãn điều này, tất cả các giá trị nằm trong các chỉ số từ <span class="arithmatex">\(i\)</span> đến <span class="arithmatex">\(n\)</span> sẽ tạo thành một mảng giảm dần. Lưu ý rằng số nhỏ nhất trong dãy giảm này mà lớn hơn <span class="arithmatex">\(a_i\)</span> sẽ là phần tử mới ở vị trí <span class="arithmatex">\(i\)</span>, và phần còn lại (cùng với số <span class="arithmatex">\(a_i\)</span> bây giờ) sẽ được sắp xếp tăng dần. Cái này có thể được cài trong <span class="arithmatex">\(O(n-i+1)\)</span>.</p>
+<p>Để ý rằng bắt đầu từ hoán vị có thứ tự từ điển nhỏ nhất (là <span class="arithmatex">\([1, 2, \dots, n]\)</span>), số hoán vị giữa (và bao gồm) hoán vị này và hoán vị có chỉ số <span class="arithmatex">\(i\)</span> đầu tiên mà <span class="arithmatex">\(a_i \ne i\)</span> là <span class="arithmatex">\(k\)</span> sẽ ít nhất là <span class="arithmatex">\((n-k)! + 1\)</span>. Điều này có nghĩa là nếu bạn dùng <code>next_permutation</code> nhiều lần, số phần tử trong hoán vị thay đổi sẽ không nhiều (trừ khi bạn bắt đầu ở một hoán vị nào đó, và ngay cả trong trường hợp đó, ngoài một thay đổi với tất cả các chỉ số tiềm năng, kết luận tương tự vẫn giữ nguyên).</p>
+<p>Vậy nếu ta có một hoán vị độ dài <span class="arithmatex">\(n\)</span>, bạn dùng <code>next_permutation</code>(như cài đặt ở trên) trong <span class="arithmatex">\(O(n^k)\)</span> lần, thời gian cần sẽ là khoảng (ít hơn nhiều so với) <span class="arithmatex">\(O(kn^k \log n)\)</span>. Ta cũng có thể mô phỏng kết quả của <span class="arithmatex">\(r\)</span> thao tác <code>next_permutation</code> trong <span class="arithmatex">\(O(r+n)\)</span> (cho ra kết quả chính xác chứ không cài đặt tương tự như trên). Phân tích cũng tương tự với việc phân tích độ phức tạp khi tăng một số nhị phân <span class="arithmatex">\(n\)</span> bit lên <span class="arithmatex">\(r\)</span> lần.</p>
+<h3 id="cac-hoan-vi-ngau-nhien">Các hoán vị ngẫu nhiên</h3>
+<p>Có tổng cộng <span class="arithmatex">\(n!\)</span> hoán vị độ dài <span class="arithmatex">\(n\)</span>. Làm sao để tạo ra một hoán vị ngẫu nhiêu nếu ta chỉ có một trình sinh số ngẫu nhiên (random number generator - RNG) cho ta một số nguyên trong một đoạn tự chọn nào đó?</p>
+<p>Về việc nghĩ cách làm sao để tạo dần một hoán vị như thế, hãy thử loại bỏ tất cả các phần tử <span class="arithmatex">\(&gt; k\)</span> với một số <span class="arithmatex">\(k\)</span>. Lưu ý rằng vị trí của <span class="arithmatex">\(k\)</span> trong mảng này có khả năng là bất cứ số nguyên nào từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(k\)</span>. Tuy nhiên nó sẽ không đưa ta đến một thuật toán hiệu quả ngay được.</p>
+<p>Ta sẽ muốn tạo một hoán vị từ trái sang phải. Giả sử ta chọn ra được một tiền tố. Lưu ý rằng hoán vị của tất cả các phần tử còn lại đều có khả năng như nhau. Thêm nữa, tất cả các phần tử bên phải cũng có khả năng như nhau để trở thành phần tử đầu tiên của hậu tố (phần tử tiếp theo của tiền tố ấy). Nhận xét này dẫn đến biến thể Durstenfeld của <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">thuật toán xáo Fisher-Yates</a>.</p>
+<p>Giờ ta xem xét một vài thông số của hoán vị ngẫu nhiên:</p>
+<p>Đầu tiên, độ dài kỳ vọng của dãy tăng dần được chọn tham lam bằng thuật toán này là bao nhiêu:</p>
+<ul>
+<li>Nếu không có gì trong dãy hoặc phần tử mới lớn hơn phần tử được chọn cuối cùng, chọn phần tử này.</li>
+</ul>
+<p>Lưu ý rằng một phần tử được chọn khi và chỉ khi nó lớn hơn tất cả các phần tử được chọn trước nó. Vậy nên ta dùng kỳ vọng tuyến tính:</p>
+<p><span class="arithmatex">\(E[l] = E[\sum_i(a_i \text{ được chọn})] = \sum_i P[a_i \text{ được chọn}] = \sum_i P[a_i &gt; \max(a_1, \dots, a_{i - 1})] = \sum_i \frac{1}{i}\)</span> xấp xỉ <span class="arithmatex">\(\ln n\)</span></p>
+<p>Tuy nhiên, thực ra kỳ vọng độ dài của LIS là <span class="arithmatex">\(\Theta(\sqrt{n})\)</span>, cho nên thuật tham lam sẽ tệ hơn nhiều so với việc tính LIS bài bản.</p>
+<p>Để biết thêm số liệu thống kê hoán vị ngẫu nhiên cũng có một số thông tin về số liệu thống kê được lấy từ một số phần tiếp theo, bạn có thể xem tại <a href="https://en.wikipedia.org/wiki/Random_permutation_statistics">đây</a>.</p>
+<h2 id="goc-nhin-phan-ra-chu-trinh">Góc nhìn phân rã chu trình</h2>
+<p>Giờ ta sẽ đến với phần rất quan trọng trong lý thuyết hoán vị - phân rã chu trình. Bạn sẽ thấy rằng bản thân dùng những thứ sau đây khá nhiều khi giải các bài tập về hoán vị.</p>
+<h3 id="chu-trinh">Chu trình</h3>
+<p>Giả sử ta có một hoán vị <span class="arithmatex">\(a\)</span>. Cố định vị trí <span class="arithmatex">\(i\)</span>. Giờ nhìn vào dãy <span class="arithmatex">\(i\)</span>, <span class="arithmatex">\(a_i\)</span>, <span class="arithmatex">\(a_{a_i}\)</span>, <span class="arithmatex">\(a_{a_{a_i}}\)</span>, <span class="arithmatex">\(\dots\)</span>. Đến cùng thì nó sẽ lặp lại vì chỉ có nhiều nhất <span class="arithmatex">\(n\)</span> giá trị mà dãy này có thể có. Để cho tiện thì gọi phần tử thứ <span class="arithmatex">\(j\)</span> của dãy này là <span class="arithmatex">\(b_j\)</span>.</p>
+<p>Tiếp theo thì với <span class="arithmatex">\(k\)</span> nào đó mà <span class="arithmatex">\(k &lt; l\)</span>, ta sẽ có <span class="arithmatex">\(b_k = b_l\)</span>. Cho <span class="arithmatex">\(k\)</span> là chỉ số bé nhất có tính chất như vậy, và <span class="arithmatex">\(l\)</span> là chỉ số bé nhất ứng với <span class="arithmatex">\(k\)</span>. Nếu <span class="arithmatex">\(k\)</span> không phải <span class="arithmatex">\(1\)</span> thì ta sẽ có <span class="arithmatex">\(b_{k-1} = b_{l-1}\)</span>, vì <span class="arithmatex">\(a\)</span> là song ánh. Tuy nhiên, điều này mâu thuẫn với tính tối giản của <span class="arithmatex">\(k\)</span>. Nghĩa là phần tử đầu tiên lặp trong dãy này thực ra lại là <span class="arithmatex">\(i\)</span>.</p>
+<p>Giờ giả sử có gì đó trong dãy giữa <span class="arithmatex">\(1\)</span> và <span class="arithmatex">\(l\)</span> lặp lại (ở các vị trí <span class="arithmatex">\(1 &lt; m &lt; o &lt; l\)</span>). Ta lập luận song ánh <span class="arithmatex">\(m-1\)</span> lần, ta sẽ có <span class="arithmatex">\(b_{o - m + 1} = b_1 = i\)</span>, nên là <span class="arithmatex">\(o - m + 1 \ge l\)</span>, cái này cũng mâu thuẫn luôn. Điều này nghĩa là dãy bắt đầu lặp từ <span class="arithmatex">\(l\)</span> và tạo một <strong>chu trình</strong> (cycle).</p>
+<p>Ta gọi nó là chu trình vì nếu ta tạo một đồ thị có các cạnh có hướng từ <span class="arithmatex">\(i\)</span> đến <span class="arithmatex">\(a_i\)</span>, thì <span class="arithmatex">\(i\)</span> sẽ nằm trong một chu trình độ dài <span class="arithmatex">\(l - 1\)</span>.</p>
+<p>Ta đã xong với một <span class="arithmatex">\(i\)</span>. Làm tương tự với tất cả <span class="arithmatex">\(i\)</span> nghĩa là tất cả các phần tử sẽ nằm trong một chu trình nào đó trong đồ thị. Vì bậc vào và bậc ra của mỗi <span class="arithmatex">\(i\)</span> đều là <span class="arithmatex">\(1\)</span>, các chu trình này riêng rẽ với nhau.</p>
+<p>Ví dụ, ta có hoán vị <span class="arithmatex">\([2,3,1,5,4]\)</span>. Các chu trình của mỗi phần tử là:</p>
+<ul>
+<li><span class="arithmatex">\(1 \to 2 \to 3 \to 1\)</span></li>
+<li><span class="arithmatex">\(2 \to 3 \to 1 \to 2\)</span></li>
+<li><span class="arithmatex">\(3 \to 1 \to 2 \to 3\)</span></li>
+<li><span class="arithmatex">\(4 \to 5 \to 4\)</span></li>
+<li><span class="arithmatex">\(5 \to 4 \to 5\)</span></li>
+</ul>
+<p>Các chu trình này tương ứng với các chu trình <span class="arithmatex">\(1 \to 2 \to 3 \to 1\)</span> và <span class="arithmatex">\(4 \to 5 \to 4\)</span> trong đồ thị.</p>
+<h3 id="ky-hieu-chu-trinh">Ký hiệu chu trình</h3>
+<p>Vì các chu trình này độc lập, ta có thể nói rằng với mỗi chu trình, các phần tử nằm ngoài nó sẽ không liên quan. Vậy với bất kỳ hoán vị nào, ta chỉ cần chỉ ra những chu trình của chúng và ta có thể xác định được hoán vị đó.</p>
+<p>Vậy ta chỉ cần biểu diễn hoán vị dưới dạng một dãy các chu trình của nó. Ví dụ, hoán vị <span class="arithmatex">\([2,3,1,5,4]\)</span> có thể được biểu diễn là <span class="arithmatex">\((123)(45)\)</span>.</p>
+<p>Lưu ý, ký hiệu này có ý nghĩa sâu xa hơn liên quan đến kết hợp hoán vị và cách các chu trình rời rạc tác động đến kết hợp hoán vị.</p>
+<h3 id="tim-gia-tri-thu-k-tiep-theo-o-thi-chuc-nang">Tìm giá trị thứ k tiếp theo, đồ thị chức năng</h3>
+<p>Xét bài toán sau: với một hoán vị, tìm giá trị của <span class="arithmatex">\(a_{a_{\ddots_{i}}}\)</span> với mọi <span class="arithmatex">\(i\)</span> khi ta có <span class="arithmatex">\(k\)</span> chữ <span class="arithmatex">\(a\)</span> trong ký hiệu, <span class="arithmatex">\(k \le 10^{18}\)</span>.</p>
+<p>Lưu ý rằng nếu tìm được các chu trình, ta có thể dùng modulo độ dài chu trình để tìm ra kết quả.</p>
+<p>Chuyện gì sẽ xảy ra nếu <span class="arithmatex">\(a\)</span> không đảm bảo là một hoán vị nhưng tất cả các phần tử trong <span class="arithmatex">\(a\)</span> vẫn nằm trong đoạn <span class="arithmatex">\([1,n]\)</span>? Khi đó thì đồ thị sẽ không còn chỉ tồn tại các chu trình nữa, nhưng nó sẽ có tính chất như sau:</p>
+<ul>
+<li>Mỗi thành phần liên thông yếu bao gồm 2 phần: một chu trình có hướng và các cây có hướng với gốc tại các đỉnh riêng biệt trong chu trình, hướng về gốc (còn gọi là các cụm cây định hướng ngược - reverse-oriented arborescences).</li>
+</ul>
+<p>Bài toán tương tự cũng có thể được giải theo cách này, dùng binary lifting cho mỗi đỉnh cho đến khi đạt đến chu trình "chính" của thành phần liên thông chứa nó.</p>
+<p>Nói theo cách của lý thuyết đồ thị, đồ thị như vậy được gọi là <strong>đồ thị chức năng (functional graph)</strong>, chúng có bậc ra của mỗi đỉnh là <span class="arithmatex">\(1\)</span>.</p>
+<p>Một số bài luyện tập là bài <a href="https://cses.fi/problemset/task/1750">Planet Queries I</a> và <a href="https://cses.fi/problemset/task/1160">Planet Queries II</a> trên CSES.</p>
+<h3 id="oi-cho-chuyen-vi">Đổi chỗ / chuyển vị</h3>
+<p>Bắt đầu từ mảng <span class="arithmatex">\([1, 2, \dots, n]\)</span>, dùng một số phép đổi chỗ trên mảng này cho đến khi ta đến được một hoán vị mong muốn <span class="arithmatex">\(a = [a_1, a_2, \dots, a_n]\)</span>. Lưu ý rằng ta luôn có thể áp dụng các phép đổi chỗ, bằng cách tạo hoán vị từ trái sang phải. Các phép đổi chỗ này còn được gọi là các phép chuyển vị (transpositions).</p>
+<h3 id="oi-cho-trong-chu-trinh">Đổi chỗ trong chu trình</h3>
+<p>Giờ ta xem chuyện gì xảy ra khi ta áp dụng một phép đổi chỗ trên một hoán vị. Giả sử phép đổi chỗ này đổi chỗ hai phần tử ở vị trí <span class="arithmatex">\(i\)</span> và <span class="arithmatex">\(j\)</span>. Xét đồ thị biểu diễn hoán vị này. Trong đồ thị, đổi chỗ hai phần tử ở vị trí <span class="arithmatex">\(x\)</span> và <span class="arithmatex">\(z\)</span> sẽ tương đương với việc bẻ hai cạnh <span class="arithmatex">\(x \to y\)</span> và <span class="arithmatex">\(z \to w\)</span> và tạo hai cạnh <span class="arithmatex">\(x \to w\)</span> và <span class="arithmatex">\(z \to y\)</span> (giống bắt chéo nhau ấy).</p>
+<p>Có hai trường hợp ở đây:</p>
+<ol>
+<li><span class="arithmatex">\(i\)</span> và <span class="arithmatex">\(j\)</span> nằm khác chu trình: hai chu trình sẽ nhập làm một.</li>
+<li><span class="arithmatex">\(i\)</span> và <span class="arithmatex">\(j\)</span> nằm trong cùng một chu trình: chu trình này sẽ tách ra làm hai.</li>
+</ol>
+<p>Bạn có thể làm thử bài <a href="https://codeforces.com/contest/1768/problem/D">1768D - Lucky Permutation</a>.</p>
+<p>Thêm một bài sắp xếp hoán vị khác, nhưng ta không chỉ có thể đổi chỗ hai phần tử cạnh nhau, ta có thể đổi chỗ bất kỳ cặp nào. Số lần đổi chỗ ít nhất cần để sắp xếp mảng này là bao nhiêu?</p>
+<p>Lưu ý rằng ở kết quả cuối cùng (hoán vị đã sắp xếp), ta sẽ có đúng <span class="arithmatex">\(n\)</span> chu trình (đỉnh nối chính nó). Giả sử giờ ta có <span class="arithmatex">\(c\)</span> chu trình. Vì số chu trình tăng 1 mỗi lần đổi chỗ, ta sẽ cần ít nhất <span class="arithmatex">\(n - c\)</span> lần đổi chỗ để sắp xếp hoán vị này.</p>
+<p>Nhưng đó có phải đáp án thực sự không? Đúng. Ta có thể đổi chỗ các phần tử trong cùng chu trình khi độ dài chu trình từ <span class="arithmatex">\(2\)</span> trở lên, và đến cuối cùng nó sẽ sắp xếp hoán vị đề bài.</p>
+<h2 id="goc-nhin-ket-hop-hoan-vi">Góc nhìn kết hợp hoán vị</h2>
+<h3 id="inh-nghia_1">Định nghĩa</h3>
+<p>Giả sử ta có hai hoán vị <span class="arithmatex">\(a\)</span> và <span class="arithmatex">\(b\)</span> có cùng độ dài <span class="arithmatex">\(n\)</span>. Giờ ta muốn định nghĩa kết hợp hoán vị như sau: <span class="arithmatex">\(ab\)</span> được định nghĩa là mảng <span class="arithmatex">\(c\)</span> sao cho <span class="arithmatex">\(c_i = a_{b_i}\)</span>.</p>
+<p>Điều này tương ứng với việc tìm hợp của hàm <span class="arithmatex">\(g\)</span> của <span class="arithmatex">\(a\)</span> và <span class="arithmatex">\(b\)</span>, với <span class="arithmatex">\(g\)</span> của <span class="arithmatex">\(b\)</span> được áp dụng trước.</p>
+<p>Để cho dễ hiểu thì ta đi vào phân tích một chút. Đầu tiên ta xét trường hợp khi tất cả <span class="arithmatex">\(b_i = i\)</span> (hoán vị đồng nhất), thì <span class="arithmatex">\(c = a\)</span> theo định nghĩa. Tương tự, nếu <span class="arithmatex">\(a\)</span> là hoán vị đồng nhất thì <span class="arithmatex">\(c = b\)</span>. Như vậy việc kết hợp với hoán vị đồng nhất theo bất kỳ thứ tự nào cũng sẽ cho ra lại hoán vị ban đầu.</p>
+<p>Giờ ta hãy dùng ký hiệu hai dòng để diễn tả. Xét hai hoán vị <span class="arithmatex">\(a\)</span> và <span class="arithmatex">\(b\)</span> như sau:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+\begin{pmatrix} 1 &amp; 2 &amp; \cdots &amp; n \\ a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix}
+\end{equation*}
+\]</div>
+<p>và </p>
+<div class="arithmatex">\[
+\begin{equation*}
+\begin{pmatrix} 1 &amp; 2 &amp; \cdots &amp; n \\ b_1 &amp; b_2 &amp; \cdots &amp; b_n \end{pmatrix}
+\end{equation*}
+\]</div>
+<p>Sắp xếp lại các cột trong ký hiệu hai dòng của <span class="arithmatex">\(a\)</span> sao cho hàng dưới của <span class="arithmatex">\(b\)</span> ứng với hàng trên của <span class="arithmatex">\(a\)</span>. Tuy nhiên, điều này tương đương với việc xáo các cột của <span class="arithmatex">\(a\)</span> theo <span class="arithmatex">\(b\)</span>:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+\begin{pmatrix} b_1 &amp; b_2 &amp; \cdots &amp; b_n \\ a_{b_1} &amp; a_{b_2} &amp; \cdots &amp; a_{b_n} \end{pmatrix}
+\end{equation*}
+\]</div>
+<p>Lưu ý rằng đây vẫn là ký hiệu hai dòng chuẩn cho <span class="arithmatex">\(a\)</span>. Giờ nếu ta "chập" nó với ký hiệu hai dòng của <span class="arithmatex">\(b\)</span>, ta sẽ có ký hiệu hai dòng của hợp của <span class="arithmatex">\(a\)</span> và <span class="arithmatex">\(b\)</span>.</p>
+<p>Điều này giải thích một cách tự nhiên vì sao hoán vị lại được xem như một song ánh trên một tập hợp.</p>
+<p>Ta bắt đầu với hoán vị đồng nhất, rồi áp hoán vị đầu tiên vào, rồi áp hoán vị thứ hai vào. Áp dụng vào nghĩa là thay <span class="arithmatex">\(x \mapsto a_x\)</span>. Ký hiệu hai dòng của hoán vị <span class="arithmatex">\(a\)</span> có tính chất như sau:</p>
+<ul>
+<li>Nếu hoán vị hàng trên là <span class="arithmatex">\(p\)</span> thì hoán vị hàng dưới là <span class="arithmatex">\(ap\)</span>.</li>
+</ul>
+<h3 id="vi-du-chu-trinh-va-oi-cho">Ví dụ - chu trình và đổi chỗ</h3>
+<p>Lưu ý rằng ta có thể liên kết một chu trình với một hoán vị, trong đó các phần tử không phải là chu trình là các điểm cố định, và phần còn lại được ánh xạ theo chu trình. Theo nghĩa này, các chu trình là các hoán vị.</p>
+<p>Cũng lưu ý rằng một phép đổi chỗ cũng là một hoán vị theo nghĩa như vậy. Thực tế, một thao tác đổi chỗ chỉ là một chu trình độ dài <span class="arithmatex">\(2\)</span>.</p>
+<p>Bạn có thể viết ra vài ví dụ về đổi chỗ và chu trình và viết chúng dưới dạng ký hiệu hai dòng để hiểu cách chúng được tạo thành và ánh xạ.</p>
+<p>Đến đây, ta cần nhớ hai điều sau:</p>
+<ol>
+<li>Khi giới thiệu về chu trình, ta viết chúng dưới một format nhất định. Thực tế, bạn có thể viết các chu trình rời rạc mà không cần quan tâm đến thứ tự chúng được viết như thế nào. Việc này đi từ thực tế rằng chúng độc lập theo một cách nào đó (một phần tử được di chuyển trong một hoán vị sẽ là điểm cố định của các hoán vị còn lại). Bạn cũng có thể thấy rằng ký hiệu <span class="arithmatex">\((123)(45)\)</span> cũng cho ta thấy rằng hoán vị này bao gồm hai chu trình <span class="arithmatex">\((123)\)</span> và <span class="arithmatex">\((45)\)</span>.</li>
+<li>Khi ta nói về việc đổi chỗ, ý ở đây là thực sự đổi chỗ các phần tử. Nó tương ứng với việc nhân hoán vị với một hoán vị đổi chỗ tương ứng. Sẽ dễ hiểu hơn nếu bạn có một số ví dụ về việc đổi chỗ và cách chúng có thể kết hợp với nhau.</li>
+</ol>
+<p>Điều quan trọng cần lưu ý là hợp hoán vị có tính kết hợp.</p>
+<p>Giả sử ta có một hoán vị được tạo ra từ việc áp dụng 3 hoán vị sau: <span class="arithmatex">\((12)\)</span>, <span class="arithmatex">\((312)(43)\)</span> và <span class="arithmatex">\((53241)\)</span> theo thứ tự như vậy, ta sẽ viết chúng thành <span class="arithmatex">\((53241)(312)(43)(12)\)</span>. Lưu ý rằng <span class="arithmatex">\((12)\)</span> và <span class="arithmatex">\((43)\)</span> là các chu trình độ dài <span class="arithmatex">\(2\)</span>, nghĩa là chúng là các phép đổi chỗ.</p>
+<p>Giờ làm sao để đưa nó về lại một hoán vị bình thường? Có một cách là viết hoán vị của mỗi chu trình và tạo ra nó. Một cách tốt để làm việc này là: với mỗi phần tử, đi từ bên phải, và thay nó bằng cái mà chu trình chứa nó ánh xạ tới. Ví dụ, nếu ta muốn tìm ảnh của <span class="arithmatex">\(1\)</span>, chu trình đầu tiên sẽ ánh xạ <span class="arithmatex">\(1\)</span> tới <span class="arithmatex">\(2\)</span>, chu trình thứ hai sẽ ánh xạ <span class="arithmatex">\(2\)</span> tới <span class="arithmatex">\(2\)</span>, chu trình thứ ba sẽ ánh xạ <span class="arithmatex">\(2\)</span> tới <span class="arithmatex">\(3\)</span>, và chu trình cuối cùng sẽ ánh xạ <span class="arithmatex">\(3\)</span> tới <span class="arithmatex">\(2\)</span>.</p>
+<h3 id="tinh-chan-le-cua-hoan-vi">Tính chẵn lẻ của hoán vị</h3>
+<p>Ở trên thì ta đã đề cập đến việc đổi chỗ hai phần tử cạnh nhau sẽ giảm số nghịch thế đi <span class="arithmatex">\(1\)</span>. Chính xác hơn thì nó sẽ <span class="arithmatex">\(\pm 1\)</span> số nghịch thế, và sẽ thay đổi tính chẵn lẻ của số nghịch thế của hoán vị.</p>
+<p>Ta định nghĩa <strong>tính chẵn lẻ</strong> của hoán vị là tính chẵn lẻ của số nghịch thế của hoán vị đó.</p>
+<p>Điều này quan trọng vì nó giúp xác định tính chẵn lẻ của các phép đổi chỗ (không chỉ là các phép đổi chỗ liền kề) cũng như một số thông tin về tính chẵn lẻ của các chu trình, như sau.</p>
+<p>Xét một phép đổi chỗ hai phần tử ở vị trí <span class="arithmatex">\(i &lt; j\)</span>. Vậy thì nó sẽ tương đương với việc áp dụng <span class="arithmatex">\(j-i\)</span> phép đổi chỗ liền kề để mang <span class="arithmatex">\(a_j\)</span> về vị trí <span class="arithmatex">\(i\)</span>, và <span class="arithmatex">\(j-i-1\)</span> phép đổi chỗ liền kề để mang <span class="arithmatex">\(a_i\)</span> (từ vị trí mới của nó) đến vị trí <span class="arithmatex">\(j\)</span>. Nó sẽ tốn số lẻ lần đổi chỗ liền kề, nên nó sẽ thay đổi tính chẵn lẻ của hoán vị.</p>
+<p>Như một hệ quả tất yếu, việc áp dụng bất kỳ phép đổi chỗ nào sẽ làm thay đổi tính chẵn lẻ của hoán vị, và cụ thể hơn, tất cả các hoán vị đổi chỗ đều có tính lẻ.</p>
+<p>Giờ lưu ý rằng với một chu trình, ta có thể tạo ra nó với một số phép đổi chỗ. Cụ thể hơn, nếu chu trình là <span class="arithmatex">\((i_1, i_2, \dots, i_k)\)</span>, ta có thể dùng <span class="arithmatex">\(k-1\)</span> phép đổi chỗ để áp dụng biến đổi tương tự như hoán vị chu trình.</p>
+<p>Vậy tất cả các chu trình chẵn sẽ có tính lẻ, và tất các chu trình lẻ sẽ có tính chẵn.</p>
+<p>Xét một sự phân rã bất kỳ của một hoán vị thành các chu trình (có thể không rời rạc). Theo kết quả ở trên, tính chẵn lẻ của hoán vị là lẻ khi và chỉ khi số chu trình chẵn là lẻ.</p>
+<p>Cụ thể, với việc phân rã một hoán vị thành các phép đổi chỗ, tính chẵn lẻ của hoán vị sẽ giống tính chẵn lẻ của số lần đổi chỗ trong phân rã đó. Lưu ý rằng điều này cũng tương đuơng với việc không thể có hai cách phân rã với hiệu số lần đổi chỗ là lẻ.</p>
+<p>Từ kết quả trên, ta có một fact là nếu cần một số lẻ phép đổi chỗ để tạo ra một hoán vị, hoán vị đó sẽ có tính lẻ và ngược lại.</p>
+<h3 id="tinh-chan-le-khi-ket-hop">Tính chẵn lẻ khi kết hợp</h3>
+<p>Rõ ràng, từ trên ta suy ra được tính chẵn lẻ cộng dồn với modulo 2 khi kết hợp. Cái này khá quan trọng để có một phần riêng vì nó tóm tắt tất cả các ý ở trên.</p>
+<h3 id="nghich-ao-cua-hoan-vi">Nghịch đảo của hoán vị</h3>
+<p>Ta xét hoán vị trong hoàn cảnh thực tế. Có cách nào để có được hoán vị ban đầu sau khi có một số hoán vị khác đã được áp dụng vào nó không? Từ các lưu ý trong phần ký hiệu hai dòng, chỉ cần làm như sau là đủ với hoán vị ban đầu là hoán vị đồng nhất. Giả sử hoán vị được áp dụng là <span class="arithmatex">\(a\)</span>:</p>
+<div class="arithmatex">\[
+\begin{equation*} 
+\begin{pmatrix} 1 &amp; 2 &amp; \cdots &amp; n \\ a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix} 
+\end{equation*}
+\]</div>
+<p>Theo như lưu ý về kết hợp hoán vị dùng ký hiệu hai dòng, ta cần đảo hai dòng như sau:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+\begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n\\ 1 &amp; 2 &amp; \cdots &amp; n \end{pmatrix}
+\end{equation*}
+\]</div>
+<p>Xét mảng vị trí <span class="arithmatex">\(p\)</span> của <span class="arithmatex">\(a\)</span> ta định nghĩa ở trên, tức là <span class="arithmatex">\(p_i\)</span> là vị trí mà có <span class="arithmatex">\(a\)</span> có giá trị là <span class="arithmatex">\(i\)</span>, nghĩa là <span class="arithmatex">\(a_{p_i} = i\)</span>. Lưu ý rằng <span class="arithmatex">\(a\)</span> có giá trị <span class="arithmatex">\(a_i\)</span> ở vị trí <span class="arithmatex">\(i\)</span>, nên <span class="arithmatex">\(p_{a_i}\)</span> là vị trí mà <span class="arithmatex">\(a\)</span> có giá trị là <span class="arithmatex">\(a_i\)</span>, nghĩa là <span class="arithmatex">\(p_{a_i} = i\)</span>. Suy ra <span class="arithmatex">\(pa = ap\)</span>, và giá trị chung này gọi là hoán vị đồng nhất - identity permutation, ta sẽ gọi nó là <span class="arithmatex">\(\text{id}\)</span> luôn nhé.</p>
+<p>Nói cách khác, <span class="arithmatex">\(p\)</span> và <span class="arithmatex">\(a\)</span> nghịch nhau khi kết hợp. Lưu ý rằng <span class="arithmatex">\(a\)</span> cũng là mảng vị trí của <span class="arithmatex">\(p\)</span>. Ta gọi <span class="arithmatex">\(p\)</span> là <span class="arithmatex">\(a^{-1}\)</span>.</p>
+<p>Giờ ta có một số hiểu biết về hoán vị nghịch đảo theo ký hiệu hai dòng, còn theo chu trình, đổi chỗ, kết hợp thì như thế nào?</p>
+<ol>
+<li>Nghịch đảo của chu trình <span class="arithmatex">\((i_1, i_2, \dots, i_k)\)</span> sẽ là <span class="arithmatex">\((i_k, \dots, i_2, i_1)\)</span>. Ta đơn giản đảo tất cả các cạnh có hướng của đồ thị.</li>
+<li>Nghịch đảo của một phép đổi chỗ là chính nó. Đơn giản là vì nó là chu trình độ dài <span class="arithmatex">\(2\)</span>.</li>
+<li>Nghịch đảo của một phép kết hợp hoán vị <span class="arithmatex">\(ab\)</span> là <span class="arithmatex">\(b^{-1} a^{-1}\)</span>. Điều này tương ứng với việc hoàn tác việc áp dụng hoán vị trên một stack và cũng có ý nghĩa đại số như sau: <span class="arithmatex">\(abb^{-1}a^{-1} = aa^{-1} = \text{id} = b^{-1}b = b^{-1}a^{-1}ab\)</span>.</li>
+</ol>
+<p>Cụ thể, để phân tách một hoán vị thành các chu trình (không nhất thiết phải rời rạc), ta chỉ cần lấy ảnh phản chiếu của phân rã đó, nó sẽ tương ứng với nghịch đảo của hoán vị!</p>
+<p>Thêm nữa, tính chẵn lẻ của hoán vị nghịch đảo cũng y như tính chẵn lẻ của hoán vị gốc.</p>
+<h3 id="involution">Involution</h3>
+<p>Một involution là một hoán vị có nghịch đảo là chính nó. Xét sự phân tách một hoán vị <span class="arithmatex">\(a\)</span> thành các chu trình rời rạc <span class="arithmatex">\(a = c_1 \dots c_k\)</span>. <span class="arithmatex">\(a = a^{-1}\)</span> nghĩa là <span class="arithmatex">\(\text{id} = a^2 = \prod_i c_i^2\)</span>. Ta viết được như thế vì các chu trình rời rạc giao hoán và các chu trình giống nhau cũng vậy. <span class="arithmatex">\(c_i^2\)</span> phải là một map nhận dạng trên các phần tử của <span class="arithmatex">\(c_i\)</span> vì nếu không thì hoán vị kết quả sẽ không phải là <span class="arithmatex">\(\text{id}\)</span>. Điều này có nghĩa là <span class="arithmatex">\(c_i\)</span> có độ dài <span class="arithmatex">\(1\)</span> hoặc <span class="arithmatex">\(2\)</span>. Ngược lại, có thể kiểm tra xem các hoán vị này có phải involution hay không.</p>
+<h3 id="mu-k-cua-hoan-vi">Mũ k của hoán vị</h3>
+<p>Vì phép kết hợp hoán vị có tính kết hợp, ta có thể dùng luỹ thừa nhị phân để tính hoán vị. Một cách toán học hơn để làm là dùng cách tương tự với phần trước. Với định nghĩa tương tự phần trước, với mọi <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(a^k = \prod_i c_i^k\)</span>, vì thế nên cấu trúc chu trình sẽ được xác định bởi số mũ của chu trình.</p>
+<p>Việc tìm mũ <span class="arithmatex">\(k\)</span> của một chu trình cũng tương ứng với việc ánh xạ nó đến điểm thứ <span class="arithmatex">\(k\)</span> tiếp theo của nó trên chu trình. Nếu độ dài chu trình là <span class="arithmatex">\(c\)</span> và <span class="arithmatex">\(g = gcd(c, k)\)</span>, thì việc phân tách chu trình rời rạc <span class="arithmatex">\(c^k\)</span> gồm <span class="arithmatex">\(g\)</span> chu trình, với mỗi chu trình tương ứng với một bước độ dài <span class="arithmatex">\(k\)</span> dọc theo chu trình ban đầu.</p>
+<h3 id="thu-tu-cua-hoan-vi">Thứ tự của hoán vị</h3>
+<p>Thứ tự của hoán vị <span class="arithmatex">\(a\)</span> được định nghĩa là <span class="arithmatex">\(k\)</span> nhỏ nhất sao cho <span class="arithmatex">\(a^k\)</span> là hoán vị đồng nhất. Xem lại phần trước, với chu trình <span class="arithmatex">\(c\)</span> độ dài <span class="arithmatex">\(l\)</span> cần phân tách thành các điểm cố định, điểu kiện cần và đủ là số mũ của hoán vị chia hết cho <span class="arithmatex">\(l\)</span>. Vậy thự tự của hoán vị chỉ là bội chung nhỏ nhất của độ dài của tất cả các chu trình.</p>
+<h3 id="can-bac-hai-cua-hoan-vi">Căn bậc hai của hoán vị</h3>
+<p>Phần này ta sẽ giải bài tập sau <a href="https://codeforces.com/contest/612/problem/E">612E - Square Root of Permutation</a>. Bài này sẽ không khó với những kiến thức ở các phần trước.</p>
+<h3 id="lien-hop-va-lop-lien-hop">Liên hợp và lớp liên hợp</h3>
+<p>Cho hai hoán vị <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span>. Xét hoán vị <span class="arithmatex">\(aba^{-1}\)</span>. Nhớ lại cách kết hợp ký hiệu hai dòng cho việc kết hợp các hoán vị này, đây chỉ là một hoán vị có phân tách chu trình gần giống <span class="arithmatex">\(b\)</span>, nhưng <span class="arithmatex">\(a\)</span> được áp dụng cho mỗi phần tử trong chu trình. Nói cách khác, ta diễn giải lại các chu trình bằng cách ánh xạ tới và từ một ground set riêng biệt thông qua hoán vị <span class="arithmatex">\(a\)</span>.</p>
+<p>Cụ thể hơn, gọi phân tách chu trình của <span class="arithmatex">\(b\)</span> là <span class="arithmatex">\(c_1 \cdots c_k\)</span>, trong đó <span class="arithmatex">\(c_i = (x_{i1}, \dots, x_{il_i})\)</span>. Ta nói rằng <span class="arithmatex">\(aba^{-1}\)</span> có phân tách chu trình là <span class="arithmatex">\(c'_1 \cdots c'_k\)</span> trong đó <span class="arithmatex">\(c'_i = (a_{x_{i1}}, \dots, a_{x_{il_i}})\)</span>.</p>
+<p>Chứng minh sẽ làm rõ mệnh đề ở đầu phần này. Xét phần tử <span class="arithmatex">\(i\)</span>, ta sẽ xem chuyện gì xảy ra với <span class="arithmatex">\(i\)</span> khi mỗi hoán vị được áp dụng vào nó:</p>
+<ol>
+<li><span class="arithmatex">\(aba^{-1}\)</span>: Tồn tại một <span class="arithmatex">\(j\)</span> sao cho <span class="arithmatex">\(a_j = i\)</span> vì <span class="arithmatex">\(a\)</span> là một hoán vị. Nên <span class="arithmatex">\((aba^{-1})_i = a_{b_{a^{-1}_i}} = a_{b_j}\)</span>.</li>
+<li><span class="arithmatex">\(c'_1 \cdots c'_k\)</span>: Không làm mất đi tính tổng quát, ta cho <span class="arithmatex">\(i\)</span> là phần tử đầu tiên của <span class="arithmatex">\(c'_1\)</span>, nghĩa là <span class="arithmatex">\(i = a_{x_{i1}}\)</span>. Giờ nó sẽ được ánh xạ thành <span class="arithmatex">\(a_{x_{i2}} = a_{b_{x_{i1}}} = a_{b_j}\)</span></li>
+</ol>
+<p>Vì cả hai đều cho ra cùng kết quả, ta có điều phải chứng minh.</p>
+<p>Điều này nói lên rằng thao tác <span class="arithmatex">\(aba^{-1}\)</span> không gì khác là việc chuyển các nhãn của <span class="arithmatex">\(b\)</span> theo <span class="arithmatex">\(a\)</span>.</p>
+<p>Theo kết quả này, vì ta chỉ áp dụng hoán vị cho mọi thứ bên trong chu trình, ta có thể ánh xạ bất kỳ tích nào của các chu trình rời rạc tới bất kỳ tích nào khác của các chu trình rời rạc, miễn multiset của kích thước các chu trình không thay đổi.</p>
+<p>Ta nói <span class="arithmatex">\(b\)</span> và <span class="arithmatex">\(c\)</span> liên hợp nếu tồn tại <span class="arithmatex">\(a\)</span> sao cho <span class="arithmatex">\(c = aba^{-1}\)</span> và gọi đây là thao tác liên hợp.</p>
+<p>Do đó, điều này dẫn đến sự phân chia tất cả các hoán vị thành các lớp tương đương (sau khi xác minh một vài tiên đề), trong đó mọi thứ bên trong một lớp được liên hợp với mọi thứ khác trong lớp. Lưu ý rằng bất kỳ lớp tương đương nào cũng được xác định duy nhất bởi multiset của kích thước các chu trình. Các lớp tương đương này được gọi là các lớp liên hợp.</p>
+<h2 id="cac-topic-khac">Các topic khác</h2>
+<p>Phần này chủ yếu đề cập đến một số tài liệu tham khảo và nhằm mục đích cho người đọc biết về một số chủ đề trước đây chưa từng nghe thấy, nhưng có liên quan đến bài viết này. Trong tương lai có thể có những blog khác liên quan đến các chủ đề này, nhưng vẫn sẽ rất tốt nếu bạn biết sơ lược trước về chúng.</p>
+<h3 id="ly-thuyet-nhom">Lý thuyết nhóm</h3>
+<p>Một tập các hoán vị kích thước <span class="arithmatex">\(n\)</span> tạo thành một "nhóm", ký hiệu là <span class="arithmatex">\(S_n\)</span>, và hóa ra tất cả các nhóm hữu hạn có kích thước <span class="arithmatex">\(n\)</span> đều đẳng cấu với một nhóm con nào đó của <span class="arithmatex">\(S_n\)</span>. Đây là lý do tại sao đã có rất nhiều nghiên cứu về hoán vị từ góc độ lý thuyết nhóm. Phần về kết hợp hoán vị dưới góc nhìn của lý thuyết nhóm là tốt nhất.</p>
+<p>Việc phân tích rất nhiều trò chơi có thể được thực hiện bằng cách sử dụng lý thuyết nhóm, chẳng hạn như, <a href="https://en.wikipedia.org/wiki/15_Puzzle">trò 15</a>, trò Rubik, hình vuông Latin, vân vân...</p>
+<p>Có một nhóm con các hoán vị tương ứng với tất cả các hoán vị chẵn. Nhóm này cũng đơn giản và có thể được sử dụng để cho biết kết quả về các trò chơi, ví dụ như trò 15.</p>
+<h3 id="em-burnside-liet-ke-polya-so-stirling">Đếm: Burnside, liệt kê Polya, số Stirling</h3>
+<p>Với các ý tưởng về lý thuyết nhóm, bổ đề Burnside và định lý liệt kê Polya xuất hiên và giúp đếm các lớp đối tượng (tương đương theo quan hệ nào đó) thay vì bản thân các đối tượng đó.</p>
+<p>Số Stirling khá hữu ích khi đến những thứ liên quan đến hoán vị và xứng đáng có một bài viết riêng.</p>
+<h3 id="nen-toa-o">Nén toạ độ</h3>
+<p>Ở trên, đặc biệt là trong phần về thứ tự, ta dùng mảng các phần tử riêng biệt và các hoán vị thay thế cho nhau. Bất cứ khi nào một cái gì đó chỉ phụ thuộc vào các quan hệ <span class="arithmatex">\(\le\)</span>, <span class="arithmatex">\(&lt;\)</span>, <span class="arithmatex">\(&gt;\)</span>, <span class="arithmatex">\(\ge\)</span>, <span class="arithmatex">\(=\)</span> giữa các phần tử chứ không phải bản thân các phần tử đó, thì việc thay thế các phần tử bằng thứ hạng của chúng là điều hợp lý. Trong trường hợp của các phần tử riêng biệt, "phiên bản nén" này trở thành một hoán vị.</p>
+<h3 id="dp-tren-thanh-phan-lien-thong">DP trên thành phần liên thông</h3>
+<p>Giống như ý tưởng thất bại về việc sinh hoán vị, ý tưởng đó cũng có thể được dùng cho DP. Bạn xem <a href="https://codeforces.com/blog/entry/92602">ở đây</a> để biết thêm chi tiết.</p>
+<h3 id="young-tableaus">Young tableaus</h3>
+<p>Ý tưởng của Young tableaus liên quan chặt chẽ đến LIS và các khái niệm sắp xếp khác. Đây là một lý thuyết rất thú vị và <a href="https://codeforces.com/blog/entry/98167">blog này</a> là một tài liệu tham khảo hay về nó.</p>
+<h3 id="thuat-toan-schreier-sims">Thuật toán Schreier Sims</h3>
+<p>Giả sử ta có một nhóm con được tạo thành bởi một số hoán vị và ta muốn tìm kích thước nhóm con này. Thuật toán Schreier Sims giúp tìm kích thước, bạn có thể đọc tại <a href="https://codeforces.com/blog/entry/111290">đây</a>.</p>
+<h3 id="cay-hoan-vi">Cây hoán vị</h3>
+<p>Có một loại cấu trúc dữ liệu khá thú vị có thể đáp ứng một số loại truy vấn trên hoán vị và mảng con. <a href="https://codeforces.com/blog/entry/78898">Blog này</a> giới thiệu về nó.</p>
+<h2 id="luyen-tap">Luyện tập</h2>
+<p>Dưới đây chỉ là các bài tập được nhắc đến trong bài. Bạn có thể tìm thêm các bài hoán vị (chẳng hạn tìm bằng từ khoá "permutation" trên Codeforces) trên các trang Online Judge.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Problem</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: center;">Submission</th>
+<th style="text-align: center;">Code</th>
+<th style="text-align: center;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="https://cses.fi/problemset/task/1750">CSES - Planet Queries I</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/CSES/CSES%201750.cpp">Code</a></td>
+<td style="text-align: center;">09/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://cses.fi/problemset/task/1160">CSES - Planet Queries II</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/CSES/CSES%201160.cpp">Code</a></td>
+<td style="text-align: center;">09/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://codeforces.com/contest/1768/problem/D">Codeforces - Lucky Permutation</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://codeforces.com/contest/1768/submission/236517320">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1768-D2-D.cpp">Code</a></td>
+<td style="text-align: center;">09/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://codeforces.com/contest/612/problem/E">Codeforces - Square Root of Permutation</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://codeforces.com/contest/612/submission/236874904">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF612-D12-E.cpp">Code</a></td>
+<td style="text-align: center;">12/12/2023</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">12/12/2023 (GMT+07)</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">17/11/2023 (GMT+07)</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:jerry.stone.manutd@gmail.com">farmerboy95</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/CPBlogs"
+    data-repo-id="R_kgDOIA7h_g"
+    data-category="General"
+    data-category-id="DIC_kwDOIA7h_s4CVvKI"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+        Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 farmerboy
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/farmerboy95" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+  
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script
+    data-name="BMC-Widget"
+    data-cfasync="false" 
+    src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+    data-id="farmerboy" 
+    data-description="Support me on Buy me a coffee!" 
+    data-message="" 
+    data-color="#5F7FFF" 
+    data-position="Right" 
+    data-x_margin="18" 
+    data-y_margin="18"
+  ></script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
