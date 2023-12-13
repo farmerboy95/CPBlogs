@@ -36,6 +36,9 @@ comment: false
     - Đồ thị
         - Đường đi ngắn nhất một nguồn
             - [0-1 BFS](cp-algorithms/graph/sssp/01-bfs.md)
+    - Xử lý xâu
+        - Các bài toán tiêu biểu
+            - [Phân tích biểu thức](cp-algorithms/string-processing/tasks/expression-parsing.md)
     - Khác
         - Khác
             - [Thuật toán Floyd tìm chu trình trong Linked List](cp-algorithms/misc/misc/tortoise-and-hare.md)
