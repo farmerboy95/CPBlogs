@@ -4,71 +4,64 @@
 
 <img src="../../../../assets/images/cpalgorithms.ico" width="16" height="16"/> [Expression parsing](https://cp-algorithms.com/string/expression_parsing.html)
 
-A string containing a mathematical expression containing numbers and various operators is given.
-We have to compute the value of it in $O(n)$, where $n$ is the length of the string.
+## Bài toán
 
-The algorithm discussed here translates an expression into the so-called **reverse Polish notation** (explicitly or implicitly), and evaluates this expression.
+Cho một xâu chứa một biểu thức toán học, trong đó có chứa các số và các toán tử. Tính giá trị của biểu thức đó trong $O(n)$, với $n$ là độ dài của xâu.
 
-## Reverse Polish notation
+Thuật toán sau đây sẽ chuyển biểu thức về dạng được gọi là **Ký pháp nghịch đảo Ba Lan (Reverse Polish notation - RPN)** và tính giá trị của nó.
 
-The reverse Polish notation is a form of writing mathematical expressions, in which the operators are located after their operands.
-For example the following expression
+## Ký pháp nghịch đảo Ba Lan
+
+Ký pháp nghịch đảo Ba Lan là một dạng viết biểu thức toán học, trong đó các toán tử được đặt sau các toán hạng của nó. Ví dụ ta có biểu thức sau:
 
 $$a + b * c * d + (e - f) * (g * h + i)$$
 
-can be written in reverse Polish notation in the following way:
+có thể được viết dưới dạng ký pháp nghịch đảo Ba Lan như sau:
 
 $$a b c * d * + e f - g h * i + * +$$
 
-The reverse Polish notation was developed by the Australian philosopher and computer science specialist Charles Hamblin in the mid 1950s on the basis of the Polish notation, which was proposed in 1920 by the Polish mathematician Jan Łukasiewicz.
+Ký pháp nghịch đảo Ba Lan được phát triển bởi nhà triết học và chuyên gia khoa học máy tính người Úc Charles Hamblin vào giữa những năm 1950, dựa trên ký pháp Ba Lan được đề xuất vào năm 1920 bởi nhà toán học người Ba Lan Jan Łukasiewicz.
 
-The convenience of the reverse Polish notation is, that expressions in this form are very **easy to evaluate** in linear time.
-We use a stack, which is initially empty.
-We will iterate over the operands and operators of the expression in reverse Polish notation.
-If the current element is a number, then we put the value on top of the stack, if the current element is an operator, then we get the top two elements from the stack, perform the operation, and put the result back on top of the stack.
-In the end there will be exactly one element left in the stack, which will be the value of the expression.
+Lợi thế của ký pháp nghịch đảo Ba Lan là nó giúp các tính các biểu thức toán học ở dạng này dễ dàng hơn trong thời gian tuyến tính. Ban đầu ta dùng một stack rỗng, sau đó duyệt qua các toán hạng và toán tử của biểu thức được viết theo ký pháp nghịch đảo Ba Lan. Nếu gặp một toán hạng, ta đẩy nó vào stack. Nếu gặp một toán tử, ta lấy ra hai toán hạng trên cùng của stack, thực hiện phép tính và đẩy kết quả vào stack. Sau khi duyệt qua toàn bộ biểu thức, sẽ chỉ còn một giá trị duy nhất trên stack, đó chính là giá trị của biểu thức.
 
-Obviously this simple evaluation runs in $O(n)$ time.
+Rõ ràng thuật toán này chạy trong $O(n)$.
 
-## Parsing of simple expressions
+## Phân tích biểu thức đơn giản
 
-For the time being we only consider a simplified problem:
-we assume that all operators are **binary** (i.e. they take two arguments), and all are **left-associative** (if the priorities are equal, they get executed from left to right).
-Parentheses are allowed.
+Trước hết ta sẽ giải quyết bài toán đơn giản hơn, giả sử tất cả các toán tử đều là toán tử **hai ngôi** (tức là chúng có hai toán hạng), và tất cả các toán tử đều là toán tử trái sang phải (nếu có hai toán tử có cùng độ ưu tiên, thì chúng được thực hiện từ trái sang phải). Dấu ngoặc cũng có thể được sử dụng.
 
-We will set up two stacks: one for numbers, and one for operators and parentheses.
-Initially both stacks are empty.
-For the second stack we will maintain the condition that all operations are ordered by strict descending priority.
-If there are parenthesis on the stack, than each block of operators (corresponding to one pair of parenthesis) is ordered, and the entire stack is not necessarily ordered.
+Ta sẽ thiết lập hai stack: một stack để lưu các số, và một stack để lưu các toán tử và dấu ngoặc. Ban đầu cả hai stack đều rỗng. Với stack thứ hai, ta sẽ duy trì điều kiện rằng tất cả các toán tử được sắp xếp theo độ ưu tiên giảm dần. Nếu stack thứ hai có chứa dấu ngoặc, thì mỗi khối toán tử (tương ứng với một cặp dấu ngoặc) được sắp xếp, và stack thứ hai không nhất thiết phải được sắp xếp.
 
-We will iterate over the characters of the expression from left to right.
-If the current character is a digit, then we put the value of this number on the stack.
-If the current character is an opening parenthesis, then we put it on the stack.
-If the current character is a closing parenthesis, the we execute all operators on the stack until we reach the opening bracket (in other words we perform all operations inside the parenthesis).
-Finally if the current character is an operator, then while the top of the stack has an operator with the same or higher priority, we will execute this operation, and put the new operation on the stack.
+Ta sẽ duyệt qua các ký tự của biểu thức từ trái sang phải. Nếu ký tự hiện tại là một chữ số, ta đưa giá trị của nó vào stack thứ nhất. Nếu ký tự hiện tại là một dấu ngoặc mở, ta đưa nó vào stack thứ hai. Nếu ký tự hiện tại là một dấu ngoặc đóng, ta thực hiện tất cả các toán tử trong stack thứ hai cho đến khi gặp dấu ngoặc mở. Cuối cùng nếu ký tự hiện tại là một toán tử, ta thực hiện tất cả các toán tử trong stack thứ hai có độ ưu tiên cao hơn hoặc bằng độ ưu tiên của toán tử hiện tại, và đưa toán tử mới vào stack thứ hai.
 
-After we processed the entire string, some operators might still be in the stack, so we execute them.
+Sau khi duyệt qua toàn bộ biểu thức, một số toán tử có thể vẫn còn trong stack thứ hai, ta thực hiện chúng.
 
-Here is the implementation of this method for the four operators $+$ $-$ $*$ $/$:
+Sau đây là cài đặt cho bốn toán tử $+$ $-$ $*$ $/$:
 
-```{.cpp file=expression_parsing_simple}
+```cpp
+// kiểm tra xem ký tự c có phải là ký tự ta không quan tâm hay không
 bool delim(char c) {
     return c == ' ';
 }
 
-bool is_op(char c) {
+// kiểm tra xem ký tự c có phải là một toán tử hay không
+bool isOp(char c) {
     return c == '+' || c == '-' || c == '*' || c == '/';
 }
 
-int priority (char op) {
-    if (op == '+' || op == '-')
+// xác định độ ưu tiên của toán tử, phép nhân và chia có độ ưu tiên cao hơn
+int priority(char op) {
+    if (op == '+' || op == '-') {
         return 1;
-    if (op == '*' || op == '/')
+    }
+    if (op == '*' || op == '/') {
         return 2;
+    }
     return -1;
 }
 
-void process_op(stack<int>& st, char op) {
+// thực hiện phép tính giữa hai toán hạng trong stack với toán tử op
+void processOp(stack<int>& st, char op) {
     int r = st.top(); st.pop();
     int l = st.top(); st.pop();
     switch (op) {
@@ -79,105 +72,122 @@ void process_op(stack<int>& st, char op) {
     }
 }
 
+// tính giá trị của biểu thức s
 int evaluate(string& s) {
+    // stack st lưu các số
     stack<int> st;
+    // stack op lưu các toán tử và dấu ngoặc
     stack<char> op;
-    for (int i = 0; i < (int)s.size(); i++) {
-        if (delim(s[i]))
+    // duyệt qua các ký tự của biểu thức
+    for (int i = 0; i < (int) s.size(); i++) {
+        if (delim(s[i])) {
+            // bỏ qua các ký tự ta không quan tâm
             continue;
+        }
         
         if (s[i] == '(') {
+            // nếu ký tự hiện tại là một dấu ngoặc mở, đưa nó vào stack op
             op.push('(');
         } else if (s[i] == ')') {
+            // nếu ký tự hiện tại là một dấu ngoặc đóng, thực hiện tất cả các toán tử trong stack op cho đến khi gặp dấu ngoặc mở
             while (op.top() != '(') {
-                process_op(st, op.top());
+                processOp(st, op.top());
                 op.pop();
             }
+            // bỏ dấu ngoặc mở ra khỏi stack op
             op.pop();
-        } else if (is_op(s[i])) {
-            char cur_op = s[i];
-            while (!op.empty() && priority(op.top()) >= priority(cur_op)) {
-                process_op(st, op.top());
+        } else if (isOp(s[i])) {
+            // nếu ký tự hiện tại là một toán tử, thực hiện tất cả các toán tử trong stack op 
+            // có độ ưu tiên cao hơn hoặc bằng độ ưu tiên của toán tử hiện tại, và đưa toán tử 
+            // mới vào stack op
+            char curOp = s[i];
+            while (!op.empty() && priority(op.top()) >= priority(curOp)) {
+                processOp(st, op.top());
                 op.pop();
             }
-            op.push(cur_op);
+            op.push(curOp);
         } else {
+            // nếu ký tự hiện tại là một chữ số, lấy tất cả các chữ số liên tiếp nhau và đưa vào stack st 
             int number = 0;
-            while (i < (int)s.size() && isalnum(s[i]))
+            while (i < (int)s.size() && isalnum(s[i])) {
                 number = number * 10 + s[i++] - '0';
+            }
             --i;
             st.push(number);
         }
     }
 
+    // sau khi duyệt qua toàn bộ biểu thức, một số toán tử có thể vẫn còn trong stack op, ta thực hiện chúng
     while (!op.empty()) {
-        process_op(st, op.top());
+        processOp(st, op.top());
         op.pop();
     }
+    // stack st sẽ chỉ còn một giá trị duy nhất, đó chính là giá trị của biểu thức
     return st.top();
 }
 ```
 
-Thus we learned how to calculate the value of an expression in $O(n)$, at the same time we implicitly used the reverse Polish notation.
-By slightly modifying the above implementation it is also possible to obtain the expression in reverse Polish notation in an explicit form.
+Vậy ta đã học cách tính giá trị của một biểu thức trong $O(n)$, đồng thời ta cũng đã sử dụng ký pháp nghịch đảo Ba Lan. Bằng cách thay đổi một chút cài đặt trên, ta cũng có thể thu được biểu thức ở dạng ký pháp nghịch đảo Ba Lan.
 
-## Unary operators
+## Toán tử đơn nguyên
 
-Now suppose that the expression also contains **unary** operators (operators that take one argument).
-The unary plus and unary minus are common examples of such operators.
+Giả sử biểu thức cũng có thể chứa các toán tử **đơn nguyên** (toán tử chỉ có một toán hạng). Ví dụ, đơn giản nhất là toán tử **âm** và **dương**.
 
-One of the differences in this case, is that we need to determine whether the current operator is a unary or a binary one.
+Một trong những khác biệt trong trường hợp này là ta cần xác định xem toán tử hiện tại là toán tử đơn nguyên hay toán tử hai ngôi.
 
-You can notice, that before an unary operator, there always is another operator or an opening parenthesis, or nothing at all (if it is at the very beginning of the expression).
-On the contrary before a binary operator there will always be an operand (number) or a closing parenthesis.
-Thus it is easy to flag whether the next operator can be unary or not. 
+Để ý rằng trước một toán tử đơn nguyên, luôn có một toán tử khác hoặc một dấu ngoặc mở, hoặc không có gì cả (nếu nó ở đầu biểu thức). Ngược lại, trước một toán tử hai ngôi luôn có một toán hạng (số) hoặc một dấu ngoặc đóng. Do đó, ta có thể dễ dàng xác định xem toán tử tiếp theo có thể là toán tử đơn nguyên hay không.
 
-Additionally we need to execute a unary and a binary operator differently.
-And we need to chose the priority of a unary operator higher than all of the binary operators.
+Ngoài ra, ta cũng cần thực hiện các toán tử đơn nguyên và hai ngôi khác nhau. Và ta cũng cần xác định độ ưu tiên của toán tử đơn nguyên cao hơn tất cả các toán tử hai ngôi.
 
-In addition it should be noted, that some unary operators (e.g. unary plus and unary minus) are actually **right-associative**.
+Thêm nữa, cần lưu ý rằng một số toán tử đơn nguyên (ví dụ như toán tử **âm** và **dương**) thực chất là có tính **ưu tiên phải**.
 
-## Right-associativity
+## Tính ưu tiên phải
 
-Right-associative means, that whenever the priorities are equal, the operators must be evaluated from right to left.
+Ưu tiên phải có nghĩa là, bất cứ khi nào độ ưu tiên bằng nhau, các toán tử phải được thực hiện từ phải sang trái.
 
-As noted above, unary operators are usually right-associative.
-Another example for an right-associative operator is the exponentiation operator ($a \wedge b \wedge c$ is usually perceived as $a^{b^c}$ and not as $(a^b)^c$).
+Như đã nói ở trên, các toán tử đơn nguyên thường có tính ưu tiên phải. Một ví dụ khác cho toán tử ưu tiên phải là toán tử **mũ** ($a \wedge b \wedge c$ thường được hiểu là $a^{b^c}$ chứ không phải là $(a^b)^c$).
 
-What difference do we need to make in order to correctly handle right-associative operators?
-It turns out that the changes are very minimal.
-The only difference will be, if the priorities are equal we will postpone the execution of the right-associative operation.
+Ta cần làm gì để xử lý trường hợp có toán tử ưu tiên phải? Cũng ít thôi. Khác biệt duy nhất là, nếu độ ưu tiên bằng nhau, ta sẽ hoãn việc thực hiện toán tử ưu tiên phải.
 
-The only line that needs to be replaced is
+Dòng duy nhất cần được chỉnh là:
+
 ```cpp
-while (!op.empty() && priority(op.top()) >= priority(cur_op))
+while (!op.empty() && priority(op.top()) >= priority(curOp))
 ```
-with
+
+thay bằng
+
 ```cpp
 while (!op.empty() && (
-        (left_assoc(cur_op) && priority(op.top()) >= priority(cur_op)) ||
-        (!left_assoc(cur_op) && priority(op.top()) > priority(cur_op))
+        (left_assoc(curOp) && priority(op.top()) >= priority(curOp)) ||
+        (!left_assoc(curOp) && priority(op.top()) > priority(curOp))
     ))
 ```
-where `left_assoc` is a function that decides if an operator is left_associative or not.
 
-Here is an implementation for the binary operators $+$ $-$ $*$ $/$ and the unary  operators $+$ and $-$.
+với `left_assoc` là một hàm xác định xem toán tử có tính ưu tiên trái hay không.
 
-```{.cpp file=expression_parsing_unary}
+Sau đây là cài đặt cho các toán tử hai ngôi $+$ $-$ $*$ $/$ và các toán tử đơn nguyên $+$ $-$:
+
+
+```cpp
+// kiểm tra xem ký tự c có phải là ký tự ta không quan tâm hay không
 bool delim(char c) {
     return c == ' ';
 }
 
-bool is_op(char c) {
+// kiểm tra xem ký tự c có phải là một toán tử hai ngôi hay không
+bool isOp(char c) {
     return c == '+' || c == '-' || c == '*' || c == '/';
 }
 
-bool is_unary(char c) {
+// kiểm tra xem ký tự c có phải là một toán tử đơn nguyên hay không
+bool isUnary(char c) {
     return c == '+' || c=='-';
 }
 
-int priority (char op) {
-    if (op < 0) // unary operator
+// xác định độ ưu tiên của toán tử, phép nhân và chia có độ ưu tiên cao hơn, nhưng toán tử đơn nguyên có độ ưu tiên cao nhất
+int priority(char op) {
+    if (op < 0) // toán tử đơn nguyên
         return 3;
     if (op == '+' || op == '-')
         return 1;
@@ -186,7 +196,7 @@ int priority (char op) {
     return -1;
 }
 
-void process_op(stack<int>& st, char op) {
+void processOp(stack<int>& st, char op) {
     if (op < 0) {
         int l = st.top(); st.pop();
         switch (-op) {
@@ -205,51 +215,80 @@ void process_op(stack<int>& st, char op) {
     }
 }
 
+// tính giá trị của biểu thức s
 int evaluate(string& s) {
+    // stack st lưu các số
     stack<int> st;
+    // stack op lưu các toán tử và dấu ngoặc
     stack<char> op;
-    bool may_be_unary = true;
-    for (int i = 0; i < (int)s.size(); i++) {
-        if (delim(s[i]))
+
+    // mayBeUnary xác định xem tiếp theo có thể là một toán tử đơn nguyên hay không
+    bool mayBeUnary = true;
+    // duyệt qua các ký tự của biểu thức
+    for (int i = 0; i < (int) s.size(); i++) {
+        if (delim(s[i])) {
+            // bỏ qua các ký tự ta không quan tâm
             continue;
+        }
         
         if (s[i] == '(') {
+            // nếu ký tự hiện tại là một dấu ngoặc mở, đưa nó vào stack op
             op.push('(');
-            may_be_unary = true;
+            // tiếp theo có thể là một toán tử đơn nguyên
+            mayBeUnary = true;
         } else if (s[i] == ')') {
+            // nếu ký tự hiện tại là một dấu ngoặc đóng, thực hiện tất cả các toán tử trong stack op cho đến khi gặp dấu ngoặc mở
             while (op.top() != '(') {
-                process_op(st, op.top());
+                processOp(st, op.top());
                 op.pop();
             }
+            // bỏ dấu ngoặc mở ra khỏi stack op
             op.pop();
-            may_be_unary = false;
-        } else if (is_op(s[i])) {
-            char cur_op = s[i];
-            if (may_be_unary && is_unary(cur_op))
-                cur_op = -cur_op;
+            // tiếp theo không thể là một toán tử đơn nguyên
+            mayBeUnary = false;
+        } else if (isOp(s[i])) {
+            // nếu ký tự hiện tại là một toán tử
+            char curOp = s[i];
+            if (mayBeUnary && isUnary(curOp)) {
+                // nếu đây là một toán tử đơn nguyên, đổi dấu của nó để phân biệt với toán tử hai ngôi (+ và -)
+                curOp = -curOp;
+            }
             while (!op.empty() && (
-                    (cur_op >= 0 && priority(op.top()) >= priority(cur_op)) ||
-                    (cur_op < 0 && priority(op.top()) > priority(cur_op))
+                    (curOp >= 0 && priority(op.top()) >= priority(curOp)) ||
+                    (curOp < 0 && priority(op.top()) > priority(curOp))
                 )) {
-                process_op(st, op.top());
+                // nếu toán tử hai ngôi thì thực hiện tất cả các toán tử trong stack op
+                // có độ ưu tiên cao hơn hoặc bằng độ ưu tiên của toán tử hiện tại
+
+                // nếu toán tử đơn nguyên thì thực hiện tất cả các toán tử trong stack op
+                // có độ ưu tiên cao hơn độ ưu tiên của toán tử hiện tại
+                processOp(st, op.top());
                 op.pop();
             }
-            op.push(cur_op);
-            may_be_unary = true;
+            // đưa toán tử mới vào stack op
+            op.push(curOp);
+            // tiếp theo có thể là một toán tử đơn nguyên
+            mayBeUnary = true;
         } else {
+            // nếu ký tự hiện tại là một chữ số, lấy tất cả các chữ số liên tiếp nhau và đưa vào stack st
             int number = 0;
-            while (i < (int)s.size() && isalnum(s[i]))
+            while (i < (int)s.size() && isalnum(s[i])) {
                 number = number * 10 + s[i++] - '0';
+            }
             --i;
             st.push(number);
-            may_be_unary = false;
+            // tiếp theo không thể là một toán tử đơn nguyên
+            mayBeUnary = false;
         }
     }
 
+    // sau khi duyệt qua toàn bộ biểu thức, một số toán tử có thể vẫn còn trong stack op, ta thực hiện chúng
     while (!op.empty()) {
-        process_op(st, op.top());
+        processOp(st, op.top());
         op.pop();
     }
+
+    // stack st sẽ chỉ còn một giá trị duy nhất, đó chính là giá trị của biểu thức
     return st.top();
 }
 ```
