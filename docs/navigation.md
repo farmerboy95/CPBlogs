@@ -49,6 +49,7 @@ comment: false
     - [Lấy mẫu hồ chứa (Reservoir Sampling)](LeetCode/reservoir-sampling.md)
     - [Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay](LeetCode/search-in-rotated-sorted-array.md)
     - [Tính toán biểu thức từ xâu](LeetCode/basic-calculator.md)
+    - [Lớp bài tập Two-Sum](LeetCode/two-sum.md)
 - Nguồn khác
     - Phân tích Độ phức tạp
         - [Các ký hiệu tiệm cận](misc/complexity-analysis/asymptotic-notations.md)
