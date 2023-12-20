@@ -8,35 +8,35 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/Codeforces/randomized-algorithms/hacking-randomized-solutions/">
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/LeetCode/two-sum/">
       
       
-        <link rel="prev" href="../../c%2B%2B/no-rand/">
+        <link rel="prev" href="../basic-calculator/">
       
       
-        <link rel="next" href="../../../cp-algorithms/algebra/binary-exponentiation/">
+        <link rel="next" href="../../misc/complexity-analysis/asymptotic-notations/">
       
       
-      <link rel="icon" href="../../../assets/images/logo.jpg">
+      <link rel="icon" href="../../assets/images/logo.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó - farmerboy's CP Blogs</title>
+        <title>Lớp bài tập Two-Sum - farmerboy's CP Blogs</title>
       
     
     
   
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
 
     
-  <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+  <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
 
     
   
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -70,7 +70,7 @@
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -81,7 +81,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lam-sao-hack-cac-solution-ngau-nhien-va-cach-ngan-chan-no" class="md-skip">
+        <a href="#lop-bai-tap-two-sum" class="md-skip">
           Skip to content
         </a>
       
@@ -114,9 +114,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
       
-  <img src="../../../assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -133,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó
+              Lớp bài tập Two-Sum
             
           </span>
         </div>
@@ -242,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   Trang chủ
@@ -256,21 +256,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../graph/dfs-tree/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../Codeforces/graph/dfs-tree/" class="md-tabs__link">
           
   
   Codeforces
@@ -297,7 +293,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../cp-algorithms/algebra/binary-exponentiation/" class="md-tabs__link">
+        <a href="../../cp-algorithms/algebra/binary-exponentiation/" class="md-tabs__link">
           
   
   cp-algorithms
@@ -324,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Codechef/data-structures/disjoint-sparse-table/" class="md-tabs__link">
+        <a href="../../Codechef/data-structures/disjoint-sparse-table/" class="md-tabs__link">
           
   
   Codechef
@@ -341,11 +337,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../LeetCode/reservoir-sampling/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../reservoir-sampling/" class="md-tabs__link">
           
   
   LeetCode
@@ -369,7 +367,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../misc/complexity-analysis/asymptotic-notations/" class="md-tabs__link">
+        <a href="../../misc/complexity-analysis/asymptotic-notations/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -405,9 +403,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
       
-  <img src="../../../assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     farmerboy's CP Blogs
@@ -474,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -495,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../navigation/" class="md-nav__link">
+      <a href="../../navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,8 +518,6 @@
       
   
   
-    
-  
   
   
     
@@ -532,12 +528,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -551,7 +547,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Codeforces
@@ -602,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/dfs-tree/" class="md-nav__link">
+      <a href="../../Codeforces/graph/dfs-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -668,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bit-manipulation/xor-basis/" class="md-nav__link">
+      <a href="../../Codeforces/bit-manipulation/xor-basis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/floors-ceilings-inequalities/" class="md-nav__link">
+      <a href="../../Codeforces/math/floors-ceilings-inequalities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -755,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/sums-and-expected-value/" class="md-nav__link">
+      <a href="../../Codeforces/math/sums-and-expected-value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -776,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/inclusion-exclusion/" class="md-nav__link">
+      <a href="../../Codeforces/math/inclusion-exclusion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -797,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/permutations-for-beginners/" class="md-nav__link">
+      <a href="../../Codeforces/math/permutations-for-beginners/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -863,7 +859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hashing/blowing-up-unordered-map/" class="md-nav__link">
+      <a href="../../Codeforces/hashing/blowing-up-unordered-map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -929,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../c%2B%2B/no-rand/" class="md-nav__link">
+      <a href="../../Codeforces/c%2B%2B/no-rand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -955,21 +951,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -983,7 +977,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Các thuật toán ngẫu nhiên và gần đúng
@@ -994,30 +988,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Codeforces/randomized-algorithms/hacking-randomized-solutions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1026,62 +1000,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nguồn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tinh-huong" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tình huống
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cach-giai-quyet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cách giải quyết?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ap-an" class="md-nav__link">
-    <span class="md-ellipsis">
-      Đáp án
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1186,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/algebra/binary-exponentiation/" class="md-nav__link">
+      <a href="../../cp-algorithms/algebra/binary-exponentiation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1289,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/data-structures/fundamentals/min-stack-min-queue/" class="md-nav__link">
+      <a href="../../cp-algorithms/data-structures/fundamentals/min-stack-min-queue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1310,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/data-structures/fundamentals/sparse-table/" class="md-nav__link">
+      <a href="../../cp-algorithms/data-structures/fundamentals/sparse-table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1376,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/data-structures/trees/sqrt-tree/" class="md-nav__link">
+      <a href="../../cp-algorithms/data-structures/trees/sqrt-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1397,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/data-structures/trees/dsu/" class="md-nav__link">
+      <a href="../../cp-algorithms/data-structures/trees/dsu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1508,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/graph/sssp/01-bfs/" class="md-nav__link">
+      <a href="../../cp-algorithms/graph/sssp/01-bfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1619,7 +1537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/string-processing/tasks/expression-parsing/" class="md-nav__link">
+      <a href="../../cp-algorithms/string-processing/tasks/expression-parsing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1730,7 +1648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/misc/misc/tortoise-and-hare/" class="md-nav__link">
+      <a href="../../cp-algorithms/misc/misc/tortoise-and-hare/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,7 +1769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codechef/data-structures/disjoint-sparse-table/" class="md-nav__link">
+      <a href="../../Codechef/data-structures/disjoint-sparse-table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1884,8 +1802,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1894,12 +1814,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -1913,7 +1833,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             LeetCode
@@ -1927,7 +1847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../LeetCode/reservoir-sampling/" class="md-nav__link">
+      <a href="../reservoir-sampling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1948,7 +1868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../LeetCode/search-in-rotated-sorted-array/" class="md-nav__link">
+      <a href="../search-in-rotated-sorted-array/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1969,7 +1889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../LeetCode/basic-calculator/" class="md-nav__link">
+      <a href="../basic-calculator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1987,10 +1907,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../LeetCode/two-sum/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lớp bài tập Two-Sum
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1999,6 +1939,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nguồn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode-1-two-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode 1 - Two Sum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode-15-3sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode 15 - 3Sum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode-16-3sum-closest" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode 16 - 3Sum Closest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode-259-3sum-smaller" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode 259 - 3Sum Smaller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode-18-4sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode 18 - 4Sum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode-454-4sum-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode 454 - 4Sum II
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luyen-tap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Luyện tập
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2095,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/complexity-analysis/asymptotic-notations/" class="md-nav__link">
+      <a href="../../misc/complexity-analysis/asymptotic-notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2116,7 +2148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/complexity-analysis/potential-method/" class="md-nav__link">
+      <a href="../../misc/complexity-analysis/potential-method/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2182,7 +2214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/data-structures/splay-tree/" class="md-nav__link">
+      <a href="../../misc/data-structures/splay-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2248,7 +2280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/probability/probability/" class="md-nav__link">
+      <a href="../../misc/probability/probability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2269,7 +2301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/probability/expected-value/" class="md-nav__link">
+      <a href="../../misc/probability/expected-value/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2290,7 +2322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/probability/linearity-of-expectation/" class="md-nav__link">
+      <a href="../../misc/probability/linearity-of-expectation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2356,7 +2388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/experience/being-better/" class="md-nav__link">
+      <a href="../../misc/experience/being-better/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2377,7 +2409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/experience/icpc-strategy/" class="md-nav__link">
+      <a href="../../misc/experience/icpc-strategy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2442,27 +2474,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tinh-huong" class="md-nav__link">
+  <a href="#leetcode-1-two-sum" class="md-nav__link">
     <span class="md-ellipsis">
-      Tình huống
+      LeetCode 1 - Two Sum
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cach-giai-quyet" class="md-nav__link">
+  <a href="#leetcode-15-3sum" class="md-nav__link">
     <span class="md-ellipsis">
-      Cách giải quyết?
+      LeetCode 15 - 3Sum
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ap-an" class="md-nav__link">
+  <a href="#leetcode-16-3sum-closest" class="md-nav__link">
     <span class="md-ellipsis">
-      Đáp án
+      LeetCode 16 - 3Sum Closest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode-259-3sum-smaller" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode 259 - 3Sum Smaller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode-18-4sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode 18 - 4Sum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode-454-4sum-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode 454 - 4Sum II
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luyen-tap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Luyện tập
     </span>
   </a>
   
@@ -2487,31 +2555,166 @@
   
 
 
-<h1 id="lam-sao-hack-cac-solution-ngau-nhien-va-cach-ngan-chan-no">Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó</h1>
+<h1 id="lop-bai-tap-two-sum">Lớp bài tập Two-Sum</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a class="glightbox" href="../../../assets/images/codeforces.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/codeforces.png" width="16" height="16"/></a> <a href="https://codeforces.com/blog/entry/61675">How randomized solutions can be hacked, and how to make your solution unhackable</a></p>
-<h2 id="tinh-huong">Tình huống</h2>
-<p>Trong Round 507 trên Codeforces, có một cơ số các solution ngẫu nhiên gần đúng trong bài <a href="https://codeforces.com/contest/1039/problem/B">1039B - Subway Pursuit</a> bị hack. Mình muốn giải thích nhanh vì sao nó lại có thể bị hack và cách để viết code sao cho nó tránh bị hack.</p>
-<p>Đầu tiên ta cần xem đáp án của bài như nào nhé: ta có thể dùng tìm kiếm nhị phân để thu nhỏ phạm vi các vị trí có thể cho tàu xuống thành một bội số của <span class="arithmatex">\(K\)</span>, ví dụ như <span class="arithmatex">\(6K\)</span>. Chỉ cần đảm bảo mở rộng cả hai đầu của phạm vi này thêm <span class="arithmatex">\(K\)</span> sau mỗi lần lặp. Khi phạm vi tối đa là <span class="arithmatex">\(6K\)</span>, ta có thể lặp lại các bước như sau:</p>
-<ol>
-<li>Đoán ngẫu nhiên các số còn lại. Xác suất thành công ít nhất là <span class="arithmatex">\(\frac{1}{6K}\)</span>.</li>
-<li>Tìm kiếm nhị phân cho đến khi phạm vi lại về tối đa <span class="arithmatex">\(6K\)</span>. Hoá ra chỉ cần một truy vấn thôi, vì sau lần đoán trước thì đoạn <span class="arithmatex">\(6K\)</span> của ta sẽ thành đoạn <span class="arithmatex">\(8K\)</span>, và một truy vấn sẽ thu nhỏ đoạn này về <span class="arithmatex">\(\frac{8K}{2} + 2K = 6K\)</span>.</li>
-</ol>
-<p>Vì <span class="arithmatex">\(K \leq 10\)</span> và ta có 4500 truy vấn, solution này sẽ ok vì xác suất thất bại trong bất cứ test case nào sẽ không quá <span class="arithmatex">\((\frac{59}{60})^{2200} \approx 8 \cdot 10^{-17}\)</span>, cực nhỏ.</p>
-<p>Tuy nhiên, điều này đưa ra giả định quan trọng rằng các vị trí tàu độc lập với truy vấn của chúng ta. Vấn đề chính của các solution bị hack là chúng đều được xác định hoàn toàn, nghĩa là chúng đều truy vấn cùng một chuỗi số trong mỗi lần chạy, cho ra cùng một kết quả. Hầu hết mọi người gặp phải vấn đề này do dùng <code>rand()</code> mà không bao giờ dùng <code>srand()</code>. Ngoài ra còn một số nguyên nhân khác: <code>random_device</code> khá kì lạ khi cũng được xác định trên Codeforces, giống <code>mt19937</code> khi không có seed. Gọi <code>srand()</code> với một giá trị cố định cũng sẽ dẫn đến kết quả giống nhau, làm cho chương trình của bạn dễ đoán và nói chung cũng không tốt.</p>
-<p>Do có thể dự đoán được nên các chương trình này khá dễ bị hack: chỉ cần tạo ra cùng một chuỗi truy vấn mà chương trình sẽ thực hiện, và đặt tàu ở một vị trí khác ở mỗi truy vấn. Để làm cho việc này dễ hơn khi bạn hack người ta, bạn chỉ cần chọn <span class="arithmatex">\(N = 2\)</span> và <span class="arithmatex">\(K = 1\)</span>, nó sẽ bỏ qua giai đoạn tìm kiếm nhị phân ban đầu, rồi đặt tàu vào chỗ không được truy vấn giữa 1 và 2 mỗi lần truy vấn.</p>
-<h2 id="cach-giai-quyet">Cách giải quyết?</h2>
-<p>Để tránh hack thì nhiều bạn seed RNG với thời gian hiện tại bằng cách gọi <code>srand(time(NULL));</code>. Nó sẽ giúp code tránh bị xác định và ít có khả năng bị hack hơn, nhưng cái này vẫn có khả năng lớn bị hack. Vấn đề chính ở đây là <code>time(NULL)</code> chỉ đúng đến đơn vị giây thôi. Nếu mình đoán được chương trình của bạn được chạy ở thời điểm nào, code của bạn vẫn có thể bị đoán được.</p>
-<p>Cũng chả cần đoán luôn ấy. Nếu mình đặt <span class="arithmatex">\(N = 11\)</span> và <span class="arithmatex">\(K = 10\)</span>, mình có thể sinh ra tất cả các dãy truy vấn mà bạn có thể sinh ra trong 10 giây tiếp theo, vì code của bạn gần như chắc chắn sẽ chạy sau trình tạo của mình vài giây. Sau đó, với mỗi truy vấn, ít nhất một trong 11 vị trí sẽ không bị chọn bởi bất kỳ chuỗi nào trong số 10 chuỗi, và mình có thể di chuyển tàu đến vị trí đó mỗi lần. Không may (cho mình, may cho bạn) là mình chẳng có thời gian làm vậy trong contest.</p>
-<h2 id="ap-an">Đáp án</h2>
-<p>Sửa thì cũng dễ thôi. <code>time(NULL)</code> cũng có ý tốt đấy, nhưng ta cần một clock có độ chính xác cao hơn:</p>
-<p><code>mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());</code></p>
-<p>Sau đó sinh số ngẫu nhiên bằng cách dùng <code>rng()</code>. Nhớ thêm header <code>&lt;chrono&gt;</code> và <code>&lt;random&gt;</code>. Ủa sao không dùng <code>rand()</code> và <code>srand()</code>? Đọc <a href="https://codeforces.com/blog/entry/61587">bài này</a> nhé.</p>
-<p>Một cách khác là dùng địa chỉ của một biến mới tạo trong heap:</p>
-<p><code>mt19937 rng((uint64_t) new char);</code></p>
-<p>Nó sẽ khác nhau trong mỗi lần chạy. Lưu ý rằng nó sẽ tạo ra một ít memory leak trong vòng đời của chương trình vì ta không bao giờ gọi lệnh xoá, nhưng vì đó chỉ là một biến nên cũng không sao cả.</p>
-<p>Cá nhân mình thích kết hợp cả hai phương pháp này nhưng cũng không cần thiết. Một trong hai cách sẽ khiến chương trình của bạn trở nên khó đoán hơn nhiều, khiến nó không thể bị hack một cách hiệu quả.</p>
-<p>Nếu bạn muốn đọc thêm, hãy đọc bài của bạn dacin21 về <a href="https://codeforces.com/blog/entry/60442">sinh anti-hash test</a>.</p>
+<p>Bài viết này được dựa trên editorial các bài tập có dạng Two-Sum trên LeetCode, nghĩa là các bài toán có dạng: Cho một mảng các số nguyên và một số nguyên <code>target</code>, hãy tìm <span class="arithmatex">\(X\)</span> số trong mảng có tổng theo một tiêu chí nào đó so với <code>target</code>.</p>
+<p>Code của các bài toán này có thể xem tại phần Luyện tập ở dưới cùng.</p>
+<h2 id="leetcode-1-two-sum">LeetCode 1 - Two Sum</h2>
+<p>Cho một mảng các số nguyên <code>nums</code> có <span class="arithmatex">\(N\)</span> phần tử và một số nguyên <code>target</code>, hãy trả về chỉ số của hai số trong mảng có tổng bằng <code>target</code>. Bạn có thể giả sử rằng mỗi input chỉ có một lời giải duy nhất và bạn không thể dùng cùng một phần tử hai lần. Bạn có thể trả về kết quả theo bất kì thứ tự nào.</p>
+<p>Giới hạn: <span class="arithmatex">\(2 \le N \le 10^4\)</span>, <span class="arithmatex">\(-10^9 \le nums_i \le 10^9\)</span>, <span class="arithmatex">\(-10^9 \le target \le 10^9\)</span>.</p>
+<p>Chi tiết đề bài có thể xem tại <a href="https://leetcode.com/problems/two-sum/">đây</a>.</p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Ngoài cách duyệt trâu <span class="arithmatex">\(O(N^2)\)</span> ra, ta có thể để ý rằng khi xét một số <span class="arithmatex">\(x\)</span> (ở vị trí <span class="arithmatex">\(i\)</span>) trong mảng, ta chỉ cần tìm xem có tồn tại một số <span class="arithmatex">\(y\)</span> trong mảng sao cho <span class="arithmatex">\(x + y = target\)</span> hay <span class="arithmatex">\(y = target - x\)</span>. Ta có thể duy trì một hash table chứa các số nằm trước vị trí <span class="arithmatex">\(i\)</span> để tìm kiếm <span class="arithmatex">\(y\)</span> trong <span class="arithmatex">\(O(1)\)</span>, nên nhớ là trung bình <span class="arithmatex">\(O(1)\)</span>. Như vậy, với cách này độ phức tạp thời gian là <span class="arithmatex">\(O(N)\)</span>, độ phức tạp bộ nhớ là <span class="arithmatex">\(O(N)\)</span>.</p>
+<p>Ngoài ra ta còn có thể tạo một mảng khác lưu giá trị và vị trí của các phần tử trong mảng ban đầu, sắp xếp nó theo thứ tự tăng dần giá trị, sau đó đặt 2 con trỏ ở đầu và cuối mảng, nếu tổng giá trị của hai con trỏ nhỏ hơn <code>target</code> thì ta tăng con trỏ ở đầu, ngược lại ta giảm con trỏ ở cuối. Độ phức tạp thời gian là <span class="arithmatex">\(O(N \log N)\)</span>, độ phức tạp bộ nhớ là <span class="arithmatex">\(O(N)\)</span>.</p>
+</details>
+<h2 id="leetcode-15-3sum">LeetCode 15 - 3Sum</h2>
+<p>Cho một mảng các số nguyên <code>nums</code> có <span class="arithmatex">\(N\)</span> phần tử, hãy trả về tất cả các bộ ba số không trùng vị trí với nhau trong mảng có tổng bằng 0. Kết quả không được chứa các bộ ba số trùng nhau về mặt giá trị, ví dụ nếu có hai bộ ba <span class="arithmatex">\([1, 2, 3]\)</span> thì chỉ tính một lần.</p>
+<p>Giới hạn: <span class="arithmatex">\(3 \le N \le 3000\)</span>, <span class="arithmatex">\(-10^5 \le nums_i \le 10^5\)</span>.</p>
+<p>Chi tiết đề bài có thể xem tại <a href="https://leetcode.com/problems/3sum/">đây</a>.</p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Với mỗi số <span class="arithmatex">\(x\)</span> (ở vị trí <span class="arithmatex">\(i\)</span>) trong mảng, ta tìm kiếm xem bên phải nó có tồn tại một bộ đôi <span class="arithmatex">\((y, z)\)</span> trong mảng sao cho <span class="arithmatex">\(y + z = -x\)</span> hay không. Đến đây bài toán lại trở về với bài toán Two Sum. Tuy nhiên, ta không xét các số <span class="arithmatex">\(x\)</span> bằng nhau vì nó sẽ tạo ra các bộ ba giống nhau. Để bớt thời gian xét bằng nhau thì ta có thể sắp xếp mảng trước, sau đó ta chỉ xét số <span class="arithmatex">\(x\)</span> một lần khi nó khác số <span class="arithmatex">\(x\)</span> ở vị trí trước đó. Còn về việc tìm <span class="arithmatex">\(y\)</span> và <span class="arithmatex">\(z\)</span>. Ta có thể tìm bằng hash table hoặc 2 con trỏ như ở bài Two Sum, tuy nhiên sau khi tìm được một bộ ba, ta phải tránh trùng lặp bằng cách cho di chuyển <span class="arithmatex">\(y\)</span> hoặc <span class="arithmatex">\(z\)</span> (tuỳ theo cách làm) sang một giá trị mới. Độ phức tạp thời gian là <span class="arithmatex">\(O(N^2)\)</span>, độ phức tạp bộ nhớ là <span class="arithmatex">\(O(N)\)</span>.</p>
+<p>Ta cũng có thể làm cách không sắp xếp. Đáp án của chúng ta sẽ là một <code>set</code> luôn, ta cũng duy trì một hashset để tránh trùng lặp <span class="arithmatex">\(x\)</span>. Khi duyệt tìm <span class="arithmatex">\(z\)</span> ở bên phải <span class="arithmatex">\(x\)</span>, ta lưu lại xem ta có thấy <span class="arithmatex">\(y = -x - z\)</span> trong một hash table <code>seen</code> hay chưa, trick ở đây là ta lưu <code>seen[nums[j]] = i</code> để không phải xoá hash table sau mỗi lần duyệt <span class="arithmatex">\(x\)</span>. Ta cũng không cần phải để ý xem <span class="arithmatex">\(y\)</span> và <span class="arithmatex">\(z\)</span> có khả năng trùng không vì nếu trùng thì set đáp án sẽ lo. Độ phức tạp thời gian là <span class="arithmatex">\(O(N^2)\)</span>, độ phức tạp bộ nhớ là <span class="arithmatex">\(O(N)\)</span>.</p>
+</details>
+<h2 id="leetcode-16-3sum-closest">LeetCode 16 - 3Sum Closest</h2>
+<p>Cho một mảng các số nguyên <code>nums</code> có <span class="arithmatex">\(N\)</span> phần tử và một số nguyên <code>target</code>, hãy trả về tổng của 3 số trong mảng có tổng gần nhất với <code>target</code>. Giả sử rằng mỗi input chỉ có một lời giải duy nhất.</p>
+<p>Giới hạn: <span class="arithmatex">\(3 \le N \le 500\)</span>, <span class="arithmatex">\(-10^3 \le nums_i \le 10^3\)</span>, <span class="arithmatex">\(-10^4 \le target \le 10^4\)</span>.</p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Đầu tiên ta sắp xếp lại mảng, sau đó với mỗi giá trị <span class="arithmatex">\(x\)</span> (ở vị trí <span class="arithmatex">\(i\)</span>), ta tìm xem trong phần bên phải của <span class="arithmatex">\(x\)</span> có <span class="arithmatex">\(y\)</span> và <span class="arithmatex">\(z\)</span> sao cho <span class="arithmatex">\(y + z\)</span> gần nhất với <span class="arithmatex">\(target - x\)</span> hay không. Để tìm <span class="arithmatex">\(y\)</span> và <span class="arithmatex">\(z\)</span> ta có thể dùng 2 con trỏ như ở bài Two Sum. Độ phức tạp thời gian là <span class="arithmatex">\(O(N^2)\)</span>, độ phức tạp bộ nhớ là <span class="arithmatex">\(O(\log N)\)</span> hoặc <span class="arithmatex">\(O(N)\)</span>, tuỳ vào thuật toán sắp xếp.</p>
+<p>Ngoài ra, ta cũng có thể chặt nhị phân tìm <span class="arithmatex">\(y\)</span> giữa <span class="arithmatex">\(x\)</span> và <span class="arithmatex">\(z\)</span> sau khi sắp xếp mảng. Độ phức tạp thời gian là <span class="arithmatex">\(O(N^2 \log N)\)</span>, độ phức tạp bộ nhớ là <span class="arithmatex">\(O(\log N)\)</span> hoặc <span class="arithmatex">\(O(N)\)</span>, tuỳ vào thuật toán sắp xếp.</p>
+</details>
+<h2 id="leetcode-259-3sum-smaller">LeetCode 259 - 3Sum Smaller</h2>
+<p>Cho một mảng các số nguyên <code>nums</code> có <span class="arithmatex">\(N\)</span> phần tử và một số nguyên <code>target</code>, hãy trả về số bộ ba số trong mảng có tổng nhỏ hơn <code>target</code>.</p>
+<p>Giới hạn: <span class="arithmatex">\(0 \le N \le 3500\)</span>, <span class="arithmatex">\(-100 \le nums_i \le 100\)</span>, <span class="arithmatex">\(-100 \le target \le 100\)</span>.</p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Ta cũng có hai cách như bài trước, và đều phải sắp xếp mảng trước khi tính toán.</p>
+<p>Đầu tiên, với chặt nhị phân, ta tìm <span class="arithmatex">\(y\)</span> lớn nhất làm tổng nhỏ hơn <code>target</code>, rồi thêm đoạn từ <span class="arithmatex">\(i+1\)</span> đến vị trí của <span class="arithmatex">\(y\)</span> vào kết quả. Độ phức tạp thời gian là <span class="arithmatex">\(O(N^2 \log N)\)</span>, độ phức tạp bộ nhớ là <span class="arithmatex">\(O(\log N)\)</span> hoặc <span class="arithmatex">\(O(N)\)</span>, tuỳ vào thuật toán sắp xếp.</p>
+<p>Với 2 con trỏ, ta đặt chúng ở <span class="arithmatex">\(i+1\)</span> và cuối mảng, nếu tổng 3 số nhỏ hơn target thì ta có thể thêm đoạn từ con trỏ trái đến con trỏ phải vào kết quả, sau đó ta tăng con trỏ trái, ngược lại ta giảm con trỏ phải. Độ phức tạp thời gian là <span class="arithmatex">\(O(N^2)\)</span>, độ phức tạp bộ nhớ là <span class="arithmatex">\(O(\log N)\)</span> hoặc <span class="arithmatex">\(O(N)\)</span>, tuỳ vào thuật toán sắp xếp.</p>
+</details>
+<h2 id="leetcode-18-4sum">LeetCode 18 - 4Sum</h2>
+<p>Cho một mảng các số nguyên <code>nums</code> có <span class="arithmatex">\(N\)</span> phần tử và một số nguyên <code>target</code>, hãy trả về tất cả các bộ 4 số (riêng biệt về vị trí) trong mảng có tổng bằng <code>target</code>. Kết quả không được chứa các bộ 4 số trùng nhau về mặt giá trị.</p>
+<p>Giới hạn: <span class="arithmatex">\(4 \le N \le 200\)</span>, <span class="arithmatex">\(-10^9 \le nums_i \le 10^9\)</span>, <span class="arithmatex">\(-10^9 \le target \le 10^9\)</span>.</p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Ta giải y hệt bài 3Sum, có điều ta cần duyệt 2 vòng lặp ngoài nhau để xét <span class="arithmatex">\(x\)</span> và <span class="arithmatex">\(y\)</span>. Hai số còn lại ta có thể tìm bằng hash table hoặc 2 con trỏ. Độ phức tạp thời gian là <span class="arithmatex">\(O(N^3)\)</span>, độ phức tạp bộ nhớ là <span class="arithmatex">\(O(N)\)</span>.</p>
+</details>
+<h2 id="leetcode-454-4sum-ii">LeetCode 454 - 4Sum II</h2>
+<p>Cho 4 mảng các số nguyên <code>A</code>, <code>B</code>, <code>C</code>, <code>D</code> có <span class="arithmatex">\(N\)</span> phần tử, hãy trả về số bộ 4 vị trí trong 4 mảng có tổng bằng 0.</p>
+<p>Giới hạn: <span class="arithmatex">\(0 \le N \le 200\)</span>, <span class="arithmatex">\(-2^{28} \le A_i, B_i, C_i, D_i \le 2^{28}\)</span>.</p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Ta dùng hash table để lưu số các tổng của 2 số trong 2 mảng đầu tiên. Sau đó làm tương tự với 2 mảng còn lại, khi xét thì ta tìm xem trong hash table có âm của tổng đang xét hay không, nếu có thì thêm vào đáp án. Độ phức tạp thời gian là <span class="arithmatex">\(O(N^2)\)</span>, độ phức tạp bộ nhớ là <span class="arithmatex">\(O(N^2)\)</span>.</p>
+<p>Nếu người ta hỏi <span class="arithmatex">\(k\)</span> mảng thì sao? Ta chia số mảng này ra hai phần, một phần có <span class="arithmatex">\(\lfloor k/2 \rfloor\)</span> mảng, một phần có <span class="arithmatex">\(\lceil k/2 \rceil\)</span> mảng. Sau đó ta dùng hash table cho một phần, rồi duyệt phần còn lại y hệt như trên. Độ phức tạp thời gian là <span class="arithmatex">\(O(N^{\lceil k/2 \rceil})\)</span>, độ phức tạp bộ nhớ là <span class="arithmatex">\(O(N^{\lceil k/2 \rceil})\)</span>.</p>
+</details>
+<h2 id="luyen-tap">Luyện tập</h2>
+<p>Dưới đây là code mẫu của toàn bộ các cách giải các bài toán trên.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Problem</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: center;">Submission</th>
+<th style="text-align: center;">Code</th>
+<th style="text-align: center;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/two-sum/">LC 1 - Two Sum</a> - Hash Table Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC1-two-sum(HashTable).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/two-sum/">LC 1 - Two Sum</a> - 2-pointer Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC1-two-sum(2-pointer).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/3sum/">LC 15 - 3Sum</a> - Hash Table Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC15-3sum(HashTable).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/3sum/">LC 15 - 3Sum</a> - 2-pointer Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC15-3sum(2-pointer).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/3sum/">LC 15 - 3Sum</a> - No-sort Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC15-3sum(NoSort).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/3sum-closest/">LC 16 - 3Sum Closest</a> - 2-pointer Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC16-3sum-closest(2-pointer).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/3sum-closest/">LC 16 - 3Sum Closest</a> - Binary Search Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC16-3sum-closest(BinarySearch).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/3sum-smaller/">LC 259 - 3Sum Smaller</a> - 2-pointer Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC259-3sum-smaller(2-pointer).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/3sum-smaller/">LC 259 - 3Sum Smaller</a> - Binary Search Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC259-3sum-smaller(BinarySearch).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/4sum/">LC 18 - 4Sum</a> - Hash Table Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC18-4sum(HashTable).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/4sum/">LC 18 - 4Sum</a> - 2-pointer Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC18-4sum(2-pointer).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/4sum-ii/">LC 454 - 4Sum II</a> - 4Sum Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC454-4sum-ii(4sum).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://leetcode.com/problems/4sum-ii/">LC 454 - 4Sum II</a> - k-Sum Approach</td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">Unavailable public link</td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/LeetCode/LC454-4sum-ii(ksum).cpp">Code</a></td>
+<td style="text-align: center;">20/12/2023</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -2534,7 +2737,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">11/10/2023 (GMT+07)</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">20/12/2023 (GMT+07)</span>
   </span>
 
     
@@ -2544,7 +2747,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">09/09/2023 (GMT+07)</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">18/12/2023 (GMT+07)</span>
   </span>
 
     
@@ -2690,11 +2893,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
   
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
