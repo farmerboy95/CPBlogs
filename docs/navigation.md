@@ -5,7 +5,7 @@ comment: false
 ---
 
 - Trang chủ
-    - [Lời chào](index.md)
+    - [Giới thiệu](index.md)
     - [Các tài liệu](navigation.md)
 - Codeforces
     - Đồ thị
