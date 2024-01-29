@@ -7,8 +7,8 @@ repo_name: farmerboy95/CPBlogs
 theme:
   name: material
   custom_dir: overrides
-  logo: assets/images/logo.jpg
-  favicon: assets/images/logo.jpg
+  logo: assets/images/ico-cpblog.png
+  favicon: assets/images/ico-cpblog.png
   features:
     - navigation.tabs
     - navigation.top
