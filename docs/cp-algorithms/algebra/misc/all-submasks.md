@@ -73,8 +73,8 @@ $$\sum_{k=0}^n \binom{n}{k} \cdot 2^k$$
 
 | Problem | Status | Submission | Code | Date |
 | :---: | :-----------: | :---: | :---: | :---: |
-| [AtCoder - Close Group](https://atcoder.jp/contests/abc187/tasks/abc187_f) | | | | |
-| [Codeforces - Nuclear Fusion](http://codeforces.com/problemset/problem/71/E) | | | | |
-| [Codeforces - Sandy and Nuts](http://codeforces.com/problemset/problem/599/E) | | | | |
-| [UVA 1439 - Exclusive Access 2](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4185) | | | | |
-| [UVA 11825 - Hackers' Crackdown](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2925) | | | | |
+| [AtCoder - Close Group](https://atcoder.jp/contests/abc187/tasks/abc187_f) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder187-ABC-F.cpp) | 31/01/2024 |
+| [Codeforces - Nuclear Fusion](https://codeforces.com/contest/71/problem/E) | :white_check_mark: | [Submission]() | [Code]() | |
+| [Codeforces - Sandy and Nuts](http://codeforces.com/problemset/problem/599/E) | :white_check_mark: | [Submission]() | [Code]() | |
+| [UVA 1439 - Exclusive Access 2](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4185) | :white_check_mark: | Unavailable public link | [Code]() | |
+| [UVA 11825 - Hackers' Crackdown](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2925) | :white_check_mark: | Unavailable public link | [Code]() | |
