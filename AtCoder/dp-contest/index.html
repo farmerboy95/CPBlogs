@@ -1,0 +1,3957 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/AtCoder/dp-contest/">
+      
+      
+        <link rel="prev" href="../../Codechef/data-structures/disjoint-sparse-table/">
+      
+      
+        <link rel="next" href="../../LeetCode/reservoir-sampling/">
+      
+      
+      <link rel="icon" href="../../assets/images/ico-cpblog.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Lời giải AtCoder Education DP Contest - farmerboy's CP Blogs</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+  <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+
+    
+  
+      
+    
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-W9EFM7GCX7"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-W9EFM7GCX7",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-W9EFM7GCX7",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#loi-giai-atcoder-education-dp-contest" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="farmerboy&#39;s CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+      
+  <img src="../../assets/images/ico-cpblog.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            farmerboy's CP Blogs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lời giải AtCoder Education DP Contest
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/farmerboy95/CPBlogs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    farmerboy95/CPBlogs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Trang chủ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Codeforces/graph/dfs-tree/" class="md-tabs__link">
+          
+  
+  Codeforces
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cp-algorithms/algebra/binary-exponentiation/" class="md-tabs__link">
+          
+  
+  cp-algorithms
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Codechef/data-structures/disjoint-sparse-table/" class="md-tabs__link">
+          
+  
+  Codechef
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  AtCoder
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../LeetCode/reservoir-sampling/" class="md-tabs__link">
+          
+  
+  LeetCode
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../misc/complexity-analysis/asymptotic-notations/" class="md-tabs__link">
+          
+  
+  Nguồn khác
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="farmerboy&#39;s CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+      
+  <img src="../../assets/images/ico-cpblog.png" alt="logo">
+
+    </a>
+    farmerboy's CP Blogs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/farmerboy95/CPBlogs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    farmerboy95/CPBlogs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Trang chủ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Trang chủ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giới thiệu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các tài liệu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Codeforces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Codeforces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Đồ thị
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Đồ thị
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Codeforces/graph/dfs-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cây DFS và ứng dụng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Xử lý bit
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Xử lý bit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Codeforces/bit-manipulation/xor-basis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kĩ thuật Vector cơ sở cho các bài toán XOR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Toán học
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Toán học
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Codeforces/math/floors-ceilings-inequalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Floor, ceiling và bất đẳng thức cho người mới học
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Codeforces/math/sums-and-expected-value/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tổng và Giá trị kỳ vọng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Codeforces/math/inclusion-exclusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nguyên tắc Bao hàm - Loại trừ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Codeforces/math/permutations-for-beginners/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hoán vị cho người mới bắt đầu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hashing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Hashing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Codeforces/hashing/blowing-up-unordered-map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giải mã và chống hack cho unordered-map trong C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Codeforces/c%2B%2B/no-rand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Các thuật toán ngẫu nhiên và gần đúng
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Các thuật toán ngẫu nhiên và gần đúng
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Codeforces/randomized-algorithms/hacking-randomized-solutions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    cp-algorithms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            cp-algorithms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Đại số
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Đại số
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cp-algorithms/algebra/binary-exponentiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Luỹ thừa nhị phân
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cấu trúc dữ liệu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cấu trúc dữ liệu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cơ bản
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Cơ bản
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cp-algorithms/data-structures/fundamentals/min-stack-min-queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Minimum Stack / Minimum Queue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cp-algorithms/data-structures/fundamentals/sparse-table/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sparse Table
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cây
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cây
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cp-algorithms/data-structures/trees/sqrt-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sqrt Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cp-algorithms/data-structures/trees/dsu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disjoint Set Union
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Đồ thị
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Đồ thị
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Đường đi ngắn nhất một nguồn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Đường đi ngắn nhất một nguồn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cp-algorithms/graph/sssp/01-bfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0-1 BFS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Xử lý xâu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Xử lý xâu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Các bài toán tiêu biểu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Các bài toán tiêu biểu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cp-algorithms/string-processing/tasks/expression-parsing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phân tích biểu thức
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Khác
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Khác
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_1" id="__nav_3_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Khác
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Khác
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cp-algorithms/misc/misc/tortoise-and-hare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thuật toán Floyd tìm chu trình trong Linked List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Codechef
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Codechef
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cấu trúc dữ liệu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Cấu trúc dữ liệu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Codechef/data-structures/disjoint-sparse-table/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disjoint Sparse Table
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    AtCoder
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            AtCoder
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lời giải AtCoder Education DP Contest
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lời giải AtCoder Education DP Contest
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giới thiệu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-bai-tap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các bài tập
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Các bài tập">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-frog-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      A - Frog 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-frog-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      B - Frog 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-vacation" class="md-nav__link">
+    <span class="md-ellipsis">
+      C - Vacation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-knapsack-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      D - Knapsack 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-knapsack-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      E - Knapsack 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-lcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      F - LCS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g-longest-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      G - Longest Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h-grid-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      H - Grid 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-coins" class="md-nav__link">
+    <span class="md-ellipsis">
+      I - Coins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j-sushi" class="md-nav__link">
+    <span class="md-ellipsis">
+      J - Sushi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-stones" class="md-nav__link">
+    <span class="md-ellipsis">
+      K - Stones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l-deque" class="md-nav__link">
+    <span class="md-ellipsis">
+      L - Deque
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m-candies" class="md-nav__link">
+    <span class="md-ellipsis">
+      M - Candies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n-slimes" class="md-nav__link">
+    <span class="md-ellipsis">
+      N - Slimes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      O - Matching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-independent-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      P - Independent Set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-flowers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q - Flowers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-walk" class="md-nav__link">
+    <span class="md-ellipsis">
+      R - Walk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s-digit-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      S - Digit Sum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t-permutation" class="md-nav__link">
+    <span class="md-ellipsis">
+      T - Permutation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u-grouping" class="md-nav__link">
+    <span class="md-ellipsis">
+      U - Grouping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v-subtree" class="md-nav__link">
+    <span class="md-ellipsis">
+      V - Subtree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#w-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      W - Intervals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-tower" class="md-nav__link">
+    <span class="md-ellipsis">
+      X - Tower
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-grid-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Y - Grid 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-frog-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Z - Frog 3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cai-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cài đặt
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    LeetCode
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            LeetCode
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LeetCode/reservoir-sampling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lấy mẫu hồ chứa (Reservoir Sampling)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LeetCode/search-in-rotated-sorted-array/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tìm kiếm trên mảng đã sắp xếp nhưng đã xoay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LeetCode/basic-calculator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tính toán biểu thức từ xâu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LeetCode/two-sum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lớp bài tập Two-Sum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nguồn khác
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Nguồn khác
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Phân tích Độ phức tạp
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Phân tích Độ phức tạp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/complexity-analysis/asymptotic-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các ký hiệu tiệm cận
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/complexity-analysis/potential-method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phương pháp Tiềm năng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cấu trúc dữ liệu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cấu trúc dữ liệu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/data-structures/splay-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Splay Tree: Một mình anh chấp hết
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Xác suất
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Xác suất
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/probability/probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Xác suất
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/probability/expected-value/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giá trị kỳ vọng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/probability/linearity-of-expectation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kỳ vọng tuyến tính
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kinh nghiệm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kinh nghiệm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/experience/being-better/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Làm thế nào để giỏi hơn trong lập trình thi đấu?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/experience/icpc-strategy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chiến thuật khi thi ICPC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giới thiệu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-bai-tap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các bài tập
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Các bài tập">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-frog-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      A - Frog 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-frog-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      B - Frog 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-vacation" class="md-nav__link">
+    <span class="md-ellipsis">
+      C - Vacation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-knapsack-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      D - Knapsack 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-knapsack-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      E - Knapsack 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-lcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      F - LCS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g-longest-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      G - Longest Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h-grid-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      H - Grid 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-coins" class="md-nav__link">
+    <span class="md-ellipsis">
+      I - Coins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j-sushi" class="md-nav__link">
+    <span class="md-ellipsis">
+      J - Sushi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-stones" class="md-nav__link">
+    <span class="md-ellipsis">
+      K - Stones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l-deque" class="md-nav__link">
+    <span class="md-ellipsis">
+      L - Deque
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m-candies" class="md-nav__link">
+    <span class="md-ellipsis">
+      M - Candies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n-slimes" class="md-nav__link">
+    <span class="md-ellipsis">
+      N - Slimes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      O - Matching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-independent-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      P - Independent Set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-flowers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q - Flowers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-walk" class="md-nav__link">
+    <span class="md-ellipsis">
+      R - Walk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s-digit-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      S - Digit Sum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t-permutation" class="md-nav__link">
+    <span class="md-ellipsis">
+      T - Permutation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u-grouping" class="md-nav__link">
+    <span class="md-ellipsis">
+      U - Grouping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v-subtree" class="md-nav__link">
+    <span class="md-ellipsis">
+      V - Subtree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#w-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      W - Intervals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-tower" class="md-nav__link">
+    <span class="md-ellipsis">
+      X - Tower
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-grid-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Y - Grid 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-frog-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Z - Frog 3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cai-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cài đặt
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+  
+  
+
+
+<h1 id="loi-giai-atcoder-education-dp-contest">Lời giải AtCoder Education DP Contest</h1>
+<h2 id="gioi-thieu">Giới thiệu</h2>
+<p>AtCoder Education DP Contest là một contest rất hay của AtCoder về quy hoạch động (Dynamic Programming). Contest này gồm 26 bài, mỗi bài là một kiểu bài DP khác nhau. Cá nhân mình thấy contest này rất thú vị và đáng để ghi lại lời giải.</p>
+<p>Các bạn có thể xem đề bài tại <a href="https://atcoder.jp/contests/dp/tasks">đây</a>.</p>
+<h2 id="cac-bai-tap">Các bài tập</h2>
+<h3 id="a-frog-1">A - Frog 1</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_a">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> viên đá, mỗi viên đá <span class="arithmatex">\(i\)</span> có chiều cao <span class="arithmatex">\(h[i]\)</span>. Có một con ếch ở viên đá <span class="arithmatex">\(1\)</span> và muốn nhảy đến viên đá <span class="arithmatex">\(N\)</span>. Ở viên đá <span class="arithmatex">\(i\)</span>, con ếch chỉ có thể nhảy đến viên đá <span class="arithmatex">\(i+1\)</span> hoặc <span class="arithmatex">\(i+2\)</span>. Chi phí để nhảy từ viên đá <span class="arithmatex">\(i\)</span> đến viên đá <span class="arithmatex">\(j\)</span> là <span class="arithmatex">\(|h[i] - h[j]|\)</span>. Hãy tìm chi phí nhỏ nhất để con ếch nhảy từ viên đá <span class="arithmatex">\(1\)</span> đến viên đá <span class="arithmatex">\(N\)</span>.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(2 \leq N \leq 10^5\)</span></p>
+<p><span class="arithmatex">\(1 \leq h[i] \leq 10^4\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Ta gọi dp[i] là chi phí nhỏ nhất để con ếch nhảy từ viên đá <span class="arithmatex">\(1\)</span> đến viên đá <span class="arithmatex">\(i\)</span>. Vì ban đầu con ếch ở viên đá <span class="arithmatex">\(1\)</span>, nên <span class="arithmatex">\(dp[1] = 0\)</span>. Ta có thể nhảy đến viên đá <span class="arithmatex">\(i\)</span> từ viên đá <span class="arithmatex">\(i-1\)</span> (khi <span class="arithmatex">\(i &gt; 1\)</span>) hoặc từ viên đá <span class="arithmatex">\(i-2\)</span> (khi $i &gt; 2). Vậy ta có công thức truy hồi như sau:</p>
+<div class="arithmatex">\[dp[i] = \min(dp[i-1] + |h[i] - h[i-1]|, dp[i-2] + |h[i] - h[i-2]|), \forall i, 3 \leq i \leq N\]</div>
+<p>Còn khi <span class="arithmatex">\(i = 2\)</span>, ta chỉ có thể nhảy từ viên đá <span class="arithmatex">\(1\)</span> đến viên đá <span class="arithmatex">\(2\)</span>, nên <span class="arithmatex">\(dp[2] = dp[1] + |h[2] - h[1]|\)</span>.</p>
+<p>Cuối cùng, kết quả sẽ là <span class="arithmatex">\(dp[N]\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+<p>Về mặt không gian, ta có thể dùng mảng <span class="arithmatex">\(dp\)</span> để lưu kết quả (độ phức tạp <span class="arithmatex">\(O(N)\)</span>), hoặc để ý rằng ta chỉ cần lưu 2 giá trị <span class="arithmatex">\(dp[i-1]\)</span> và <span class="arithmatex">\(dp[i-2]\)</span> để cập nhật <span class="arithmatex">\(dp[i]\)</span>, ta có thể lưu chúng vào các biến <code>dp_1</code> và <code>dp_2</code> để tiết kiệm bộ nhớ (độ phức tạp <span class="arithmatex">\(O(1)\)</span>, tất nhiên là khi không tính mảng đầu vào).</p>
+</details>
+<h3 id="b-frog-2">B - Frog 2</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_b">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> viên đá, mỗi viên đá <span class="arithmatex">\(i\)</span> có chiều cao <span class="arithmatex">\(h[i]\)</span>. Có một con ếch ở viên đá <span class="arithmatex">\(1\)</span> và muốn nhảy đến viên đá <span class="arithmatex">\(N\)</span>. Ngoài ra ta còn có thêm một số nguyên <span class="arithmatex">\(K\)</span>. Ở viên đá <span class="arithmatex">\(i\)</span>, con ếch chỉ có thể nhảy đến viên đá <span class="arithmatex">\(i+1, i+2, ..., i+K\)</span>. Chi phí để nhảy từ viên đá <span class="arithmatex">\(i\)</span> đến viên đá <span class="arithmatex">\(j\)</span> là <span class="arithmatex">\(|h[i] - h[j]|\)</span>. Hãy tìm chi phí nhỏ nhất để con ếch nhảy từ viên đá <span class="arithmatex">\(1\)</span> đến viên đá <span class="arithmatex">\(N\)</span>.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(2 \leq N \leq 10^5\)</span></p>
+<p><span class="arithmatex">\(1 \leq K \leq 100\)</span></p>
+<p><span class="arithmatex">\(1 \leq h[i] \leq 10^4\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Bài trên chính là bài này với <span class="arithmatex">\(K = 2\)</span>. Ta có thể áp dụng cùng một phương pháp để giải bài này.</p>
+<p>Gọi <span class="arithmatex">\(dp[i]\)</span> là chi phí nhỏ nhất để con ếch nhảy từ viên đá <span class="arithmatex">\(1\)</span> đến viên đá <span class="arithmatex">\(i\)</span>. Vì ban đầu con ếch ở viên đá <span class="arithmatex">\(1\)</span>, nên <span class="arithmatex">\(dp[1] = 0\)</span>. Để đến viên đá <span class="arithmatex">\(i\)</span>, ta có thể nhảy từ các viên đá <span class="arithmatex">\(i-j\)</span>, <span class="arithmatex">\(\forall j, 1 \leq j \leq K, i-j &gt; 0\)</span>. Vậy ta có công thức truy hồi như sau:</p>
+<div class="arithmatex">\[dp[i] = \min_{1 \leq j \leq K, i-j &gt; 0}(dp[i-j] + |h[i] - h[i-j]|)\]</div>
+<p>Cuối cùng, kết quả sẽ là <span class="arithmatex">\(dp[N]\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(NK)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+</details>
+<h3 id="c-vacation">C - Vacation</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_c">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> ngày, mỗi ngày <span class="arithmatex">\(i\)</span> có 3 công việc A, B, C và mỗi công việc sẽ mang lại một số điểm <span class="arithmatex">\(a[i], b[i], c[i]\)</span>. Có một người muốn chọn một công việc mỗi ngày sao cho không chọn 2 công việc cùng một loại liên tiếp. Hãy tìm cách chọn sao cho tổng điểm là lớn nhất.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 10^5\)</span></p>
+<p><span class="arithmatex">\(1 \leq a[i], b[i], c[i] \leq 10^4\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i][j]\)</span> là tổng điểm lớn nhất có thể đạt được sau <span class="arithmatex">\(i\)</span> ngày nếu chọn công việc <span class="arithmatex">\(j\)</span> vào ngày <span class="arithmatex">\(i\)</span>. Ở ngày <span class="arithmatex">\(i\)</span>, ta có thể chọn công việc <span class="arithmatex">\(j\)</span> nếu <span class="arithmatex">\(j\)</span> không trùng với công việc <span class="arithmatex">\(k\)</span> ở ngày <span class="arithmatex">\(i-1\)</span>. Vậy ta có công thức truy hồi như sau:</p>
+<div class="arithmatex">\[dp[i][j] = \max(dp[i-1][k] + x[i][j]), \forall k \neq j\]</div>
+<p>Trong đó <span class="arithmatex">\(x[i][j]\)</span> là điểm của công việc <span class="arithmatex">\(j\)</span> vào ngày <span class="arithmatex">\(i\)</span>, nghĩa là <span class="arithmatex">\(x[i][j] = a[i]\)</span> nếu <span class="arithmatex">\(j = 0\)</span>, <span class="arithmatex">\(x[i][j] = b[i]\)</span> nếu <span class="arithmatex">\(j = 1\)</span>, <span class="arithmatex">\(x[i][j] = c[i]\)</span> nếu <span class="arithmatex">\(j = 2\)</span>. Ban đầu ta có <span class="arithmatex">\(dp[1][j] = x[1][j], \forall j, 0 \leq j \leq 2\)</span>.</p>
+<p>Cuối cùng, kết quả sẽ là <span class="arithmatex">\(\max(dp[N][j]), \forall j, 0 \leq j \leq 2\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+<p>Về mặt không gian, ta để ý rằng <span class="arithmatex">\(dp[i]\)</span> chỉ phụ thuộc vào <span class="arithmatex">\(dp[i-1]\)</span> nên ta có thể lưu 2 dòng <span class="arithmatex">\(dp\)</span> để tiết kiệm bộ nhớ (độ phức tạp <span class="arithmatex">\(O(1)\)</span>, tất nhiên là khi không tính mảng đầu vào).</p>
+</details>
+<h3 id="d-knapsack-1">D - Knapsack 1</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_d">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> món hàng, mỗi món hàng <span class="arithmatex">\(i\)</span> có khối lượng <span class="arithmatex">\(w[i]\)</span> và giá trị <span class="arithmatex">\(v[i]\)</span>. Có một cái túi có thể chứa tối đa <span class="arithmatex">\(W\)</span> kg. Hãy chọn một số món hàng sao cho tổng khối lượng không vượt quá <span class="arithmatex">\(W\)</span> và tổng giá trị là lớn nhất.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 100\)</span></p>
+<p><span class="arithmatex">\(1 \leq W \leq 10^5\)</span></p>
+<p><span class="arithmatex">\(1 \leq w[i] \leq W\)</span></p>
+<p><span class="arithmatex">\(1 \leq v[i] \leq 10^9\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i][j]\)</span> là tổng giá trị lớn nhất có thể đạt được sau khi chọn một số món hàng từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(i\)</span> sao cho tổng khối lượng bằng <span class="arithmatex">\(j\)</span>. Vậy ta có công thức truy hồi như sau:</p>
+<div class="arithmatex">\[dp[i][j] = \max \begin{cases} dp[i-1][j] &amp; \text{không chọn món hàng thứ } i \\ dp[i-1][j-w[i]] + v[i] &amp; \text{chọn món hàng thứ } i \text{, và khi } j \leq w[i] \end{cases}\]</div>
+<p>Ban đầu ta có <span class="arithmatex">\(dp[0][0] = 0\)</span>, <span class="arithmatex">\(dp[0][j] = -\infty, \forall j &gt; 0\)</span> vì ban đầu chưa chọn món hàng nào nên không có giá trị nào cả.</p>
+<p>Vì ta các giá trị không hợp lệ quá nhỏ nên giá trị hợp lệ sẽ lấp đầy mảng <span class="arithmatex">\(dp\)</span>, vì vậy ta không cần phải lo lắng về các giá trị không hợp lệ trong quá trình truy hồi.</p>
+<p>Cuối cùng, kết quả sẽ là <span class="arithmatex">\(\max(dp[N][j]), \forall j, 0 \leq j \leq W\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(NW)\)</span>.</p>
+<p>Về mặt không gian, ta có thể</p>
+<ul>
+<li>Sử dụng mảng <span class="arithmatex">\(dp\)</span> để lưu kết quả (độ phức tạp <span class="arithmatex">\(O(NW)\)</span>).</li>
+<li>Sử dụng mảng <span class="arithmatex">\(dp\)</span> 1 chiều để lưu kết quả của i hiện tại, với công thức truy hồi <span class="arithmatex">\(dp[j] = \max(dp[j], dp[j-w[i]] + v[i])\)</span>, với <span class="arithmatex">\(j \geq w[i]\)</span>. Tuy nhiên vì ta cần cập nhật <span class="arithmatex">\(dp[j]\)</span> với <span class="arithmatex">\(dp[j-w[i]] + v[i]\)</span>, trong đó <span class="arithmatex">\(j-w[i] &lt; j\)</span>, nên ta cần phải duyệt từ <span class="arithmatex">\(W\)</span> đến <span class="arithmatex">\(0\)</span> để tránh tính toán trùng lặp. Vậy độ phức tạp không gian của cách này là <span class="arithmatex">\(O(W)\)</span>.</li>
+</ul>
+</details>
+<h3 id="e-knapsack-2">E - Knapsack 2</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_e">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> món hàng, mỗi món hàng <span class="arithmatex">\(i\)</span> có khối lượng <span class="arithmatex">\(w[i]\)</span> và giá trị <span class="arithmatex">\(v[i]\)</span>. Có một cái túi có thể chứa tối đa <span class="arithmatex">\(W\)</span> kg. Hãy chọn một số món hàng sao cho tổng khối lượng không vượt quá <span class="arithmatex">\(W\)</span> và tổng giá trị là lớn nhất.</p>
+<p>Về cơ bản, bài này giống hệt bài <a href="https://atcoder.jp/contests/dp/tasks/dp_d">D - Knapsack 1</a>, tuy nhiên với giới hạn <span class="arithmatex">\(W\)</span> lớn hơn nhiều nhưng <span class="arithmatex">\(v[i]\)</span> cũng nhỏ hơn.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 100\)</span></p>
+<p><span class="arithmatex">\(1 \leq W \leq 10^9\)</span></p>
+<p><span class="arithmatex">\(1 \leq w[i] \leq W\)</span></p>
+<p><span class="arithmatex">\(1 \leq v[i] \leq 10^3\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Bạn có thể hơi rối một chút khi xem giới hạn bài toán, vì giá trị lớn nhất của <span class="arithmatex">\(W\)</span> là <span class="arithmatex">\(10^9\)</span>. Tuy nhiên bạn có thể thấy giá trị lớn nhất của <span class="arithmatex">\(v[i]\)</span> là <span class="arithmatex">\(10^3\)</span>, nên tổng giá trị lớn nhất có thể đạt được là <span class="arithmatex">\(10^5\)</span>. Ta có thể sử dụng <span class="arithmatex">\(V\)</span> làm chiều thứ hai của mảng <span class="arithmatex">\(dp\)</span> giống như <span class="arithmatex">\(W\)</span> trong bài gốc.</p>
+<p>Gọi <span class="arithmatex">\(dp[i][j]\)</span> là khối lượng nhỏ nhất có thể đạt được với <span class="arithmatex">\(i\)</span> món hàng đầu tiên sao cho tổng giá trị là <span class="arithmatex">\(j\)</span>. Ta có thể tính <span class="arithmatex">\(dp[i][j]\)</span> như sau:</p>
+<div class="arithmatex">\[dp[i][j] = \min \begin{cases} dp[i-1][j] &amp; \text{không chọn món hàng thứ } i \\ dp[i-1][j-v[i]] + w[i] &amp; \text{chọn món hàng thứ } i \text{, và } j \geq v[i] \end{cases}\]</div>
+<p>Ban đầu ta có <span class="arithmatex">\(dp[0][0] = 0\)</span>, <span class="arithmatex">\(dp[0][j] = \infty, \forall j &gt; 0\)</span> vì ban đầu chưa chọn món hàng nào nên không có khối lượng nào cả.</p>
+<p>Vì các giá trị không hợp lệ quá lớn nên giá trị hợp lệ sẽ lấp đầy mảng <span class="arithmatex">\(dp\)</span>, vì vậy ta không cần phải lo lắng về các giá trị không hợp lệ trong quá trình truy hồi.</p>
+<p>Kết quả sẽ là giá trị lớn nhất của <span class="arithmatex">\(j\)</span> sao cho <span class="arithmatex">\(dp[N][j] \leq W\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N \sum v[i])\)</span>.</p>
+<p>Về mặt không gian, ta có thể</p>
+<ul>
+<li>Sử dụng mảng <span class="arithmatex">\(dp\)</span> để lưu kết quả (độ phức tạp <span class="arithmatex">\(O(N \sum v[i])\)</span>).</li>
+<li>Sử dụng mảng <span class="arithmatex">\(dp\)</span> 1 chiều để lưu kết quả của i hiện tại, với công thức truy hồi <span class="arithmatex">\(dp[j] = \min(dp[j], dp[j-v[i]] + w[i])\)</span>, với <span class="arithmatex">\(j \geq v[i]\)</span>. Tuy nhiên vì ta cần cập nhật <span class="arithmatex">\(dp[j]\)</span> với <span class="arithmatex">\(dp[j-v[i]] + w[i]\)</span>, trong đó <span class="arithmatex">\(j-v[i] &lt; j\)</span>, nên ta cần phải duyệt từ <span class="arithmatex">\(\sum v[i]\)</span> đến <span class="arithmatex">\(0\)</span> để tránh tính toán trùng lặp. Vậy độ phức tạp không gian của cách này là <span class="arithmatex">\(O(\sum v[i])\)</span>.</li>
+</ul>
+</details>
+<h3 id="f-lcs">F - LCS</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_f">Link đề bài</a></p>
+<p>Cho 2 xâu <span class="arithmatex">\(s\)</span> và <span class="arithmatex">\(t\)</span>. Hãy tìm độ dài của dãy con chung dài nhất của 2 xâu.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq |s|, |t| \leq 3000\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i][j]\)</span> là độ dài của dãy con chung dài nhất của <span class="arithmatex">\(s[1..i]\)</span> và <span class="arithmatex">\(t[1..j]\)</span>. Ta có thể tính <span class="arithmatex">\(dp[i][j]\)</span> như sau:</p>
+<div class="arithmatex">\[dp[i][j] = \begin{cases} dp[i-1][j-1] + 1 &amp; \text{nếu } s[i] = t[j] \\ \max(dp[i-1][j], dp[i][j-1]) &amp; \text{ngược lại} \end{cases}\]</div>
+<p>Độ dài của dãy con chung dài nhất của <span class="arithmatex">\(s\)</span> và <span class="arithmatex">\(t\)</span> sẽ là <span class="arithmatex">\(dp[|s|][|t|]\)</span>. Tuy nhiên ta cần phải truy vết để tìm một dãy con chung dài nhất nào đó. Ta có thể truy vết như sau:</p>
+<ul>
+<li>Đầu tiên, ta khởi tạo 2 biến <span class="arithmatex">\(i = |s|\)</span> và <span class="arithmatex">\(j = |t|\)</span>.</li>
+<li>Nếu <span class="arithmatex">\(s[i] = t[j]\)</span>, ta thêm <span class="arithmatex">\(s[i]\)</span> vào dãy con chung và giảm <span class="arithmatex">\(i\)</span> và <span class="arithmatex">\(j\)</span> đi <span class="arithmatex">\(1\)</span>.</li>
+<li>Nếu <span class="arithmatex">\(dp[i-1][j] &gt; dp[i][j-1]\)</span>, ta giảm <span class="arithmatex">\(i\)</span> đi <span class="arithmatex">\(1\)</span>.</li>
+<li>Ngược lại, ta giảm <span class="arithmatex">\(j\)</span> đi <span class="arithmatex">\(1\)</span>.</li>
+</ul>
+<p>Nhớ đảo ngược dãy con chung để có kết quả cuối cùng.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(NM)\)</span>, với <span class="arithmatex">\(n = |s|\)</span> và <span class="arithmatex">\(m = |t|\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(NM)\)</span>.</p>
+</details>
+<h3 id="g-longest-path">G - Longest Path</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_g">Link đề bài</a></p>
+<p>Cho một đồ thị có hướng không chu trình <span class="arithmatex">\(G\)</span> với <span class="arithmatex">\(N\)</span> đỉnh và <span class="arithmatex">\(M\)</span> cạnh. Hãy tìm độ dài của đường đi dài nhất trong đồ thị.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(2 \leq N \leq 10^5\)</span></p>
+<p><span class="arithmatex">\(1 \leq M \leq 10^5\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Vì đồ thị <span class="arithmatex">\(G\)</span> không chứa chu trình, nó là một đồ thị có hướng không chu trình (directed acyclic graph - DAG), vì thế ta có thể dùng dp ở đây.</p>
+<p>Gọi <span class="arithmatex">\(dp[u]\)</span> là độ dài đường đi dài nhất bắt đầu từ đỉnh <span class="arithmatex">\(u\)</span>. Ban đầu ta có <span class="arithmatex">\(dp[u] = 0\)</span> với mọi <span class="arithmatex">\(u\)</span>.</p>
+<p>Ta có thể thấy rằng <span class="arithmatex">\(dp[u] = \max(dp[v] + 1)\)</span> với mọi <span class="arithmatex">\(v\)</span> mà có cạnh từ <span class="arithmatex">\(u\)</span> đến <span class="arithmatex">\(v\)</span>. Tuy nhiên ta cần phải chắc chắn rằng ta đã tính <span class="arithmatex">\(dp[v]\)</span> trước khi tính <span class="arithmatex">\(dp[u]\)</span>. Vì vậy ta cần phải sắp xếp topo để chắc chắn rằng trong quá trình tính toán, tất cả <span class="arithmatex">\(dp[v]\)</span> đã được tính trước khi tính <span class="arithmatex">\(dp[u]\)</span>.
+Sau khi sắp xếp topo, giả sử rằng nó đang xếp <span class="arithmatex">\(u\)</span> trước <span class="arithmatex">\(v\)</span> (với tất cả các cạnh <span class="arithmatex">\((u, v)\)</span>), ta duyệt ngược từ cuối về đầu, với mỗi cạnh <span class="arithmatex">\((i, j)\)</span> khi đang xét đỉnh <span class="arithmatex">\(i\)</span>, ta cập nhật <span class="arithmatex">\(dp[i] = \max(dp[i], dp[j] + 1)\)</span>.</p>
+<p>Cuối cùng, kết quả sẽ là <span class="arithmatex">\(\max(dp[u])\)</span> với mọi <span class="arithmatex">\(u\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N+M)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+</details>
+<h3 id="h-grid-1">H - Grid 1</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_h">Link đề bài</a></p>
+<p>Cho một bảng <span class="arithmatex">\(N \times M\)</span> với mỗi ô được đánh dấu là có hoặc không thể đi vào. Hãy tìm số cách để đi từ ô <span class="arithmatex">\((1, 1)\)</span> đến ô <span class="arithmatex">\((N, M)\)</span>.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N, M \leq 1000\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i][j]\)</span> là số cách để đi từ ô <span class="arithmatex">\((1, 1)\)</span> đến ô <span class="arithmatex">\((i, j)\)</span>. Ta có thể thấy rằng ô <span class="arithmatex">\((i, j)\)</span> chỉ có thể đi từ ô <span class="arithmatex">\((i-1, j)\)</span> hoặc <span class="arithmatex">\((i, j-1)\)</span>. Vậy ta có công thức truy hồi như sau:</p>
+<div class="arithmatex">\[dp[i][j] = \begin{cases} dp[i-1][j] + dp[i][j-1] &amp; \text{nếu } \text{grid}[i][j] = 1 \\ 0 &amp; \text{ngược lại} \end{cases}\]</div>
+<p>Ban đầu ta có <span class="arithmatex">\(dp[1][1] = 1\)</span> vì chỉ có một cách để đi từ ô <span class="arithmatex">\((1, 1)\)</span> đến ô <span class="arithmatex">\((1, 1)\)</span>. Với trạng thái đầu tiên là <span class="arithmatex">\(dp[1][1]\)</span>, ta có thể đặt giá trị các ô <span class="arithmatex">\(\text{grid}[0][j]\)</span> và <span class="arithmatex">\(\text{grid}[i][0]\)</span> là 0 vì các ô này không thể đi vào, từ đó giúp tính toán dễ dàng hơn khi không phải xét nhiều điều kiện ở biên trên và bên trái.</p>
+<p>Cuối cùng, kết quả sẽ là <span class="arithmatex">\(dp[N][M]\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(NM)\)</span>.</p>
+<p>Về mặt không gian, ta có thể</p>
+<ul>
+<li>Sử dụng mảng <span class="arithmatex">\(dp\)</span> để lưu kết quả (độ phức tạp <span class="arithmatex">\(O(NM)\)</span>).</li>
+<li>Ta thấy rằng <span class="arithmatex">\(dp[i]\)</span> chỉ phụ thuộc vào <span class="arithmatex">\(dp[i-1]\)</span>. Vậy ta có thể lưu 2 dòng <span class="arithmatex">\(dp\)</span> để tiết kiệm bộ nhớ (độ phức tạp <span class="arithmatex">\(O(M)\)</span>).</li>
+</ul>
+</details>
+<h3 id="i-coins">I - Coins</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_i">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> đồng xu (<span class="arithmatex">\(N\)</span> là số lẻ), mỗi đồng xu <span class="arithmatex">\(i\)</span> có xác suất <span class="arithmatex">\(p[i]\)</span> để ra mặt ngửa. Hãy tính xác suất để có số mặt ngửa nhiều hơn số mặt sấp.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 2999\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i][j]\)</span> là xác suất để có <span class="arithmatex">\(j\)</span> mặt ngửa sau khi tung <span class="arithmatex">\(i\)</span> đồng xu. Ban đầu ta có <span class="arithmatex">\(dp[0][0] = 1\)</span> vì ta bắt đầu từ việc tung <span class="arithmatex">\(0\)</span> đồng xu và có <span class="arithmatex">\(0\)</span> mặt ngửa. Ta có công thức truy hồi như sau:</p>
+<div class="arithmatex">\[dp[i][j] = \begin{cases} dp[i-1][j] \cdot (1 - p[i]) &amp; \text{nếu } j = 0 \\ dp[i-1][j-1] \cdot p[i] + dp[i-1][j] \cdot (1 - p[i]) &amp; \text{ngược lại, lần lượt khi gặp mặt ngửa và mặt sấp} \end{cases}\]</div>
+<p>Kết quả sẽ là tổng của <span class="arithmatex">\(dp[N][j]\)</span> với <span class="arithmatex">\(j\)</span> từ <span class="arithmatex">\(N/2+1\)</span> đến <span class="arithmatex">\(N\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N^2)\)</span>.</p>
+<p>Về mặt không gian, ta có thể</p>
+<ul>
+<li>Sử dụng mảng <span class="arithmatex">\(dp\)</span> để lưu kết quả (độ phức tạp <span class="arithmatex">\(O(N^2)\)</span>).</li>
+<li>Ta thấy rằng <span class="arithmatex">\(dp[i]\)</span> chỉ phụ thuộc vào <span class="arithmatex">\(dp[i-1]\)</span>. Vậy ta có thể lưu 2 dòng <span class="arithmatex">\(dp\)</span> để tiết kiệm bộ nhớ (độ phức tạp <span class="arithmatex">\(O(N)\)</span>).</li>
+</ul>
+</details>
+<h3 id="j-sushi">J - Sushi</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_j">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> dĩa sushi, dĩa thứ <span class="arithmatex">\(i\)</span> có <span class="arithmatex">\(a[i]\)</span> miếng sushi. Bạn sẽ thực hiện tung xúc xắc có <span class="arithmatex">\(N\)</span> mặt, mỗi mặt có một số từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(N\)</span>. Nếu tung mặt <span class="arithmatex">\(i\)</span>, bạn sẽ ăn một miếng sushi từ dĩa <span class="arithmatex">\(i\)</span>, nếu dĩa <span class="arithmatex">\(i\)</span> không có miếng sushi nào thì không ăn gì cả. Cứ làm như vậy cho đến khi không còn miếng sushi nào. Hãy tính kỳ vọng số lần tung xúc xắc để ăn hết sushi.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 300\)</span></p>
+<p><span class="arithmatex">\(1 \leq a[i] \leq 3\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Bài này cần một ít kiến thức về giá trị kỳ vọng để giải, bạn vui lòng tìm hiểu trước qua các bài dịch của mình trên blog này nhé.</p>
+<p>Gọi <span class="arithmatex">\(dp[i][j][k]\)</span> là số lần tung xúc xắc để ăn hết sushi, trong đó</p>
+<ul>
+<li><span class="arithmatex">\(i\)</span> là số dĩa sushi có <span class="arithmatex">\(1\)</span> miếng sushi</li>
+<li><span class="arithmatex">\(j\)</span> là số dĩa sushi có <span class="arithmatex">\(2\)</span> miếng sushi</li>
+<li><span class="arithmatex">\(k\)</span> là số dĩa sushi có <span class="arithmatex">\(3\)</span> miếng sushi</li>
+</ul>
+<p>Ta dễ dàng suy ra được <span class="arithmatex">\(x = N - i - j - k\)</span> là số dĩa sushi không còn miếng sushi nào.</p>
+<p>Ta dùng dp top-down để dễ hình dung, bắt đầu từ <span class="arithmatex">\(dp[cnt[1]][cnt[2]][cnt[3]]\)</span>, với <span class="arithmatex">\(cnt[i]\)</span> là số dĩa sushi có <span class="arithmatex">\(i\)</span> miếng sushi.</p>
+<p>Trường hợp cơ bản là khi không còn miếng sushi nào, số lần tung xúc xắc sẽ là <span class="arithmatex">\(0\)</span>. Với mỗi lần tung xúc xắc, ta có công thức truy hồi như sau:</p>
+<div class="arithmatex">\[\begin{align}
+dp[i][j][k] &amp;= \frac{x}{n} \cdot (dp[i][j][k] + 1) \text{ (nếu chọn dĩa sushi không còn miếng sushi nào)} \\
+&amp;+ \frac{i}{n} \cdot (dp[i-1][j][k] + 1) \text{ (nếu } i &gt; 0 \text{ và chọn dĩa sushi có } 1 \text{ miếng sushi)} \\
+&amp;+ \frac{j}{n} \cdot (dp[i+1][j-1][k] + 1) \text{ (nếu } j &gt; 0 \text{ và chọn dĩa sushi có } 2 \text{ miếng sushi)} \\
+&amp;+ \frac{k}{n} \cdot (dp[i][j+1][k-1] + 1) \text{ (nếu } k &gt; 0 \text{ và chọn dĩa sushi có } 3 \text{ miếng sushi)}
+\end{align}\]</div>
+<p>Chuyển vế <span class="arithmatex">\(dp[i][j][k]\)</span> sang trái và rút gọn phương trình, ta có</p>
+<div class="arithmatex">\[dp[i][j][k] = \frac{x + i \cdot (dp[i-1][j][k] + 1) + j \cdot (dp[i+1][j-1][k] + 1) + k \cdot (dp[i][j+1][k-1] + 1)}{n - x}\]</div>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N^3)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(N^3)\)</span>.</p>
+</details>
+<h3 id="k-stones">K - Stones</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_k">Link đề bài</a></p>
+<p>Cho tập $A = {a_1, a_2, ..., a_N} gồm <span class="arithmatex">\(N\)</span> số nguyên dương. Taro và Jiro sẽ chơi một trò chơi như sau. Ban đầu ta có một đống đá gồm <span class="arithmatex">\(K\)</span> viên đá. Người đến lượt phải chọn một phần tử trong tập <span class="arithmatex">\(A\)</span>, giả sử là <span class="arithmatex">\(x\)</span>, và lấy đi đúng <span class="arithmatex">\(x\)</span> viên đá từ đống đá. Taro chơi trước. Người nào không thể thực hiện đúng thao tác đó sẽ thua. Giả sử cả hai đều chơi một cách tối ưu, hãy xác định người chiến thắng.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 100\)</span></p>
+<p><span class="arithmatex">\(1 \leq K \leq 10^5\)</span></p>
+<p><span class="arithmatex">\(1 \leq a_1 &lt; a_2 &lt; ... &lt; a_N \leq K\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i]\)</span> là kết quả của trò chơi nếu còn <span class="arithmatex">\(i\)</span> viên đá. Ta sẽ có <span class="arithmatex">\(dp[i] = 1\)</span> nếu người chơi hiện tại thắng, ngược lại thì <span class="arithmatex">\(dp[i] = 0\)</span>. Ta có thể dùng dp top-down để dễ hình dung, bắt đầu từ <span class="arithmatex">\(dp[K]\)</span>.</p>
+<p>Ở mỗi trạng thái <span class="arithmatex">\(i\)</span>, ta có <span class="arithmatex">\(N\)</span> lựa chọn, nếu có ít nhất một lựa chọn dẫn đến trạng thái thua (tức là <span class="arithmatex">\(dp[i - a[j]] = 0\)</span>), ta có thể chọn lựa chọn đó để thắng, ngược lại thì ta sẽ thua.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(KN)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(K)\)</span>.</p>
+</details>
+<h3 id="l-deque">L - Deque</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_l">Link đề bài</a></p>
+<p>Taro và Jiro chơi một trò chơi như sau. Cho một dãy số <span class="arithmatex">\(a\)</span> gồm <span class="arithmatex">\(N\)</span> phần tử. Người đến lượt phải chọn một đầu của dãy số và lấy phần tử đó. Taro chơi trước. Gọi <span class="arithmatex">\(X\)</span> và <span class="arithmatex">\(Y\)</span> lần lượt là tổng số điểm của Taro và Jiro. Taro muốn tối đa hóa <span class="arithmatex">\(X - Y\)</span>, còn Jiro muốn tối thiểu hóa <span class="arithmatex">\(X - Y\)</span>. Hãy xác định giá trị của <span class="arithmatex">\(X - Y\)</span>.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 3000\)</span></p>
+<p><span class="arithmatex">\(1 \leq a[i] \leq 10^9\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i][j]\)</span> là điểm của trò chơi nếu chúng ta còn lại dãy con từ <span class="arithmatex">\(i\)</span> đến <span class="arithmatex">\(j\)</span>. Ta có thể dùng dp top-down để dễ hình dung, bắt đầu từ <span class="arithmatex">\(dp[1][n]\)</span> vì Taro bắt đầu chơi còn cả dãy.</p>
+<p>Do điểm của trò chơi là <span class="arithmatex">\(P = X - Y\)</span>, trong đó <span class="arithmatex">\(X\)</span> là điểm của Taro và <span class="arithmatex">\(Y\)</span> là điểm của Jiro, nên nếu là lượt của Taro, ta cộng phần tử đã chọn vào <span class="arithmatex">\(P\)</span>, ngược lại, ta trừ phần tử đã chọn khỏi <span class="arithmatex">\(P\)</span>.</p>
+<p>Khoan đã, làm sao ta biết với trạng thái <span class="arithmatex">\(i, j\)</span> hiện tại, đó là lượt của ai?</p>
+<ul>
+<li>Ta có thể thêm một chiều nữa vào mảng <span class="arithmatex">\(dp\)</span> để lưu lượt chơi, 0 cho Taro, 1 cho Jiro.</li>
+<li>Hoặc có một cách khác, để ý rằng nếu đến lượt Taro, tính chẵn lẻ của độ dài dãy con hiện tại sẽ bằng với tính chẵn lẻ của độ dài dãy ban đầu, nếu không bằng thì là lượt của Jiro.</li>
+</ul>
+<p>Trạng thái cơ bản là khi ta còn lại một phần tử trong dãy con, hay <span class="arithmatex">\(i = j\)</span>, điểm của trò chơi sẽ là <span class="arithmatex">\(a[i]\)</span> nếu là lượt của Taro, <span class="arithmatex">\(-a[i]\)</span> nếu là lượt của Jiro.</p>
+<p>Với công thức truy hồi thì, ta biết rằng Taro muốn tối đa hóa <span class="arithmatex">\(P\)</span>, nên ta chọn phần tử ở đầu hoặc cuối dãy con sao cho <span class="arithmatex">\(P\)</span> lớn nhất. Ngược lại, Jiro muốn tối thiểu hóa <span class="arithmatex">\(P\)</span>, nên ta chọn phần tử sao cho <span class="arithmatex">\(P\)</span> nhỏ nhất.</p>
+<div class="arithmatex">\[dp[i][j] = \begin{cases} \max(dp[i+1][j] + a[i], dp[i][j-1] + a[j]) &amp; \text{nếu là lượt của Taro} \\ \min(dp[i+1][j] - a[i], dp[i][j-1] - a[j]) &amp; \text{nếu là lượt của Jiro} \end{cases}\]</div>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N^2)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(N^2)\)</span>.</p>
+</details>
+<h3 id="m-candies">M - Candies</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_m">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> học sinh và <span class="arithmatex">\(K\)</span> viên kẹo. Ta cần chia <span class="arithmatex">\(K\)</span> viên kẹo cho <span class="arithmatex">\(N\)</span> học sinh này sao cho mỗi học sinh nhận được từ <span class="arithmatex">\(0\)</span> đến <span class="arithmatex">\(a[i]\)</span> viên kẹo. Sau khi chia ta không còn viên kẹo nào. Hãy tính số cách chia kẹo mod <span class="arithmatex">\(10^9 + 7\)</span>.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 100\)</span></p>
+<p><span class="arithmatex">\(0 \leq a[i] \leq K \leq 10^5\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i][j]\)</span> là số cách chia kẹo cho <span class="arithmatex">\(i\)</span> học sinh sao cho tổng số kẹo là <span class="arithmatex">\(j\)</span>. Ban đầu ta có <span class="arithmatex">\(dp[0][0] = 1\)</span>.</p>
+<p>Ta có công thức truy hồi như sau:</p>
+<div class="arithmatex">\[dp[i][j] = \sum_{x=0, j-x \geq 0}^{a[i]} dp[i-1][j-x]\]</div>
+<p>Nếu cài đúng như trên thì độ phức tạp sẽ là <span class="arithmatex">\(O(NK^2)\)</span>, quá chậm. Ta có thể nhận thấy rằng <span class="arithmatex">\(dp[i][j]\)</span> cần tổng của <span class="arithmatex">\(dp[i-1]\)</span> từ <span class="arithmatex">\(j-a[i]\)</span> đến <span class="arithmatex">\(j\)</span>, vậy ta có thể định nghĩa <span class="arithmatex">\(sum[i][j]\)</span> là tổng của <span class="arithmatex">\(dp[i]\)</span> từ <span class="arithmatex">\(dp[i][0]\)</span> đến <span class="arithmatex">\(dp[i][j]\)</span>. Ta có thể tính <span class="arithmatex">\(sum[i]\)</span> cùng với <span class="arithmatex">\(dp[i]\)</span>.</p>
+<p>Vậy ta có công thức truy hồi mới:</p>
+<div class="arithmatex">\[dp[i][j] = \begin{cases} sum[i-1][j] - sum[i-1][j-a[i]-1] &amp; \text{nếu } j &gt; a[i] \\ sum[i-1][j] &amp; \text{ngược lại} \end{cases}\]</div>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(NK)\)</span>.</p>
+<p>Về mặt không gian, ta có thể</p>
+<ul>
+<li>Sử dụng mảng <span class="arithmatex">\(dp\)</span> và <span class="arithmatex">\(sum\)</span> để lưu kết quả (độ phức tạp <span class="arithmatex">\(O(NK)\)</span>).</li>
+<li>Ta thấy rằng <span class="arithmatex">\(dp[i]\)</span> chỉ phụ thuộc vào <span class="arithmatex">\(dp[i-1]\)</span>. Vậy ta có thể lưu 2 dòng <span class="arithmatex">\(dp\)</span> và <span class="arithmatex">\(sum\)</span> để tiết kiệm bộ nhớ (độ phức tạp <span class="arithmatex">\(O(K)\)</span>).</li>
+</ul>
+</details>
+<h3 id="n-slimes">N - Slimes</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_n">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> viên slime, viên slime thứ <span class="arithmatex">\(i\)</span> có kích thước <span class="arithmatex">\(a[i]\)</span>. Ta thực hiện thao tác sau cho đến khi chỉ còn một viên slime:</p>
+<ul>
+<li>Chọn hai viên slime cạnh nhau, trộn lại với nhau để tạo ra một viên slime mới. Viên slime mới có kích thước bằng tổng kích thước của hai viên slime cũ. Thao tác này có giá trị cũng bằng tổng kích thước của hai viên slime cũ.</li>
+</ul>
+<p>Hãy tính giá trị nhỏ nhất có thể đạt được khi thực hiện đến khi chỉ còn một viên slime.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(2 \leq N \leq 400\)</span></p>
+<p><span class="arithmatex">\(1 \leq a[i] \leq 10^9\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i][j]\)</span> là giá trị nhỏ nhất có thể đạt được khi trộn từ viên slime <span class="arithmatex">\(i\)</span> đến viên slime <span class="arithmatex">\(j\)</span> để có một viên slime duy nhất. Kết quả sẽ là <span class="arithmatex">\(dp[1][n]\)</span>. Ban đầu ta có <span class="arithmatex">\(dp[i][i] = 0\)</span> vì không cần phải làm gì cả.</p>
+<p>Với mỗi cặp <span class="arithmatex">\((i, j)\)</span> (với <span class="arithmatex">\(i &lt; j\)</span>), ta có thể chia dãy thành 2 phần tại vị trí <span class="arithmatex">\(k\)</span> (<span class="arithmatex">\(i \leq k &lt; j\)</span>):</p>
+<ul>
+<li>Ta trộn phần bên trái trước, sau đó đến phần bên phải.</li>
+<li>Giá trị để trộn phần bên trái là <span class="arithmatex">\(dp[i][k]\)</span>, phần bên phải là <span class="arithmatex">\(dp[k+1][j]\)</span>.</li>
+<li>Giá trị để trộn cả dãy là <span class="arithmatex">\(dp[i][k] + dp[k+1][j] + \text{sum}[i][j]\)</span> (với <span class="arithmatex">\(\text{sum}[i][j]\)</span> là tổng của dãy từ <span class="arithmatex">\(i\)</span> đến <span class="arithmatex">\(j\)</span>).</li>
+<li>Vậy ta có <span class="arithmatex">\(dp[i][j] = \min(dp[i][j], dp[i][k] + dp[k+1][j] + \text{sum}[i][j])\)</span> (với <span class="arithmatex">\(i \leq k &lt; j\)</span>).</li>
+</ul>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N^3)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(N^2)\)</span>.</p>
+</details>
+<h3 id="o-matching">O - Matching</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_o">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> người đàn ông và <span class="arithmatex">\(N\)</span> người phụ nữ. Cho một bảng <span class="arithmatex">\(N \times N\)</span> với mỗi ô <span class="arithmatex">\((i, j)\)</span> là <span class="arithmatex">\(a[i][j]\)</span>. <span class="arithmatex">\(a[i][j] = 1\)</span> khi người đàn ông <span class="arithmatex">\(i\)</span> và người phụ nữ <span class="arithmatex">\(j\)</span> hợp nhau, ngược lại thì <span class="arithmatex">\(a[i][j] = 0\)</span>. Hãy tính số cách ghép cặp sao cho mỗi người đều được ghép với một người khác hợp với mình.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 21\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i][j]\)</span> là bitmask của tập những người phụ nữ đã được ghép. Kết quả sẽ là <span class="arithmatex">\(dp[n][(1 &lt;&lt; n) - 1]\)</span> (nếu chúng ta đánh số từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(N\)</span>). Ban đầu, ta có <span class="arithmatex">\(dp[0][0] = 1\)</span>.</p>
+<p>Với mỗi người đàn ông <span class="arithmatex">\(i\)</span> và bitmask <span class="arithmatex">\(j\)</span>, ta cố gắng tìm một người phụ nữ k chưa được ghép và người đàn ông i hợp với cô ấy, sau đó ta cập nhật <span class="arithmatex">\(dp[i][j | (1 &lt;&lt; (k-1))] += dp[i-1][j]\)</span> (<span class="arithmatex">\(k-1\)</span> vì chúng ta đánh số từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(N\)</span>). Độ phức tạp lúc này sẽ là <span class="arithmatex">\(O(N^2 * 2^N)\)</span>, không ổn để vượt qua các test cuối.</p>
+<p>Để ý rằng khi xét đến người đàn ông <span class="arithmatex">\(i\)</span>, mask <span class="arithmatex">\(j\)</span> phải có đúng <span class="arithmatex">\(i-1\)</span> bit được set, vì chúng ta đã ghép <span class="arithmatex">\(i-1\)</span> người đàn ông với <span class="arithmatex">\(i-1\)</span> người phụ nữ, vậy ta có thể bỏ qua mask <span class="arithmatex">\(j\)</span> có nhiều hoặc ít hơn <span class="arithmatex">\(i-1\)</span> bit được set. Vậy phần "với mỗi người đàn ông <span class="arithmatex">\(i\)</span> và bitmask <span class="arithmatex">\(j\)</span>" có thể chạy trong <span class="arithmatex">\(O(2^N)\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N * 2^N)\)</span>.</p>
+<p>Về mặt không gian, ta có thể</p>
+<ul>
+<li>Sử dụng mảng <span class="arithmatex">\(dp\)</span> 2 chiều để lưu kết quả (độ phức tạp <span class="arithmatex">\(O(N * 2^N)\)</span>).</li>
+<li>Ta thấy rằng <span class="arithmatex">\(dp[i]\)</span> chỉ phụ thuộc vào <span class="arithmatex">\(dp[i-1]\)</span>, vậy ta có thể lưu 2 dòng <span class="arithmatex">\(dp\)</span> để tiết kiệm bộ nhớ (độ phức tạp <span class="arithmatex">\(O(2^N)\)</span>). Thậm chí, ta thấy rằng
+mỗi người đàn ông <span class="arithmatex">\(i\)</span> sẽ tương ứng với một số mask <span class="arithmatex">\(j\)</span> có đúng <span class="arithmatex">\(i-1\)</span> bit được set, vậy ta có thể lưu 1 dòng <span class="arithmatex">\(dp\)</span>, vì các trạng thái của những người đàn ông khác nhau sẽ không trùng với nhau.</li>
+</ul>
+</details>
+<h3 id="p-independent-set">P - Independent Set</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_p">Link đề bài</a></p>
+<p>Cho một cây gồm <span class="arithmatex">\(N\)</span> đỉnh. Mỗi đỉnh có thể được tô màu đen hoặc trắng. Hãy tính số cách tô màu sao cho không có hai đỉnh kề nào cùng có màu đen.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 10^5\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[u][col]\)</span> là số cách tô màu cho cây con của đỉnh <span class="arithmatex">\(u\)</span> sao cho đỉnh <span class="arithmatex">\(u\)</span> có màu <span class="arithmatex">\(col\)</span>. Kết quả sẽ là <span class="arithmatex">\(dp[1][0] + dp[1][1]\)</span>.</p>
+<p>Ban đầu ta có <span class="arithmatex">\(dp[u][0] = dp[u][1] = 1\)</span> vì ta có thể tô màu đen hoặc trắng cho mọi đỉnh.</p>
+<p>Với mỗi đỉnh con <span class="arithmatex">\(v\)</span> của đỉnh <span class="arithmatex">\(u\)</span>, ta có thể tính <span class="arithmatex">\(dp[v][0]\)</span> và <span class="arithmatex">\(dp[v][1]\)</span> theo cách đệ quy. Sau đó, ta có công thức truy hồi như sau:</p>
+<div class="arithmatex">\[\begin{align}
+dp[u][1] &amp;= dp[u][1] \cdot dp[v][0] \text{ (nếu đỉnh } u \text{ màu đen, đỉnh } v \text{ phải màu trắng)} \\
+dp[u][0] &amp;= dp[u][0] \cdot (dp[v][0] + dp[v][1]) \text{ (nếu đỉnh } u \text{ màu trắng, đỉnh } v \text{ có thể màu trắng hoặc đen)}
+\end{align}\]</div>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+</details>
+<h3 id="q-flowers">Q - Flowers</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_q">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> bông hoa xếp thành hàng. Bông hoa thứ <span class="arithmatex">\(i\)</span> có chiều cao <span class="arithmatex">\(h[i]\)</span> và sắc đẹp <span class="arithmatex">\(a[i]\)</span>, <span class="arithmatex">\(h[i]\)</span> đôi một khác nhau. Nhổ bỏ một số bông hoa sao cho chiều cao của những bông hoa còn lại tăng dần. Hãy tính tổng sắc đẹp lớn nhất của các bông hoa còn lại.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 2 \times 10^5\)</span></p>
+<p><span class="arithmatex">\(1 \leq h[i] \leq N\)</span></p>
+<p><span class="arithmatex">\(1 \leq a[i] \leq 10^9\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i]\)</span> là tổng sắc đẹp lớn nhất của các bông hoa từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(i\)</span> và bông hoa cuối cùng được giữ lại là bông hoa <span class="arithmatex">\(i\)</span>. Kết quả sẽ là <span class="arithmatex">\(\max(dp[1], dp[2], ..., dp[N])\)</span>.</p>
+<p>Ban đầu ta có <span class="arithmatex">\(dp[0] = 0\)</span> vì không có bông hoa nào.</p>
+<p>Với mỗi bông hoa <span class="arithmatex">\(i\)</span>, ta có thể tính <span class="arithmatex">\(dp[i]\)</span> theo công thức truy hồi sau:</p>
+<div class="arithmatex">\[dp[i] = \max(dp[j]) + a[i] \text{ với mọi } j &lt; i \text{ và } h[j] &lt; h[i]\]</div>
+<p>Tuy nhiên cách này sẽ chạy trong <span class="arithmatex">\(O(N^2)\)</span>, quá chậm.</p>
+<p>Như vậy ta tối ưu bằng cách nào? Ta cần biết giá trị lớn nhất của <span class="arithmatex">\(dp[j]\)</span> trước đó và chiều cao của nó nhỏ hơn <span class="arithmatex">\(h[i]\)</span>. Ta có thể sử dụng cây Fenwick (Binary Indexed Tree - BIT) để lưu giá trị <span class="arithmatex">\(dp[j]\)</span> tại vị trí <span class="arithmatex">\(h[j]\)</span> trên cây (vì <span class="arithmatex">\(h[j]\)</span> là duy nhất), sau đó lấy giá trị lớn nhất từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(h[i]-1\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N \log N)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+</details>
+<h3 id="r-walk">R - Walk</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_r">Link đề bài</a></p>
+<p>Cho đồ thị đơn <span class="arithmatex">\(G\)</span> có <span class="arithmatex">\(N\)</span> đỉnh. Với mỗi cặp <span class="arithmatex">\(i, j\)</span> (<span class="arithmatex">\(1 \leq i, j \leq N\)</span>), giá trị <span class="arithmatex">\(a[i][j] = 1\)</span> nếu có cạnh nối giữa <span class="arithmatex">\(i\)</span> và <span class="arithmatex">\(j\)</span>, ngược lại thì <span class="arithmatex">\(a[i][j] = 0\)</span>. Tính số đường đi có hướng độ dài <span class="arithmatex">\(K\)</span> trong <span class="arithmatex">\(G\)</span>. Đường đi có thể đi qua cùng một cạnh nhiều lần.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 50\)</span></p>
+<p><span class="arithmatex">\(1 \leq K \leq 10^{18}\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i][j]\)</span> là số cách đi từ đỉnh <span class="arithmatex">\(i\)</span> đến đỉnh <span class="arithmatex">\(j\)</span> trong <span class="arithmatex">\(i\)</span> bước. Kết quả sẽ là tổng của <span class="arithmatex">\(dp[k][j]\)</span> với <span class="arithmatex">\(j\)</span> từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(N\)</span>.</p>
+<p>Ban đầu ta có <span class="arithmatex">\(dp[0][i] = 1\)</span> với mọi <span class="arithmatex">\(i\)</span>.</p>
+<p>Ta có công thức truy hồi như sau:</p>
+<div class="arithmatex">\[\begin{align}
+dp[i][j] &amp;= \sum_{k=1, a[k][j] = 1}^{N} dp[i-1][k] \\
+&amp;= \sum_{k=1}^{N} dp[i-1][k] \cdot a[k][j]
+\end{align}\]</div>
+<p>Cách này sẽ chạy trong <span class="arithmatex">\(O(KN^2)\)</span>, quá chậm.</p>
+<p>Để ý rằng ta có thể đi từ <span class="arithmatex">\(dp[i-1]\)</span> đến <span class="arithmatex">\(dp[i]\)</span> bằng một ma trận, vậy ta có thể áp dụng nhân ma trận để tối ưu. Ma trận <span class="arithmatex">\(A\)</span> sẽ là ma trận dạng <span class="arithmatex">\(A[i][j] = a[j][i]\)</span>.</p>
+<p>Vậy ta có <span class="arithmatex">\(dp[k] = A^k \cdot dp[0]\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N^3 \log K)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(N^2)\)</span>.</p>
+</details>
+<h3 id="s-digit-sum">S - Digit Sum</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_s">Link đề bài</a></p>
+<p>Tìm số các số nằm trong khoảng <span class="arithmatex">\([1, K]\)</span> sao cho tổng chữ số của số đó chia hết cho <span class="arithmatex">\(D\)</span>.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq K \leq 10^{10000}\)</span></p>
+<p><span class="arithmatex">\(1 \leq D \leq 100\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Giờ ta đến với một biến thể của DP, cụ thể ở đây là Digit DP hay DP chữ số. Ta cần tính số lượng số nguyên nằm trong khoảng từ 0 đến một số nào đó (<span class="arithmatex">\(K\)</span> chẳng han) và các số đó có một số tính chất nhất định. Thông thường, ta cần xây dựng số từ trái sang phải, và xem xét xem số đó có nhỏ hơn <span class="arithmatex">\(n\)</span> hay không. Ta cần biết điều đó để biết chữ số tiếp theo có thể nằm trong khoảng nào.</p>
+<p>Gọi <span class="arithmatex">\(dp[i][j][eq]\)</span> là số cách xây dựng một số có độ dài <span class="arithmatex">\(i\)</span>, tổng chữ số chia dư cho <span class="arithmatex">\(d\)</span> được <span class="arithmatex">\(j\)</span>, và số đó nhỏ hơn <span class="arithmatex">\(K\)</span> nếu <span class="arithmatex">\(eq = 0\)</span>, ngược lại <span class="arithmatex">\(eq = 1\)</span> khi số đó đang có thể bằng <span class="arithmatex">\(K\)</span>. Ban đầu, ta chưa có chữ số nào, tổng chữ số chia dư cho <span class="arithmatex">\(d\)</span> là <span class="arithmatex">\(0\)</span>, và số đó vẫn có thể bằng <span class="arithmatex">\(K\)</span>, nên <span class="arithmatex">\(dp[0][0][1] = 1\)</span>.</p>
+<p>Công thức truy hồi khá đơn giản, ta lặp qua chữ số tiếp theo, cập nhật tổng chữ số chia dư cho <span class="arithmatex">\(d\)</span>, và xem xét xem số đó có nhỏ hơn <span class="arithmatex">\(K\)</span> hay không.</p>
+<p>Kết quả sẽ là <span class="arithmatex">\(dp[N][0][0] + dp[N][0][1] - 1\)</span>, vì ta cần loại bỏ số <span class="arithmatex">\(0\)</span>, với <span class="arithmatex">\(N\)</span> là số chữ số của <span class="arithmatex">\(K\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(ND)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(ND)\)</span>, bạn có thể tối ưu nó xuống <span class="arithmatex">\(O(d)\)</span> bằng cách sử dụng 2 dòng.</p>
+</details>
+<h3 id="t-permutation">T - Permutation</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_t">Link đề bài</a></p>
+<p>Cho số nguyên dương <span class="arithmatex">\(N\)</span> và một xâu độ dài <span class="arithmatex">\(N-1\)</span> gồm các ký tự <code>&gt;</code> và <code>&lt;</code>. Tìm số hoán vị <span class="arithmatex">\(p_1, p_2, ..., p_N\)</span> sao cho thỏa mãn điều kiện <span class="arithmatex">\(p_i &lt; p_{i+1}\)</span> nếu ký tự thứ <span class="arithmatex">\(i\)</span> trong xâu là <code>&lt;</code> và <span class="arithmatex">\(p_i &gt; p_{i+1}\)</span> nếu ký tự thứ <span class="arithmatex">\(i\)</span> trong xâu là <code>&lt;</code>.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(2 \leq N \leq 3000\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i][j]\)</span> là số hoán vị có <span class="arithmatex">\(i\)</span> ô đã được điền, ta còn <span class="arithmatex">\(n-i\)</span> phần tử còn lại, trong đó <span class="arithmatex">\(j\)</span> phần tử lớn hơn phần tử cuối cùng ta đã điền. Ban đầu ta điền ô đầu tiên trước, có <span class="arithmatex">\(N\)</span> cách chọn, và ta có thể chọn bất kỳ phần tử nào để là phần tử đầu tiên. Nếu chúng ta chọn số <span class="arithmatex">\(j\)</span>, có <span class="arithmatex">\(N-j\)</span> phần tử lớn hơn <span class="arithmatex">\(j\)</span>, vậy <span class="arithmatex">\(dp[1][N-j] = 1\)</span>.</p>
+<p>Sau đó, ta tiếp tục điền vào ô tiếp theo với mỗi trạng thái có ít nhất một cách chọn (mod <span class="arithmatex">\(10^9+7\)</span>):</p>
+<ul>
+<li>Nếu ký tự là <code>&lt;</code>, ta cần thêm <span class="arithmatex">\(dp[i][j]\)</span> vào <span class="arithmatex">\(dp[i+1][0]\)</span>, <span class="arithmatex">\(dp[i+1][1]\)</span>, ..., <span class="arithmatex">\(dp[i+1][j-1]\)</span>, vì ta cần chọn một phần tử lớn hơn phần tử cuối cùng hiện tại nên <span class="arithmatex">\(j\)</span> bị giảm đi.</li>
+<li>Nếu ký tự là <code>&gt;</code>, ta cần thêm <span class="arithmatex">\(dp[i][j]\)</span> vào <span class="arithmatex">\(dp[i+1][j]\)</span>, <span class="arithmatex">\(dp[i+1][j+1]\)</span>, ..., <span class="arithmatex">\(dp[i+1][n-i-1]\)</span>, vì ta cần chọn một phần tử nhỏ hơn phần tử cuối cùng hiện tại nên <span class="arithmatex">\(j\)</span> được giữ nguyên hoặc tăng lên.</li>
+<li>Cách này nếu cài lên sẽ chạy trong <span class="arithmatex">\(O(N^3)\)</span>, nhưng ta thấy rằng ta cộng một đoạn cụ thể, vậy ta có thể sử dụng prefix sum để tối ưu nó xuống <span class="arithmatex">\(O(N^2)\)</span>.</li>
+</ul>
+<p>Kết quả cuối cùng sẽ là <span class="arithmatex">\(dp[N][0]\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N^2)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(N^2)\)</span>, hoặc <span class="arithmatex">\(O(N)\)</span> nếu ta sử dụng 2 dòng.</p>
+</details>
+<h3 id="u-grouping">U - Grouping</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_u">Link đề bài</a></p>
+<p>Cho <span class="arithmatex">\(N\)</span> con thỏ. Với mỗi cặp thỏ <span class="arithmatex">\(i, j\)</span>, ta có <span class="arithmatex">\(a[i][j]\)</span> là mức độ tương hợp giữa chúng. Ta cần chia <span class="arithmatex">\(N\)</span> con thỏ thành các nhóm sao cho mỗi con thỏ thuộc về đúng một nhóm. Nếu hai con thỏ <span class="arithmatex">\(i, j\)</span> thuộc cùng nhóm thì bạn sẽ được <span class="arithmatex">\(a[i][j]\)</span> điểm. Hãy tính tổng điểm lớn nhất có thể đạt được.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 16\)</span></p>
+<p><span class="arithmatex">\(|a[i][j]| \leq 10^9\)</span></p>
+<p><span class="arithmatex">\(a[i][i] = 0\)</span></p>
+<p><span class="arithmatex">\(a[i][j] = a[j][i]\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(sum[\text{mask}]\)</span> là điểm của nhóm thỏ được biểu diễn bởi <span class="arithmatex">\(\text{mask}\)</span>. Ta sẽ mất <span class="arithmatex">\(O(2^N \cdot N^2)\)</span> để tính toán cái này.</p>
+<p>Sau đó, ta định nghĩa <span class="arithmatex">\(dp[\text{mask}]\)</span> là điểm lớn nhất của các nhóm thỏ có thể được tạo ra bởi <span class="arithmatex">\(\text{mask}\)</span>. Ta có thể tính như sau trong <span class="arithmatex">\(O(3^N)\)</span>:</p>
+<div class="arithmatex">\[dp[\text{mask}] = \max(dp[\text{mask}], dp[\text{mask} \oplus \text{subMask}] + \text{sum}[\text{subMask}]) \text{ với mọi mask con của mask}\]</div>
+<p>Cuối cùng, kết quả sẽ là <span class="arithmatex">\(dp[2^N - 1]\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(3^N + 2^N \cdot N^2)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(2^N)\)</span>.</p>
+</details>
+<h3 id="v-subtree">V - Subtree</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_v">Link đề bài</a></p>
+<p>Cho một cây <span class="arithmatex">\(N\)</span> đỉnh. Ta tô màu trắng hoặc đen cho các đỉnh sao cho một đỉnh đen chỉ có thể đến được một đỉnh đen khác bằng cách đi qua một số đỉnh đen khác nữa. Tìm số cách tô mod <span class="arithmatex">\(M\)</span>.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 10^5\)</span></p>
+<p><span class="arithmatex">\(1 \leq M \leq 10^9\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Giả sử gốc của cây nằm ở node <span class="arithmatex">\(1\)</span>.</p>
+<p>Gọi <span class="arithmatex">\(res[u]\)</span> là số cách tô màu cho toàn bộ cây, trong đó có một thành phần liên thông chứa <span class="arithmatex">\(u\)</span> là có màu đen.</p>
+<p>Gọi <span class="arithmatex">\(subtree[u]\)</span> là số cách tô màu cho cây con gốc <span class="arithmatex">\(u\)</span>, trong đó có một thành phần liên thông chứa <span class="arithmatex">\(u\)</span> là có màu đen.</p>
+<div class="arithmatex">\[subtree[u] = \prod_{v \in \text{con của } u} (subtree[v] + 1)\]</div>
+<p>Rõ ràng ban đầu <span class="arithmatex">\(res[1] = subtree[1]\)</span>.</p>
+<p>Với <span class="arithmatex">\(res[v]\)</span>, gọi <span class="arithmatex">\(u\)</span> là cha của <span class="arithmatex">\(v\)</span>, ta có:</p>
+<div class="arithmatex">\[res[v] = subtree[v] \cdot \left( \frac{res[u]}{subtree[v] + 1} + 1 \right)\]</div>
+<p>Nếu <span class="arithmatex">\(M\)</span> là số nguyên tố kiểu <span class="arithmatex">\(10^9 + 7\)</span>, ta có thể sử dụng định lý Fermat nhỏ để tính nghịch đảo của <span class="arithmatex">\((subtree[v] + 1)\)</span> modulo <span class="arithmatex">\(M\)</span>, nhưng vì <span class="arithmatex">\(M\)</span> có thể là bất kỳ số nguyên dương nào, ta cần tìm cách để lấy <span class="arithmatex">\(res[u] / subtree[v]\)</span> modulo <span class="arithmatex">\(M\)</span> mà không cần phải chia.</p>
+<p>Gọi <span class="arithmatex">\(parTree[u]\)</span> là số cách tô màu cho cả cây mà không có cây con gốc <span class="arithmatex">\(u\)</span>, trong đó có một thành phần liên thông chứa cha của <span class="arithmatex">\(u\)</span> là có màu đen. Với <span class="arithmatex">\(v, v_1, v_2, \ldots, v_k\)</span> là các con của <span class="arithmatex">\(u\)</span>, ta có:</p>
+<div class="arithmatex">\[res[u] = (subtree[v] + 1) \cdot (subtree[v_1] + 1) \cdot (subtree[v_2] + 1) \cdot \ldots \cdot (subtree[v_k] + 1) \cdot (parTree[u] + 1)\]</div>
+<div class="arithmatex">\[\begin{align}
+parTree[v] &amp;= \frac{(parTree[u] + 1) \cdot (subtree[v_1] + 1) \cdot (subtree[v_2] + 1) \cdot \ldots \cdot (subtree[v_k] + 1)}{subtree[v] + 1} \\
+&amp;= (parTree[u] + 1) \cdot (subtree[v_1] + 1) \cdot (subtree[v_2] + 1) \cdot \ldots \cdot (subtree[v_k] + 1) \\
+\end{align}\]</div>
+<p>Gọi <span class="arithmatex">\(subtreeOfParWithout[v]\)</span> là <span class="arithmatex">\((subtree[v_1] + 1) \cdot (subtree[v_2] + 1) \cdot \ldots \cdot (subtree[v_k] + 1)\)</span>.</p>
+<p>Vậy <span class="arithmatex">\(parTree[v] = (parTree[u] + 1) \cdot subtreeOfParWithout[v]\)</span>.</p>
+<p>Và <span class="arithmatex">\(res[v] = subtree[v] \cdot (parTree[v] + 1)\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+</details>
+<h3 id="w-intervals">W - Intervals</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_w">Link đề bài</a></p>
+<p>Xét một xâu độ dài <span class="arithmatex">\(N\)</span> gồm các ký tự <code>0</code> và <code>1</code>. Điểm của xâu này sẽ được tính như sau:</p>
+<ul>
+<li>Với mỗi <span class="arithmatex">\(i\)</span>, <span class="arithmatex">\(a[i]\)</span> được cộng vào tổng điểm nếu xâu con từ <span class="arithmatex">\(l[i]\)</span> đến <span class="arithmatex">\(r[i]\)</span> chứa ít nhất một ký tự <code>1</code>.</li>
+</ul>
+<p>Hãy tính tổng điểm lớn nhất có thể đạt được.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N, M \leq 2 \times 10^5\)</span></p>
+<p><span class="arithmatex">\(1 \leq l[i], r[i] \leq N\)</span></p>
+<p><span class="arithmatex">\(|a[i]| \leq 10^9\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i]\)</span> là tổng điểm lớn nhất có thể đạt được cho xâu con từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(i\)</span> và bit <span class="arithmatex">\(i\)</span> được set (đánh số từ <span class="arithmatex">\(1\)</span>).</p>
+<p>Ta có <span class="arithmatex">\(dp[i] = \max(dp[j] + \text{cost}(i, j))\)</span> với <span class="arithmatex">\(j &lt; i\)</span>, và <span class="arithmatex">\(\text{cost}(i, j)\)</span> là tổng điểm của tất cả các đoạn <span class="arithmatex">\(x\)</span> với <span class="arithmatex">\(i\)</span> nằm trong <span class="arithmatex">\([l_x, r_x]\)</span> và <span class="arithmatex">\(j\)</span> không nằm trong <span class="arithmatex">\([l_x, r_x]\)</span>. Kết quả sẽ là <span class="arithmatex">\(\max(0, \max(dp[i]))\)</span>. Cái này sẽ chạy trong <span class="arithmatex">\(O(N^2)\)</span>, quá chậm.</p>
+<p>Xét một biến đổi từ <span class="arithmatex">\(\text{cost}(i-1, j)\)</span> sang <span class="arithmatex">\(\text{cost}(i, j)\)</span> khi ta di chuyển từ <span class="arithmatex">\(i-1\)</span> sang <span class="arithmatex">\(i\)</span>:</p>
+<ul>
+<li>Khi ta có một đoạn mà <span class="arithmatex">\(l_x = i\)</span>, <span class="arithmatex">\(\text{cost}\)</span> sẽ tăng thêm <span class="arithmatex">\(a_x\)</span>.</li>
+<li>Khi ta có một đoạn mà <span class="arithmatex">\(r_x = i-1\)</span>, <span class="arithmatex">\(\text{cost}\)</span> sẽ giảm đi <span class="arithmatex">\(a_x\)</span>.</li>
+</ul>
+<p>Vậy ta có thể sử dụng một mảng <span class="arithmatex">\(p\)</span>, ở mỗi bước <span class="arithmatex">\(i\)</span> và <span class="arithmatex">\(j &lt; i\)</span>, <span class="arithmatex">\(p[j] = \text{cost}(i, j) + dp[j]\)</span>. Khi ta di chuyển đến <span class="arithmatex">\(i\)</span> mới, ta sẽ tăng <span class="arithmatex">\(p[j]\)</span> thêm <span class="arithmatex">\(a_x\)</span> nếu có đoạn bắt đầu từ <span class="arithmatex">\(i\)</span>, và giảm <span class="arithmatex">\(p[j]\)</span> đi <span class="arithmatex">\(a_x\)</span> nếu có đoạn kết thúc tại <span class="arithmatex">\(i-1\)</span>.</p>
+<p>Ta có thể sử dụng segment tree để duy trì p[j] với mọi j &lt; i, sau đó cập nhật <span class="arithmatex">\(p[i] = \max(p[0], p[1], \ldots, p[i-1])\)</span> (không có \text{cost} ở đây vì <span class="arithmatex">\(\text{cost}(i, i) = 0\)</span>).</p>
+<p><span class="arithmatex">\(p[i]\)</span> ở mỗi bước <span class="arithmatex">\(i\)</span> cũng chính là <span class="arithmatex">\(dp[i]\)</span>, ta cập nhật kết quả tương ứng.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N \log N)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+</details>
+<h3 id="x-tower">X - Tower</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_x">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> phiến đá. Phiến đá thứ <span class="arithmatex">\(i\)</span> nặng <span class="arithmatex">\(w[i]\)</span>, có độ vững chắc <span class="arithmatex">\(s[i]\)</span>, và giá trị <span class="arithmatex">\(v[i]\)</span>. Ta cần xây một cái tháp với một số phiến đá trong này và xếp chồng chúng lên nhau, sao cho với mỗi phiến đá trong tháp, tổng khối lượng các phiến đá nằm trên nó không vượt quá độ vững chắc của nó. Hãy tính giá trị lớn nhất có thể đạt được của tháp.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq N \leq 10^3\)</span></p>
+<p><span class="arithmatex">\(1 \leq w[i], s[i] \leq 10^4\)</span></p>
+<p><span class="arithmatex">\(1 \leq v[i] \leq 10^9\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Ta cần các khối đá phải được sắp xếp theo thứ tự nào đó để ta có thể thực hiện DP, nhưng thứ tự nào? Hóa ra nó sẽ là thứ tự <span class="arithmatex">\(w + s\)</span> tăng dần.</p>
+<ul>
+<li>Xét thứ tự của hai khối đá <span class="arithmatex">\(a\)</span> và <span class="arithmatex">\(b\)</span>.</li>
+<li>Nếu khối đá <span class="arithmatex">\(a\)</span> nằm dưới khối đá <span class="arithmatex">\(b\)</span>, thì độ vững chắc của tháp là <span class="arithmatex">\(s[a] - w[b]\)</span> cho các khối đá khác được đặt lên trên khối đá <span class="arithmatex">\(a\)</span>.</li>
+<li>Nếu khối đá <span class="arithmatex">\(b\)</span> nằm dưới khối đá <span class="arithmatex">\(a\)</span>, thì độ vững chắc của tháp là <span class="arithmatex">\(s[b] - w[a]\)</span> cho các khối đá khác được đặt lên trên khối đá <span class="arithmatex">\(b\)</span>.</li>
+<li>Để có đặt được nhiều khối lượng hơn ở trên khối đá nằm dưới, giá trị nào lớn hơn thì sẽ được chọn. Nghĩa là, nếu ta muốn <span class="arithmatex">\(a\)</span> nằm dưới (nghĩa là xếp sau theo thứ tự), ta sẽ muốn <span class="arithmatex">\(s[a] - w[b] \geq s[b] - w[a] \Rightarrow s[a] + w[a] \geq s[b] + w[b]\)</span>. Vậy tổng nhỏ hơn sẽ được sắp xếp trước.</li>
+</ul>
+<p>Sau khi sắp xếp, gọi <span class="arithmatex">\(dp[i][j]\)</span> là giá trị lớn nhất của tháp khi xét <span class="arithmatex">\(i\)</span> khối đá đầu tiên và độ vững chắc của tháp là <span class="arithmatex">\(j\)</span>. Ta biết rằng khối lượng lớn nhất của tháp là gấp đôi <span class="arithmatex">\(w_{\text{max}}\)</span>.</p>
+<p>Ban đầu, <span class="arithmatex">\(dp[0][0] = 0\)</span>.</p>
+<p>Với mỗi khối đá, ta có thể đặt nó lên tháp hoặc không (nghĩa là đặt dưới cùng đấy). Nếu đặt nó lên tháp, ta cần kiểm tra xem khối đá đó có chịu được cái tháp hiện tại không.</p>
+<div class="arithmatex">\[dp[i][j + w[i]] = \max(dp[i][j + w[i]], dp[i - 1][j] + v[i]), \forall j \leq s[i]\]</div>
+<p>Cuối cùng, kết quả sẽ là <span class="arithmatex">\(\max(dp[n][j])\)</span> với mọi <span class="arithmatex">\(j\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(n \cdot \max(w))\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(\max(w))\)</span> nếu ta chỉ lưu một hàng của <span class="arithmatex">\(dp\)</span>, <span class="arithmatex">\(dp[j]\)</span>.</p>
+</details>
+<h3 id="y-grid-2">Y - Grid 2</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_y">Link đề bài</a></p>
+<p>Cho một bảng <span class="arithmatex">\(H \times W\)</span>. Có <span class="arithmatex">\(N\)</span> ô là tường và bạn không đi vào được. Các ô <span class="arithmatex">\((1, 1)\)</span> và <span class="arithmatex">\((H, W)\)</span> là ô xuất phát và kết thúc, đều là ô trống. Ta bắt đầu từ ô <span class="arithmatex">\((1, 1)\)</span> và cần đi đến ô <span class="arithmatex">\((H, W)\)</span>, mỗi bước chỉ có thể đi sang phải hoặc xuống dưới. Hãy tính số cách đi.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(1 \leq H, W \leq 10^5\)</span></p>
+<p><span class="arithmatex">\(1 \leq N \leq 3000\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Số cách đi từ ô <span class="arithmatex">\((x, y)\)</span> đến ô <span class="arithmatex">\((u, v)\)</span> là <span class="arithmatex">\(\binom{u-x+v-y}{u-x}\)</span> (với <span class="arithmatex">\(x \leq u, y \leq v\)</span> và không có chướng ngại vật trên đường đi, chỉ được di chuyển sang phải hoặc xuống dưới trong bảng).</p>
+<p>Gọi <span class="arithmatex">\(dp[i]\)</span> là số cách đi từ ô <span class="arithmatex">\((1, 1)\)</span> đến ô <span class="arithmatex">\((x[i], y[i])\)</span> mà không đi qua chướng ngại vật nào (nghĩa là không qua ô chướng ngại nào khác ngoài ô thứ <span class="arithmatex">\(i\)</span>).</p>
+<p>Số cách đi từ ô <span class="arithmatex">\((1, 1)\)</span> đến ô <span class="arithmatex">\((x[i], y[i])\)</span> là <span class="arithmatex">\(\binom{x[i]+y[i]-2}{x[i]-1}\)</span>, nhưng ta cần loại bỏ đường đi từ <span class="arithmatex">\((1, 1)\)</span> đến chướng ngại vật bên trong hình chữ nhật <span class="arithmatex">\((1, 1, x[i], y[i])\)</span>, đó là <span class="arithmatex">\(dp[j] \cdot \binom{x[i]-x[j]+y[i]-y[j]}{x[i]-x[j]}\)</span> với mọi <span class="arithmatex">\(j\)</span> sao cho <span class="arithmatex">\(x[j] \leq x[i]\)</span> và <span class="arithmatex">\(y[j] \leq y[i]\)</span>. Ta có thể sắp xếp các ô ban đầu theo <span class="arithmatex">\(x[i]\)</span> để các ô như vậy đến trước ô thứ <span class="arithmatex">\(i\)</span>.</p>
+<p>Thêm ô <span class="arithmatex">\((H, W)\)</span> vào cuối mảng và bắt đầu tính DP, kết quả sẽ là phần tử cuối cùng của mảng <span class="arithmatex">\(dp\)</span>.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(\max(n^2, H+W))\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(\max(n, H+W))\)</span>.</p>
+</details>
+<h3 id="z-frog-3">Z - Frog 3</h3>
+<p><a href="https://atcoder.jp/contests/dp/tasks/dp_z">Link đề bài</a></p>
+<p>Có <span class="arithmatex">\(N\)</span> viên đá, mỗi viên đá <span class="arithmatex">\(i\)</span> có chiều cao <span class="arithmatex">\(h[i]\)</span>, dãy <span class="arithmatex">\(h\)</span> tăng dần. Có một con ếch ở viên đá <span class="arithmatex">\(1\)</span> và muốn nhảy đến viên đá <span class="arithmatex">\(N\)</span>. Từ viên đá <span class="arithmatex">\(i\)</span>, con ếch có thể nhảy đến viên đá <span class="arithmatex">\(i+1, i+2, ..., N\)</span> với chi phí là <span class="arithmatex">\((h[j] - h[i])^2 + C\)</span>, với <span class="arithmatex">\(j\)</span> là viên đá mà con ếch nhảy đến. Hãy tính chi phí nhỏ nhất để con ếch nhảy đến viên đá <span class="arithmatex">\(N\)</span>.</p>
+<p>Giới hạn:</p>
+<p><span class="arithmatex">\(2 \leq N \leq 2 \times 10^5\)</span></p>
+<p><span class="arithmatex">\(1 \leq C \leq 10^{12}\)</span></p>
+<p><span class="arithmatex">\(1 \leq h[1] &lt; h[2] &lt; \cdots &lt; h[N] \leq 10^6\)</span></p>
+<details class="tip">
+<summary>Lời giải</summary>
+<p>Gọi <span class="arithmatex">\(dp[i]\)</span> là chi phí nhỏ nhất để nhảy đến viên đá <span class="arithmatex">\(i\)</span>. Ban đầu, <span class="arithmatex">\(dp[1] = 0\)</span>.</p>
+<div class="arithmatex">\[\begin{align}
+dp[i] &amp;= \min(dp[j] + C + (h[i] - h[j])^2), \forall j &lt; i \\
+&amp;= \min(dp[j] + C + h[i]^2 - 2 \cdot h[i] \cdot h[j] + h[j]^2), \forall j &lt; i \\
+&amp;= C + h[i]^2 + \min(dp[j] - 2 \cdot h[j] \cdot h[i] + h[j]^2), \forall j &lt; i
+\end{align}\]</div>
+<p><span class="arithmatex">\(dp[j] - 2 \cdot h[j] \cdot h[i] + h[j]^2\)</span> có thể viết lại dưới dạng <span class="arithmatex">\((-2 \cdot h[j]) \cdot x + (dp[j] + h[j]^2)\)</span> với <span class="arithmatex">\(x = h[i]\)</span>, tạo thành một đường thẳng <span class="arithmatex">\(y = mx + b\)</span>, <span class="arithmatex">\(m\)</span> cũng được sắp xếp theo thứ tự giảm dần, vậy ta có thể sử dụng Convex Hull Trick để giải bài toán này, bạn có thể tìm hiểu kỹ thuật này <a href="https://codeforces.com/blog/entry/63823">tại đây</a>.</p>
+<p>Khi <span class="arithmatex">\(x = h[i]\)</span>, vì <span class="arithmatex">\(x\)</span> tăng dần, đường thẳng ta cần sẽ có xu hướng nằm sau trong danh sách đường thẳng của bao lồi, vậy ta chỉ cần duy trì một con trỏ và di chuyển nó về phía trước cho đến khi đường thẳng tiếp theo không cho ra kết quả tốt hơn đường thẳng hiện tại.</p>
+<p>Độ phức tạp thời gian của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+<p>Độ phức tạp không gian của thuật toán là <span class="arithmatex">\(O(N)\)</span>.</p>
+</details>
+<h2 id="cai-at">Cài đặt</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Problem</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: center;">Submission</th>
+<th style="text-align: center;">Code</th>
+<th style="text-align: center;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_a">A - Frog 1</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55344258">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-A.cpp">Code</a></td>
+<td style="text-align: center;">07/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_b">B - Frog 2</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55351301">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-B.cpp">Code</a></td>
+<td style="text-align: center;">07/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_c">C - Vacation</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55352036">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-C.cpp">Code</a></td>
+<td style="text-align: center;">07/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_d">D - Knapsack 1</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55829773">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-D.cpp">Code</a></td>
+<td style="text-align: center;">20/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_e">E - Knapsack 2</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55829979">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-E.cpp">Code</a></td>
+<td style="text-align: center;">20/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_f">F - LCS</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55829904">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-F.cpp">Code</a></td>
+<td style="text-align: center;">20/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_g">G - Longest Path</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55890151">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-G.cpp">Code</a></td>
+<td style="text-align: center;">22/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_h">H - Grid 1</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55890231">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-H.cpp">Code</a></td>
+<td style="text-align: center;">23/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_i">I - Coins</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55890266">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-I.cpp">Code</a></td>
+<td style="text-align: center;">23/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_j">J - Sushi</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55915567">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-J.cpp">Code</a></td>
+<td style="text-align: center;">23/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_k">K - Stones</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55915506">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-K.cpp">Code</a></td>
+<td style="text-align: center;">23/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_l">L - Deque</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55915619">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-L.cpp">Code</a></td>
+<td style="text-align: center;">23/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_m">M - Candies</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55937618">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-M.cpp">Code</a></td>
+<td style="text-align: center;">24/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_n">N - Slimes</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55937636">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-N.cpp">Code</a></td>
+<td style="text-align: center;">24/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_o">O - Matching</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55960386">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-O.cpp">Code</a></td>
+<td style="text-align: center;">24/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_p">P - Independent Set</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55961069">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-P.cpp">Code</a></td>
+<td style="text-align: center;">25/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_q">Q - Flowers</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55961153">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-Q.cpp">Code</a></td>
+<td style="text-align: center;">25/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_r">R - Walk</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55961200">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-R.cpp">Code</a></td>
+<td style="text-align: center;">25/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_s">S - Digit Sum</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55983470">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-S.cpp">Code</a></td>
+<td style="text-align: center;">26/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_t">T - Permutation</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55983587">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-T.cpp">Code</a></td>
+<td style="text-align: center;">26/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_u">U - Grouping</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/55983771">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-U.cpp">Code</a></td>
+<td style="text-align: center;">26/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_v">V - Subtree</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/56067485">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-V.cpp">Code</a></td>
+<td style="text-align: center;">27/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_w">W - Intervals</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/56068649">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-W.cpp">Code</a></td>
+<td style="text-align: center;">27/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_x">X - Tower</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/56068829">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-X.cpp">Code</a></td>
+<td style="text-align: center;">27/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_y">Y - Grid 2</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/56071266">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-Y.cpp">Code</a></td>
+<td style="text-align: center;">27/07/2024</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/tasks/dp_z">Z - Frog 3</a></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><a href="https://atcoder.jp/contests/dp/submissions/56073023">Submission</a></td>
+<td style="text-align: center;"><a href="https://github.com/farmerboy95/CompetitiveProgramming/blob/master/AtCoder/AtCoder-DP-Z.cpp">Code</a></td>
+<td style="text-align: center;">27/07/2024</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">28/07/2024 (GMT+07)</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">28/07/2024 (GMT+07)</span>
+  </span>
+
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:tanbaonguyen95@gmail.com">farmerboy95</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/CPBlogs"
+    data-repo-id="R_kgDOIA7h_g"
+    data-category="General"
+    data-category-id="DIC_kwDOIA7h_s4CVvKI"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+        Authors: <span class='git-page-authors git-authors'><a href='mailto:tanbaonguyen95@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 farmerboy
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/farmerboy95" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script
+    data-name="BMC-Widget"
+    data-cfasync="false" 
+    src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+    data-id="farmerboy" 
+    data-description="Support me on Buy me a coffee!" 
+    data-message="" 
+    data-color="#5F7FFF" 
+    data-position="Right" 
+    data-x_margin="18" 
+    data-y_margin="18"
+  ></script>
+
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
