@@ -693,7 +693,7 @@ $|a[i]| \leq 10^9$
 
     Vậy ta có thể sử dụng một mảng $p$, ở mỗi bước $i$ và $j < i$, $p[j] = \text{cost}(i, j) + dp[j]$. Khi ta di chuyển đến $i$ mới, ta sẽ tăng $p[j]$ thêm $a_x$ nếu có đoạn bắt đầu từ $i$, và giảm $p[j]$ đi $a_x$ nếu có đoạn kết thúc tại $i-1$.
 
-    Ta có thể sử dụng segment tree để duy trì p[j] với mọi j < i, sau đó cập nhật $p[i] = \max(p[0], p[1], \ldots, p[i-1])$ (không có \text{cost} ở đây vì $\text{cost}(i, i) = 0$).
+    Ta có thể sử dụng segment tree để duy trì p[j] với mọi j < i, sau đó cập nhật $p[i] = \max(p[0], p[1], \ldots, p[i-1])$ (không có $\text{cost}$ ở đây vì $\text{cost}(i, i) = 0$).
 
     $p[i]$ ở mỗi bước $i$ cũng chính là $dp[i]$, ta cập nhật kết quả tương ứng.
 
