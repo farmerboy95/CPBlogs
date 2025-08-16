@@ -56,6 +56,8 @@ comment: false
     - Phân tích Độ phức tạp
         - [Các ký hiệu tiệm cận](misc/complexity-analysis/asymptotic-notations.md)
         - [Phương pháp Tiềm năng](misc/complexity-analysis/potential-method.md)
+    - Thuật toán
+        - [Tìm kiếm nhị phân và các phương pháp "chia đôi" khác](misc/algorithms/binary-search.md)
     - Cấu trúc dữ liệu
         - [Splay Tree: Một mình anh chấp hết](misc/data-structures/splay-tree.md)
     - Xác suất
