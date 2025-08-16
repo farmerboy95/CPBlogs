@@ -37,6 +37,8 @@ comment: false
         - Đường đi ngắn nhất một nguồn
             - [0-1 BFS](cp-algorithms/graph/sssp/01-bfs.md)
     - Xử lý xâu
+        - Căn bản
+            - [Thuật toán Aho-Corasick](cp-algorithms/string-processing/fundamentals/aho-corasick.md)
         - Các bài toán tiêu biểu
             - [Phân tích biểu thức](cp-algorithms/string-processing/tasks/expression-parsing.md)
     - Khác
