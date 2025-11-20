@@ -27,6 +27,8 @@ Hiện tại mình đang tham gia Competitive Programming với các tài khoả
 
 Ngoài ra, các bạn có thể tìm được các tài khoản của mình trên các trang Competitive Programming tại [clist.by](https://clist.by/coder/farmerboy/).
 
+Mình còn có một kênh YouTube về thuật toán tên là [Algorithms with farmerboy](https://www.youtube.com/@farmerboy95). Content là tiếng Anh nhưng mình có phụ đề tiếng Việt rất đầy đủ nha. Nếu có thể hãy ủng hộ mình bằng cách đăng ký kênh nhé!
+
 Nếu các bạn thấy website này hữu ích, có thể ủng hộ mình thông qua **Buy Me A Coffee** ở duới đây hoặc ở góc phải dưới màn hình.
 
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="farmerboy" data-color="#FFDD00" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
