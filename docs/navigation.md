@@ -23,9 +23,14 @@ comment: false
         - [Ngưng xài rand() - Tổng quan về các trình sinh số ngẫu nhiên trong C++](Codeforces/c++/no-rand.md)
     - Các thuật toán ngẫu nhiên và gần đúng
         - [Làm sao hack các solution ngẫu nhiên và cách ngăn chặn nó](Codeforces/randomized-algorithms/hacking-randomized-solutions.md)
+    - Quy hoạch động (DP - Dynamic Programming)
+        - [SOS DP](Codeforces/dp/sos-dp.md)
 - cp-algorithms
     - Đại số
-        - [Luỹ thừa nhị phân](cp-algorithms/algebra/binary-exponentiation.md)
+        - Cơ bản
+            - [Luỹ thừa nhị phân](cp-algorithms/algebra/fundamentals/binary-exponentiation.md)
+        - Khác
+            - [Duyệt submask](cp-algorithms/algebra/misc/all-submasks.md)
     - Cấu trúc dữ liệu
         - Cơ bản
             - [Minimum Stack / Minimum Queue](cp-algorithms/data-structures/fundamentals/min-stack-min-queue.md)
