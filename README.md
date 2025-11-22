@@ -1,7 +1,9 @@
 # CPBlogs
 CP Blogs for myself in Vietnamese
 
-Installation guide:
+Visit the live website at: https://coding.farmerboy95.com/
+
+Installation guide if you want to run this on your local machine:
 
 ```
 pip3 install mkdocs-material
