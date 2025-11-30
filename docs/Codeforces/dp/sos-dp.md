@@ -119,9 +119,8 @@ $$G[mask] = H2(\sum_{i \subseteq mask} F[i])$$
 
 | Problem | Status | Submission | Code | Date |
 | :---: | :-----------: | :---: | :---: | :---: |
-| [HackerEarth - Special Pairs](https://www.hackerearth.com/problem/algorithm/special-pairs-7/?utm_source=header&utm_medium=search&utm_campaign=he-search) | | | | |
-| [Codeforces - Compatible Numbers](https://codeforces.com/contest/165/problem/E) | | | | |
-| [Codeforces - Vowels](https://codeforces.com/contest/383/problem/E) | | | | |
+| [Codeforces - Compatible Numbers](https://codeforces.com/contest/165/problem/E) | :white_check_mark: | https://codeforces.com/contest/165/submission/350259211 | https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF165-D2-E.cpp | 22/11/2025 |
+| [Codeforces - Vowels](https://codeforces.com/contest/383/problem/E) | :white_check_mark: | https://codeforces.com/contest/383/submission/350913823 | https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF383-D1-E.cpp |27/11/2025 |
 | [Codechef - COVERING](https://www.codechef.com/problems/COVERING) | | | | |
 | [COCI 2011/2012 - KOSARE](http://hsin.hr/coci/archive/2011_2012/contest6_tasks.pdf) | | | | |
 | [HackerRank - Vim War](https://www.hackerrank.com/contests/w16/challenges/vim-war) | | | | |
