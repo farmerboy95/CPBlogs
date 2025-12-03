@@ -119,8 +119,10 @@ $$G[mask] = H2(\sum_{i \subseteq mask} F[i])$$
 
 | Problem | Status | Submission | Code | Date |
 | :---: | :-----------: | :---: | :---: | :---: |
-| [Codeforces - Compatible Numbers](https://codeforces.com/contest/165/problem/E) | :white_check_mark: | https://codeforces.com/contest/165/submission/350259211 | https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF165-D2-E.cpp | 22/11/2025 |
-| [Codeforces - Vowels](https://codeforces.com/contest/383/problem/E) | :white_check_mark: | https://codeforces.com/contest/383/submission/350913823 | https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF383-D1-E.cpp |27/11/2025 |
+| [Codeforces - Compatible Numbers](https://codeforces.com/contest/165/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/165/submission/350259211) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF165-D2-E.cpp) | 22/11/2025 |
+| [Codeforces - Vowels](https://codeforces.com/contest/383/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/383/submission/350913823) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF383-D1-E.cpp) | 27/11/2025 |
+| [CSES - Bit Problem](https://cses.fi/problemset/task/1654) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/CSES/CSES%201654.cpp) | 27/11/2025 |
+| [USACO 2023 February - Problem Setting](http://usaco.org/index.php?page=viewproblem2&cpid=1309) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/USACO/USACO%2023feb-problem-setting.cpp) | 03/12/2025 |
 | [Codechef - COVERING](https://www.codechef.com/problems/COVERING) | | | | |
 | [COCI 2011/2012 - KOSARE](http://hsin.hr/coci/archive/2011_2012/contest6_tasks.pdf) | | | | |
 | [HackerRank - Vim War](https://www.hackerrank.com/contests/w16/challenges/vim-war) | | | | |
