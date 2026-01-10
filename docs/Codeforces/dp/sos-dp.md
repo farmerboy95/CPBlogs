@@ -98,7 +98,6 @@ for (int i = 0; i < N; ++i) {
     // để ý rằng ta tính dp[mask][i] chỉ từ dp[][i-1] nên ta có thể dùng một mảng 1 chiều
     for (int mask = 0; mask < (1<<N); ++mask) {
         if (mask & (1<<i)) {
-            // chỉ có trường hợp này mới cần cập nhật, và vì mask ^ (1<<i) < mask nên không sợ bị trùng
             F[mask] += F[mask ^ (1<<i)];
         }
     }
@@ -123,6 +122,7 @@ $$G[mask] = H2(\sum_{i \subseteq mask} F[i])$$
 | [Codeforces - Vowels](https://codeforces.com/contest/383/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/383/submission/350913823) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF383-D1-E.cpp) | 27/11/2025 |
 | [CSES - Bit Problem](https://cses.fi/problemset/task/1654) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/CSES/CSES%201654.cpp) | 27/11/2025 |
 | [USACO 2023 February - Problem Setting](http://usaco.org/index.php?page=viewproblem2&cpid=1309) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/USACO/USACO%2023feb-problem-setting.cpp) | 03/12/2025 |
+| [Codeforces - Bits And Pieces](https://codeforces.com/contest/1208/problem/F) | :white_check_mark: | [Submission](https://codeforces.com/contest/1208/submission/357263374) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1208-D12-F.cpp) | 10/01/2025 |
 | [Codechef - COVERING](https://www.codechef.com/problems/COVERING) | | | | |
 | [COCI 2011/2012 - KOSARE](http://hsin.hr/coci/archive/2011_2012/contest6_tasks.pdf) | | | | |
 | [HackerRank - Vim War](https://www.hackerrank.com/contests/w16/challenges/vim-war) | | | | |
