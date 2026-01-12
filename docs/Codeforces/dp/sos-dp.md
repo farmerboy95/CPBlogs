@@ -127,7 +127,7 @@ $$G[mask] = H2(\sum_{i \subseteq mask} F[i])$$
 | [COCI 2011/2012 - KOSARE](http://hsin.hr/coci/archive/2011_2012/contest6_tasks.pdf) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/COCI/COCI%2011-Kosare.cpp) | 12/01/2026 |
 | [HackerRank - Vim War](https://www.hackerrank.com/contests/w16/challenges/vim-war) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/HackerRank/HACKR%20vim-war.cpp) | 12/01/2026 |
 | [Codeforces - Jzzhu and Numbers](https://codeforces.com/problemset/problem/449/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/449/submission/357383064) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF449-D1-D-SOS.cpp) | 12/01/2026 |
-| [HackerRank - Subset](https://www.hackerrank.com/contests/countercode/challenges/subset) | | | | |
+| [HackerRank - Subset](https://www.hackerrank.com/contests/countercode/challenges/subset) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/HackerRank/HACKR%20subset.cpp) | 12/01/2026 |
 | [Jersey Number](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=635&page=show_problem&problem=4997) | | | | |
 | [Codechef - BEAUTY](https://www.codechef.com/SNFL16MR/problems/BEAUTY) | | | | |
 | [Codeforces - Pepsi Cola](https://codeforces.com/group/qcIqFPYhVr/contest/203881/problem/K) | | | | |
