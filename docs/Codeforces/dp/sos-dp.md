@@ -124,7 +124,7 @@ $$G[mask] = H2(\sum_{i \subseteq mask} F[i])$$
 | [USACO 2023 February - Problem Setting](http://usaco.org/index.php?page=viewproblem2&cpid=1309) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/USACO/USACO%2023feb-problem-setting.cpp) | 03/12/2025 |
 | [Codeforces - Bits And Pieces](https://codeforces.com/contest/1208/problem/F) | :white_check_mark: | [Submission](https://codeforces.com/contest/1208/submission/357263374) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1208-D12-F.cpp) | 10/01/2026 |
 | [Codechef - COVERING](https://www.codechef.com/problems/COVERING) | :white_check_mark: | [Submission](https://www.codechef.com/viewsolution/1225153608) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20COVERING.cpp) | 11/01/2026 |
-| [COCI 2011/2012 - KOSARE](http://hsin.hr/coci/archive/2011_2012/contest6_tasks.pdf) | | | | |
+| [COCI 2011/2012 - KOSARE](http://hsin.hr/coci/archive/2011_2012/contest6_tasks.pdf) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/COCI/COCI%2011-Kosare.cpp) | 12/01/2026 |
 | [HackerRank - Vim War](https://www.hackerrank.com/contests/w16/challenges/vim-war) | | | | |
 | [Codeforces - Jzzhu and Numbers](https://codeforces.com/problemset/problem/449/D) | | | | |
 | [HackerRank - Subset](https://www.hackerrank.com/contests/countercode/challenges/subset) | | | | |
