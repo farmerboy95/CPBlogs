@@ -128,9 +128,16 @@ $$G[mask] = H2(\sum_{i \subseteq mask} F[i])$$
 | [HackerRank - Vim War](https://www.hackerrank.com/contests/w16/challenges/vim-war) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/HackerRank/HACKR%20vim-war.cpp) | 12/01/2026 |
 | [Codeforces - Jzzhu and Numbers](https://codeforces.com/problemset/problem/449/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/449/submission/357383064) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF449-D1-D-SOS.cpp) | 12/01/2026 |
 | [HackerRank - Subset](https://www.hackerrank.com/contests/countercode/challenges/subset) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/HackerRank/HACKR%20subset.cpp) | 12/01/2026 |
-| [Codechef - Jersey Number](https://www.codechef.com/problems/AMR14F) | :white_check_mark: | [Submission](https://www.codechef.com/viewsolution/1225301141) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20AMR14F.cpp) | 12/01/2026 |
-| [Codechef - BEAUTY](https://www.codechef.com/SNFL16MR/problems/BEAUTY) | | | | |
+| [Codechef - AMR14F](https://www.codechef.com/problems/AMR14F) | :white_check_mark: | [Submission](https://www.codechef.com/viewsolution/1225301141) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20AMR14F.cpp) | 12/01/2026 |
+| [Codechef - BEAUTY](https://www.codechef.com/problems/BEAUTY) | :white_check_mark: | [Submission](https://www.codechef.com/viewsolution/1225440970) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20BEAUTY.cpp) | 13/01/2026 |
 | [Codeforces - Pepsi Cola](https://codeforces.com/group/qcIqFPYhVr/contest/203881/problem/K) | | | | |
-| [HackerEarth - Uchiha and Two Products](https://www.hackerearth.com/problem/algorithm/uchiha-brothers-and-two-products-circuit/) | | | | |
-| [Codechef - STR_FUNC](https://www.codechef.com/IPC15P2B/problems/STR_FUNC) | | | | |
+| [Codeforces - Subsequences Galore](https://codeforces.com/contest/1620/problem/G) | | | | |
+| [Codechef - STR_FUNC](https://www.codechef.com/problems/STR_FUNC) | | | | |
+| [USACO 2022 February - Sleeping in Class](https://usaco.org/index.php?page=viewproblem2&cpid=1213) | | | | |
+| [kilonova - XorTransform](https://kilonova.ro/problems/1832) | | | | |
 | [Codeforces - Varying Kibibits](https://codeforces.com/contest/800/problem/D) | | | | |
+| [JOI 2018 - Snake Escaping](https://oj.uz/problem/view/JOI18_snake_escaping) | | | | |
+| [Codeforces - Wise Men](https://codeforces.com/contest/1326/problem/F2) | | | | |
+
+
+
