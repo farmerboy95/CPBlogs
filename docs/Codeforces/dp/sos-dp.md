@@ -132,7 +132,7 @@ $$G[mask] = H2(\sum_{i \subseteq mask} F[i])$$
 | [Codechef - BEAUTY](https://www.codechef.com/problems/BEAUTY) | :white_check_mark: | [Submission](https://www.codechef.com/viewsolution/1225440970) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20BEAUTY.cpp) | 13/01/2026 |
 | [Codeforces - Pepsi Cola](https://codeforces.com/group/qcIqFPYhVr/contest/203881/problem/K) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF%5BqcIqFPYhVr-203881%5D-K.cpp) | 14/01/2026 |
 | [Codechef - STR_FUNC](https://www.codechef.com/problems/STR_FUNC) | :white_check_mark: | [Submission](https://www.codechef.com/viewsolution/1225444085) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20STR_FUNC.cpp) | 14/01/2026 |
-| [Codeforces - Subsequences Galore](https://codeforces.com/contest/1620/problem/G) | | | | |
+| [Codeforces - Subsequences Galore](https://codeforces.com/contest/1620/problem/G) | :white_check_mark: | [Submission](https://codeforces.com/contest/1620/submission/357892412) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1620-D12-G.cpp) | 15/01/2026 |
 | [USACO 2022 February - Sleeping in Class](https://usaco.org/index.php?page=viewproblem2&cpid=1213) | | | | |
 | [kilonova - XorTransform](https://kilonova.ro/problems/1832) | | | | |
 | [Codeforces - Varying Kibibits](https://codeforces.com/contest/800/problem/D) | | | | |
