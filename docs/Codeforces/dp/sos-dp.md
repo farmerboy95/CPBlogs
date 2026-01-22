@@ -133,9 +133,9 @@ $$G[mask] = H2(\sum_{i \subseteq mask} F[i])$$
 | [Codeforces - Pepsi Cola](https://codeforces.com/group/qcIqFPYhVr/contest/203881/problem/K) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF%5BqcIqFPYhVr-203881%5D-K.cpp) | 14/01/2026 |
 | [Codechef - STR_FUNC](https://www.codechef.com/problems/STR_FUNC) | :white_check_mark: | [Submission](https://www.codechef.com/viewsolution/1225444085) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20STR_FUNC.cpp) | 14/01/2026 |
 | [Codeforces - Subsequences Galore](https://codeforces.com/contest/1620/problem/G) | :white_check_mark: | [Submission](https://codeforces.com/contest/1620/submission/357892412) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF1620-D12-G.cpp) | 15/01/2026 |
+| [Codeforces - Varying Kibibits](https://codeforces.com/contest/800/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/800/submission/359134018) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF800-D1-D.cpp) | 22/01/2026 |
 | [USACO 2022 February - Sleeping in Class](https://usaco.org/index.php?page=viewproblem2&cpid=1213) | | | | |
 | [kilonova - XorTransform](https://kilonova.ro/problems/1832) | | | | |
-| [Codeforces - Varying Kibibits](https://codeforces.com/contest/800/problem/D) | | | | |
 | [JOI 2018 - Snake Escaping](https://oj.uz/problem/view/JOI18_snake_escaping) | | | | |
 | [Codeforces - Wise Men](https://codeforces.com/contest/1326/problem/F2) | | | | |
 
