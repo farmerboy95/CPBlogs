@@ -42,6 +42,8 @@ comment: false
         - Đường đi ngắn nhất một nguồn
             - [0-1 BFS](cp-algorithms/graph/sssp/01-bfs.md)
     - Xử lý xâu
+        - Cơ bản
+            - [String Hashing](cp-algorithms/string-processing/fundamentals/string-hashing.md)
         - Các bài toán tiêu biểu
             - [Phân tích biểu thức](cp-algorithms/string-processing/tasks/expression-parsing.md)
     - Khác
