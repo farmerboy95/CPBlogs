@@ -5,36 +5,38 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/misc/experience/icpc-strategy/">
+        <link rel="canonical" href="https://farmerboy95.github.io/CPBlogs/cp-algorithms/string-processing/fundamentals/string-hashing/">
       
       
-        <link rel="prev" href="../being-better/">
+        <link rel="prev" href="../../../graph/sssp/01-bfs/">
       
+      
+        <link rel="next" href="../../tasks/expression-parsing/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/ico-cpblog.png">
+      <link rel="icon" href="../../../../assets/images/ico-cpblog.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
-        <title>Chiến thuật khi thi ICPC - farmerboy's CP Blogs</title>
+        <title>String Hashing - farmerboy's CP Blogs</title>
       
     
     
   
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
 
     
-  <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+  <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
 
     
   
@@ -51,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -67,7 +69,7 @@
 
     
     
-  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -96,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chien-thuat-khi-thi-icpc" class="md-skip">
+        <a href="#hash-xau" class="md-skip">
           Skip to content
         </a>
       
@@ -110,9 +112,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="farmerboy's CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+    <a href="../../../.." title="farmerboy's CP Blogs" class="md-header__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
       
-  <img src="../../../assets/images/ico-cpblog.png" alt="logo">
+  <img src="../../../../assets/images/ico-cpblog.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -129,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chiến thuật khi thi ICPC
+              String Hashing
             
           </span>
         </div>
@@ -242,7 +244,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../../../.." class="md-tabs__link">
           
   
   
@@ -269,7 +271,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Codeforces/graph/dfs-tree/" class="md-tabs__link">
+        <a href="../../../../Codeforces/graph/dfs-tree/" class="md-tabs__link">
           
   
   
@@ -288,6 +290,8 @@
   
   
   
+    
+  
   
     
     
@@ -295,6 +299,8 @@
   
   
   
+    
+  
   
     
     
@@ -302,11 +308,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../cp-algorithms/algebra/fundamentals/binary-exponentiation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../algebra/fundamentals/binary-exponentiation/" class="md-tabs__link">
           
   
   
@@ -339,7 +347,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Codechef/data-structures/disjoint-sparse-table/" class="md-tabs__link">
+        <a href="../../../../Codechef/data-structures/disjoint-sparse-table/" class="md-tabs__link">
           
   
   
@@ -362,7 +370,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../AtCoder/dp-contest/" class="md-tabs__link">
+        <a href="../../../../AtCoder/dp-contest/" class="md-tabs__link">
           
   
   
@@ -382,7 +390,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../LeetCode/reservoir-sampling/" class="md-tabs__link">
+        <a href="../../../../LeetCode/reservoir-sampling/" class="md-tabs__link">
           
   
   
@@ -398,8 +406,6 @@
   
   
   
-    
-  
   
     
     
@@ -407,13 +413,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../complexity-analysis/asymptotic-notations/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../misc/complexity-analysis/asymptotic-notations/" class="md-tabs__link">
           
   
   
@@ -450,9 +454,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="farmerboy's CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
+    <a href="../../../.." title="farmerboy's CP Blogs" class="md-nav__button md-logo" aria-label="farmerboy's CP Blogs" data-md-component="logo">
       
-  <img src="../../../assets/images/ico-cpblog.png" alt="logo">
+  <img src="../../../../assets/images/ico-cpblog.png" alt="logo">
 
     </a>
     farmerboy's CP Blogs
@@ -529,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -557,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../navigation/" class="md-nav__link">
+      <a href="../../../../navigation/" class="md-nav__link">
         
   
   
@@ -692,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/graph/dfs-tree/" class="md-nav__link">
+      <a href="../../../../Codeforces/graph/dfs-tree/" class="md-nav__link">
         
   
   
@@ -778,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/bit-manipulation/xor-basis/" class="md-nav__link">
+      <a href="../../../../Codeforces/bit-manipulation/xor-basis/" class="md-nav__link">
         
   
   
@@ -864,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/math/floors-ceilings-inequalities/" class="md-nav__link">
+      <a href="../../../../Codeforces/math/floors-ceilings-inequalities/" class="md-nav__link">
         
   
   
@@ -892,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/math/sums-and-expected-value/" class="md-nav__link">
+      <a href="../../../../Codeforces/math/sums-and-expected-value/" class="md-nav__link">
         
   
   
@@ -920,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/math/inclusion-exclusion/" class="md-nav__link">
+      <a href="../../../../Codeforces/math/inclusion-exclusion/" class="md-nav__link">
         
   
   
@@ -948,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/math/permutations-for-beginners/" class="md-nav__link">
+      <a href="../../../../Codeforces/math/permutations-for-beginners/" class="md-nav__link">
         
   
   
@@ -1034,7 +1038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/hashing/blowing-up-unordered-map/" class="md-nav__link">
+      <a href="../../../../Codeforces/hashing/blowing-up-unordered-map/" class="md-nav__link">
         
   
   
@@ -1120,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/c%2B%2B/no-rand/" class="md-nav__link">
+      <a href="../../../../Codeforces/c%2B%2B/no-rand/" class="md-nav__link">
         
   
   
@@ -1206,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/randomized-algorithms/hacking-randomized-solutions/" class="md-nav__link">
+      <a href="../../../../Codeforces/randomized-algorithms/hacking-randomized-solutions/" class="md-nav__link">
         
   
   
@@ -1292,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces/dp/sos-dp/" class="md-nav__link">
+      <a href="../../../../Codeforces/dp/sos-dp/" class="md-nav__link">
         
   
   
@@ -1332,24 +1336,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -1367,7 +1376,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1485,7 +1494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/algebra/fundamentals/binary-exponentiation/" class="md-nav__link">
+      <a href="../../../algebra/fundamentals/binary-exponentiation/" class="md-nav__link">
         
   
   
@@ -1571,7 +1580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/algebra/misc/all-submasks/" class="md-nav__link">
+      <a href="../../../algebra/misc/all-submasks/" class="md-nav__link">
         
   
   
@@ -1715,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/data-structures/fundamentals/min-stack-min-queue/" class="md-nav__link">
+      <a href="../../../data-structures/fundamentals/min-stack-min-queue/" class="md-nav__link">
         
   
   
@@ -1743,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/data-structures/fundamentals/sparse-table/" class="md-nav__link">
+      <a href="../../../data-structures/fundamentals/sparse-table/" class="md-nav__link">
         
   
   
@@ -1829,7 +1838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/data-structures/trees/sqrt-tree/" class="md-nav__link">
+      <a href="../../../data-structures/trees/sqrt-tree/" class="md-nav__link">
         
   
   
@@ -1857,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/data-structures/trees/dsu/" class="md-nav__link">
+      <a href="../../../data-structures/trees/dsu/" class="md-nav__link">
         
   
   
@@ -2001,7 +2010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/graph/sssp/01-bfs/" class="md-nav__link">
+      <a href="../../../graph/sssp/01-bfs/" class="md-nav__link">
         
   
   
@@ -2042,6 +2051,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2052,11 +2063,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
         
           
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
@@ -2077,7 +2088,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2092,6 +2103,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2102,11 +2115,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
@@ -2127,7 +2140,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_4_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2142,10 +2155,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../cp-algorithms/string-processing/fundamentals/string-hashing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    String Hashing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2161,6 +2201,148 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nguồn
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Giới thiệu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tinh-toan-hash-cua-mot-xau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tính toán hash của một xâu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-bai-toan-vi-du" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Các bài toán ví dụ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Các bài toán ví dụ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tim-cac-xau-trung-lap-trong-mot-mang-cac-xau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tìm các xâu trùng lặp trong một mảng các xâu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tinh-hash-nhanh-cua-cac-xau-con-trong-mot-xau-cho-truoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tính hash nhanh của các xâu con trong một xâu cho trước
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ung-dung-cua-hashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ứng dụng của Hashing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ứng dụng của Hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tinh-so-luong-xau-con-khac-nhau-trong-mot-xau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tính số lượng xâu con khác nhau trong một xâu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cai-thien-xac-suat-khong-va-cham" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cải thiện xác suất không va chạm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luyen-tap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Luyện tập
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2231,7 +2413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/string-processing/tasks/expression-parsing/" class="md-nav__link">
+      <a href="../../tasks/expression-parsing/" class="md-nav__link">
         
   
   
@@ -2375,7 +2557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithms/misc/misc/tortoise-and-hare/" class="md-nav__link">
+      <a href="../../../misc/misc/tortoise-and-hare/" class="md-nav__link">
         
   
   
@@ -2526,7 +2708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codechef/data-structures/disjoint-sparse-table/" class="md-nav__link">
+      <a href="../../../../Codechef/data-structures/disjoint-sparse-table/" class="md-nav__link">
         
   
   
@@ -2619,7 +2801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AtCoder/dp-contest/" class="md-nav__link">
+      <a href="../../../../AtCoder/dp-contest/" class="md-nav__link">
         
   
   
@@ -2704,7 +2886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../LeetCode/reservoir-sampling/" class="md-nav__link">
+      <a href="../../../../LeetCode/reservoir-sampling/" class="md-nav__link">
         
   
   
@@ -2732,7 +2914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../LeetCode/search-in-rotated-sorted-array/" class="md-nav__link">
+      <a href="../../../../LeetCode/search-in-rotated-sorted-array/" class="md-nav__link">
         
   
   
@@ -2760,7 +2942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../LeetCode/basic-calculator/" class="md-nav__link">
+      <a href="../../../../LeetCode/basic-calculator/" class="md-nav__link">
         
   
   
@@ -2788,7 +2970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../LeetCode/two-sum/" class="md-nav__link">
+      <a href="../../../../LeetCode/two-sum/" class="md-nav__link">
         
   
   
@@ -2820,29 +3002,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -2860,7 +3037,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2928,7 +3105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../complexity-analysis/asymptotic-notations/" class="md-nav__link">
+      <a href="../../../../misc/complexity-analysis/asymptotic-notations/" class="md-nav__link">
         
   
   
@@ -2956,7 +3133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../complexity-analysis/potential-method/" class="md-nav__link">
+      <a href="../../../../misc/complexity-analysis/potential-method/" class="md-nav__link">
         
   
   
@@ -3042,7 +3219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/binary-search/" class="md-nav__link">
+      <a href="../../../../misc/algorithms/binary-search/" class="md-nav__link">
         
   
   
@@ -3128,7 +3305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data-structures/splay-tree/" class="md-nav__link">
+      <a href="../../../../misc/data-structures/splay-tree/" class="md-nav__link">
         
   
   
@@ -3214,7 +3391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../probability/probability/" class="md-nav__link">
+      <a href="../../../../misc/probability/probability/" class="md-nav__link">
         
   
   
@@ -3242,7 +3419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../probability/expected-value/" class="md-nav__link">
+      <a href="../../../../misc/probability/expected-value/" class="md-nav__link">
         
   
   
@@ -3270,7 +3447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../probability/linearity-of-expectation/" class="md-nav__link">
+      <a href="../../../../misc/probability/linearity-of-expectation/" class="md-nav__link">
         
   
   
@@ -3303,8 +3480,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3315,11 +3490,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5">
         
           
           <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
@@ -3340,7 +3515,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3358,7 +3533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../being-better/" class="md-nav__link">
+      <a href="../../../../misc/experience/being-better/" class="md-nav__link">
         
   
   
@@ -3383,37 +3558,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Chiến thuật khi thi ICPC
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../misc/experience/icpc-strategy/" class="md-nav__link">
         
   
   
@@ -3429,81 +3577,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nguồn
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#loi-tua" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lời tựa
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mo-au" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mở đầu
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chien-thuat-chung" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Chiến thuật chung
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nhung-meo-khac" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Những mẹo khác
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3562,10 +3635,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#loi-tua" class="md-nav__link">
+  <a href="#gioi-thieu" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lời tựa
+        Giới thiệu
       
     </span>
   </a>
@@ -3573,10 +3646,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mo-au" class="md-nav__link">
+  <a href="#tinh-toan-hash-cua-mot-xau" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mở đầu
+        Tính toán hash của một xâu
       
     </span>
   </a>
@@ -3584,10 +3657,77 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#chien-thuat-chung" class="md-nav__link">
+  <a href="#cac-bai-toan-vi-du" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Chiến thuật chung
+        Các bài toán ví dụ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Các bài toán ví dụ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tim-cac-xau-trung-lap-trong-mot-mang-cac-xau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tìm các xâu trùng lặp trong một mảng các xâu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tinh-hash-nhanh-cua-cac-xau-con-trong-mot-xau-cho-truoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tính hash nhanh của các xâu con trong một xâu cho trước
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ung-dung-cua-hashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ứng dụng của Hashing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ứng dụng của Hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tinh-so-luong-xau-con-khac-nhau-trong-mot-xau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tính số lượng xâu con khác nhau trong một xâu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cai-thien-xac-suat-khong-va-cham" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cải thiện xác suất không va chạm
       
     </span>
   </a>
@@ -3595,10 +3735,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nhung-meo-khac" class="md-nav__link">
+  <a href="#luyen-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Những mẹo khác
+        Luyện tập
       
     </span>
   </a>
@@ -3626,46 +3766,261 @@
   
 
 
-<h1 id="chien-thuat-khi-thi-icpc">Chiến thuật khi thi ICPC</h1>
+<h1 id="hash-xau">Hash xâu</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a href="https://lukipuki.github.io/contest-wiki/team-strategy.html">Team strategy - lukipuki.github.io</a></p>
-<h2 id="loi-tua">Lời tựa</h2>
-<p>Trước tiên mình muốn trình bày rằng mình không xem bản thân là một người thành công trong cộng đồng Lập trình thi đấu (Competitive Programming - CP) cũng như không phải là một người có khả năng chiến thuật tốt. Bài viết này là một bài mình dịch từ một bài viết trong blog của một cao thủ trong cộng đồng. Đây là một bài khá hay và mình nghĩ sẽ có ích cho các đội thi.</p>
-<p>Sơ lược về tác giả: <strong>Lukáš Poláček</strong> - hiện đang là nghiên cứu sinh tại KTH Royal Institute of Technology, Thụy Điển (profile này là năm 2016). Anh ấy từng đạt huy chương đồng tại ACM ICPC 2010 và từng có rating cao nhất là 2676 trên TopCoder.</p>
-<p>Sơ lược về kì thi: <strong>ACM-ICPC</strong> (giờ rút gọn thành <strong>ICPC</strong>) là kì thi lập trình thi đấu lớn và uy tín nhất thế giới. Kì thi kéo dài 5 giờ đồng hồ, mỗi đội 3 người sẽ phải suy nghĩ và giải quyết 10-12 bài toán bằng máy tính.</p>
-<p>Sau đây là nội dung bài dịch của mình. Ngôi thứ nhất trong bài là chỉ tác giả, không phải chỉ mình.</p>
-<h2 id="mo-au">Mở đầu</h2>
-<p>Bài viết này nói về chiến thuật khi thi ICPC, nơi mà bạn sẽ cùng 2 đồng đội khác thi đấu trong vòng 5 giờ đồng hồ. Có nhiều kì thi khác nhau với những luật lệ khác nhau nhưng ở đây ta sẽ chỉ tập trung vào ICPC.</p>
-<p>Có 3 yếu tố quan trọng mà bạn cần lưu ý trong suốt kì thi:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../../assets/images/cpalgorithms.ico" data-desc-position="bottom"><img src="../../../../assets/images/cpalgorithms.ico" width="16" height="16"></a> <a href="https://cp-algorithms.com/string/string-hashing.html">String Hashing</a></p>
+<h2 id="gioi-thieu">Giới thiệu</h2>
+<p>Các thuật toán hashing rất hữu ích trong việc giải quyết nhiều bài toán khác nhau.</p>
+<p>Giả sử ta muốn so sánh nhanh các xâu. Ta có thể dùng cách trâu là so sánh từng ký tự của hai xâu, có độ phức tạp thời gian là <span class="arithmatex">\(O(\min(n_1, n_2))\)</span> với <span class="arithmatex">\(n_1\)</span> và <span class="arithmatex">\(n_2\)</span> là độ dài của hai xâu đó. Ta có thể làm tốt hơn. Ý tưởng của hashing là: ta ánh xạ mỗi xâu thành một số nguyên và so sánh các số đó thay vì so sánh xâu. Làm như vậy sẽ cho phép ta giảm thời gian so sánh xâu xuống còn <span class="arithmatex">\(O(1)\)</span>.</p>
+<p>Để thực hiện việc chuyển đổi này, ta cần một <strong>hash function</strong> (hàm băm). Mục tiêu là biến đổi một xâu thành một số nguyên, gọi là <strong>hash</strong> của xâu đó. Nó phải thỏa điều kiện: nếu hai xâu <span class="arithmatex">\(s\)</span> và <span class="arithmatex">\(t\)</span> bằng nhau (<span class="arithmatex">\(s = t\)</span>), thì hash của chúng cũng phải bằng nhau (<span class="arithmatex">\(\text{hash}(s) = \text{hash}(t)\)</span>). Nếu không thỏa mãn điều này, ta sẽ không thể so sánh được các xâu.</p>
+<p>Lưu ý, điều ngược lại không nhất thiết phải đúng. Nếu các hash bằng nhau (<span class="arithmatex">\(\text{hash}(s) = \text{hash}(t)\)</span>), thì các xâu không nhất thiết phải bằng nhau. Ví dụ, một hash function hợp lệ có thể đơn giản là <span class="arithmatex">\(\text{hash}(s) = 0\)</span> với mọi <span class="arithmatex">\(s\)</span>. Ví dụ này hơi xàm vì hàm này sẽ chả có tác dụng gì cả, nhưng nó vẫn là một hash function hợp lệ. Lý do tại sao điều ngược lại không cần phải đúng là vì có vô số xâu. Nếu ta chỉ muốn hash function phân biệt được tất cả các xâu gồm các ký tự thường có độ dài nhỏ hơn 15, thì hash đã không thể nằm trọn trong giới hạn số nguyên 64-bit nữa (ví dụ như unsigned long long), vì có quá nhiều xâu như vậy. Và tất nhiên, ta không muốn so sánh các số nguyên có độ dài tùy ý, vì chính cái việc so sánh đó cũng sẽ có độ phức tạp <span class="arithmatex">\(O(n)\)</span>.</p>
+<p>Vì vậy, thông thường ta muốn hash function ánh xạ các xâu vào các số trong một khoảng cố định <span class="arithmatex">\([0, m)\)</span>, khi đó việc so sánh xâu chỉ là so sánh hai số nguyên có độ dài cố định. Và tất nhiên, ta muốn <span class="arithmatex">\(\text{hash}(s) \neq \text{hash}(t)\)</span> có xác suất rất cao nếu <span class="arithmatex">\(s \neq t\)</span>.</p>
+<p>Nhớ rằng, việc sử dụng hashing sẽ không chính xác 100% được, vì hai xâu hoàn toàn khác nhau có thể có cùng hash (các hash va chạm - collision). Tuy nhiên, trong phần lớn các bài toán, ta có thể bỏ qua một cách an toàn vì xác suất hash giống nhau của hai xâu khác nhau vẫn rất nhỏ. Ta sẽ tìm hiểu một số kỹ thuật để giữ xác suất này ở mức cực thấp.</p>
+<h2 id="tinh-toan-hash-cua-mot-xau">Tính toán hash của một xâu</h2>
+<p>Để hash một xâu <span class="arithmatex">\(s\)</span> có độ dài <span class="arithmatex">\(n\)</span>, ta thường dùng cách sau:</p>
+<div class="arithmatex">\[\begin{align}
+\text{hash}(s) &amp;= s[0] + s[1] \cdot p + s[2] \cdot p^2 + ... + s[n-1] \cdot p^{n-1} \mod m \\
+&amp;= \sum_{i=0}^{n-1} s[i] \cdot p^i \mod m,
+\end{align}\]</div>
+<p>trong đó <span class="arithmatex">\(p\)</span> và <span class="arithmatex">\(m\)</span> là các số dương được chọn trước. Đây được gọi là <strong>polynomial rolling hash function</strong>.</p>
+<p>Ta sẽ thường chọn <span class="arithmatex">\(p\)</span> là một số nguyên tố xấp xỉ bằng số ký tự trong bảng chữ cái đầu vào. Ví dụ, nếu đầu vào chỉ gồm các chữ cái thường trong bảng chữ cái tiếng Anh, ta sẽ chọn <span class="arithmatex">\(p = 31\)</span>. Nếu đầu vào có thể chứa cả chữ hoa và chữ thường, thì <span class="arithmatex">\(p = 53\)</span> là một ý hay. Code trong bài viết này sẽ sử dụng <span class="arithmatex">\(p = 31\)</span>.</p>
+<p><span class="arithmatex">\(m\)</span> thì sao? <span class="arithmatex">\(m\)</span> nên là một số lớn vì xác suất hai xâu ngẫu nhiên có hash giống nhau là khoảng <span class="arithmatex">\(\approx \frac{1}{m}\)</span>. Đôi khi người ta chọn <span class="arithmatex">\(m = 2^{64}\)</span>, vì khi đó việc tràn số của số nguyên 64-bit sẽ giống như phép modulo. Tuy nhiên, ta có một phương pháp có thể tạo ra các xâu có hash giống nhau (không phụ thuộc vào <span class="arithmatex">\(p\)</span>). Vì vậy, trong thực tế, <span class="arithmatex">\(m = 2^{64}\)</span> không được khuyến khích cho lắm. Sẽ hay hơn nếu <span class="arithmatex">\(m\)</span> là một số nguyên tố lớn. Code trong bài viết này sẽ sử dụng <span class="arithmatex">\(m = 10^9+9\)</span>. Đây là một số lớn, nhưng vẫn đủ nhỏ để ta có thể thực hiện phép nhân hai giá trị với số nguyên 64-bit.</p>
+<p>Đây là một ví dụ về việc tính hash của một xâu <span class="arithmatex">\(s\)</span> chỉ chứa các chữ cái thường. Ta chuyển đổi mỗi ký tự của <span class="arithmatex">\(s\)</span> thành một số nguyên. Ở đây ta sử dụng chuyển đổi <span class="arithmatex">\(a \rightarrow 1\)</span>, <span class="arithmatex">\(b \rightarrow 2\)</span>, <span class="arithmatex">\(\dots\)</span>, <span class="arithmatex">\(z \rightarrow 26\)</span>. Lưu ý không nên chuyển đổi <span class="arithmatex">\(a \rightarrow 0\)</span>, vì khi đó hash của các xâu <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(aa\)</span>, <span class="arithmatex">\(aaa\)</span>, <span class="arithmatex">\(\dots\)</span> đều có giá trị là <span class="arithmatex">\(0\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">compute_hash</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">31</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e9</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">hash_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">p_pow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="n">hash_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">hash_value</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">'a'</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p_pow</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="n">p_pow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">p_pow</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hash_value</span><span class="p">;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+</code></pre></div>
+<p>Việc tính trước các lũy thừa của <span class="arithmatex">\(p\)</span> có thể cải thiện thời gian một tí.</p>
+<h2 id="cac-bai-toan-vi-du">Các bài toán ví dụ</h2>
+<h3 id="tim-cac-xau-trung-lap-trong-mot-mang-cac-xau">Tìm các xâu trùng lặp trong một mảng các xâu</h3>
+<p>Cho một mảng <span class="arithmatex">\(n\)</span> xâu <span class="arithmatex">\(s_i\)</span>, mỗi xâu có độ dài không quá <span class="arithmatex">\(m\)</span> ký tự, tìm tất cả các xâu giống nhau và chia chúng thành các nhóm.</p>
+<p>Từ thuật toán hiển nhiên là sắp xếp các xâu, ta sẽ có độ phức tạp thời gian là <span class="arithmatex">\(O(n m \log n)\)</span> trong đó việc sắp xếp yêu cầu <span class="arithmatex">\(O(n \log n)\)</span> phép so sánh và mỗi phép so sánh mất <span class="arithmatex">\(O(m)\)</span> thời gian. Tuy nhiên, bằng cách sử dụng hash, ta giảm thời gian so sánh xuống còn <span class="arithmatex">\(O(1)\)</span>, cho ta một thuật toán chạy trong thời gian <span class="arithmatex">\(O(n m + n \log n)\)</span>.</p>
+<p>Ta tính hash cho mỗi xâu, sắp xếp các hash cùng với chỉ số của chúng trong mảng ban đầu, sau đó nhóm các chỉ số theo các hash giống nhau.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">group_identical_strings</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">hashes</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="n">hashes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">compute_hash</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span><span class="w"> </span><span class="n">i</span><span class="p">};</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">sort</span><span class="p">(</span><span class="n">hashes</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">hashes</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">groups</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">hashes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">first</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">hashes</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">].</span><span class="n">first</span><span class="p">)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="n">groups</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">();</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="n">groups</span><span class="p">.</span><span class="n">back</span><span class="p">().</span><span class="n">push_back</span><span class="p">(</span><span class="n">hashes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">second</span><span class="p">);</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">groups</span><span class="p">;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="tinh-hash-nhanh-cua-cac-xau-con-trong-mot-xau-cho-truoc">Tính hash nhanh của các xâu con trong một xâu cho trước</h3>
+<p>Cho một xâu <span class="arithmatex">\(s\)</span> và các chỉ số <span class="arithmatex">\(i\)</span> và <span class="arithmatex">\(j\)</span>, tìm hash của xâu con <span class="arithmatex">\(s [i \dots j]\)</span>.</p>
+<p>Theo định nghĩa, ta có:</p>
+<div class="arithmatex">\[\text{hash}(s[i \dots j]) = \sum_{k = i}^j s[k] \cdot p^{k-i} \mod m\]</div>
+<p>Nhân với <span class="arithmatex">\(p^i\)</span> ta được:</p>
+<div class="arithmatex">\[\begin{align}
+\text{hash}(s[i \dots j]) \cdot p^i &amp;= \sum_{k = i}^j s[k] \cdot p^k \mod m \\
+&amp;= \text{hash}(s[0 \dots j]) - \text{hash}(s[0 \dots i-1]) \mod m
+\end{align}\]</div>
+<p>Như vậy, nếu biết giá trị hash của mỗi tiền tố của xâu <span class="arithmatex">\(s\)</span>, ta có thể tính hash của bất kỳ xâu con nào bằng công thức này. Vấn đề duy nhất ta gặp phải khi tính toán là ta phải có khả năng chia <span class="arithmatex">\(\text{hash}(s[0 \dots j]) - \text{hash}(s[0 \dots i-1])\)</span> cho <span class="arithmatex">\(p^i\)</span>. Do đó, ta cần tìm nghịch đảo modulo của <span class="arithmatex">\(p^i\)</span> và sau đó thực hiện phép nhân với nghịch đảo này. Ta có thể tính trước nghịch đảo của mọi <span class="arithmatex">\(p^i\)</span>, giúp cho việc tính hash của bất kỳ xâu con nào của <span class="arithmatex">\(s\)</span> trong thời gian <span class="arithmatex">\(O(1)\)</span>.</p>
+<p>Tuy nhiên, có một cách dễ hơn. Trong hầu hết các trường hợp, thay vì tính chính xác hash của xâu con nào đó, chỉ cần tính hash nhân với một lũy thừa nào đó của <span class="arithmatex">\(p\)</span> là đủ. Giả sử ta có hai hash của hai xâu con, một hash được nhân với <span class="arithmatex">\(p^i\)</span> và hash kia được nhân với <span class="arithmatex">\(p^j\)</span>. Nếu <span class="arithmatex">\(i &lt; j\)</span> thì ta nhân hash đầu tiên với <span class="arithmatex">\(p^{j-i}\)</span>, ngược lại, ta nhân hash thứ hai với <span class="arithmatex">\(p^{i-j}\)</span>. Bằng cách này, ta có cả hai hash đều được nhân với cùng một lũy thừa của <span class="arithmatex">\(p\)</span> (là <span class="arithmatex">\(\max(i, j)\)</span>) và bây giờ các hash này có thể được so sánh dễ dàng mà không cần phải chia nữa.</p>
+<h2 id="ung-dung-cua-hashing">Ứng dụng của Hashing</h2>
+<p>Dưới đây là một số ứng dụng điển hình của Hashing:</p>
 <ul>
-<li>Đây là kì thi đồng đội và mỗi team có 3 người.</li>
-<li>Thời gian sử dụng máy tính (computer time) rất là quý giá (5 tiếng dùng máy, nhưng có 15 tiếng suy nghĩ chia ra cho mỗi người). </li>
-<li>Giai đoạn đầu là giai đoạn quan trọng nhất của kì thi.</li>
+<li>Thuật toán Rabin-Karp để tìm kiếm pattern trong xâu trong thời gian <span class="arithmatex">\(O(n)\)</span></li>
+<li>Tính số lượng xâu con khác nhau của một xâu trong <span class="arithmatex">\(O(n^2)\)</span> (ở dưới)</li>
+<li>Tính số lượng xâu con palindrome trong một xâu.</li>
 </ul>
-<h2 id="chien-thuat-chung">Chiến thuật chung</h2>
-<p>Với 3 yếu tố trên, bạn có thể triển khai được một chiến thuật ngon lành. Trong giai đoạn đầu kì thi, người code nhanh nhất đội viết code template và có thể thêm 1 script để biên dịch. Với cách tính điểm của ICPC, giải bài dễ trước là tối ưu nhất, vì vậy, 2 người còn lại có thể đọc sơ qua cả tất cả các bài thi để tìm bài dễ (1 người đọc từ bài A xuống, một người đọc từ bài J lên, ví dụ thế). Khi xác định được bài dễ rồi (giải được trong khoảng 10-15 phút chẳng hạn), đưa bài đó và mô tả nhanh bài đó cho người code nhanh nhất đội.</p>
-<p>Hai người còn lại tiếp tục đọc lướt qua đề thi. Nếu có bài dễ hơn bài trước đó (giải được trong 5 phút), thì ưu tiên bài dễ hơn. Sau khi đọc xong toàn bộ đề thi, 2 người không code trong đội nên trao đổi về các bài họ đã đọc.</p>
-<p><strong>Thứ không nên xảy ra trong giai đoạn đầu</strong>: Sau khi đọc bài đầu tiên, mình thấy mình giải được. Mình không đọc các bài khác và cố gắng giải bài đầu trong 2 tiếng mà không xong, trong khi đề có 2 bài dễ hơn mà mình không đọc. Đó là một trong các lý do mà việc đọc hết đề và trao đổi với nhau trong giai đoạn đầu là cực kỳ quan trong.</p>
-<p>Team tiếp tục giải các bài. Nếu có người biết cách giải 1 bài nào đó và không ai dùng máy tính, người đó nên làm bài đó luôn. Ngược lại, nếu có người đang code, chịu khó chuẩn bị solution và code sơ bộ trên giấy.</p>
-<p>Chiến thuật tốt cần phải được áp dụng dựa theo kĩ năng của từng bạn trong đội. Ví dụ, một người giỏi nghĩ thuật nhưng code không tốt thì nên làm việc chủ yếu trên giấy, sau đó giải thích solution của mình cho người khác để họ code. Team nên train thường xuyên để tìm hiểu điểm mạnh, yếu của nhau và sau đó dùng những điểm đó để xây dựng chiến thuật tốt nhất cho đội. Ngay cả việc thiếu 1 bạn thì 2 người còn lại cũng train được. Ngoài ra, nên nhờ huấn luyện viên của bạn theo dõi tiến độ train của đội để đưa ra những lời khuyên phù hợp.</p>
-<h2 id="nhung-meo-khac">Những mẹo khác</h2>
-<p>Giờ bạn đã thấm nhuần chiến thuật chung, đến những mẹo khác thôi.</p>
-<ul>
-<li>Nếu không chắc về solution của mình, hãy trao đổi với đồng đội. Nếu không có hướng đi, giải thích vấn đề với đồng đội.</li>
-<li>Nếu có thời gian, viết code ra giấy trước khi code trên máy để tiết kiệm thời gian dùng máy. Không cần code quá chi tiết, nên tập trung vào các phần quan trong nhất của code thôi.</li>
-<li>Không nên debug trên máy. In code ra với một số debugging output và debug trên giấy.</li>
-<li>Nếu không tìm ra được hướng làm, nên đi dạo hoặc đi vệ sinh. Đôi khi ý tưởng lại đến khi bạn giải quyết được nỗi buồn.</li>
-<li>Nếu cứ bị Wrong Answer, để bài đó đấy và giải bài khác. Có thể sau đó bạn sẽ tìm được cách giải bài cũ. Đừng ngại code lại toàn bộ, thường chỉ mất tầm 15 phút để code lại hết cả bài nếu như bạn hiểu cách giải bài đó.</li>
-<li>Nếu sinh được test to, hoặc test nhỏ mà bạn biết chính xác đáp án thì nên làm, cẩn thận một chút còn hơn là mất 20 phút penalty.</li>
-<li>Làm xong bài nào thì vứt hết các giấy tờ liên quan đến bài đó đi. Bạn sẽ không bị mất công tìm thứ mình muốn trong một đống bùi nhùi giấy tờ trên bàn, tiết kiệm thời gian sẽ tốt hơn.</li>
-<li>Thường xuyên xem scoreboard. Nếu có bài nhiều đội làm được thì nó hẳn là bài dễ.</li>
-<li>Viết ra thông tin các submission của đội trên giấy, viết thêm ra xem ai làm bài gì.</li>
-<li>Thường xuyên yêu cầu in code, in mỗi khi submit bài (ở đây mình cũng không hiểu ý là in code ra hay là in thông tin biến ra màn hình console để tiện theo dõi).</li>
-<li>Đừng quên chiến thuật lúc gần hết thời gian. Khi gần hết giờ, không nên mỗi người làm một bài mà nên tập trung 3 người làm 1 bài thôi. Đảm bảo ai cũng đang làm gì đó hữu ích (ví dụ 1 người kiểm tra code cùng với người code, 1 người nghĩ test hiểm). Mình biết việc này rất khó làm và không phải ai cũng đủ dũng cảm để bỏ qua những bài còn lại mà mình biết làm nhưng có khả năng bạn sẽ tạch cả 3 bài, hoặc bạn có thể chọn làm 1 bài chắc kèo, tùy bạn thôi.</li>
-<li>Trong vài trường hợp bạn nên cho 1 người thử giải 1 bài khó trong 2-3 tiếng trước khi hết giờ để tránh trường hợp sau. Giả sử mọi thứ đang đi đúng hướng và bạn dùng máy tính, giải bài thứ 8 của đội sau 4 tiếng. Có 2 bài khó nhưng bạn cần 1 giờ nghĩ và 45 phút code. 3 người các bạn có 3 giờ suy nghĩ trong 1 tiếng thời gian thực, rõ ràng nhiều hơn 1 giờ 45 phút, nhưng 1 tiếng suy nghĩ không thể chia ra cho 3 người được, và bạn phải chờ solution của 1 bạn khác trước khi code.</li>
-<li>Chỉ submit bừa khi bạn thấy giải được 1 bài quan trọng hơn penalty và bạn thấy code của bạn có khả năng Accepted. Thường bạn sẽ submit bừa trong vòng 30 phút cuối. Cơ mà nếu đội bạn có penalty không tốt ngay từ đầu rồi (sai rất nhiều trong giai đoạn đầu) thì penalty không quá quan trọng nữa, cứ submit thôi (thời gian submit bừa sẽ được tăng lên, 1-2 tiếng chẳng hạn). </li>
-<li>Thi 5 tiếng, nhưng train 5 tiếng thì hết cả ngày của bạn rồi. Bạn có thể train 3.5 đến 4 tiếng thôi, và hiệu quả thì như nhau. Ngay cả vận động viên marathon cũng chỉ chạy 30 km mỗi ngày trong khi cuộc đua thật dài 42 km.</li>
-</ul>
+<h3 id="tinh-so-luong-xau-con-khac-nhau-trong-mot-xau">Tính số lượng xâu con khác nhau trong một xâu</h3>
+<p>Cho một xâu <span class="arithmatex">\(s\)</span> có độ dài <span class="arithmatex">\(n\)</span>, chỉ gồm các chữ cái tiếng Anh thường, tìm số lượng xâu con khác nhau trong xâu này.</p>
+<p>Để giải quyết bài toán này, ta duyệt qua tất cả các độ dài xâu con <span class="arithmatex">\(l = 1 \dots n\)</span>. Với mỗi độ dài xâu con <span class="arithmatex">\(l\)</span>, ta xây dựng một mảng các hash của tất cả các xâu con có độ dài <span class="arithmatex">\(l\)</span> nhân với cùng một lũy thừa của <span class="arithmatex">\(p\)</span>. Số lượng phần tử khác nhau trong mảng bằng với số lượng xâu con phân biệt có độ dài <span class="arithmatex">\(l\)</span> trong xâu. Số lượng này được cộng vào đáp án cuối cùng.</p>
+<p>Để tiện hơn, ta sẽ sử dụng <span class="arithmatex">\(h[i]\)</span> là hash của tiền tố có <span class="arithmatex">\(i\)</span> ký tự, và định nghĩa <span class="arithmatex">\(h[0] = 0\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">count_unique_substrings</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">31</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e9</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_pow</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">p_pow</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="n">p_pow</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">p_pow</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">h</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">'a'</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p_pow</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">l</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">hs</span><span class="p">;</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">l</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">            </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">cur_h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">l</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">            </span><span class="n">cur_h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">cur_h</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p_pow</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="mi">-1</span><span class="p">])</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">            </span><span class="n">hs</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">cur_h</span><span class="p">);</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">        </span><span class="n">cnt</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">hs</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">cnt</span><span class="p">;</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="p">}</span>
+</code></pre></div>
+<p>Lưu ý rằng, <span class="arithmatex">\(O(n^2)\)</span> không phải là độ phức tạp thời gian tốt nhất có thể cho bài toán này. Ta có thể dùng Suffix Arrays với độ phức tạp <span class="arithmatex">\(O(n \log n)\)</span>, và thậm chí là <span class="arithmatex">\(O(n)\)</span> với Suffix Tree hoặc Suffix Automaton.</p>
+<h2 id="cai-thien-xac-suat-khong-va-cham">Cải thiện xác suất không va chạm</h2>
+<p>Thường thì cách polynomial hash ở trên khá là tốt rồi, và đa số trường hợp sẽ không xảy ra va chạm. Tuy nhiên, xác suất va chạm vẫn là <span class="arithmatex">\(\approx \frac{1}{m}\)</span>. Với <span class="arithmatex">\(m = 10^9 + 9\)</span>, xác suất này là rất thấp, khoảng <span class="arithmatex">\(10^{-9}\)</span>. Nhưng nhớ rằng, xác suất đó tồn tại khi ta chỉ thực hiện một phép so sánh. Nhưng nếu ta so sánh một xâu <span class="arithmatex">\(s\)</span> với <span class="arithmatex">\(10^6\)</span> xâu khác nhau, thì xác suất ít nhất một va chạm xảy ra sẽ tăng lên khoảng <span class="arithmatex">\(\approx 10^{-3}\)</span>. Và nếu ta muốn so sánh <span class="arithmatex">\(10^6\)</span> xâu khác nhau với nhau (ví dụ: bằng cách đếm có bao nhiêu xâu duy nhất tồn tại), thì xác suất ít nhất một va chạm xảy ra đã là <span class="arithmatex">\(\approx 1\)</span>. Điều này có nghĩa là gần như chắc chắn rằng bài toán này sẽ kết thúc với một va chạm và trả về kết quả sai.</p>
+<p>Có một mẹo rất đơn giản để có xác suất tốt hơn. Ta có thể tính hai hash khác nhau cho mỗi xâu (bằng cách sử dụng hai <span class="arithmatex">\(p\)</span> khác nhau, và/hoặc <span class="arithmatex">\(m\)</span> khác nhau, và so sánh các cặp này thay thế. Nếu <span class="arithmatex">\(m\)</span> khoảng <span class="arithmatex">\(10^9\)</span> cho cả hai hash function thì nó sẽ gần như tương đương với việc có một hash function với <span class="arithmatex">\(m \approx 10^{18}\)</span>. Khi so sánh <span class="arithmatex">\(10^6\)</span> xâu với nhau, xác suất ít nhất một va chạm xảy ra bây giờ giảm xuống còn <span class="arithmatex">\(\approx 10^{-6}\)</span>.</p>
+<h2 id="luyen-tap">Luyện tập</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Problem</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: center;">Submission</th>
+<th style="text-align: center;">Code</th>
+<th style="text-align: center;">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="https://codeforces.com/contest/271/problem/D">Good Substrings - Codeforces</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://www.spoj.com/problems/NHAY/">A Needle in the Haystack - SPOJ</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://open.kattis.com/problems/hashing">String Hashing - Kattis</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://codeforces.com/problemset/problem/154/C">Double Profiles - Codeforces</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://codeforces.com/problemset/problem/126/B">Password - Codeforces</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://www.spoj.com/problems/SUB_PROB/">SUB_PROB - SPOJ</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.codechef.com/problems/INSQ15_A">INSQ15_A</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://www.spoj.com/problems/ADACLEAN/">SPOJ - Ada and Spring Cleaning</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://codeforces.com/gym/101466/problem/E">GYM - Text Editor</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3163">12012 - Detection of Extraterrestrial</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://codeforces.com/contest/727/problem/E">Codeforces - Games on a CD</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=2955">UVA 11855 - Buzzwords</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://codeforces.com/contest/752/problem/D">Codeforces - Santa Claus and a Palindrome</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://codeforces.com/contest/825/problem/F">Codeforces - String Compression</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://codeforces.com/contest/835/problem/D">Codeforces - Palindromic Characteristics</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://www.spoj.com/problems/CF25E/">SPOJ - Test</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://codeforces.com/contest/7/problem/D">Codeforces - Palindrome Degree</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="http://codeforces.com/contest/19/problem/C">Codeforces - Deletion of Repeats</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.hackerrank.com/contests/womens-codesprint-5/challenges/gift-boxes">HackerRank - Gift Boxes</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -3688,7 +4043,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom" title="14 tháng 4, 2023 10:53:01 +07">14/04/2023 (SCN4T+0700)</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom" title="19 tháng 2, 2026 18:57:09 +07">19/02/2026 (SCN2T+0700)</span>
   </span>
 
     
@@ -3698,7 +4053,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom" title="14 tháng 4, 2023 10:53:01 +07">14/04/2023 (SCN4T+0700)</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom" title="19 tháng 2, 2026 18:57:09 +07">19/02/2026 (SCN2T+0700)</span>
   </span>
 
     
@@ -3713,7 +4068,7 @@
     </span>
     <nav>
       
-        <a href="mailto:jerry.stone.manutd@gmail.com">farmerboy95</a>
+        <a href="mailto:tanbaonguyen95@gmail.com">farmerboy95</a>
     </nav>
   </span>
 
@@ -3769,7 +4124,7 @@
   
     <div class="md-source-date">
       <small>
-        Authors: <span class="git-page-authors git-authors"><a href="mailto:jerry.stone.manutd@gmail.com">farmerboy95</a></span>
+        Authors: <span class="git-page-authors git-authors"><a href="mailto:tanbaonguyen95@gmail.com">farmerboy95</a></span>
       </small>
     </div>
   
@@ -3836,11 +4191,11 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
   
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
       
