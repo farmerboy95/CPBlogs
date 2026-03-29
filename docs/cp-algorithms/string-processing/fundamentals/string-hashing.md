@@ -165,13 +165,13 @@ Có một mẹo rất đơn giản để có xác suất tốt hơn. Ta có th�
 | [INSQ15_A](https://www.codechef.com/problems/INSQ15_A) | :white_check_mark: | [Submission](https://www.codechef.com/viewsolution/1238683797) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20INSQ15_A.cpp) | 20/02/2026 |
 | [SPOJ - Ada and Spring Cleaning](https://www.spoj.com/problems/ADACLEAN/) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20ADACLEAN.cpp) | 20/02/2026 |
 | [GYM - Text Editor](https://codeforces.com/gym/101466/problem/E) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF101466-Gym-E.cpp) | 21/02/2026 |
+| [Codeforces - Palindrome Degree](https://codeforces.com/contest/7/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/7/submission/368616684) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF7-D12-D.cpp) | 28/03/2026 |
+| [Codeforces - Palindromic Characteristics](https://codeforces.com/contest/835/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/835/submission/368616930) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF835-D2-D.cpp) | 28/03/2026 |
 | [12012 - Detection of Extraterrestrial](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3163) | | | | |
 | [Codeforces - Games on a CD](https://codeforces.com/contest/727/problem/E) | | | | |
 | [UVA 11855 - Buzzwords](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2955) | | | | |
 | [Codeforces - Santa Claus and a Palindrome](https://codeforces.com/contest/752/problem/D) | | | | |
 | [Codeforces - String Compression](https://codeforces.com/contest/825/problem/F) | | | | |
-| [Codeforces - Palindromic Characteristics](https://codeforces.com/contest/835/problem/D) | | | | |
 | [SPOJ - Test](https://www.spoj.com/problems/CF25E/) | | | | |
-| [Codeforces - Palindrome Degree](https://codeforces.com/contest/7/problem/D) | | | | |
 | [Codeforces - Deletion of Repeats](https://codeforces.com/contest/19/problem/C) | | | | |
 | [HackerRank - Gift Boxes](https://www.hackerrank.com/contests/womens-codesprint-5/challenges/gift-boxes) | | | | |
