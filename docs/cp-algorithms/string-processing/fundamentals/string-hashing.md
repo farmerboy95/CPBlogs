@@ -171,7 +171,7 @@ Có một mẹo rất đơn giản để có xác suất tốt hơn. Ta có th�
 | [Codeforces - Test](https://codeforces.com/contest/25/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/25/submission/369053343) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF25-D2-E.cpp) | 31/03/2026 |
 | [HackerRank - Gift Boxes](https://www.hackerrank.com/contests/womens-codesprint-5/challenges/gift-boxes) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/HackerRank/HACKR%20gift-boxes.cpp) | 01/04/2026 |
 | [Codeforces - Santa Claus and a Palindrome](https://codeforces.com/contest/752/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/752/submission/369291958) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF752-D2-D.cpp) | 01/04/2026 |
+| [Codeforces - Games on a CD](https://codeforces.com/contest/727/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/727/submission/369293345) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF727-D2-E.cpp) | 01/04/2026 |
 | [12012 - Detection of Extraterrestrial](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3163) | | | | |
-| [Codeforces - Games on a CD](https://codeforces.com/contest/727/problem/E) | | | | |
 | [Codeforces - Deletion of Repeats](https://codeforces.com/contest/19/problem/C) | | | | |
 | [SUB_PROB - SPOJ](https://www.spoj.com/problems/SUB_PROB/) | | | | |
