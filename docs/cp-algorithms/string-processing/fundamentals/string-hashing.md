@@ -161,17 +161,17 @@ Có một mẹo rất đơn giản để có xác suất tốt hơn. Ta có th�
 | [String Hashing - Kattis](https://open.kattis.com/problems/hashing) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Kattis/kattis%20hashing.cpp) | 19/02/2026 |
 | [Double Profiles - Codeforces](https://codeforces.com/contest/154/problem/C) | :white_check_mark: | [Submission](https://codeforces.com/contest/154/submission/363710542) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF154-D1-C.cpp) | 20/02/2026 |
 | [Password - Codeforces](https://codeforces.com/contest/126/problem/B) | :white_check_mark: | [Submission](https://codeforces.com/contest/126/submission/363712004) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF126-D1-B.cpp) | 20/02/2026 |
-| [SUB_PROB - SPOJ](https://www.spoj.com/problems/SUB_PROB/) | | | | |
 | [INSQ15_A](https://www.codechef.com/problems/INSQ15_A) | :white_check_mark: | [Submission](https://www.codechef.com/viewsolution/1238683797) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codechef/CODECHEF%20INSQ15_A.cpp) | 20/02/2026 |
 | [SPOJ - Ada and Spring Cleaning](https://www.spoj.com/problems/ADACLEAN/) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20ADACLEAN.cpp) | 20/02/2026 |
 | [GYM - Text Editor](https://codeforces.com/gym/101466/problem/E) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF101466-Gym-E.cpp) | 21/02/2026 |
 | [Codeforces - Palindrome Degree](https://codeforces.com/contest/7/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/7/submission/368616684) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF7-D12-D.cpp) | 28/03/2026 |
 | [Codeforces - Palindromic Characteristics](https://codeforces.com/contest/835/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/835/submission/368616930) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF835-D2-D.cpp) | 28/03/2026 |
+| [UVA 11855 - Buzzwords](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2955) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%2011855.cpp) | 31/03/2026 |
+| [Codeforces - String Compression](https://codeforces.com/contest/825/problem/F) | :white_check_mark: | [Submission](https://codeforces.com/contest/825/submission/369096679) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF825-D12-F.cpp) | 01/04/2026 |
+| [Codeforces - Test](https://codeforces.com/contest/25/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/25/submission/369053343) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF25-D2-E.cpp) | 31/03/2026 |
+| [HackerRank - Gift Boxes](https://www.hackerrank.com/contests/womens-codesprint-5/challenges/gift-boxes) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/HackerRank/HACKR%20gift-boxes.cpp) | 01/04/2026 |
 | [12012 - Detection of Extraterrestrial](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3163) | | | | |
 | [Codeforces - Games on a CD](https://codeforces.com/contest/727/problem/E) | | | | |
-| [UVA 11855 - Buzzwords](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2955) | | | | |
 | [Codeforces - Santa Claus and a Palindrome](https://codeforces.com/contest/752/problem/D) | | | | |
-| [Codeforces - String Compression](https://codeforces.com/contest/825/problem/F) | | | | |
-| [SPOJ - Test](https://www.spoj.com/problems/CF25E/) | | | | |
 | [Codeforces - Deletion of Repeats](https://codeforces.com/contest/19/problem/C) | | | | |
-| [HackerRank - Gift Boxes](https://www.hackerrank.com/contests/womens-codesprint-5/challenges/gift-boxes) | | | | |
+| [SUB_PROB - SPOJ](https://www.spoj.com/problems/SUB_PROB/) | | | | |
