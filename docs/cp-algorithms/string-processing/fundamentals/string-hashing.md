@@ -172,6 +172,6 @@ Có một mẹo rất đơn giản để có xác suất tốt hơn. Ta có th�
 | [HackerRank - Gift Boxes](https://www.hackerrank.com/contests/womens-codesprint-5/challenges/gift-boxes) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/HackerRank/HACKR%20gift-boxes.cpp) | 01/04/2026 |
 | [Codeforces - Santa Claus and a Palindrome](https://codeforces.com/contest/752/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/752/submission/369291958) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF752-D2-D.cpp) | 01/04/2026 |
 | [Codeforces - Games on a CD](https://codeforces.com/contest/727/problem/E) | :white_check_mark: | [Submission](https://codeforces.com/contest/727/submission/369293345) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF727-D2-E.cpp) | 01/04/2026 |
+| [Codeforces - Deletion of Repeats](https://codeforces.com/contest/19/problem/C) | :white_check_mark: | [Submission](https://codeforces.com/contest/19/submission/369298463) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF19-D12-C.cpp) | 02/04/2026 |
 | [12012 - Detection of Extraterrestrial](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3163) | | | | |
-| [Codeforces - Deletion of Repeats](https://codeforces.com/contest/19/problem/C) | | | | |
 | [SUB_PROB - SPOJ](https://www.spoj.com/problems/SUB_PROB/) | | | | |
