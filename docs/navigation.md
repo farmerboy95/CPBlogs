@@ -44,6 +44,7 @@ comment: false
     - Xử lý xâu
         - Cơ bản
             - [String Hashing](cp-algorithms/string-processing/fundamentals/string-hashing.md)
+            - [Thuật toán Rabin-Karp để so sánh xâu](cp-algorithms/string-processing/fundamentals/rabin-karp.md)
         - Các bài toán tiêu biểu
             - [Phân tích biểu thức](cp-algorithms/string-processing/tasks/expression-parsing.md)
     - Khác
