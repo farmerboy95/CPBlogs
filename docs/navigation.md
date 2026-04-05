@@ -45,6 +45,7 @@ comment: false
         - Cơ bản
             - [String Hashing](cp-algorithms/string-processing/fundamentals/string-hashing.md)
             - [Thuật toán Rabin-Karp để so sánh xâu](cp-algorithms/string-processing/fundamentals/rabin-karp.md)
+            - [Hàm tiền tố - Thuật toán Knuth–Morris–Pratt (KMP)](cp-algorithms/string-processing/fundamentals/kmp.md)
         - Các bài toán tiêu biểu
             - [Phân tích biểu thức](cp-algorithms/string-processing/tasks/expression-parsing.md)
     - Khác
