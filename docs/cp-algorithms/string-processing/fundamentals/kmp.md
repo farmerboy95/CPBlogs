@@ -129,11 +129,11 @@ Theo định nghĩa, tiền tố có độ dài $\pi[i]$ của xâu $s$ xuất h
 Như vậy tại vị trí $i$ kết thúc tiền tố có độ dài $\pi[i]$, tiền tố có độ dài $\pi[\pi[i] - 1]$, tiền tố $\pi[\pi[\pi[i] - 1] - 1]$, và cứ tiếp tục cho đến khi chỉ số bằng $0$. Do đó ta có thể tính đáp án theo cách sau.
 
 ```cpp
-vector<int> ans(n + 1);
+vector<int> ans(n + 1); // ans[i] là số lần tiền tố độ dài i xuất hiện trong xâu s
 for (int i = 0; i < n; i++)
     ans[pi[i]]++;
 for (int i = n-1; i > 0; i--)
-    ans[pi[i]-1] += ans[i];
+    ans[pi[i-1]] += ans[i];
 for (int i = 0; i <= n; i++)
     ans[i]++;
 ```
