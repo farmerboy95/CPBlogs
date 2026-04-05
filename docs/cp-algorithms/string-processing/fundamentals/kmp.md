@@ -6,7 +6,7 @@ Cho một xâu $s$ độ dài $n$. **Hàm tiền tố** của xâu này được
 
 Về mặt toán học, định nghĩa của hàm tiền tố có thể được viết như sau:
 
-$\pi[i] = \max_ {k = 0 \dots i} \{k : s[0 \dots k-1] = s[i-(k-1) \dots i] \}$
+$$\pi[i] = \max_ {k = 0 \dots i} \{k : s[0 \dots k-1] = s[i-(k-1) \dots i] \}$$
 
 Ví dụ, hàm tiền tố của xâu "abcabcd" là $[0, 0, 0, 1, 2, 3, 0]$, và hàm tiền tố của xâu "aabaaab" là $[0, 1, 0, 1, 2, 2, 3]$.
 
@@ -41,7 +41,7 @@ Thật vậy, nếu ngược lại, $\pi[i + 1] \gt \pi[i] + 1$, thì ta có th�
 Hình minh họa sau đây cho thấy mâu thuẫn này.
 Hậu tố thực sự dài nhất tại vị trí $i$ mà cũng là tiền tố có độ dài $2$, và tại vị trí $i+1$ nó có độ dài $4$. Do đó xâu $s_0 ~ s_1 ~ s_2 ~ s_3$ bằng xâu $s_{i-2} ~ s_{i-1} ~ s_i ~ s_{i+1}$, nghĩa là các xâu $s_0 ~ s_1 ~ s_2$ và $s_{i-2} ~ s_{i-1} ~ s_i$ cũng bằng nhau, vì vậy $\pi[i]$ phải bằng $3$.
 
-$\underbrace{\overbrace{s_0 ~ s_1}^{\pi[i] = 2} ~ s_2 ~ s_3}_{\pi[i+1] = 4} ~ \dots ~ \underbrace{s_{i-2} ~ \overbrace{s_{i-1} ~ s_{i}}^{\pi[i] = 2} ~ s_{i+1}}_{\pi[i+1] = 4}$
+$$\underbrace{\overbrace{s_0 ~ s_1}^{\pi[i] = 2} ~ s_2 ~ s_3}_{\pi[i+1] = 4} ~ \dots ~ \underbrace{s_{i-2} ~ \overbrace{s_{i-1} ~ s_{i}}^{\pi[i] = 2} ~ s_{i+1}}_{\pi[i+1] = 4}$$
 
 Như vậy khi chuyển sang vị trí tiếp theo, giá trị của hàm tiền tố có thể tăng thêm một, giữ nguyên, hoặc giảm đi một lượng nào đó. Thực tế này đã cho phép ta giảm độ phức tạp của thuật toán xuống $O(n^2)$, vì trong mỗi bước hàm tiền tố chỉ có thể tăng tối đa một đơn vị. Tổng cộng hàm có thể tăng tối đa $n$ bước, và do đó cũng chỉ có thể giảm tổng cộng $n$ bước. Điều này có nghĩa là ta chỉ cần thực hiện $O(n)$ phép so sánh xâu, và đạt được độ phức tạp $O(n^2)$.
 
@@ -51,18 +51,18 @@ Như vậy khi chuyển sang vị trí tiếp theo, giá trị của hàm tiền
 
 Vậy hãy tính giá trị của hàm tiền tố $\pi$ cho $i + 1$. Nếu $s[i+1] = s[\pi[i]]$, thì ta có thể khẳng định chắc chắn rằng $\pi[i+1] = \pi[i] + 1$, vì ta đã biết rằng hậu tố tại vị trí $i$ có độ dài $\pi[i]$ bằng với tiền tố có độ dài $\pi[i]$. Điều này được minh họa lại bằng một ví dụ.
 
-$\underbrace{\overbrace{s_0 ~ s_1 ~ s_2}^{\pi[i]} ~ \overbrace{s_3}^{s_3 = s_{i+1}}}_{\pi[i+1] = \pi[i] + 1} ~ \dots ~ \underbrace{\overbrace{s_{i-2} ~ s_{i-1} ~ s_{i}}^{\pi[i]} ~ \overbrace{s_{i+1}}^{s_3 = s_{i + 1}}}_{\pi[i+1] = \pi[i] + 1}$
+$$\underbrace{\overbrace{s_0 ~ s_1 ~ s_2}^{\pi[i]} ~ \overbrace{s_3}^{s_3 = s_{i+1}}}_{\pi[i+1] = \pi[i] + 1} ~ \dots ~ \underbrace{\overbrace{s_{i-2} ~ s_{i-1} ~ s_{i}}^{\pi[i]} ~ \overbrace{s_{i+1}}^{s_3 = s_{i + 1}}}_{\pi[i+1] = \pi[i] + 1}$$
 
 Nếu không dính trường hợp đó, $s[i+1] \neq s[\pi[i]]$, ta cần thử một xâu ngắn hơn.
 Để tăng tốc, ta muốn nhảy ngay đến độ dài $j \lt \pi[i]$ lớn nhất sao cho tính chất tiền tố tại vị trí $i$ vẫn thỏa mãn, tức là $s[0 \dots j-1] = s[i-j+1 \dots i]$:
 
-$\overbrace{\underbrace{s_0 ~ s_1}_j ~ s_2 ~ s_3}^{\pi[i]} ~ \dots ~ \overbrace{s_{i-3} ~ s_{i-2} ~ \underbrace{s_{i-1} ~ s_{i}}_j}^{\pi[i]} ~ s_{i+1}$
+$$\overbrace{\underbrace{s_0 ~ s_1}_j ~ s_2 ~ s_3}^{\pi[i]} ~ \dots ~ \overbrace{s_{i-3} ~ s_{i-2} ~ \underbrace{s_{i-1} ~ s_{i}}_j}^{\pi[i]} ~ s_{i+1}$$
 
 Thật vậy, nếu ta tìm được độ dài $j$ như vậy, thì ta lại chỉ cần so sánh các ký tự $s[i+1]$ và $s[j]$. Nếu chúng bằng nhau, thì ta gán $\pi[i+1] = j + 1$. Ngược lại, ta cần tìm giá trị lớn nhất nhỏ hơn $j$ mà tính chất tiền tố vẫn thỏa mãn, và cứ tiếp tục như vậy. Có thể xảy ra trường hợp quá trình này tiếp tục cho đến khi $j = 0$. Khi đó nếu $s[i+1] = s[0]$, ta gán $\pi[i+1] = 1$, ngược lại $\pi[i+1] = 0$.
 
 Vậy ta đã có sơ đồ tổng quát của thuật toán. Câu hỏi duy nhất còn lại là làm thế nào để tìm hiệu quả các độ dài $j$. Tóm tắt lại xem nào: với độ dài hiện tại $j$ tại vị trí $i$ mà tính chất tiền tố thỏa mãn, tức là $s[0 \dots j-1] = s[i-j+1 \dots i]$, ta muốn tìm $k \lt j$ lớn nhất mà tính chất tiền tố vẫn thỏa mãn.
 
-$\overbrace{\underbrace{s_0 ~ s_1}_k ~ s_2 ~ s_3}^j ~ \dots ~ \overbrace{s_{i-3} ~ s_{i-2} ~ \underbrace{s_{i-1} ~ s_{i}}_k}^j ~s_{i+1}$
+$$\overbrace{\underbrace{s_0 ~ s_1}_k ~ s_2 ~ s_3}^j ~ \dots ~ \overbrace{s_{i-3} ~ s_{i-2} ~ \underbrace{s_{i-1} ~ s_{i}}_k}^j ~s_{i+1}$$
 
 Hình minh họa cho thấy giá trị này chính là $\pi[j-1]$, mà ta đã tính trước đó.
 
@@ -174,17 +174,17 @@ Tất nhiên ta vẫn cần chứng minh rằng nó tối ưu. Thật vậy, n�
 
 Bây giờ giả sử $n$ không chia hết cho $k$. Ta sẽ chứng minh rằng nó dẫn đến đáp án có độ dài $n$. Ta chứng minh bằng phản chứng. Giả sử tồn tại một đáp án, và cách nén có độ dài $p$ ($n$ chia hết cho $p$). Khi đó giá trị cuối cùng của hàm tiền tố phải lớn hơn $n - p$, tức là hậu tố sẽ phủ một phần khối đầu tiên. Bây giờ xét khối thứ hai của xâu. Vì tiền tố bằng hậu tố, và cả tiền tố lẫn hậu tố đều phủ khối này, và độ lệch giữa chúng $k$ không chia hết độ dài khối $p$ (nếu không thì $n$ chia hết cho $k$), nên tất cả các ký tự trong khối phải giống nhau. Nhưng khi đó xâu chỉ gồm một ký tự lặp đi lặp lại, do đó ta có thể nén nó thành xâu có kích thước $1$, cho $k = 1$, và $n$ lại phải chia hết cho $k$. Điều này mâu thuẫn.
 
-$\overbrace{s_0 ~ s_1 ~ s_2 ~ s_3}^p ~ \overbrace{s_4 ~ s_5 ~ s_6 ~ s_7}^p$
+$$\overbrace{s_0 ~ s_1 ~ s_2 ~ s_3}^p ~ \overbrace{s_4 ~ s_5 ~ s_6 ~ s_7}^p$$
 
-$s_0 ~ s_1 ~ s_2 ~ \underbrace{\overbrace{s_3 ~ s_4 ~ s_5 ~ s_6}^p ~ s_7}_{\pi[7] = 5}$
+$$s_0 ~ s_1 ~ s_2 ~ \underbrace{\overbrace{s_3 ~ s_4 ~ s_5 ~ s_6}^p ~ s_7}_{\pi[7] = 5}$$
 
-$s_4 = s_3, ~ s_5 = s_4, ~ s_6 = s_5, ~ s_7 = s_6 ~ \Rightarrow ~ s_0 = s_1 = s_2 = s_3$
+$$s_4 = s_3, ~ s_5 = s_4, ~ s_6 = s_5, ~ s_7 = s_6 ~ \Rightarrow ~ s_0 = s_1 = s_2 = s_3$$
 
 ### Xây dựng automat theo hàm tiền tố
 
 Hãy quay lại việc nối hai xâu qua ký tự phân cách, tức là với các xâu $s$ và $t$ ta tính hàm tiền tố cho xâu $s + \# + t$. Vì $\#$ là ký tự phân cách, giá trị hàm tiền tố sẽ không bao giờ vượt quá $|s|$. Từ đó suy ra rằng chỉ cần lưu xâu $s + \#$ và các giá trị hàm tiền tố tương ứng, và ta có thể tính hàm tiền tố cho tất cả các ký tự tiếp theo một cách trực tiếp:
 
-$\underbrace{s_0 ~ s_1 ~ \dots ~ s_{n-1} ~ \#}_{\text{need to store}} ~ \underbrace{t_0 ~ t_1 ~ \dots ~ t_{m-1}}_{\text{do not need to store}}$
+$$\underbrace{s_0 ~ s_1 ~ \dots ~ s_{n-1} ~ \#}_{\text{cần lưu}} ~ \underbrace{t_0 ~ t_1 ~ \dots ~ t_{m-1}}_{\text{không cần lưu}}$$
 
 Thật vậy, trong những trường hợp như thế, việc biết ký tự tiếp theo $c \in t$ và giá trị hàm tiền tố của vị trí trước đó là đủ để tính giá trị tiếp theo của hàm tiền tố, mà không cần sử dụng bất kỳ ký tự nào trước đó của xâu $t$ và giá trị hàm tiền tố ở các vị trí đó.
 
@@ -241,12 +241,12 @@ Nhưng có một ứng dụng thứ hai, khó thấy hơn. Ta có thể sử d�
 Để cho hoàn chỉnh, ta sẽ giải một bài toán như sau: cho một số $k \le 10^5$ và một xâu $s$ có độ dài $\le 10^5$. Ta cần tính số lần xuất hiện của $s$ trong xâu Gray thứ $k$.
 Nhắc lại rằng các xâu Gray được định nghĩa như sau:
 
-$\begin{align}
+$$\begin{align}
 g_1 &= \text{"a"}\\
 g_2 &= \text{"aba"}\\
 g_3 &= \text{"abacaba"}\\
 g_4 &= \text{"abacabadabacaba"}
-\end{align}$
+\end{align}$$
 
 Trong những trường hợp như vậy, việc xây dựng xâu $t$ là không thể, vì độ dài quá lớn của nó. Xâu Gray thứ $k$ có độ dài $2^k-1$ ký tự. Tuy nhiên ta có thể tính giá trị hàm tiền tố ở cuối xâu một cách hiệu quả, chỉ cần biết giá trị hàm tiền tố ở đầu.
 
@@ -254,22 +254,22 @@ Ngoài automat, ta còn cần tính các giá trị $G[i][j]$ - giá trị của
 
 Làm thế nào để tính các giá trị này? Các giá trị cơ sở là $G[0][j] = j$ và $K[0][j] = 0$. Và tất cả các giá trị tiếp theo có thể được tính từ các giá trị trước đó và sử dụng automat. Để tính giá trị cho $i$ nào đó, ta để ý rằng xâu $g_i$ gồm $g_{i-1}$, ký tự thứ $i$ trong bảng chữ cái, và $g_{i-1}$. Vì vậy automat sẽ đi vào trạng thái:
 
-$\text{mid} = \text{aut}[G[i-1][j]][i]$
+$$\text{mid} = \text{aut}[G[i-1][j]][i]$$
 
-$G[i][j] = G[i-1][\text{mid}]$
+$$G[i][j] = G[i-1][\text{mid}]$$
 
 Các giá trị $K[i][j]$ cũng có thể được tính dễ dàng.
 
-$K[i][j] = K[i-1][j] + (\text{mid} == |s|) + K[i-1][\text{mid}]$
+$$K[i][j] = K[i-1][j] + (\text{mid} == |s|) + K[i-1][\text{mid}]$$
 
 Vậy ta có thể giải bài toán cho xâu Gray, và cho rất nhiều bài toán tương tự khác. Ví dụ, cùng phương pháp này cũng giải được bài toán sau: cho một xâu $s$ và một số xâu mẫu $t_i$, mỗi xâu mẫu được xác định như sau: nó là một xâu gồm các ký tự thông thường, và có thể có một số phép chèn đệ quy các xâu trước đó dưới dạng $t_k^{\text{cnt}}$, nghĩa là tại vị trí đó ta phải chèn xâu $t_k$ $\text{cnt}$ lần. Một ví dụ về các xâu mẫu như vậy:
 
-$\begin{align}
+$$\begin{align}
 t_1 &= \text{"abdeca"}\\
 t_2 &= \text{"abc"} + t_1^{30} + \text{"abd"}\\
 t_3 &= t_2^{50} + t_1^{100}\\
 t_4 &= t_2^{10} + t_3^{100}
-\end{align}$
+\end{align}$$
 
 Các phép thay thế đệ quy làm xâu phình to lên, sao cho độ dài của chúng có thể đạt cỡ $100^{100}$.
 
@@ -281,14 +281,14 @@ Bài toán có thể được giải theo cùng cách như vậy bằng cách x�
 
 | Problem | Status | Submission | Code | Date |
 | :---: | :-----------: | :---: | :---: | :---: |
-| [UVA 455 - Periodic Strings](http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=396) | | | | |
-| [UVA 11022 - String Factoring](http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1963) | | | | |
-| [UVA 11452 - Dancing the Cheeky-Cheeky](http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2447) | | | | |
-| [UVA 12604 - Caesar Cipher](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4282) | | | | |
-| [UVA 12467 - Secret Word](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3911) | | | | |
-| [UVA 11019 - Matrix Matcher](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1960) | | | | |
-| [SPOJ - Pattern Find](http://www.spoj.com/problems/NAJPF/) | | | | |
-| [SPOJ - A Needle in the Haystack](https://www.spoj.com/problems/NHAY/) | | | | |
-| [Codeforces - Anthem of Berland](http://codeforces.com/contest/808/problem/G) | | | | |
-| [Codeforces - MUH and Cube Walls](http://codeforces.com/problemset/problem/471/D) | | | | |
-| [Codeforces - Prefixes and Suffixes](https://codeforces.com/contest/432/problem/D) | | | | |
+| [UVA 455 - Periodic Strings](http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=396) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%20455.cpp) | 05/04/2026 |
+| [UVA 11022 - String Factoring](http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1963) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%2011022.cpp) | 05/04/2026 |
+| [UVA 11452 - Dancing the Cheeky-Cheeky](http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2447) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%2011452.cpp) | 05/04/2026 |
+| [UVA 12604 - Caesar Cipher](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4282) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%2012604.cpp) | 05/04/2026 |
+| [UVA 12467 - Secret Word](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3911) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%2012467.cpp) | 05/04/2026 |
+| [UVA 11019 - Matrix Matcher](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1960) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/UVA/UVA%2011019.cpp) | 05/04/2026 |
+| [SPOJ - Pattern Find](http://www.spoj.com/problems/NAJPF/) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20NAJPF-KMP.cpp) | 05/04/2026 |
+| [SPOJ - A Needle in the Haystack](https://www.spoj.com/problems/NHAY/) | :white_check_mark: | Unavailable public link | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/SPOJ/SPOJ%20NHAY-KMP.cpp) | 05/04/2026 |
+| [Codeforces - Anthem of Berland](http://codeforces.com/contest/808/problem/G) | :white_check_mark: |[Submission](https://codeforces.com/contest/808/submission/369913116) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF808-D12-G.cpp) | 05/04/2026 |
+| [Codeforces - MUH and Cube Walls](https://codeforces.com/contest/471/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/471/submission/369909998) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF471-D2-D.cpp) | 05/04/2026 |
+| [Codeforces - Prefixes and Suffixes](https://codeforces.com/contest/432/problem/D) | :white_check_mark: | [Submission](https://codeforces.com/contest/432/submission/369909302) | [Code](https://github.com/farmerboy95/CompetitiveProgramming/blob/master/Codeforces/CF432-D2-D.cpp) | 05/04/2026 |
