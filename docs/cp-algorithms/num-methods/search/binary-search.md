@@ -1,6 +1,10 @@
-# Binary search
-
 # Tìm kiếm nhị phân
+
+## Nguồn
+
+<img src="../../../../assets/images/cpalgorithms.ico" width="16" height="16"/> [Binary search](https://cp-algorithms.com/num_methods/binary_search.html)
+
+## Giới thiệu
 
 **Tìm kiếm nhị phân** là phương pháp cho phép tìm kiếm nhanh bằng cách chia đôi khoảng tìm kiếm. Ứng dụng phổ biến nhất của nó là tìm giá trị trong mảng đã sắp xếp, tuy nhiên chia đôi lại là ý tưởng then chốt trong nhiều bài toán điển hình khác.
 

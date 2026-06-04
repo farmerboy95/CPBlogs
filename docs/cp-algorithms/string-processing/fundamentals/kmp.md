@@ -1,5 +1,9 @@
 # Hàm tiền tố - Thuật toán Knuth–Morris–Pratt (KMP)
 
+## Nguồn
+
+<img src="../../../../assets/images/cpalgorithms.ico" width="16" height="16"/> [Prefix function. Knuth–Morris–Pratt algorithm](https://cp-algorithms.com/string/prefix-function.html)
+
 ## Định nghĩa hàm tiền tố
 
 Cho một xâu $s$ độ dài $n$. **Hàm tiền tố** của xâu này được định nghĩa là một mảng $\pi$ có độ dài $n$, trong đó $\pi[i]$ là độ dài của tiền tố thực sự dài nhất của xâu con $s[0 \dots i]$ mà đồng thời cũng là hậu tố của xâu con đó. Tiền tố thực sự của một xâu là tiền tố không bằng chính xâu đó. Theo định nghĩa, $\pi[0] = 0$.

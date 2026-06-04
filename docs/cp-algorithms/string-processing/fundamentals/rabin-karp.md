@@ -1,5 +1,11 @@
 # Thuật toán Rabin-Karp để so sánh xâu
 
+## Nguồn
+
+<img src="../../../../assets/images/cpalgorithms.ico" width="16" height="16"/> [Rabin-Karp Algorithm for string matching](https://cp-algorithms.com/string/rabin-karp.html)
+
+## Thuật toán
+
 Thuật toán này dựa trên khái niệm băm (hashing), nếu bạn chưa quen với việc xâu, hãy đọc qua bài viết về [Hash xâu](string-hashing.md) nhé.
 
 Thuật toán này được Rabin và Karp công bố vào năm 1987.
