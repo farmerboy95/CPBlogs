@@ -41,6 +41,9 @@ comment: false
     - Đồ thị
         - Đường đi ngắn nhất một nguồn
             - [0-1 BFS](cp-algorithms/graph/sssp/01-bfs.md)
+    - Các phương pháp số học
+        - Tìm kiếm
+            - [Tìm kiếm nhị phân](cp-algorithms/num-methods/search/binary-search.md)
     - Xử lý xâu
         - Cơ bản
             - [String Hashing](cp-algorithms/string-processing/fundamentals/string-hashing.md)
